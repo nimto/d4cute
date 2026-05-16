@@ -11,6 +11,24 @@ export default defineConfig({
     starlight({
       title: '디아블로4 시즌13 한국어 가이드',
       description: '심판의 시즌(Season of Reckoning) / 증오의 군주(Lord of Hatred) 확장팩 종합 헬퍼',
+      head: [
+        {
+          tag: 'meta',
+          attrs: { property: 'fb:app_id', content: '952181990762525' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image', content: 'https://nimto.github.io/d4cute/app-icon-1024.png' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:width', content: '1024' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:height', content: '1024' },
+        },
+      ],
       defaultLocale: 'root',
       locales: {
         root: { label: '한국어', lang: 'ko-KR' },
