@@ -1,0 +1,111 @@
+---
+---
+
+<div class="img-lightbox" data-state="closed" role="dialog" aria-modal="true" aria-label="이미지 확대 보기" hidden>
+  <button class="img-lightbox-close" type="button" aria-label="닫기">×</button>
+  <figure class="img-lightbox-figure">
+    <img alt="" />
+    <figcaption></figcaption>
+  </figure>
+</div>
+
+<style is:global>
+  .img-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 3, 4, 0.92);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 2rem;
+    cursor: zoom-out;
+  }
+  .img-lightbox[hidden] { display: none; }
+  .img-lightbox-figure {
+    margin: 0;
+    max-width: min(92vw, 1100px);
+    max-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: default;
+  }
+  .img-lightbox-figure img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 2px solid var(--d4-gold, #eac333);
+    border-radius: 6px;
+    box-shadow: 0 0 40px rgba(150, 7, 17, 0.6);
+  }
+  .img-lightbox-figure figcaption {
+    color: var(--d4-bone, #d8c8a0);
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 90vw;
+    line-height: 1.4;
+  }
+  .img-lightbox-figure figcaption:empty { display: none; }
+  .img-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    background: transparent;
+    border: 1px solid var(--d4-gold, #eac333);
+    color: var(--d4-gold, #eac333);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .img-lightbox-close:hover { transform: rotate(90deg); background: rgba(234, 195, 51, 0.15); }
+</style>
+
+<script is:inline>
+  (() => {
+    const lb = document.querySelector('.img-lightbox');
+    if (!lb) return;
+    const img = lb.querySelector('img');
+    const cap = lb.querySelector('figcaption');
+    const closeBtn = lb.querySelector('.img-lightbox-close');
+
+    const open = (src, alt, caption) => {
+      img.src = src;
+      img.alt = alt || '';
+      cap.textContent = caption || '';
+      lb.hidden = false;
+      lb.dataset.state = 'open';
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+      lb.hidden = true;
+      lb.dataset.state = 'closed';
+      img.src = '';
+      document.body.style.overflow = '';
+    };
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.img-thumb-btn');
+      if (btn) {
+        e.preventDefault();
+        open(btn.dataset.imgSrc, btn.dataset.imgAlt, btn.dataset.imgCaption);
+      }
+    });
+
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb || e.target.closest('.img-lightbox-close')) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lb.dataset.state === 'open') close();
+    });
+  })();
+</script>

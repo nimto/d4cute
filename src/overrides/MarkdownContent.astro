@@ -1,9 +1,11 @@
 ---
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 import Giscus from '../components/Giscus.astro';
+import ImageLightbox from '../components/ImageLightbox.astro';
 ---
 
 <Default {...Astro.props}>
   <slot />
+  <ImageLightbox />
   <Giscus />
 </Default>
