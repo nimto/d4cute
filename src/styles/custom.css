@@ -197,6 +197,68 @@
   min-width: 1.5rem;
 }
 
+/* Keyword highlighting */
+.kw-gold, .kw-resource { color: var(--d4-gold); font-weight: 600; }
+.kw-blood, .kw-danger { color: var(--d4-blood-bright); font-weight: 600; }
+.kw-bone { color: var(--d4-bone); }
+.kw-price { color: var(--d4-gold); font-weight: 700; font-variant-numeric: tabular-nums; }
+.kw-magic { color: #5a8cff; font-weight: 600; }       /* 마법 등급 */
+.kw-rare { color: #f5d447; font-weight: 600; }        /* 희귀 등급 */
+.kw-legendary { color: #d97c1f; font-weight: 600; }   /* 전설 등급 */
+.kw-unique { color: #b864ff; font-weight: 600; }      /* 유니크/태고 */
+.kw-mythic { color: #ff4d5a; font-weight: 700; }      /* 신화 */
+.kw-offensive { color: #ff5a45; font-weight: 600; }   /* 공격 카테고리 */
+.kw-defensive { color: #4dc0ff; font-weight: 600; }   /* 방어 카테고리 */
+.kw-utility { color: #d864ff; font-weight: 600; }     /* 실용 카테고리 */
+.kw-abundance { color: #ffc847; font-weight: 600; }   /* 풍족 카테고리 */
+
+/* Quick-summary callout */
+.summary-box {
+  background: linear-gradient(135deg, rgba(150, 7, 17, 0.12), rgba(234, 195, 51, 0.05));
+  border-left: 4px solid var(--d4-gold);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+.summary-box h3 {
+  color: var(--d4-gold);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+.summary-box ol, .summary-box ul { margin: 0.5rem 0 0 1.25rem; }
+.summary-box li { margin: 0.3rem 0; }
+
+/* Decision flow */
+.decision-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+  padding: 1rem;
+  background: var(--sl-color-gray-6);
+  border-left: 3px solid var(--d4-gold);
+}
+.decision-flow .step {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+.decision-flow .step-num {
+  color: var(--d4-gold);
+  font-weight: 700;
+  min-width: 1.6rem;
+  font-size: 1.05em;
+}
+.decision-flow .step-arrow {
+  color: var(--d4-blood-bright);
+  font-weight: 700;
+  margin-left: 1.6rem;
+  font-size: 0.85em;
+}
+
 /* Mobile tightening */
 @media (max-width: 50em) {
   .sl-markdown-content table {
