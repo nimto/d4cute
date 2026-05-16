@@ -10,7 +10,10 @@ interface Props {
   url?: string;
 }
 const { url } = Astro.props as Props;
-const canonicalUrl = url || Astro.url.href;
+
+const PROD_BASE = 'https://nimto.github.io/d4cute';
+const pathname = Astro.url.pathname.replace(/^\/d4cute/, '');
+const canonicalUrl = url || `${PROD_BASE}${pathname}`;
 ---
 
 <div class="fb-comments-wrapper">

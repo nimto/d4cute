@@ -48,6 +48,11 @@
 [data-theme='dark'] .sidebar-content a[aria-current='page'] {
   background: linear-gradient(90deg, rgba(150, 7, 17, 0.25), transparent);
   border-left: 2px solid var(--d4-blood-bright);
+  color: var(--d4-gold);
+  font-weight: 700;
+}
+[data-theme='dark'] .sidebar-content a[aria-current='page']:hover {
+  color: var(--d4-gold);
 }
 
 /* Tables: bone-card look */
