@@ -24,3 +24,6 @@ pnpm-debug.log*
 # image lightbox screenshot artifacts
 giscus-rendered.png
 .playwright-mcp/
+
+# Playwright/dev screenshots
+transfig-*.png

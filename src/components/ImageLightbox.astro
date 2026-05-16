@@ -3,10 +3,14 @@
 
 <div class="img-lightbox" data-state="closed" role="dialog" aria-modal="true" aria-label="이미지 확대 보기" hidden>
   <button class="img-lightbox-close" type="button" aria-label="닫기">×</button>
+  <div class="img-lightbox-zoominfo" aria-hidden="true">100%</div>
   <figure class="img-lightbox-figure">
-    <img alt="" />
+    <div class="img-lightbox-canvas">
+      <img alt="" draggable="false" />
+    </div>
     <figcaption></figcaption>
   </figure>
+  <div class="img-lightbox-help" aria-hidden="true">휠: 확대/축소 · 드래그: 이동 · 더블클릭: 원래대로 · Esc: 닫기</div>
 </div>
 
 <style is:global>
@@ -21,11 +25,12 @@
     z-index: 9999;
     padding: 2rem;
     cursor: zoom-out;
+    overflow: hidden;
   }
   .img-lightbox[hidden] { display: none; }
   .img-lightbox-figure {
     margin: 0;
-    max-width: min(92vw, 1100px);
+    max-width: min(92vw, 1400px);
     max-height: 86vh;
     display: flex;
     flex-direction: column;
@@ -33,13 +38,30 @@
     gap: 0.75rem;
     cursor: default;
   }
-  .img-lightbox-figure img {
-    max-width: 100%;
+  .img-lightbox-canvas {
+    max-width: 92vw;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    user-select: none;
+  }
+  .img-lightbox-canvas.is-zoomed { cursor: grab; }
+  .img-lightbox-canvas.is-panning { cursor: grabbing; }
+  .img-lightbox-canvas img {
+    max-width: 92vw;
     max-height: 80vh;
     object-fit: contain;
     border: 2px solid var(--d4-gold, #eac333);
     border-radius: 6px;
     box-shadow: 0 0 40px rgba(150, 7, 17, 0.6);
+    transform-origin: center center;
+    will-change: transform;
+    transition: transform 0.05s linear;
+    user-select: none;
+    -webkit-user-drag: none;
   }
   .img-lightbox-figure figcaption {
     color: var(--d4-bone, #d8c8a0);
@@ -66,8 +88,36 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.15s ease, background 0.15s ease;
+    z-index: 2;
   }
   .img-lightbox-close:hover { transform: rotate(90deg); background: rgba(234, 195, 51, 0.15); }
+  .img-lightbox-zoominfo {
+    position: absolute;
+    top: 1rem;
+    left: 1.25rem;
+    color: var(--d4-gold, #eac333);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 0.3rem 0.7rem;
+    border: 1px solid rgba(234, 195, 51, 0.4);
+    border-radius: 4px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .img-lightbox-help {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(216, 200, 160, 0.7);
+    font-size: 0.78rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    pointer-events: none;
+  }
 </style>
 
 <script is:inline>
@@ -77,11 +127,30 @@
     const img = lb.querySelector('img');
     const cap = lb.querySelector('figcaption');
     const closeBtn = lb.querySelector('.img-lightbox-close');
+    const canvas = lb.querySelector('.img-lightbox-canvas');
+    const zoomInfo = lb.querySelector('.img-lightbox-zoominfo');
 
+    let scale = 1;
+    let tx = 0, ty = 0;
+    const MIN_SCALE = 1;
+    const MAX_SCALE = 6;
+    let isPanning = false;
+    let panStart = null;
+
+    const applyTransform = () => {
+      img.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+      zoomInfo.textContent = `${Math.round(scale * 100)}%`;
+      canvas.classList.toggle('is-zoomed', scale > MIN_SCALE);
+    };
+    const resetTransform = () => {
+      scale = 1; tx = 0; ty = 0;
+      applyTransform();
+    };
     const open = (src, alt, caption) => {
       img.src = src;
       img.alt = alt || '';
       cap.textContent = caption || '';
+      resetTransform();
       lb.hidden = false;
       lb.dataset.state = 'open';
       document.body.style.overflow = 'hidden';
@@ -90,6 +159,7 @@
       lb.hidden = true;
       lb.dataset.state = 'closed';
       img.src = '';
+      resetTransform();
       document.body.style.overflow = '';
     };
 
@@ -102,10 +172,71 @@
     });
 
     lb.addEventListener('click', (e) => {
-      if (e.target === lb || e.target.closest('.img-lightbox-close')) close();
+      if (e.target.closest('.img-lightbox-close')) { close(); return; }
+      if (e.target === lb) close();
     });
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lb.dataset.state === 'open') close();
+      if (lb.dataset.state !== 'open') return;
+      if (e.key === 'Escape') close();
+      else if (e.key === '+' || e.key === '=') { scale = Math.min(MAX_SCALE, scale * 1.2); applyTransform(); }
+      else if (e.key === '-' || e.key === '_') { scale = Math.max(MIN_SCALE, scale / 1.2); if (scale === MIN_SCALE) { tx = 0; ty = 0; } applyTransform(); }
+      else if (e.key === '0') resetTransform();
     });
+
+    canvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const rect = img.getBoundingClientRect();
+      const cx = e.clientX - rect.left - rect.width / 2;
+      const cy = e.clientY - rect.top - rect.height / 2;
+      const factor = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+      const newScale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale * factor));
+      const ratio = newScale / scale;
+      tx = (tx - cx) * ratio + cx;
+      ty = (ty - cy) * ratio + cy;
+      scale = newScale;
+      if (scale === MIN_SCALE) { tx = 0; ty = 0; }
+      applyTransform();
+    }, { passive: false });
+
+    canvas.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (scale > MIN_SCALE) resetTransform();
+      else {
+        const rect = img.getBoundingClientRect();
+        const cx = e.clientX - rect.left - rect.width / 2;
+        const cy = e.clientY - rect.top - rect.height / 2;
+        const newScale = 2;
+        tx = -cx * newScale;
+        ty = -cy * newScale;
+        scale = newScale;
+        applyTransform();
+      }
+    });
+
+    canvas.addEventListener('pointerdown', (e) => {
+      if (scale <= MIN_SCALE) return;
+      isPanning = true;
+      panStart = { x: e.clientX - tx, y: e.clientY - ty };
+      canvas.setPointerCapture(e.pointerId);
+      canvas.classList.add('is-panning');
+    });
+    canvas.addEventListener('pointermove', (e) => {
+      if (!isPanning) return;
+      tx = e.clientX - panStart.x;
+      ty = e.clientY - panStart.y;
+      applyTransform();
+    });
+    const endPan = (e) => {
+      if (!isPanning) return;
+      isPanning = false;
+      panStart = null;
+      try { canvas.releasePointerCapture(e.pointerId); } catch {}
+      canvas.classList.remove('is-panning');
+    };
+    canvas.addEventListener('pointerup', endPan);
+    canvas.addEventListener('pointercancel', endPan);
+
+    canvas.addEventListener('click', (e) => e.stopPropagation());
   })();
 </script>

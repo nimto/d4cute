@@ -1,13 +1,13 @@
 [
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034912.png", "out": "menu-equipment-modification", "maxSize": 400 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034921.png", "out": "menu-item-conversion", "maxSize": 400 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034934.png", "out": "menu-rune-crafting", "maxSize": 400 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034945.png", "out": "dust-clear-attunement-369", "maxSize": 350 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034953.png", "out": "dust-entropy-attunement-542", "maxSize": 350 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034959.png", "out": "dust-expert-attunement-788", "maxSize": 350 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035005.png", "out": "dust-diverse-attunement-1000", "maxSize": 350 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035012.png", "out": "dust-offensive-attunement-1000", "maxSize": 350 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035018.png", "out": "dust-utility-attunement-1000", "maxSize": 350 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035025.png", "out": "dust-defensive-attunement-1000", "maxSize": 350 },
-  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035031.png", "out": "dust-abundance-attunement-1000", "maxSize": 350 }
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034912.png", "out": "menu-equipment-modification", "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034921.png", "out": "menu-item-conversion", "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034934.png", "out": "menu-rune-crafting", "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034945.png", "out": "dust-clear-attunement-369", "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034953.png", "out": "dust-entropy-attunement-542", "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 034959.png", "out": "dust-expert-attunement-788", "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035005.png", "out": "dust-diverse-attunement-1000", "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035012.png", "out": "dust-offensive-attunement-1000", "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035018.png", "out": "dust-utility-attunement-1000", "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035025.png", "out": "dust-defensive-attunement-1000", "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 035031.png", "out": "dust-abundance-attunement-1000", "maxSize": 700, "quality": 90 }
 ]
