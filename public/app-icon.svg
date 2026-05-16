@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#2a0509"/>
+      <stop offset="70%" stop-color="#0a0608"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5d447"/>
+      <stop offset="50%" stop-color="#eac333"/>
+      <stop offset="100%" stop-color="#9c7f1f"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="180" fill="url(#bg)"/>
+
+  <g transform="translate(512 512)" filter="url(#glow)" opacity="0.55">
+    <polygon points="0,-300 260,0 0,300 -260,0" fill="#c01020"/>
+  </g>
+  <g transform="translate(512 512)">
+    <polygon points="0,-300 260,0 0,300 -260,0" fill="none" stroke="#c01020" stroke-width="14"/>
+    <polygon points="0,-220 190,0 0,220 -190,0" fill="none" stroke="url(#gold)" stroke-width="8" opacity="0.85"/>
+  </g>
+
+  <text x="512" y="560" text-anchor="middle" font-family="Georgia, serif" font-weight="900"
+        font-size="340" fill="url(#gold)" stroke="#3a2810" stroke-width="6"
+        paint-order="stroke fill">D4</text>
+
+  <rect x="60" y="60" width="904" height="904" rx="140" fill="none"
+        stroke="#960711" stroke-width="6" opacity="0.6"/>
+</svg>

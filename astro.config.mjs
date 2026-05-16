@@ -36,6 +36,15 @@ export default defineConfig({
         { label: '패치 노트', collapsed: true, items: [{ autogenerate: { directory: 'patch-notes' } }] },
         { label: '용어 사전', link: '/glossary/' },
         { label: '사이트 소개', link: '/about/' },
+        {
+          label: '법적 정보',
+          collapsed: true,
+          items: [
+            { label: '개인정보처리방침', link: '/privacy/' },
+            { label: '서비스 약관', link: '/terms/' },
+            { label: '데이터 삭제 안내', link: '/data-deletion/' },
+          ],
+        },
       ],
     }),
   ],
