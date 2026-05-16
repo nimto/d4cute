@@ -106,6 +106,201 @@
   margin: 1.5rem 0;
 }
 
+/* Channel promo card on landing */
+.channel-promo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(234, 195, 51, 0.08), rgba(150, 7, 17, 0.12));
+  border: 1px solid rgba(234, 195, 51, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+.channel-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--sl-color-gray-5);
+}
+.channel-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.channel-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.channel-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--d4-gold);
+  background: rgba(234, 195, 51, 0.12);
+  border: 1px solid rgba(234, 195, 51, 0.4);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  width: max-content;
+}
+.channel-name {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--d4-gold) !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+.channel-name a {
+  color: inherit;
+  text-decoration: none;
+}
+.channel-name a:hover { text-decoration: underline; }
+.channel-desc {
+  margin: 0;
+  color: var(--d4-bone);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.channel-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+.channel-btn {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--d4-gold);
+  color: var(--d4-gold);
+  background: transparent;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.channel-btn:hover { background: rgba(234, 195, 51, 0.15); transform: translateY(-1px); text-decoration: none; }
+.channel-btn.primary {
+  background: var(--d4-blood);
+  border-color: var(--d4-blood-bright);
+  color: #fff;
+}
+.channel-btn.primary:hover { background: var(--d4-blood-bright); }
+
+@media (max-width: 50em) {
+  .channel-promo {
+    grid-template-columns: 1fr;
+  }
+}
+
+[data-theme='light'] .channel-promo {
+  background: linear-gradient(135deg, rgba(234, 195, 51, 0.18), rgba(150, 7, 17, 0.08));
+  border-color: #9c7f1f;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+[data-theme='light'] .channel-badge {
+  color: #7a5a0a;
+  background: rgba(234, 195, 51, 0.25);
+  border-color: #9c7f1f;
+}
+[data-theme='light'] .channel-name { color: #7a5a0a !important; }
+[data-theme='light'] .channel-desc { color: #3a2810; }
+[data-theme='light'] .channel-btn {
+  border-color: #9c7f1f;
+  color: #7a5a0a;
+}
+[data-theme='light'] .channel-btn:hover { background: rgba(234, 195, 51, 0.25); }
+[data-theme='light'] .channel-btn.primary {
+  background: var(--d4-blood);
+  border-color: var(--d4-blood);
+  color: #fff;
+}
+
+/* Clan card */
+.clan-card {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(150, 7, 17, 0.18), rgba(0, 0, 0, 0.4));
+  border: 1px solid rgba(150, 7, 17, 0.45);
+  border-left: 4px solid var(--d4-blood-bright);
+  border-radius: 6px;
+}
+.clan-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+.clan-emblem {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 8px rgba(192, 16, 32, 0.45));
+}
+.clan-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--d4-blood-bright);
+  background: rgba(192, 16, 32, 0.12);
+  border: 1px solid rgba(192, 16, 32, 0.45);
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  margin-bottom: 0.35rem;
+}
+.clan-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--d4-gold) !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+.clan-body p {
+  margin: 0.4rem 0;
+  font-size: 0.92rem;
+  color: var(--d4-bone);
+  line-height: 1.55;
+}
+.clan-body p strong { color: var(--d4-gold); }
+.clan-body code {
+  background: rgba(234, 195, 51, 0.12) !important;
+  color: var(--d4-gold) !important;
+}
+.clan-note {
+  margin-top: 0.85rem !important;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(234, 195, 51, 0.2);
+  font-style: italic;
+  font-size: 0.85rem !important;
+  color: var(--sl-color-gray-3) !important;
+}
+
+[data-theme='light'] .clan-card {
+  background: linear-gradient(135deg, rgba(150, 7, 17, 0.08), rgba(234, 195, 51, 0.12));
+  border-color: #c01020;
+  border-left-color: #960711;
+}
+[data-theme='light'] .clan-badge {
+  color: #8a0511;
+  background: rgba(192, 16, 32, 0.08);
+  border-color: rgba(192, 16, 32, 0.5);
+}
+[data-theme='light'] .clan-title { color: #7a5a0a !important; }
+[data-theme='light'] .clan-body p { color: #2a1a08; }
+[data-theme='light'] .clan-body p strong { color: #7a5a0a; }
+[data-theme='light'] .clan-body code {
+  background: rgba(234, 195, 51, 0.22) !important;
+  color: #7a5a0a !important;
+}
+[data-theme='light'] .clan-note { color: #5a4a2e !important; }
+
 /* FB comments wrapper */
 .fb-comments-wrapper {
   margin-top: 3rem;
@@ -197,7 +392,7 @@
   min-width: 1.5rem;
 }
 
-/* Keyword highlighting */
+/* Keyword highlighting — dark (기본) */
 .kw-gold, .kw-resource { color: var(--d4-gold); font-weight: 600; }
 .kw-blood, .kw-danger { color: var(--d4-blood-bright); font-weight: 600; }
 .kw-bone { color: var(--d4-bone); }
@@ -212,6 +407,23 @@
 .kw-utility { color: #d864ff; font-weight: 600; }     /* 실용 카테고리 */
 .kw-abundance { color: #ffc847; font-weight: 600; }   /* 풍족 카테고리 */
 
+/* Keyword highlighting — light 테마 가독성 보정 */
+[data-theme='light'] .kw-gold,
+[data-theme='light'] .kw-resource { color: #7a5a0a; }
+[data-theme='light'] .kw-blood,
+[data-theme='light'] .kw-danger { color: #8a0511; }
+[data-theme='light'] .kw-bone { color: #5a4a2e; }
+[data-theme='light'] .kw-price { color: #7a5a0a; }
+[data-theme='light'] .kw-magic { color: #1f3a8a; }
+[data-theme='light'] .kw-rare { color: #8a6a0a; }
+[data-theme='light'] .kw-legendary { color: #9a4a0a; }
+[data-theme='light'] .kw-unique { color: #6a1f9a; }
+[data-theme='light'] .kw-mythic { color: #8a0521; }
+[data-theme='light'] .kw-offensive { color: #9a1a05; }
+[data-theme='light'] .kw-defensive { color: #1a6a9a; }
+[data-theme='light'] .kw-utility { color: #7a1f9a; }
+[data-theme='light'] .kw-abundance { color: #8a5a0a; }
+
 /* Quick-summary callout */
 .summary-box {
   background: linear-gradient(135deg, rgba(150, 7, 17, 0.12), rgba(234, 195, 51, 0.05));
@@ -219,6 +431,10 @@
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
   border-radius: 0 4px 4px 0;
+}
+[data-theme='light'] .summary-box {
+  background: linear-gradient(135deg, rgba(150, 7, 17, 0.06), rgba(234, 195, 51, 0.08));
+  border-left-color: #9c7f1f;
 }
 .summary-box h3 {
   color: var(--d4-gold);
@@ -228,6 +444,7 @@
   border-bottom: none !important;
   padding-bottom: 0 !important;
 }
+[data-theme='light'] .summary-box h3 { color: #7a5a0a; }
 .summary-box ol, .summary-box ul { margin: 0.5rem 0 0 1.25rem; }
 .summary-box li { margin: 0.3rem 0; }
 
@@ -252,11 +469,17 @@
   min-width: 1.6rem;
   font-size: 1.05em;
 }
+[data-theme='light'] .decision-flow .step-num { color: #7a5a0a; }
 .decision-flow .step-arrow {
   color: var(--d4-blood-bright);
   font-weight: 700;
   margin-left: 1.6rem;
   font-size: 0.85em;
+}
+[data-theme='light'] .decision-flow .step-arrow { color: #8a0511; }
+[data-theme='light'] .decision-flow {
+  background: rgba(0, 0, 0, 0.04);
+  border-left-color: #9c7f1f;
 }
 
 /* Mobile tightening */

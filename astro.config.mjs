@@ -40,6 +40,12 @@ export default defineConfig({
       pagination: true,
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       sidebar: [
+        {
+          label: '🎬 삼촌안잔다잉 채널',
+          link: 'https://youtu.be/7xefDv5NCJ4',
+          attrs: { target: '_blank', rel: 'noopener noreferrer' },
+          badge: { text: 'YouTube', variant: 'tip' },
+        },
         { label: '시작하기', link: '/quickstart/' },
         { label: '호라드림 큐브', collapsed: false, items: [{ autogenerate: { directory: 'horadric-cube' } }] },
         { label: '보석', collapsed: true, items: [{ autogenerate: { directory: 'gems' } }] },
