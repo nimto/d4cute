@@ -7,7 +7,7 @@
 ## 빠른 시작 (5분 셋업)
 
 ```bash
-git clone https://github.com/nimtos/d4cute.git
+git clone https://github.com/nimto/d4cute.git
 cd d4cute
 nvm use            # .nvmrc 기준 Node 20
 npm install

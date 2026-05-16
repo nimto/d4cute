@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nimtos.github.io',
+  site: 'https://nimto.github.io',
   base: '/d4cute',
   trailingSlash: 'always',
   integrations: [
@@ -16,7 +16,7 @@ export default defineConfig({
         root: { label: '한국어', lang: 'ko-KR' },
       },
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/nimtos/d4cute' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/nimto/d4cute' },
       ],
       customCss: ['./src/styles/custom.css'],
       components: {
