@@ -1,12 +1,18 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import rehypeBaseHref from './scripts/rehype-base-href.mjs';
+
+const BASE = process.env.GITHUB_ACTIONS ? '/d4cute' : '/';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nimto.github.io',
-  base: process.env.GITHUB_ACTIONS ? '/d4cute' : '/',
+  base: BASE,
   trailingSlash: 'always',
+  markdown: {
+    rehypePlugins: [[rehypeBaseHref, BASE === '/' ? '' : BASE]],
+  },
   integrations: [
     starlight({
       title: '디아블로4 시즌13 한국어 가이드',
