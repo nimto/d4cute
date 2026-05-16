@@ -1,0 +1,83 @@
+---
+title: 레시피 — 합성 (Amalgamation)
+description: 보석 합성, 보스 트로피로 유니크 추첨, 던전 열쇠/소비 아이템 업그레이드 등 합성 카테고리의 레시피.
+sidebar:
+  order: 5
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+
+## 한 줄 요약
+
+> 합성(Amalgamation)은 보석·룬·소비 아이템·열쇠를 여러 개 합쳐 더 상위 단계 1개로 만들거나, **보스 트로피(Boss Trophy)** 를 활용해 특정 보스 풀의 유니크를 추첨하는 카테고리입니다.
+
+## 잠금해제
+
+호라드림 큐브 자체와 함께 잠금해제됩니다. 보스 트로피 기반 추첨은 해당 보스를 처치해 트로피를 확보한 뒤 가능합니다.
+
+## 합성 레시피
+
+<RecipeCard
+  name="보석 합성"
+  inputs={[{ qty: 3, name: '같은 등급/색의 보석' }]}
+  output="다음 등급의 보석 1개"
+  notes="기존 시스템과 유사하나, 시즌13 신규 보석 등급이 추가되어 최고 단계까지의 단계 수가 늘었습니다."
+/>
+
+<RecipeCard
+  name="룬 합성 (Rune Amalgamation)"
+  inputs={[{ qty: 5, name: '같은 등급의 룬' }]}
+  output="다음 등급의 룬 1개"
+  notes="의식 룬(Ritual) · 발현 룬(Invocation) 모두 적용. 자세한 룬 레시피는 다음 페이지 참고."
+/>
+
+<RecipeCard
+  name="둥지 열쇠 통합 (Lair Key Merge)"
+  inputs={[{ qty: 3, name: '둥지 보스 일반 열쇠' }]}
+  output="상위 둥지 보스 열쇠"
+  notes="확장팩과 함께 일반/특급 열쇠가 통합되어, 가지고 있는 열쇠 종류에 맞춰 보스 풀이 정해집니다."
+/>
+
+<RecipeCard
+  name="보스 풀 유니크 추첨"
+  inputs={[{ qty: 1, name: '보스 트로피 (Boss Trophy)' }, { qty: 5, name: '대응 공물 (Tribute)' }]}
+  output="해당 보스 풀의 유니크 1개"
+  cost="보스마다 요구 공물 종류가 다름"
+  notes="원하는 보스 풀의 유니크를 노릴 때 활용. 잉여 보스 트로피의 핵심 소비처."
+/>
+
+## 보스 트로피 (Boss Trophy) 운용
+
+- **획득처**: 둥지 보스 처치 시 일정 확률, 헬타이드 활동 트리 중간 경로의 헬윔(Hellwyrm) 매복.
+- **사용처**: 합성 카테고리의 보스 풀 유니크 추첨.
+- **권장 운용**: 매혹석/인장 빌드가 완성되기 전까지는 트로피를 **신화 유니크 풀**의 보스에 우선 사용하는 것이 보편적입니다.
+
+## 보석 등급 합성 (요약)
+
+| 단계 | 입력 | 산출 | 비고 |
+|------|------|------|------|
+| 1 | 같은 색 보석 3개 (Crude) | 다음 등급 1개 | 가장 흔함 |
+| 2~7 | 동일 절차 반복 | 다음 등급 | 자원이 기하급수로 증가 |
+| 최상위 | 같은 색 최상위 보석 3개 | 신규 최고 등급 보석 1개 | 시즌13에 추가된 신규 단계 |
+
+> 정확한 신규 최고 등급의 명칭은 출처마다 표기가 다릅니다. 본 사이트는 공식 표기가 확정되면 즉시 갱신합니다.
+
+## 자주 묻는 질문 (FAQ)
+
+**Q. 보스 트로피로 추첨한 결과가 마음에 들지 않을 때 다시 굴릴 수 있나요?**
+A. 합성 결과는 확정 산출이며, 다시 굴리려면 동일 트로피와 공물을 다시 모아야 합니다.
+
+**Q. 둥지 열쇠 통합이 되었다는데, 기존 일반/특급 열쇠는 어떻게 됩니까?**
+A. 보유한 열쇠는 유효합니다. 새 시스템에서는 1종으로 통합되어 보스 선택 시 풀을 고르는 방식으로 변경되었습니다.
+
+**Q. 룬 합성에 들어가는 룬의 종류가 섞여도 되나요?**
+A. 같은 등급 + 같은 종류(의식 또는 발현)로 제한되는 것이 일반적입니다. 다음 페이지의 [룬 제작 레시피](/horadric-cube/runes/)를 참고하세요.
+
+<SourceFooter
+  sources={[
+    { label: 'Fextralife Wiki — Horadric Cube', url: 'https://diablo4.wiki.fextralife.com/Horadric+Cube' },
+    { label: 'Mobalytics — Everything Lord of Hatred', url: 'https://mobalytics.gg/diablo-4/guides/everything-lord-of-hatred' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

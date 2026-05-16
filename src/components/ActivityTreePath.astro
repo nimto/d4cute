@@ -1,0 +1,25 @@
+---
+interface Step {
+  num: number | string;
+  label: string;
+  detail?: string;
+}
+interface Props {
+  title?: string;
+  steps: Step[];
+}
+const { title, steps } = Astro.props as Props;
+---
+
+<div class="tree-path">
+  {title && <strong style="color:var(--d4-gold);">🌳 {title}</strong>}
+  {steps.map((s) => (
+    <div class="tree-step">
+      <span class="tree-step-num">{s.num}.</span>
+      <span>
+        <strong>{s.label}</strong>
+        {s.detail && <span style="color:var(--sl-color-gray-2);"> — {s.detail}</span>}
+      </span>
+    </div>
+  ))}
+</div>

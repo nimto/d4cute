@@ -1,0 +1,27 @@
+---
+interface Source {
+  label: string;
+  url: string;
+}
+interface Props {
+  sources: Source[];
+  lastUpdated?: string;
+}
+const { sources, lastUpdated } = Astro.props as Props;
+---
+
+<aside class="source-footer">
+  <strong>참고 자료</strong>
+  <ul>
+    {sources.map((s) => (
+      <li>
+        <a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a>
+      </li>
+    ))}
+  </ul>
+  {lastUpdated && <p>마지막 업데이트: {lastUpdated}</p>}
+  <p style="margin-top:0.5rem;font-size:0.85em;color:var(--sl-color-gray-3);">
+    이 사이트는 비공식 팬 가이드입니다. 게임 내 정보는 블리자드 공식 패치노트가 우선합니다.
+    Diablo IV는 © Blizzard Entertainment의 상표입니다.
+  </p>
+</aside>

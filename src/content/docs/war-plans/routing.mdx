@@ -1,0 +1,87 @@
+---
+title: 효율적 경로 선택 (Routing)
+description: 자원/목표별 권장 체인 구성, 활동 사이의 자동 이동 활용, 시간/보상 효율 최적화 팁.
+sidebar:
+  order: 5
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+import ActivityTreePath from '../../../components/ActivityTreePath.astro';
+
+## 한 줄 요약
+
+> "어떤 활동을 어떤 순서로 묶을 것인가"의 문제입니다. 활동 사이의 자동 이동 시간이 단축된 패치 이후, 5단계 모두를 채우는 것이 거의 항상 최적입니다.
+
+## 목표별 권장 경로
+
+### 1. 매혹석/인장 빌드업 (초중반)
+
+<ActivityTreePath
+  title="부적 빌드업 — 5단계 경로"
+  steps={[
+    { num: 1, label: '헬타이드', detail: '매혹석 다수 + 보스 트로피' },
+    { num: 2, label: '쿠라스트 지하도시', detail: '공물로 인장 타겟' },
+    { num: 3, label: '헬타이드', detail: '셋 매혹석 추가 시도' },
+    { num: 4, label: '쿠라스트 지하도시', detail: '공물 사용 마무리' },
+    { num: 5, label: '둥지 보스', detail: '신화 인장 시도' },
+  ]}
+/>
+
+### 2. 글리프 + 가루 (중반)
+
+<ActivityTreePath
+  title="글리프+가루 — 5단계 경로"
+  steps={[
+    { num: 1, label: '악몽 던전', detail: '글리프 XP 메인' },
+    { num: 2, label: '헬타이드', detail: '광역 가루 수급' },
+    { num: 3, label: '악몽 던전', detail: '글리프 추가 레벨' },
+    { num: 4, label: '지옥의 무리', detail: 'Burning Aether + 가루' },
+    { num: 5, label: '균열', detail: 'Pure Dust 시도 / 마스터워킹' },
+  ]}
+/>
+
+### 3. 신화 유니크 노림수 (후반)
+
+<ActivityTreePath
+  title="신화 노림수 — 5단계 경로"
+  steps={[
+    { num: 1, label: '둥지 보스', detail: '신화 시도 1' },
+    { num: 2, label: '헬타이드', detail: '보스 트로피 누적' },
+    { num: 3, label: '헬타이드', detail: '트로피 누적 강화' },
+    { num: 4, label: '균열', detail: 'Pure Dust 마무리' },
+    { num: 5, label: '둥지 보스', detail: '신화 시도 2 (모은 트로피 사용)' },
+  ]}
+/>
+
+## 자동 이동(텔레포트) 활용
+
+3.0.2 패치 이후 사령부에서 활성 전쟁 계획의 다음 활동 시작 지점으로 직접 이동하는 텔레포트가 추가되었습니다. 결과적으로:
+
+- 도시 마차/포탈 동선이 사라져 한 체인 완주 시간이 약 2~4분 단축
+- 활동 사이의 대기/이동이 짧아져 짧은 시간 단위(예: 30분)에도 1체인 완주 가능
+
+## 시간 / 보상 효율 비교 (개념)
+
+| 전략 | 1체인 평균 시간 | 가루 효율 | 매혹석/유니크 효율 |
+|------|--------------|----------|------------------|
+| 5단계 모두 채움 (다양화) | 35~45분 | 매우 높음 | 매우 높음 |
+| 5단계 모두 같은 활동 | 30~40분 | 중간 | 중간 |
+| 3단계만 사용 (실험적) | 20~30분 | 낮음 | 낮음 |
+
+> **결론**: 5단계 모두를 다양한 활동으로 채우는 것이 거의 항상 가장 효율적입니다.
+
+## FAQ
+
+**Q. 둥지 보스를 5단계 모두에 넣을 수 있나요?**
+A. 가능합니다. 다만 둥지 보스는 처치 후 즉시 자동 이동되지 않는 경우가 보고되어, 다른 활동과 섞는 것이 권장됩니다.
+
+**Q. 변형(modifier) 옵션은 어디서 설정하나요?**
+A. 사령부에서 체인을 짤 때 각 활동 슬롯 우측 메뉴에서 변형을 추가합니다. 시간 제한·죽지 않기 등의 변형은 보상 배수를 올립니다.
+
+<SourceFooter
+  sources={[
+    { label: 'Mobalytics — War Plans Guide', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
+    { label: 'Maxroll — 3.0.2 Patch Notes', url: 'https://maxroll.gg/d4/news/lord-of-hatred-3-0-2-patch-notes' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

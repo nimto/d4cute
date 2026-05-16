@@ -1,0 +1,74 @@
+---
+title: 레시피 — 룬 제작 (Rune Crafting)
+description: 의식 룬(Ritual)과 발현 룬(Invocation)의 종류, 제작 비용, 권장 조합.
+sidebar:
+  order: 6
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+
+## 한 줄 요약
+
+> 룬은 **의식 룬(Ritual)** 과 **발현 룬(Invocation)** 두 종류로 나뉘며, 같은 등급 룬을 큐브에서 합성해 더 강한 룬을 만듭니다. 제작 비용이 높아 빌드 마무리 단계에서 사용됩니다.
+
+## 잠금해제
+
+룬 자체는 본편부터 존재했으며, 확장팩에서 큐브 합성 레시피가 추가되었습니다. 호라드림 큐브 잠금해제와 동시에 룬 제작 카테고리가 열립니다.
+
+## 룬 종류
+
+| 분류 | 영문 | 역할 |
+|------|------|------|
+| 의식 룬 | Ritual Rune | 특정 조건을 만족하면 자원/마나/오펜시브 옵션을 누적시키는 트리거 룬 |
+| 발현 룬 | Invocation Rune | 누적된 의식 자원을 소모해 강력한 효과를 발동시키는 트리거 룬 |
+
+대표적인 의식 룬: **Bac, Igni, Tam, Yul**
+대표적인 발현 룬: **Eom, Jah, Ohm, Vex, Yom**
+
+## 룬 제작 레시피
+
+<RecipeCard
+  name="의식 룬 합성"
+  inputs={[{ qty: 1, name: '기본 의식 룬' }, { qty: 5, name: '레어 등급 룬' }, { qty: 5, name: '전설 등급 의식 룬' }]}
+  output="다음 등급의 의식 룬 1개"
+  notes="발현 룬과 종류가 섞이면 합성 실패. 같은 트리거 카테고리만 가능."
+/>
+
+<RecipeCard
+  name="발현 룬 합성"
+  inputs={[{ qty: 1, name: '기본 발현 룬' }, { qty: 5, name: '레어 등급 룬' }, { qty: 5, name: '전설 등급 발현 룬' }]}
+  output="다음 등급의 발현 룬 1개"
+/>
+
+## 권장 조합 예시 (개념)
+
+> 본 사이트는 시즌 메타 빌드의 특정 룬 조합 추천은 별도 빌드 가이드 사이트(Maxroll, Mobalytics 등)를 참고하시는 것을 권장드립니다. 본 페이지는 **시스템 이해** 목적으로 일반 원리만 다룹니다.
+
+| 의식 룬 | 발현 룬 | 일반적 활용 |
+|---------|---------|-------------|
+| Igni (피해 누적) | Ohm (광역 폭발) | 광역 클리어 빌드 |
+| Tam (이동 누적) | Jah (자원 회복) | 자원 부족 빌드 |
+| Yul (조건 충족) | Vex (강력 단일 타격) | 보스 단일 빌드 |
+
+## 자원 효율 팁
+
+- **저급 룬 합성 우선** — 레어 룬은 모든 활동에서 가장 자주 떨어지므로, 모인 5개씩을 즉시 합성에 사용합니다.
+- **합성은 끝물 작업** — 빌드의 핵심 아이템·매혹석 세팅이 끝난 뒤에 룬 합성에 자원을 투입합니다.
+- **시즌 종료 전 합성** — 시즌 종료 직전 잉여 룬을 합성해 영원으로 보내는 것이 흔한 운용법입니다.
+
+## FAQ
+
+**Q. 룬을 의식+발현 한 쌍만 장착해야 하나요?**
+A. 동시에 한 쌍을 가장 많이 활용하지만, 의식 또는 발현 단독만 장착해도 작동은 합니다. 단, 발현 룬의 강력한 효과는 의식 룬이 누적해주지 않으면 발동 빈도가 낮아집니다.
+
+**Q. 합성 도중 일부 룬을 잃었는데, 환불이 되나요?**
+A. 합성은 확정 산출이며 환불되지 않습니다. 실수 방지를 위해 큐브 UI의 확인 단계에서 룬 종류와 등급을 다시 확인하세요.
+
+<SourceFooter
+  sources={[
+    { label: 'Fextralife Wiki — Horadric Cube', url: 'https://diablo4.wiki.fextralife.com/Horadric+Cube' },
+    { label: 'Maxroll — 3.0.2 Patch Notes', url: 'https://maxroll.gg/d4/news/lord-of-hatred-3-0-2-patch-notes' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

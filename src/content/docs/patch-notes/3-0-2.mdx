@@ -1,0 +1,85 @@
+---
+title: 3.0.2 — 셋 매혹석 / 전쟁 계획 텔레포트
+description: 셋 매혹석 인식성, 전쟁 계획 사령부 텔레포트, 클래스 밸런스 수정, 큐브/부적 버그 수정.
+sidebar:
+  order: 4
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+
+## 한 줄 요약
+
+> **2026년 5월 9일** — 시즌13 첫 대형 패치. **셋 매혹석 인식성**(드롭 사운드 + 미니맵 아이콘) 추가, **전쟁 계획 사령부에서 활동 텔레포트** 신설, 다수의 클래스 밸런스 + 큐브/부적 버그 수정.
+
+## 출시 정보
+
+| 항목 | 값 |
+|------|----|
+| 패치 버전 | 3.0.2 |
+| 출시일 | 2026년 5월 9일 |
+| 시즌 | 시즌13 — 심판의 시즌 |
+
+## 주요 변경점
+
+### 부적 (Talismans)
+
+- **셋 매혹석**: 고유 드롭 사운드 + 미니맵 아이콘 추가 — 인식성 강화
+- **드루이드 폭풍 양치기(Storm Shephard) 셋 조정**:
+  - 5-피스 보너스가 2-피스를 **덮어쓰지 않고 누적**
+  - 2-피스가 **모든 폭풍 스킬**에 적용 (이전: 75% → 40% 최대로 조정)
+- **늙은 늑대의 표식(Mark of the Old Wolf)**: DoT 곱셈 옵션 추가, 독 데미지가 곱연산으로 적용
+- **비신화 매혹석/인장 거래 불가 버그 수정**
+- **신화 인장 누락 어픽스 수정**
+
+### 전쟁 계획 / 엔드게임
+
+- **사령부 텔레포트 신설** — 활성 전쟁 계획의 다음 활동 시작 지점으로 즉시 이동
+  - 활성 계획 없으면 기본 테미스로 텔레포트
+- **파티 파인더에 메아리치는 증오 + 메피스토의 메아리 추가**
+- 지옥의 무리 부활/둥지 보스/전쟁 계획 보상 관련 다수 이슈 수정
+
+### 호라드림 큐브
+
+- 재제련된 목걸이의 어픽스가 코덱스 값과 일치하지 않던 문제 수정
+- 스킬 랭크 어픽스 · 조율 프리즘 · 유니크 변환 관련 이슈 수정
+
+### 클래스 밸런스 (인용 요약)
+
+- **흑마법사(Warlock)**: 표식(Sigil) 지속 시간 일관성, 폭격(Bombardment) 텔레키네시스 거동, 자원 생성 관련 수정
+- **정령강림자(Spiritborn)**: 돌진하는 발톱(Rushing Claws) 변형, 레조카의 분노(Rezoka's Rage) 흉포함 누적
+- **도적(Rogue) / 마법사(Sorcerer)**: 다수 스킬 / 양상(Aspect) 수정
+
+### UI / 기타
+
+- 캠페인 스킵 확인 메시지 갱신
+- 던전 길찾기 / 미니맵 다수 수정
+- 리더보드 갱신 동작 개선
+
+## 본 사이트의 영향
+
+- [부적 — 셋 매혹석](/talismans/set-charms/) 페이지에 인식성 변경 사항 반영
+- [전쟁 계획 — 효율적 경로](/war-plans/routing/) 의 텔레포트 활용 섹션 추가
+- [패치 노트 인덱스](/patch-notes/) 갱신
+
+## 인용 (원문 발췌)
+
+> "Set Charms now play a Unique drop sound to make them easier to notice."
+> "Mark of the Old Wolf now includes DoT multipliers and uses multiplicative poison damage."
+> "Fixed an issue where non-Mythic Charms and Seals could not be traded."
+
+— 출처: Maxroll 3.0.2 패치 노트
+
+## FAQ
+
+**Q. 셋 매혹석 사운드/아이콘은 끌 수 있나요?**
+A. 인식성 강화 기본 설정으로 적용됩니다. 끄는 옵션은 본 사이트가 확인한 출처에서 명시되지 않았습니다.
+
+**Q. 거래 불가 버그가 수정되었다는데, 이전에 거래 시도 실패한 아이템은?**
+A. 패치 적용 후 정상 거래 가능합니다. 인벤토리에 있는 매혹석/인장은 자동으로 거래 가능 상태로 갱신됩니다.
+
+<SourceFooter
+  sources={[
+    { label: 'Maxroll — 3.0.2 Patch Notes', url: 'https://maxroll.gg/d4/news/lord-of-hatred-3-0-2-patch-notes' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

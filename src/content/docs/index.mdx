@@ -1,40 +1,90 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: 디아블로4 시즌13 한국어 가이드
+description: 심판의 시즌(Season of Reckoning) & 증오의 군주(Lord of Hatred) 확장팩 종합 헬퍼. 호라드림 큐브 · 전쟁 계획 · 활동 스킬 트리 · 부적/공물 · 패치노트.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: 심판의 시즌(Season of Reckoning) · 증오의 군주(Lord of Hatred) 한국어 종합 헬퍼
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: 빠른 시작
+      link: /quickstart/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+      variant: primary
+    - text: 호라드림 큐브 가이드
+      link: /horadric-cube/
       icon: external
-      variant: minimal
+    - text: 전쟁 계획 가이드
+      link: /war-plans/
+      icon: external
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import SourceFooter from '../../components/SourceFooter.astro';
 
-## Next steps
+<div class="hero-card">
+  <strong>🩸 시즌13 핵심 요약</strong>
+  <ul>
+    <li><strong>확장팩 출시</strong>: 증오의 군주(Lord of Hatred) — 2026년 4월 27일</li>
+    <li><strong>최신 패치</strong>: 3.0.2 (2026년 5월 9일)</li>
+    <li><strong>새 클래스</strong>: 흑마법사(Warlock)</li>
+    <li><strong>새 지역</strong>: 스코보스(Skovos), 거점 도시 테미스(Temis)</li>
+    <li><strong>레벨 캡</strong>: 60 → 70 / <strong>고난도 단계</strong>: 4 → 12</li>
+  </ul>
+</div>
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+## 🧭 이 사이트로 무엇을 배울 수 있나요?
+
+<CardGrid>
+  <Card title="🎲 호라드림 큐브" icon="puzzle">
+    어픽스 추가/제거, 재제련, 보석 합성, 룬 제작, 부적 리롤까지 모든 레시피를 한 곳에서 확인합니다.
+    [큐브 가이드 시작하기](/horadric-cube/)
+  </Card>
+
+  <Card title="⚔️ 전쟁 계획 (War Plans)" icon="rocket">
+    5단계 활동 체인을 짜서 전쟁 상자(War Chest)에서 한 번에 보상을 수령하는 신규 엔드게임 시스템입니다.
+    [전쟁 계획 가이드](/war-plans/)
+  </Card>
+
+  <Card title="🌳 활동 스킬 트리" icon="setting">
+    헬타이드 · 악몽 던전 · 지하도시 · 균열 · 둥지 보스 · 지옥의 무리 · 호라드림 금고실에 각각 스킬 트리가 생겼습니다.
+    [활동 트리 가이드](/activity-tree/)
+  </Card>
+
+  <Card title="💎 보석 재설계" icon="star">
+    무기 슬롯 보석이 곱연산 데미지로 변경되었고 에메랄드는 독 데미지로 전환되었습니다.
+    [보석 시스템](/gems/)
+  </Card>
+
+  <Card title="🔮 부적 & 인장 (Talismans)" icon="document">
+    매혹석(Charm)과 인장(Seal)이 통합된 새로운 아이템 슬롯이 추가되었습니다.
+    [부적 가이드](/talismans/)
+  </Card>
+
+  <Card title="📜 공물 (Tributes)" icon="information">
+    쿠라스트 지하도시에서 타겟 파밍을 가능케 하는 거래(Bargain) 시스템.
+    [공물 가이드](/tributes/)
+  </Card>
 </CardGrid>
+
+## 🆕 무엇이 새로운가?
+
+- **메아리치는 증오(Echoing Hatred)** — 종료 조건 없이 끝없이 적이 강해지는 웨이브 모드
+- **메피스토의 메아리(Echo of Mephisto)** — 메피스토 관련 추가 보스 콘텐츠
+- **균열(The Pit) 개편** — 5층 구조 + 사망 페널티 제거
+- **첨탑 → 장인의 첨탑(Artificer's Tower)** — 보상 강화 + 리더보드
+- **호라드림 금고실(Horadric Strongroom)** — 신규 활동 던전
+- **신규 보석 등급 확장** — 새로운 최고 등급 보석 단계 추가
+
+## ⚠️ 면책
+
+이 사이트는 **비공식 팬 가이드**입니다. 게임 내 정보는 블리자드 공식 패치노트가 우선합니다.
+Diablo IV 및 관련 명칭은 © Blizzard Entertainment의 상표입니다.
+
+<SourceFooter
+  sources={[
+    { label: 'Blizzard 공식 뉴스 (한국)', url: 'https://news.blizzard.com/ko-kr/diablo4' },
+    { label: 'Mobalytics — Everything Lord of Hatred', url: 'https://mobalytics.gg/diablo-4/guides/everything-lord-of-hatred' },
+    { label: 'Icy-Veins — Lord of Hatred Launch Patch Notes', url: 'https://www.icy-veins.com/d4/news/diablo-4-lord-of-hatred-launch-patch-notes/' },
+    { label: 'Maxroll — 3.0.2 Patch Notes', url: 'https://maxroll.gg/d4/news/lord-of-hatred-3-0-2-patch-notes' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

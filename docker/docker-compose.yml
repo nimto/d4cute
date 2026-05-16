@@ -1,0 +1,15 @@
+services:
+  d4cute-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: d4cute-dev
+    container_name: d4cute-dev
+    ports:
+      - "4321:4321"
+    volumes:
+      - ..:/app
+      - /app/node_modules
+    environment:
+      - PUBLIC_FB_APP_ID=${PUBLIC_FB_APP_ID:-PLACEHOLDER_APP_ID}
+    command: npm run dev -- --host 0.0.0.0

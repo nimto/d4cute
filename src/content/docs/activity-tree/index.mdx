@@ -1,0 +1,60 @@
+---
+title: 활동 스킬 트리 — 전체 개요
+description: 7개 활동에 각각 붙어 있는 스킬 트리의 기본 구조, 포인트 획득 방식, 우선순위.
+sidebar:
+  order: 1
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+
+## 한 줄 요약
+
+> 헬타이드 · 악몽 던전 · 쿠라스트 지하도시 · 균열 · 둥지 보스 · 지옥의 무리 · 호라드림 금고실 — 7개 활동에 각각 **활동 스킬 트리(Activity Skill Tree)** 가 생겨, 활동의 보상과 도전 난이도를 직접 조절합니다.
+
+## 잠금해제
+
+각 활동을 1회 이상 완주하면 해당 활동의 트리가 사령부 UI에 등록됩니다. 포인트는 활동 완주 시 자동 누적됩니다.
+
+## 트리 7개 한눈에
+
+| # | 활동 | 한글 | 트리 핵심 |
+|---|------|------|----------|
+| 1 | Helltide | 헬타이드 | 좌(난도 상승)/중(보스 트로피)/우(편의) |
+| 2 | Nightmare Dungeon | 악몽 던전 | 글리프 XP/시질 보상/도전 변형 |
+| 3 | Kurast Undercity | 쿠라스트 지하도시 | 좌(종료 보상)/중(공물 강화)/우(경험치) |
+| 4 | The Pit | 균열 | 마스터워킹 자원/층 보상/도전 |
+| 5 | Lair Boss | 둥지 보스 | 유니크 풀 강화/도전/추가 트로피 |
+| 6 | Infernal Hordes | 지옥의 무리 | Burning Aether/Boss 강화/회복 |
+| 7 | Horadric Strongroom | 호라드림 금고실 | 가루 보상/시간 압박/희귀 산출 |
+
+각 트리의 상세는 사이드바의 하위 페이지를 참고하세요.
+
+## 포인트 획득 방식
+
+- 활동 완주 시 자동 누적
+- 동일 활동을 여러 번 완주할수록 포인트가 점진적으로 누적되며, 트리마다 상한이 있습니다.
+- 일부 트리는 **고난도 단계**가 올라가야 후반 노드가 잠금해제됩니다.
+
+## 일반적 분배 전략
+
+1. **시즌 초** — 가장 자주 도는 활동(보통 헬타이드)부터 좌측 경로 시작
+2. **시즌 중** — 빌드의 핵심 자원 활동(악몽 던전, 균열) 분배
+3. **시즌 말** — 신화 노림수 활동(둥지 보스) 후반 노드 마무리
+
+상세는 [포인트 분배 최적화](/activity-tree/optimization/) 페이지에서 다룹니다.
+
+## FAQ
+
+**Q. 트리 포인트는 캐릭터별인가요?**
+A. 캐릭터별로 분리되어 있습니다. 신규 캐릭터는 새로 분배해야 합니다.
+
+**Q. 한번 찍은 포인트를 회수할 수 있나요?**
+A. 일부 트리는 재설정(reset) 비용을 지불해 회수가 가능합니다. 비용은 사령부 UI에서 확인하세요.
+
+<SourceFooter
+  sources={[
+    { label: 'Mobalytics — War Plans Guide (activity tree paths)', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
+    { label: 'Mobalytics — Everything Lord of Hatred', url: 'https://mobalytics.gg/diablo-4/guides/everything-lord-of-hatred' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

@@ -1,0 +1,32 @@
+---
+interface IngredientLine {
+  qty?: number | string;
+  name: string;
+}
+interface Props {
+  name: string;
+  inputs: IngredientLine[];
+  output: string;
+  cost?: string;
+  notes?: string;
+}
+const { name, inputs, output, cost, notes } = Astro.props as Props;
+---
+
+<div class="recipe-card">
+  <div class="recipe-name">📜 {name}</div>
+  <div class="recipe-io">
+    <div>
+      {inputs.map((i, idx) => (
+        <span class="material-badge">
+          {i.qty && <strong>{i.qty}×</strong>} {i.name}
+          {idx < inputs.length - 1 && <span style="margin:0 0.25rem;">+</span>}
+        </span>
+      ))}
+    </div>
+    <span class="recipe-arrow">→</span>
+    <div><strong>{output}</strong></div>
+  </div>
+  {cost && <div style="margin-top:0.5rem;font-size:0.9em;">💰 비용: {cost}</div>}
+  {notes && <div style="margin-top:0.5rem;font-size:0.9em;color:var(--sl-color-gray-2);">💡 {notes}</div>}
+</div>

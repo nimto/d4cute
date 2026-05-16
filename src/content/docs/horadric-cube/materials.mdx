@@ -1,0 +1,92 @@
+---
+title: 큐브 재료 (Materials)
+description: 원시의 가루(Primordial Dust) 7등급, 조율 프리즘, 호라드림 수지 등 모든 큐브 재료의 종류와 획득처.
+sidebar:
+  order: 2
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+import MaterialBadge from '../../../components/MaterialBadge.astro';
+
+## 한 줄 요약
+
+> 호라드림 큐브의 모든 작업은 **원시의 가루(Primordial Dust)** 7단계와 **조율 프리즘(Tuning Prism)**, 그리고 보조 재료 **주입된 호라드림 수지(Infused Horadric Resin)** 를 조합해 수행됩니다.
+
+## 잠금해제 / 획득 조건
+
+- 모든 가루는 캠페인 클리어 직후부터 떨어지지만, **고난도(Torment) 1단계 이상** 에서 상위 등급(Volatile, Attuned, Enhanced, Pure)의 드롭 빈도가 크게 올라갑니다.
+
+## 원시의 가루 (Primordial Dust) — 7단계
+
+| 단계 | 영문 | 주 사용처 | 주 획득처 |
+|-----|------|-----------|-----------|
+| 1 | Raw | 모든 작업의 기본 소모재 | 모든 활동 부수 보상 |
+| 2 | Coarse | 어픽스 추가 | 헬타이드, 악몽 던전 |
+| 3 | Refined | 어픽스 제거·재롤 | 균열(The Pit), 엘리트 |
+| 4 | Volatile | 재제련(Transfigure) | 전쟁 계획 보상 |
+| 5 | Attuned | 유니크 파워 재롤 | 둥지 보스, 고난도 엘리트 |
+| 6 | Enhanced | 유니크/매혹석 제작 | 고난도 보스 둥지 |
+| 7 | Pure | 레어 → 전설 업그레이드 | 고난도 후반 활동 보상 |
+
+### 시각적 구분
+
+<div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin:1rem 0;">
+  <MaterialBadge type="dust-shadow" name="Raw" />
+  <MaterialBadge type="dust-shadow" name="Coarse" />
+  <MaterialBadge type="dust-shadow" name="Refined" />
+  <MaterialBadge type="dust-flame" name="Volatile" />
+  <MaterialBadge type="dust-frost" name="Attuned" />
+  <MaterialBadge type="dust-poison" name="Enhanced" />
+  <MaterialBadge type="dust-primordial" name="Pure" />
+</div>
+
+## 조율 프리즘 (Tuning Prism)
+
+큐브 작업의 결과를 **카테고리** 수준에서 고정하는 보조 재료입니다.
+
+| 종류 | 영문 | 효과 | 비고 |
+|------|------|------|------|
+| 무질서의 프리즘 | Entropic Prism | 재제련 결과를 카테고리 수준에서 고정. **이후 해당 아이템은 더 이상 수정 불가** | 가장 안전한 종료 경로 |
+| 쿨리언 프리즘 | Kullean Prism | 목걸이 전용. 재제련 후에도 아이템을 수정 가능 상태로 유지 | 목걸이 빌드 핵심 자원 |
+
+### 획득처
+
+- 전쟁 계획(War Plans) 전쟁 상자 보상
+- 고난도 엘리트 드롭
+- 호라드림 금고실 활동 종료 보상
+
+## 주입된 호라드림 수지 (Infused Horadric Resin)
+
+매혹석(Charm) · 인장(Seal) 을 큐브에서 해체하면 획득합니다. 셋 매혹석(Set Charm) 리롤과 유니크 매혹석 제작의 핵심 재료입니다.
+
+| 사용처 | 비용 (예시) |
+|--------|------------|
+| 셋 매혹석 리롤 | 50 수지 + 25 Raw Dust |
+| 유니크 매혹석 제작 | 100 수지 + 50 Raw Dust + 1 Enhanced Dust |
+
+## 보스 트로피 (Boss Trophy)
+
+특정 둥지 보스 처치 시 드롭되며, **유니크 합성(Amalgamation)** 에서 해당 보스 풀의 유니크를 추첨하는 데 사용합니다. 헬타이드 활동 트리의 중간 경로(Hellwyrm 매복)에서도 자주 떨어집니다.
+
+## 메아리의 흔적 (Trace of Echoes)
+
+**메아리치는 증오(Echoing Hatred)** 활동의 입장 키 역할을 합니다. 일정 확률로 떨어지는 소비형 아이템이며, 다양한 활동에서 부수적으로 획득합니다.
+
+## FAQ
+
+**Q. 거친 원시의 가루가 너무 빨리 떨어집니다. 효율적으로 쓰는 법은?**
+A. Raw는 거의 모든 레시피의 기본 소모재라 항상 빠르게 소진됩니다. **어픽스 추가**는 무작위성이 높으므로 우선순위를 낮추고, **카테고리 재롤(Chaotic Reroll)** 에 집중하는 것이 일반적입니다.
+
+**Q. 조율 프리즘을 모았는데 어디에 쓰는 게 가장 효율적인가요?**
+A. **무질서의 프리즘**은 핵심 빌드 아이템의 어픽스를 카테고리 단위로 잠그는 마무리 단계에서, **쿨리언 프리즘**은 목걸이 슬롯에 전용으로 사용합니다.
+
+**Q. 영원 캐릭터에서도 가루가 동일하게 떨어지나요?**
+A. 모든 가루는 영원/시즌 공통이며, 시즌 종료 시 영원으로 자동 이관됩니다.
+
+<SourceFooter
+  sources={[
+    { label: 'Keengamer — Horadric Cube Guide', url: 'https://www.keengamer.com/articles/guides/diablo-iv-lord-of-hatred-horadric-cube-guide/' },
+    { label: 'Fextralife Wiki — Horadric Cube', url: 'https://diablo4.wiki.fextralife.com/Horadric+Cube' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

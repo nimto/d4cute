@@ -1,0 +1,12 @@
+---
+interface Props {
+  type?: 'dust-shadow' | 'dust-flame' | 'dust-frost' | 'dust-poison' | 'dust-primordial' | 'tuning' | 'default';
+  qty?: number | string;
+  name: string;
+}
+const { type = 'default', qty, name } = Astro.props as Props;
+---
+
+<span class={`material-badge ${type}`}>
+  {qty && <strong>{qty}×</strong>} {name}
+</span>

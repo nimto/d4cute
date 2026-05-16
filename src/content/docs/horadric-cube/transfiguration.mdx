@@ -1,0 +1,96 @@
+---
+title: 레시피 — 어픽스 수정 (Transfiguration)
+description: 어픽스 추가/제거, 카테고리 재롤(Chaotic), 같은 카테고리 재롤(Focused), 재제련(Transfigure) 등 큐브의 핵심 어픽스 작업.
+sidebar:
+  order: 4
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+
+## 한 줄 요약
+
+> 빌드에 가장 자주 사용되는 카테고리입니다. **어픽스 추가 → 카테고리 재롤(Chaotic) → 같은 카테고리 재롤(Focused) → 재제련(Transfigure)** 순으로 자원 효율과 결과의 안정도가 올라갑니다.
+
+## 잠금해제
+
+호라드림 큐브 잠금해제와 동시에 사용 가능합니다. 다만 일부 작업은 **태고(Ancestral)** 등급 아이템에서만 의미가 있으므로 고난도 1단계 이상부터 본격 활용합니다.
+
+## 어픽스 수정 레시피
+
+<RecipeCard
+  name="어픽스 추가 (Add Affix)"
+  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: 'Coarse Primordial Dust' }, { qty: 5, name: 'Raw Primordial Dust' }]}
+  output="아이템에 무작위 어픽스 1개 추가"
+  notes="조율 프리즘 선택. 어떤 어픽스가 붙을지 통제력이 낮아 비효율적일 수 있습니다."
+/>
+
+<RecipeCard
+  name="어픽스 제거 (Remove Affix)"
+  inputs={[{ qty: 1, name: '매직/레어 아이템' }, { qty: 1, name: 'Refined Primordial Dust' }, { qty: 15, name: 'Raw Primordial Dust' }]}
+  output="무작위 어픽스 1개 제거"
+  notes="레어 아이템 정리용. 전설/유니크에는 직접 적용되지 않음에 유의."
+/>
+
+<RecipeCard
+  name="카테고리 재롤 (Chaotic Reroll)"
+  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: 'Refined Primordial Dust' }, { qty: 15, name: 'Raw Primordial Dust' }]}
+  output="무작위 어픽스 1개를 다른 카테고리의 어픽스로 변경"
+  notes="원치 않는 카테고리 어픽스를 갈아엎을 때 사용. 빌드 어픽스 확보의 첫 단계."
+/>
+
+<RecipeCard
+  name="같은 카테고리 재롤 (Focused Reroll)"
+  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: 'Refined Primordial Dust' }, { qty: 15, name: 'Raw Primordial Dust' }, { qty: 1, name: 'Tuning Prism' }]}
+  output="무작위 어픽스 1개를 같은 카테고리 내 다른 어픽스로 변경"
+  notes="원하는 어픽스 카테고리는 맞는데 세부 값/종류만 바꾸고 싶을 때 사용."
+/>
+
+<RecipeCard
+  name="재제련 (Transfigure Item)"
+  inputs={[{ qty: 1, name: '전설/유니크/신화 아이템' }, { qty: 1, name: 'Volatile Primordial Dust' }]}
+  output="아이템에 강력한 무작위 변형 적용"
+  notes="조율 프리즘 선택. 무질서의 프리즘 사용 시 결과가 카테고리 단위로 고정되며 더 이상 수정 불가."
+/>
+
+<RecipeCard
+  name="유니크 파워 재롤 (Unique Power Reroll)"
+  inputs={[{ qty: 1, name: '태고 유니크 (Ancestral)' }, { qty: 1, name: 'Attuned Primordial Dust' }, { qty: 100, name: 'Raw Primordial Dust' }]}
+  output="유니크 파워의 수치(가변 범위) 재추첨"
+  notes="유니크의 고정 옵션 수치를 빌드에 맞게 끌어올릴 때 사용."
+/>
+
+## 권장 작업 순서
+
+호라드림 큐브의 자원 효율을 살리는 일반적인 순서:
+
+1. **기본 어픽스 확보** — 빌드 어픽스가 절반 이상 박힌 아이템을 골라옵니다.
+2. **카테고리 재롤(Chaotic)** — 원치 않는 어픽스 카테고리를 모두 빌드 카테고리로 교체.
+3. **같은 카테고리 재롤(Focused)** — 카테고리는 맞지만 종류가 어긋난 어픽스를 미세 조정.
+4. **재제련(Transfigure)** — 최종 어픽스를 카테고리 잠금 + 강화. 무질서의 프리즘으로 마무리.
+5. **유니크 파워 재롤** — 유니크 슬롯이라면 수치 최적화를 마지막에 시도.
+
+## 자원 절약 팁
+
+- **어픽스 추가는 보조 수단** — 어떤 어픽스가 붙을지 모르므로 정 안 풀릴 때 마지막에 시도합니다.
+- **무질서의 프리즘은 결정 직전에만** — 한 번 사용하면 더 이상 수정 불가하므로, 빌드가 확정된 뒤에 사용합니다.
+- **목걸이는 쿨리언 프리즘** — 목걸이만 재제련 후에도 추가 수정이 가능합니다. 다른 부위와 자원 우선순위를 분리하세요.
+
+## FAQ
+
+**Q. 재제련에 일반 조율 프리즘을 안 쓰면 결과가 어떻게 되나요?**
+A. 프리즘 없이도 재제련은 가능하지만, 결과가 완전 무작위입니다. 자원 효율이 낮습니다.
+
+**Q. 한 아이템에 어픽스 추가를 여러 번 할 수 있나요?**
+A. 아이템 등급별 어픽스 슬롯 상한까지만 가능합니다. 슬롯이 꽉 찬 아이템에는 작용하지 않습니다.
+
+**Q. 무질서의 프리즘 적용 후 실수를 깨달았습니다. 되돌릴 수 있나요?**
+A. 되돌릴 수 없습니다. 동일 부위의 새 아이템을 구해 처음부터 다시 작업해야 합니다.
+
+<SourceFooter
+  sources={[
+    { label: 'Fextralife Wiki — Horadric Cube', url: 'https://diablo4.wiki.fextralife.com/Horadric+Cube' },
+    { label: 'Keengamer — Horadric Cube Guide', url: 'https://www.keengamer.com/articles/guides/diablo-iv-lord-of-hatred-horadric-cube-guide/' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

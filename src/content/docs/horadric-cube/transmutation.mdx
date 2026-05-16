@@ -1,0 +1,87 @@
+---
+title: 레시피 — 아이템 변환 (Transmutation)
+description: 3개 합쳐 1개로 만들기, 등급 업그레이드, 유니크 재활용 등 아이템 변환(Item Transmutation) 카테고리의 모든 레시피.
+sidebar:
+  order: 3
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+
+## 한 줄 요약
+
+> 같은 종류 아이템 3개를 하나로 묶어 신규 아이템을 얻거나, 일반/레어 등급을 전설/유니크로 업그레이드하는 카테고리입니다. 중복 유니크를 재활용해 능력치만 새로 굴리는 것도 여기에 속합니다.
+
+## 잠금해제
+
+호라드림 큐브 자체가 잠금해제되면 모든 변환 레시피가 함께 열립니다. 단, 일부 레시피(예: 레어 → 전설 업그레이드)는 **순수한 원시의 가루(Pure Primordial Dust)** 가 필요해 실질적으로 고난도 후반에 가야 가능합니다.
+
+## 변환 레시피 모음
+
+<RecipeCard
+  name="3-to-1 변환 (3 to 1 Transmutation)"
+  inputs={[{ qty: 3, name: '같은 종류 아이템 (장비/부적/룬)' }]}
+  output="해당 종류의 새 무작위 아이템 1개"
+  notes="가장 기본적인 정리용 레시피. 인벤토리의 중복 아이템을 활용한 무작위 시도용으로 적합합니다."
+/>
+
+<RecipeCard
+  name="유니크 재활용 (Recycle Uniques)"
+  inputs={[{ qty: 3, name: '같은 유니크 또는 같은 매혹석' }]}
+  output="같은 유니크의 새 버전 (능력치 재추첨)"
+  notes="고정 어픽스는 그대로지만 가변 어픽스가 다시 굴려집니다. 동일 유니크 잉여분 활용에 최적."
+/>
+
+<RecipeCard
+  name="유니크 업그레이드 (Upgrade to Unique)"
+  inputs={[{ qty: 1, name: '평범한(Common) 장비' }, { qty: 1, name: 'Enhanced Primordial Dust' }, { qty: 10, name: 'Raw Primordial Dust' }]}
+  output="동일 부위의 무작위 유니크"
+  cost="Enhanced 1 + Raw 10"
+  notes="유니크 풀이 매우 넓어 효율은 낮지만, 영원 캐릭터의 컬렉션 채우기에 종종 사용됩니다."
+/>
+
+<RecipeCard
+  name="전설 업그레이드 (Upgrade to Legendary)"
+  inputs={[{ qty: 1, name: '레어(Rare) 장비' }, { qty: 1, name: 'Pure Primordial Dust' }, { qty: 10, name: 'Raw Primordial Dust' }]}
+  output="동일 부위의 전설 장비 (무작위 어픽스 파워)"
+  cost="Pure 1 + Raw 10"
+  notes="조율 프리즘을 함께 넣으면 어픽스 카테고리를 어느 정도 유도할 수 있습니다."
+/>
+
+<RecipeCard
+  name="셋 매혹석 리롤 (Reroll Set Charm)"
+  inputs={[{ qty: 1, name: '셋 매혹석 (Set Charm)' }, { qty: 25, name: 'Raw Primordial Dust' }, { qty: 50, name: 'Infused Horadric Resin' }]}
+  output="같은 셋 내의 다른 매혹석"
+  cost="Raw 25 + Resin 50"
+  notes="셋 6개 중 빠진 매혹석을 확보하는 핵심 수단."
+/>
+
+<RecipeCard
+  name="유니크 매혹석 제작 (Craft Unique Charm)"
+  inputs={[{ qty: 1, name: '태고(Ancestral) 유니크 장비' }, { qty: 3, name: '유니크 매혹석' }, { qty: 1, name: 'Enhanced Primordial Dust' }, { qty: 50, name: 'Raw Primordial Dust' }, { qty: 100, name: 'Infused Horadric Resin' }]}
+  output="유니크 매혹석"
+  notes="일부 핵심 빌드 유니크는 제작 제외 풀에 들어가 있으니 사용 전 확인 필요."
+/>
+
+## 사용 우선순위 (단계별 가이드)
+
+1. **잉여 유니크부터 정리** — 동일 유니크 3개가 쌓이면 즉시 `유니크 재활용`으로 능력치 재추첨.
+2. **셋 매혹석 빠진 칸 채우기** — 같은 셋의 매혹석을 하나 가지고 있으면 `셋 매혹석 리롤`로 부족한 슬롯을 채웁니다.
+3. **레어 → 전설** — 거의 완성된 어픽스를 가진 레어 장비가 손에 들어왔을 때만 `Pure Dust`를 투자.
+4. **3-to-1 변환** — 인벤토리 정리용. 큰 기대 없이 시도.
+
+## 자주 묻는 질문 (FAQ)
+
+**Q. 유니크 재활용은 신화 유니크에도 적용되나요?**
+A. 일반 유니크와 신화 유니크는 풀이 분리되어 있으며, 신화 유니크는 별도 레시피(합성, Amalgamation)를 통해 추첨하는 것이 일반적입니다.
+
+**Q. 전설 업그레이드 시 조율 프리즘이 꼭 필요한가요?**
+A. 선택입니다. 다만 결과의 어픽스 카테고리를 통제하려면 프리즘 사용을 권장합니다.
+
+<SourceFooter
+  sources={[
+    { label: 'Fextralife Wiki — Horadric Cube', url: 'https://diablo4.wiki.fextralife.com/Horadric+Cube' },
+    { label: 'Keengamer — Horadric Cube Guide', url: 'https://www.keengamer.com/articles/guides/diablo-iv-lord-of-hatred-horadric-cube-guide/' },
+  ]}
+  lastUpdated="2026-05-16"
+/>

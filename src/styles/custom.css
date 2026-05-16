@@ -1,0 +1,204 @@
+/* Diablo 4 Sanctuary Dark Theme — Korean Guide */
+
+:root {
+  --d4-bg-deep: #0a0608;
+  --d4-bg-card: #15101220;
+  --d4-blood: #960711;
+  --d4-blood-bright: #c01020;
+  --d4-gold: #eac333;
+  --d4-gold-dim: #9c7f1f;
+  --d4-bone: #d8c8a0;
+  --d4-shadow: rgba(0, 0, 0, 0.6);
+}
+
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #2a0509;
+  --sl-color-accent: #960711;
+  --sl-color-accent-high: #ff4d5a;
+  --sl-color-white: #f5ecd6;
+  --sl-color-gray-1: #e6dcc6;
+  --sl-color-gray-2: #c8bda1;
+  --sl-color-gray-3: #948a73;
+  --sl-color-gray-4: #4a4338;
+  --sl-color-gray-5: #2a2520;
+  --sl-color-gray-6: #1a1612;
+  --sl-color-black: #0a0608;
+  --sl-color-bg: #0a0608;
+  --sl-color-bg-nav: #120c0e;
+  --sl-color-bg-sidebar: #100a0c;
+  --sl-color-text: #e6dcc6;
+  --sl-color-text-accent: #eac333;
+}
+
+/* Light fallback */
+:root {
+  --sl-color-accent-low: #ffe2e2;
+  --sl-color-accent: #960711;
+  --sl-color-accent-high: #5c000a;
+  --sl-color-text-accent: #960711;
+}
+
+/* Header brand polish */
+.site-title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Sidebar accent on active item */
+[data-theme='dark'] .sidebar-content a[aria-current='page'] {
+  background: linear-gradient(90deg, rgba(150, 7, 17, 0.25), transparent);
+  border-left: 2px solid var(--d4-blood-bright);
+}
+
+/* Tables: bone-card look */
+.sl-markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95em;
+}
+.sl-markdown-content th {
+  background: rgba(150, 7, 17, 0.15);
+  color: var(--d4-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85em;
+}
+.sl-markdown-content th,
+.sl-markdown-content td {
+  border: 1px solid var(--sl-color-gray-5);
+  padding: 0.5rem 0.75rem;
+}
+
+/* Inline code: bronze tone */
+[data-theme='dark'] .sl-markdown-content :not(pre) > code {
+  background: rgba(234, 195, 51, 0.1);
+  color: var(--d4-gold);
+  border: 1px solid rgba(234, 195, 51, 0.2);
+}
+
+/* Blockquote: torchlight border */
+.sl-markdown-content blockquote {
+  border-left: 3px solid var(--d4-blood-bright);
+  background: rgba(150, 7, 17, 0.08);
+  padding: 0.75rem 1rem;
+}
+
+/* Headings: bone-gold */
+[data-theme='dark'] .sl-markdown-content h1,
+[data-theme='dark'] .sl-markdown-content h2 {
+  color: var(--d4-gold);
+}
+[data-theme='dark'] .sl-markdown-content h2 {
+  border-bottom: 1px solid var(--sl-color-gray-5);
+  padding-bottom: 0.3em;
+}
+
+/* Hero card on landing */
+.hero-card {
+  background: linear-gradient(135deg, rgba(150, 7, 17, 0.15), rgba(234, 195, 51, 0.05));
+  border: 1px solid rgba(150, 7, 17, 0.3);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* FB comments wrapper */
+.fb-comments-wrapper {
+  margin-top: 3rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+  padding-top: 2rem;
+}
+.fb-comments-wrapper h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.fb-comments-placeholder {
+  background: var(--sl-color-gray-6);
+  border: 1px dashed var(--sl-color-gray-4);
+  padding: 1rem;
+  color: var(--sl-color-gray-3);
+  font-size: 0.9em;
+}
+
+/* Source footer */
+.source-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+  font-size: 0.9em;
+  color: var(--sl-color-gray-3);
+}
+.source-footer ul {
+  margin: 0.5rem 0 0 1rem;
+}
+
+/* RecipeCard component */
+.recipe-card {
+  background: var(--sl-color-gray-6);
+  border-left: 3px solid var(--d4-gold);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+.recipe-card .recipe-name {
+  font-weight: 700;
+  color: var(--d4-gold);
+  margin-bottom: 0.5rem;
+}
+.recipe-card .recipe-io {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.recipe-card .recipe-arrow {
+  color: var(--d4-blood-bright);
+  font-weight: bold;
+}
+
+/* Material badge */
+.material-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background: var(--sl-color-gray-5);
+  border-radius: 0;
+  font-size: 0.85em;
+  margin: 0.1rem;
+  border: 1px solid var(--sl-color-gray-4);
+}
+.material-badge.dust-shadow { color: #b864ff; border-color: #b864ff; }
+.material-badge.dust-flame { color: #ff8040; border-color: #ff8040; }
+.material-badge.dust-frost { color: #4dc0ff; border-color: #4dc0ff; }
+.material-badge.dust-poison { color: #80ff40; border-color: #80ff40; }
+.material-badge.dust-primordial { color: var(--d4-gold); border-color: var(--d4-gold); }
+.material-badge.tuning { color: var(--d4-bone); border-color: var(--d4-bone); }
+
+/* Activity tree path */
+.tree-path {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--sl-color-gray-6);
+  border-left: 3px solid var(--d4-blood);
+}
+.tree-path .tree-step {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+.tree-path .tree-step-num {
+  color: var(--d4-gold);
+  font-weight: 700;
+  min-width: 1.5rem;
+}
+
+/* Mobile tightening */
+@media (max-width: 50em) {
+  .sl-markdown-content table {
+    font-size: 0.85em;
+  }
+  .recipe-card .recipe-io {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
