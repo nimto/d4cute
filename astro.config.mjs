@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nimto.github.io',
-  base: '/d4cute',
+  base: process.env.GITHUB_ACTIONS ? '/d4cute' : '/',
   trailingSlash: 'always',
   integrations: [
     starlight({
