@@ -14,10 +14,6 @@ export default defineConfig({
       head: [
         {
           tag: 'meta',
-          attrs: { property: 'fb:app_id', content: '952181990762525' },
-        },
-        {
-          tag: 'meta',
           attrs: { property: 'og:image', content: 'https://nimto.github.io/d4cute/app-icon-1024.png' },
         },
         {

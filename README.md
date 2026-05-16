@@ -2,31 +2,31 @@
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-심판의 시즌(Season of Reckoning) · 증오의 군주(Lord of Hatred) 확장팩을 위한 **비공식 한국어 종합 가이드**입니다. Astro Starlight + GitHub Pages + Pagefind(한국어 검색) + Facebook 댓글 위젯으로 운영합니다.
+심판의 시즌(Season of Reckoning) · 증오의 군주(Lord of Hatred) 확장팩을 위한 **비공식 한국어 종합 가이드**입니다. Astro Starlight + GitHub Pages + Pagefind(한국어 검색) + Giscus(GitHub Discussions 댓글)로 운영합니다.
 
 ## 빠른 시작 (5분 셋업)
 
 ```bash
 git clone https://github.com/nimto/d4cute.git
 cd d4cute
-nvm use            # .nvmrc 기준 Node 20
+nvm use            # .nvmrc 기준 Node 22
 npm install
-cp .env.example .env   # PUBLIC_FB_APP_ID 설정 (선택)
+cp .env.example .env   # PUBLIC_GISCUS_* 값 채우기 (선택)
 npm run dev            # http://localhost:4321
 ```
 
-`PUBLIC_FB_APP_ID` 를 비워두면 Facebook 댓글 위젯이 안내 메시지로 대체됩니다. 페이지 전체는 정상 동작합니다.
+`PUBLIC_GISCUS_*` 변수를 비워두면 댓글 위젯 자리에 안내 박스가 표시됩니다. 페이지 전체는 정상 동작합니다.
 
 ## 사이트 구조
 
 ```
 .
 ├── astro.config.mjs           # Starlight 설정 (sidebar, locale, components)
-├── .nvmrc                     # Node 20 LTS
-├── .env.example               # PUBLIC_FB_APP_ID 템플릿
+├── .nvmrc                     # Node 22 LTS
+├── .env.example               # PUBLIC_GISCUS_* 템플릿
 ├── .github/workflows/deploy.yml  # GitHub Pages 자동 배포
 ├── docker/
-│   ├── Dockerfile             # Node 20 alpine
+│   ├── Dockerfile             # Node 22 alpine
 │   └── docker-compose.yml     # 로컬 개발 컨테이너
 ├── public/
 │   ├── favicon.svg
@@ -44,7 +44,7 @@ npm run dev            # http://localhost:4321
 │   │   ├── patch-notes/       # 패치 노트 (3.0.0/3.0.1/3.0.2)
 │   │   ├── glossary.mdx       # 영문↔한글 용어 대조표
 │   │   └── about.mdx          # 사이트 소개 / 면책
-│   ├── components/            # FacebookComments, RecipeCard, MaterialBadge, ActivityTreePath, SourceFooter
+│   ├── components/            # Giscus, RecipeCard, MaterialBadge, ActivityTreePath, SourceFooter
 │   ├── overrides/             # Starlight MarkdownContent 슬롯 override (댓글 자동 삽입)
 │   └── styles/custom.css      # Sanctuary 다크 테마
 └── tsconfig.json
@@ -68,17 +68,43 @@ docker compose up
 # → http://localhost:4321
 ```
 
-## Facebook App ID 교체 방법
+## Giscus 설정 (댓글 활성화)
 
-1. https://developers.facebook.com/apps/ 에서 새 App 생성
-2. **App Dashboard → Settings → Basic → App ID** 복사
-3. 로컬: `.env` 파일에 `PUBLIC_FB_APP_ID=발급받은_ID` 입력
-4. GitHub Pages 배포: 저장소 **Settings → Secrets and variables → Actions → Variables → New repository variable**
-   - Name: `PUBLIC_FB_APP_ID`
-   - Value: 발급받은 ID
-5. 다음 푸시 시점부터 자동 적용
+Giscus 는 GitHub Discussions 를 댓글 백엔드로 사용합니다. 광고 없음, 무료, 댓글 데이터는 본인 저장소에 보관됩니다.
 
-App ID 없이도 사이트는 정상 동작하며, 댓글 위젯 자리에는 안내 박스가 표시됩니다.
+### 1. GitHub Discussions 활성화
+
+저장소 → **Settings → General → Features → Discussions** 체크박스 활성화.
+
+### 2. Giscus 앱 설치
+
+https://github.com/apps/giscus 접속 → **Install** → `nimto/d4cute` 저장소 선택.
+
+### 3. Giscus 위저드에서 ID 발급
+
+1. https://giscus.app 접속
+2. 저장소 입력: `nimto/d4cute`
+3. 페이지-Discussion 매핑: **`pathname`** 선택
+4. Discussion 카테고리: GitHub Discussions 에서 만든 카테고리(예: `Comments`, Announcement 형식 권장)
+5. 위저드 하단에 자동 생성된 `data-repo-id` · `data-category-id` 값 복사
+
+### 4. 환경 변수 등록
+
+**로컬**: `.env` 파일
+```
+PUBLIC_GISCUS_REPO_ID=R_kgDOxxxxxxxx
+PUBLIC_GISCUS_CATEGORY=Comments
+PUBLIC_GISCUS_CATEGORY_ID=DIC_kwDOxxxxxxxx
+```
+
+**GitHub Pages**: 저장소 **Settings → Secrets and variables → Actions → Variables → New repository variable**
+- `PUBLIC_GISCUS_REPO_ID`
+- `PUBLIC_GISCUS_CATEGORY`
+- `PUBLIC_GISCUS_CATEGORY_ID`
+
+### 5. 재배포
+
+다음 푸시(또는 `gh workflow run`) 시점부터 자동 적용. 값을 채우지 않으면 댓글 위젯 자리에 안내 박스만 표시됩니다.
 
 ## GitHub Pages 배포 절차
 

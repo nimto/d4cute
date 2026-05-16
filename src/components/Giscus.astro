@@ -1,0 +1,59 @@
+---
+const REPO = 'nimto/d4cute';
+const REPO_ID = import.meta.env.PUBLIC_GISCUS_REPO_ID || 'PLACEHOLDER';
+const CATEGORY = import.meta.env.PUBLIC_GISCUS_CATEGORY || 'Comments';
+const CATEGORY_ID = import.meta.env.PUBLIC_GISCUS_CATEGORY_ID || 'PLACEHOLDER';
+const isPlaceholder = REPO_ID === 'PLACEHOLDER' || CATEGORY_ID === 'PLACEHOLDER';
+---
+
+<div class="comments-wrapper">
+  <h2>💬 댓글</h2>
+
+  {isPlaceholder ? (
+    <div class="comments-placeholder">
+      <strong>Giscus 댓글 위젯 비활성화 상태</strong>
+      <p>
+        <code>PUBLIC_GISCUS_REPO_ID</code>, <code>PUBLIC_GISCUS_CATEGORY_ID</code> 환경 변수가 설정되지 않았습니다.
+        활성화 절차는 README의 "Giscus 설정" 섹션을 참고합니다.
+      </p>
+    </div>
+  ) : (
+    <script
+      is:inline
+      src="https://giscus.app/client.js"
+      data-repo={REPO}
+      data-repo-id={REPO_ID}
+      data-category={CATEGORY}
+      data-category-id={CATEGORY_ID}
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="dark_dimmed"
+      data-lang="ko"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    ></script>
+  )}
+</div>
+
+<style>
+  .comments-wrapper {
+    margin-top: 3rem;
+    border-top: 1px solid var(--sl-color-gray-5);
+    padding-top: 2rem;
+  }
+  .comments-wrapper h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .comments-placeholder {
+    background: var(--sl-color-gray-6);
+    border: 1px dashed var(--sl-color-gray-4);
+    padding: 1rem;
+    color: var(--sl-color-gray-3);
+    font-size: 0.9em;
+  }
+</style>
