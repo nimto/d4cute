@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import rehypeBaseHref from './scripts/rehype-base-href.mjs';
+import fixBaseHref from './scripts/astro-fix-base-href.mjs';
 
 const BASE = process.env.GITHUB_ACTIONS ? '/d4cute' : '/';
 
@@ -14,6 +15,7 @@ export default defineConfig({
     rehypePlugins: [[rehypeBaseHref, BASE === '/' ? '' : BASE]],
   },
   integrations: [
+    fixBaseHref(BASE === '/' ? '' : BASE),
     starlight({
       title: '디아블로4 시즌13 한국어 가이드',
       description: '심판의 시즌(Season of Reckoning) / 증오의 군주(Lord of Hatred) 확장팩 종합 헬퍼',
