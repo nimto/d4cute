@@ -23,7 +23,7 @@ const { runes } = Astro.props as Props;
       <div class="rune-card-body">
         <header class="rune-card-head">
           <h4 id={`rune-${r.slug}-name`} class="rune-card-name">
-            {r.name} <span class="rune-card-cost">[{r.cost}]</span>
+            {r.name}
           </h4>
           <span class={`rune-badge rune-badge-${r.rarity}`}>{r.rarity === 'legendary' ? '전설' : r.rarity === 'rare' ? '희귀' : '마법'}</span>
         </header>

@@ -18,8 +18,8 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 - **목적**: 아이템 어픽스를 <span class="kw-gold">빌드 방향</span>으로 다듬기.
 - **위험 1순위**: <span class="kw-blood">무질서의 프리즘</span> — 한 번 쓰면 <span class="kw-danger">되돌릴 수 없음</span>. 빌드 확정 직후에만.
-- **자원 효율 1순위**: 빌드 카테고리에 맞는 <span class="kw-gold">1000 가격대 카테고리 분광경</span> 우선 사용.
-- **목걸이 예외**: <span class="kw-bone">재제련 후에도 추가 수정 가능</span>. 클레의 분광경 [<span class="kw-price">369</span>] 권장.
+- **자원 효율 1순위**: 빌드 카테고리에 맞는 <span class="kw-gold">카테고리 지향 분광경</span> 우선 사용.
+- **목걸이 예외**: <span class="kw-bone">재제련 후에도 추가 수정 가능</span>. 클레의 분광경 권장.
 
 </div>
 
@@ -107,71 +107,71 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 ## 조율 분광경 자원 카탈로그
 
-레시피 입력에 들어가는 <span class="kw-gold">조율의 분광경(Tuning Dust)</span>들입니다. 등급이 올라갈수록 결과 제어력이 높아지며, 같은 <span class="kw-price">1000</span> 가격대라도 <span class="kw-gold">방향성</span>이 다릅니다(공격/방어/실용/풍족/다채). 아이콘을 클릭하면 인-게임 툴팁 원본을 확대해서 확인할 수 있습니다.
+레시피 입력에 들어가는 <span class="kw-gold">조율의 분광경(Tuning Dust)</span>들입니다. 아이콘을 클릭하면 인-게임 툴팁 원본을 확대해서 확인할 수 있습니다.
 
 ### 기본 분광경 (등급 단계)
 
 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: flex-start; margin: 1rem 0;">
   <ImageModal
-    src="/images/horadric-cube/transfiguration/dust-clear-attunement-369.webp"
-    alt="클레의 조율의 분광경 [369]"
-    caption="클레의 조율 [369]"
+    src="/images/horadric-cube/transfiguration/dust-clear-attunement.webp"
+    alt="클레의 조율의 분광경"
+    caption="클레의 조율"
     size={120}
   />
   <ImageModal
-    src="/images/horadric-cube/transfiguration/dust-entropy-attunement-542.webp"
-    alt="엔트로피의 조율의 분광경 [542] — 100% 속성 변경 보장"
-    caption="엔트로피 [542]"
+    src="/images/horadric-cube/transfiguration/dust-entropy-attunement.webp"
+    alt="엔트로피의 조율의 분광경 — 100% 속성 변경 보장"
+    caption="엔트로피"
     size={120}
   />
   <ImageModal
-    src="/images/horadric-cube/transfiguration/dust-expert-attunement-788.webp"
-    alt="숙련자의 조율의 분광경 [788] — 핵심 능력치 좁힘"
-    caption="숙련자 [788]"
+    src="/images/horadric-cube/transfiguration/dust-expert-attunement.webp"
+    alt="숙련자의 조율의 분광경 — 핵심 능력치 좁힘"
+    caption="숙련자"
     size={120}
   />
   <ImageModal
-    src="/images/horadric-cube/transfiguration/dust-diverse-attunement-1000.webp"
-    alt="다채로운 조율의 분광경 [1000] — 모든 속성 범위"
-    caption="다채로운 [1000]"
+    src="/images/horadric-cube/transfiguration/dust-diverse-attunement.webp"
+    alt="다채로운 조율의 분광경 — 모든 속성 범위"
+    caption="다채로운"
     size={120}
   />
 </div>
 
-| 분광경 | 가격 | 특징 |
+| 분광경 | 등급 | 특징 |
 |--------|------|------|
-| <span class="kw-bone">**클레의 조율**</span> | <span class="kw-price">369</span> | <span class="kw-bone">목걸이 전용</span>. 호라드림의 합 *변성* 결과에 영향 없음 — 일반 변성용 기본 자원 |
-| <span class="kw-blood">**엔트로피의 조율**</span> | <span class="kw-price">542</span> | 변성 결과에 영향. <span class="kw-danger">100% 확률로 속성 변경 불가</span> 상태 — 가장 위험하지만 가장 강력한 결과 |
-| <span class="kw-rare">**숙련자의 조율**</span> | <span class="kw-price">788</span> (<span class="kw-rare">희귀</span>) | 변환 시 속성 범위를 <span class="kw-gold">기술 핵심 능력치</span>로 좁힘 |
-| <span class="kw-rare">**다채로운 조율**</span> | <span class="kw-price">1000</span> (<span class="kw-rare">희귀</span>) | 변환 시 속성 범위를 <span class="kw-gold">모든 속성</span>으로 확장 |
+| <span class="kw-bone">**클레의 조율**</span> | <span class="kw-bone">전설 (소비용품)</span> | <span class="kw-bone">목걸이 전용</span>. 호라드림의 합 *변성* 결과에 영향 없음 — 일반 변성용 기본 자원 |
+| <span class="kw-blood">**엔트로피의 조율**</span> | <span class="kw-blood">전설 (소비용품)</span> | 변성 결과에 영향. <span class="kw-danger">100% 확률로 속성 변경 불가</span> 상태 — 가장 위험하지만 가장 강력한 결과 |
+| <span class="kw-rare">**숙련자의 조율**</span> | <span class="kw-rare">희귀</span> | 변환 시 속성 범위를 <span class="kw-gold">기술 핵심 능력치</span>로 좁힘 |
+| <span class="kw-rare">**다채로운 조율**</span> | <span class="kw-rare">희귀</span> | 변환 시 속성 범위를 <span class="kw-gold">모든 속성</span>으로 확장 |
 
-### 카테고리 지향 분광경 (1000 가격대 — 마법 등급)
+### 카테고리 지향 분광경 (마법 등급)
 
-각 분광경은 <span class="kw-price">1000</span> 골드 가격대로 동일하지만, 변성 결과의 <span class="kw-gold">속성 카테고리</span>를 한 방향으로 좁혀줍니다. 빌드 방향이 확정됐다면 해당 카테고리 분광경으로 직행하는 게 자원 효율이 가장 좋습니다.
+각 분광경은 변성 결과의 <span class="kw-gold">속성 카테고리</span>를 한 방향으로 좁혀줍니다. 빌드 방향이 확정됐다면 해당 카테고리 분광경으로 직행하는 게 자원 효율이 가장 좋습니다.
 
 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: flex-start; margin: 1rem 0;">
   <ImageModal
-    src="/images/horadric-cube/transfiguration/dust-offensive-attunement-1000.webp"
-    alt="공격적인 조율의 분광경 [1000] — 공격 속성으로 좁힘"
-    caption="공격적인 [1000]"
+    src="/images/horadric-cube/transfiguration/dust-offensive-attunement.webp"
+    alt="공격적인 조율의 분광경 — 공격 속성으로 좁힘"
+    caption="공격적인"
     size={120}
   />
   <ImageModal
-    src="/images/horadric-cube/transfiguration/dust-defensive-attunement-1000.webp"
-    alt="보호자의 조율의 분광경 [1000] — 방어 속성으로 좁힘"
-    caption="보호자 [1000]"
+    src="/images/horadric-cube/transfiguration/dust-defensive-attunement.webp"
+    alt="보호자의 조율의 분광경 — 방어 속성으로 좁힘"
+    caption="보호자"
     size={120}
   />
   <ImageModal
-    src="/images/horadric-cube/transfiguration/dust-utility-attunement-1000.webp"
-    alt="실용적인 조율의 분광경 [1000] — 기동성/보호 속성"
-    caption="실용적인 [1000]"
+    src="/images/horadric-cube/transfiguration/dust-utility-attunement.webp"
+    alt="실용적인 조율의 분광경 — 기동성/보호 속성"
+    caption="실용적인"
     size={120}
   />
   <ImageModal
-    src="/images/horadric-cube/transfiguration/dust-abundance-attunement-1000.webp"
-    alt="풍족한 조율의 분광경 [1000] — 자원/소비 속성"
-    caption="풍족한 [1000]"
+    src="/images/horadric-cube/transfiguration/dust-abundance-attunement.webp"
+    alt="풍족한 조율의 분광경 — 자원/소비 속성"
+    caption="풍족한"
     size={120}
   />
 </div>
@@ -192,9 +192,9 @@ import ImageModal from '../../../components/ImageModal.astro';
 <div class="decision-flow">
   <div class="step"><span class="step-num">1.</span> <span><strong class="kw-gold">기본 어픽스 확보</strong> — 빌드 어픽스가 절반 이상 박힌 아이템을 골라옵니다.</span></div>
   <div class="step-arrow">▼</div>
-  <div class="step"><span class="step-num">2.</span> <span><strong class="kw-gold">카테고리 재롤(Chaotic)</strong> — 원치 않는 어픽스 카테고리를 빌드 카테고리로 교체.<br/><span class="kw-bone">→ 사용 자원:</span> <span class="kw-blood">엔트로피 [542]</span> 또는 카테고리 지향 분광경 (<span class="kw-offensive">공격</span>/<span class="kw-defensive">방어</span>/<span class="kw-utility">실용</span>/<span class="kw-abundance">풍족</span>)</span></div>
+  <div class="step"><span class="step-num">2.</span> <span><strong class="kw-gold">카테고리 재롤(Chaotic)</strong> — 원치 않는 어픽스 카테고리를 빌드 카테고리로 교체.<br/><span class="kw-bone">→ 사용 자원:</span> <span class="kw-blood">엔트로피의 조율</span> 또는 카테고리 지향 분광경 (<span class="kw-offensive">공격</span>/<span class="kw-defensive">방어</span>/<span class="kw-utility">실용</span>/<span class="kw-abundance">풍족</span>)</span></div>
   <div class="step-arrow">▼</div>
-  <div class="step"><span class="step-num">3.</span> <span><strong class="kw-gold">같은 카테고리 재롤(Focused)</strong> — 카테고리는 맞지만 종류가 어긋난 어픽스 미세 조정.<br/><span class="kw-bone">→ 사용 자원:</span> <span class="kw-rare">숙련자 [788]</span> 또는 <span class="kw-rare">다채로운 [1000]</span></span></div>
+  <div class="step"><span class="step-num">3.</span> <span><strong class="kw-gold">같은 카테고리 재롤(Focused)</strong> — 카테고리는 맞지만 종류가 어긋난 어픽스 미세 조정.<br/><span class="kw-bone">→ 사용 자원:</span> <span class="kw-rare">숙련자의 조율</span> 또는 <span class="kw-rare">다채로운 조율</span></span></div>
   <div class="step-arrow">▼</div>
   <div class="step"><span class="step-num">4.</span> <span><strong class="kw-gold">재제련(Transfigure)</strong> — 최종 어픽스를 카테고리 잠금 + 강화.<br/><span class="kw-danger">⚠ 무질서의 프리즘</span>으로 마무리 — <span class="kw-danger">되돌릴 수 없음</span></span></div>
   <div class="step-arrow">▼</div>
@@ -205,8 +205,8 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 :::tip[효율적 자원 사용]
 - <span class="kw-gold">**어픽스 추가는 보조 수단**</span> — 어떤 어픽스가 붙을지 모르므로 정 안 풀릴 때 마지막에 시도합니다.
-- <span class="kw-bone">**목걸이는 클레의 분광경 [<span class="kw-price">369</span>]**</span> — 목걸이만 재제련 후에도 추가 수정 가능. 다른 부위와 자원 우선순위를 분리하세요.
-- <span class="kw-gold">**1000 가격대 카테고리 분광경 우선**</span> — 빌드 카테고리가 확정됐다면 <span class="kw-rare">다채로운(범용)</span>보다 <span class="kw-offensive">공격</span>/<span class="kw-defensive">방어</span>/<span class="kw-utility">실용</span>/<span class="kw-abundance">풍족</span> 중 맞는 카테고리로 직행하는 게 자원 효율이 가장 좋습니다.
+- <span class="kw-bone">**목걸이는 클레의 분광경**</span> — 목걸이만 재제련 후에도 추가 수정 가능. 다른 부위와 자원 우선순위를 분리하세요.
+- <span class="kw-gold">**카테고리 지향 분광경 우선**</span> — 빌드 카테고리가 확정됐다면 <span class="kw-rare">다채로운(범용)</span>보다 <span class="kw-offensive">공격</span>/<span class="kw-defensive">방어</span>/<span class="kw-utility">실용</span>/<span class="kw-abundance">풍족</span> 중 맞는 카테고리로 직행하는 게 자원 효율이 가장 좋습니다.
 :::
 
 :::danger[무질서의 프리즘 — 사용 직전 체크리스트]
@@ -230,7 +230,7 @@ A. 아이템 등급별 어픽스 슬롯 상한까지만 가능합니다. 슬롯�
 **Q. 무질서의 프리즘 적용 후 실수를 깨달았습니다. 되돌릴 수 있나요?**
 A. <span class="kw-danger">**되돌릴 수 없습니다.**</span> 동일 부위의 새 아이템을 구해 처음부터 다시 작업해야 합니다.
 
-**Q. 엔트로피의 조율 [<span class="kw-price">542</span>] 의 "100% 속성 변경 불가" 는 무슨 의미인가요?**
+**Q. 엔트로피의 조율의 "100% 속성 변경 불가" 는 무슨 의미인가요?**
 A. 변성 결과를 <span class="kw-gold">카테고리 단위로 영구 고정</span>시켜 더 이상 수정할 수 없게 만든다는 뜻입니다. 빌드 어픽스가 <span class="kw-blood">완벽히 확정</span>된 직후에만 사용하세요.
 
 <SourceFooter
