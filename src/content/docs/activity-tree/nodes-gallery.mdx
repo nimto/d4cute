@@ -1,6 +1,6 @@
 ---
-title: 활동 트리 노드 캡처 모음
-description: 7개 활동 스킬 트리의 노드 100여 개를 인-게임 툴팁으로 모은 갤러리. 클릭 시 라이트박스 확대.
+title: 활동 트리 노드 캡처 모음 + 7 포인트 분배 가이드
+description: 시즌13 7개 활동 스킬 트리 — 노드 캡처 100여 장 + 메타 빌드 추천 분배 (Switchblade/Mobalytics 기준).
 sidebar:
   order: 10
 ---
@@ -10,29 +10,114 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 ## 한 줄 요약
 
-> 시즌13 활동 스킬 트리 노드 100여 개의 인-게임 툴팁 캡처. 트리별로 시간순 그룹화. 각 아이콘 클릭 시 라이트박스로 확대해서 효과 텍스트 확인 가능.
+> 시즌13 활동 스킬 트리 — 각 활동에 <span class="kw-gold">7 포인트</span> 만 투자 가능. 활동 완주마다 누적 + <span class="kw-bone">골드 환불</span> 가능. 사냥법(레벨업/아이템/신화 노림) 마다 최적 분배가 다릅니다.
 
-:::caution[트리 매핑 안내]
-캡처 시간 그룹 기반 추정 매핑입니다. 실제 트리 소속이 다를 수 있습니다. 정확한 노드-트리 매핑은 게임 클라이언트에서 직접 확인하세요. 오류 발견 시 [GitHub Issues](https://github.com/nimto/d4cute/issues) 로 제보 부탁드립니다.
+<div class="summary-box">
+### 3분 안에 핵심만 (디아4 처음 접하는 유저용)
+
+- 포인트 획득: 각 활동을 완주할 때마다 그 트리의 포인트가 자동 누적. 최대 7
+- 환불: 골드를 내면 포인트 회수 가능 — 빌드 바뀌면 재분배
+- 시즌 초 추천: <span class="kw-gold">지옥물결(헬타이드)</span> + <span class="kw-gold">나락(균열)</span> 부터 — 가장 자주 도는 활동
+- 빠른 효율 픽 (해외 메타 기준):
+  - 나락: <span class="kw-rare">Choron's Haste</span> (글리프 업그레이드 +1)
+  - 지옥물결: <span class="kw-rare">Duriel's Suffering</span> (무작위 유니크)
+  - 악몽 던전: <span class="kw-rare">사당 노드</span> (사당 1회당 정예 7마리)
+  - 지하도시: <span class="kw-mythic">Gutter Filth</span> (Portal Prankster 도깨비, 신화 드랍률 최고)
+  - 소굴 우두머리: <span class="kw-rare">Hoard Chest</span> (유니크 드랍률 ↑)
+- D 티어 회피: <span class="kw-blood">지옥불 군세</span> — 시즌 도전 외에는 분배 비추
+
+</div>
+
+:::caution[중요 시스템]
+- 각 활동 트리에는 <span class="kw-gold">7 포인트</span> 만 투자 가능 (활동 완주 누적)
+- 환불은 <span class="kw-bone">골드 비용 지불</span> 후 재분배 가능 — 빌드/사냥 목적 바뀌면 재분배
+- 사냥법(레벨링/아이템/메타 빌드) 마다 최적 분배가 다릅니다
 :::
 
+## 활동 티어 + 추천 분배 요약
+
+| 등급 | 활동 | 핵심 노드 (해외 메타) | 추천 분배 (7포) | 사냥 목적 |
+|------|------|------------------|---------------|----------|
+| <span class="kw-gold">S</span> | 지옥물결 (헬타이드) | Duriel's Suffering · Bounty Hunter | 중앙 4 + 우측 3 | <span class="kw-rare">유니크 드랍 + 깜부기 잊혀진 영혼</span> |
+| <span class="kw-gold">S</span> | 쿠라스트 지하도시 | Gutter Filth (Portal Prankster) | 좌측 또는 우측 (빌드별) | <span class="kw-mythic">신화 드랍 (Portal Prankster 도깨비)</span> · 매혹석 타겟 파밍 |
+| <span class="kw-rare">A</span> | 소굴 우두머리 | Escalating Nemesis · Hoard Chest | 중앙 + 좌측 | <span class="kw-rare">유니크 드랍률 ↑ · 보스 체인</span> |
+| <span class="kw-rare">A</span> | 악몽 던전 | Treasure Goblin · 사당(Shrine) 정예 7마리 | 우측 4 + 좌측 3 | <span class="kw-gold">글리프 XP · 정예 누적 처치</span> |
+| <span class="kw-bone">B</span> | 나락 (균열) | Choron's Haste · Heart of Stone | 좌측 우선 | <span class="kw-rare">글리프 업그레이드 +1 · 클리어 단축</span> |
+| <span class="kw-blood">D</span> | 지옥불 군세 | — | 분배 비추 | <span class="kw-blood">시즌 도전 외 비효율</span> |
+| - | <span class="kw-bone">속삭임의 나무</span> (병행) | Wisdom of Whispers · Fortune of Fame | 모두 | <span class="kw-gold">보관함 XP +50% · 보상 품질 ↑</span> |
+
+> War Plans 안에서 활동 진행 시 <span class="kw-gold">활동 경험치 25배</span> — 단독 도는 것보다 항상 War Plans 내에서 묶어서 돌립니다. 출처: [Switchblade Gaming](https://www.switchbladegaming.com/diablo-4/war-plans-guide/).
+
+## 빌드 목적별 추천 분배 (디아4 초보 친화)
+
+<div class="decision-flow">
+  <div class="step"><span class="step-num">1.</span> <span><strong class="kw-gold">레벨링·잎차기 단계</strong> (1-70) — <span class="kw-gold">지옥물결 우측</span>(깜부기/잊혀진 영혼) + <span class="kw-bone">속삭임 우측</span>(XP +50%) + <span class="kw-bone">악몽 우측</span>(보너스 이벤트)</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">2.</span> <span><strong class="kw-gold">아이템 셋업 단계</strong> (토먼트 1-4) — <span class="kw-gold">지옥물결 중앙</span>(유니크) + <span class="kw-rare">소굴 우두머리 중앙</span>(유니크 + 보스 체인) + <span class="kw-gold">지하도시 좌측</span>(매혹석)</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">3.</span> <span><strong class="kw-mythic">신화 노림 단계</strong> (토먼트 5+ 단계) — <span class="kw-mythic">지하도시 Gutter Filth</span> + <span class="kw-rare">소굴 우두머리 좌측</span>(Escalating Nemesis) + <span class="kw-gold">속삭임 보관함 강화</span></span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">4.</span> <span><strong class="kw-gold">엔드게임 빌드 완성</strong> — <span class="kw-rare">나락 Choron's Haste</span>(글리프 업그레이드) + <span class="kw-rare">악몽 사당 정예 7마리</span>(피해 누적)</span></div>
+</div>
+
+:::tip[환불 활용]
+시즌 진행 단계가 바뀌면 골드 지불하고 환불해서 새 빌드에 맞춰 재분배. 환불 비용은 사령부 UI 에서 확인. 시즌 초 분배는 과감하게 환불 가정하고 진행 — 어차피 메타가 패치로 바뀝니다.
+:::
+
+## 트리별 노드 갤러리 + 추천 분배
+
+각 노드 아이콘을 클릭하면 인-게임 툴팁을 확대해서 확인할 수 있습니다 (휠 줌, 드래그 패닝, ESC 닫기).
+
 export const groups = [
-  { tree: '속삭임의 나무', anchor: 'whispers', times: ['140746','140759','140823','140836','140843','140850','140859','140906','140914','140923','140954','141006','141012','141017'] },
-  { tree: '악몽 던전 (추정)', anchor: 'nightmare', times: ['141046','141052','141058','141104','141111','141123','141131','141136','141143','141150','141155','141201','141207','141220','141228','141237','141243','141249','141259','141322','141333','141341'] },
-  { tree: '지옥물결 / 헬타이드 (추정)', anchor: 'hellwave', times: ['141421','141426','141431','141438','141444','141453','141500','141506','141519','141525','141531','141537','141544'] },
-  { tree: '쿠라스트 지하도시 (추정)', anchor: 'undercity', times: ['141550','141556','141602','141608','141618','141625'] },
-  { tree: '소굴 우두머리 (추정)', anchor: 'lair-boss', times: ['141655','141700','141707','141713','141720','141727','141737','141746','141752','141758','141803','141808','141815','141821','141826','141834','141840'] },
-  { tree: '지옥불 군세 (추정)', anchor: 'infernal-hordes', times: ['141920','141926','141931','141938','141943','141949','141955','142002','142007','142013','142019','142024','142032','142037','142042'] },
-  { tree: '나락 / 균열 (추정)', anchor: 'pit', times: ['142115','142121','142129','142135','142141','142148','142154','142201','142207','142213','142219','142225','142232'] },
+  {
+    tree: '속삭임의 나무', anchor: 'whispers', count: 14,
+    times: ['140746','140759','140823','140836','140843','140850','140859','140906','140914','140923','140954','141006','141012','141017'],
+    summary: '병행 활동 — War Plans 와 동시 진행. 포인트는 7개 트리에 포함 안 됨 (별도 시스템). 보관함 보상 강화 중심.',
+    bestPick: 'Wisdom of Whispers (보관함 XP +50%) → Fortune of Fame (보상 품질 강화)',
+  },
+  {
+    tree: '악몽 던전', anchor: 'nightmare', count: 13,
+    times: ['141046','141052','141058','141104','141111','141123','141131','141136','141143','141150','141155','141201','141207'],
+    summary: 'A 티어 활동. 글리프 XP + 신화 풀. 빠른 완주 + 높은 잠재 보상.',
+    bestPick: '우측 4포 (Treasure Goblin · 보너스 이벤트) + 좌측 3포 (사당 노드 — 사당 1회당 정예 7마리)',
+  },
+  {
+    tree: '지옥물결 (헬타이드)', anchor: 'hellwave', count: 17,
+    times: ['141220','141228','141237','141243','141249','141259','141322','141333','141341','141421','141426','141431','141438','141444','141453','141500','141506'],
+    summary: 'S 티어 — 가장 효율적인 자원원 (경험치 · 잊혀진 영혼 · 둥지 열쇠). 모든 빌드의 출발점.',
+    bestPick: '중앙 4포 (Duriels Suffering — 무작위 유니크) + 우측 3포 (Bounty Hunter — 깜부기 추가 보상)',
+  },
+  {
+    tree: '쿠라스트 지하도시', anchor: 'undercity', count: 11,
+    times: ['141519','141525','141531','141537','141544','141550','141556','141602','141608','141618','141625'],
+    summary: 'S 티어 — 신화 파밍의 핵심. 공물 인장 시스템 + Portal Prankster 도깨비. ⚠ 시련 노드 + 공물 상자 함정 주의 (별도 [지하도시 페이지](/activity-tree/undercity/) 필독).',
+    bestPick: 'Gutter Filth 우선 (Portal Prankster 도깨비 — 신화 드랍률 최고). 빌드 약하면 우측(경험치/보상 강화), 강하면 좌측(매혹석 빌드업).',
+  },
+  {
+    tree: '소굴 우두머리', anchor: 'lair-boss', count: 17,
+    times: ['141655','141700','141707','141713','141720','141727','141737','141746','141752','141758','141803','141808','141815','141821','141826','141834','141840'],
+    summary: 'A 티어 — 가장 빠른 활동 (수 초). 신화 풀 + 보스 트로피.',
+    bestPick: 'Escalating Nemesis (보스 체인) + Hoard Chest (유니크 드랍률 ↑)',
+  },
+  {
+    tree: '지옥불 군세', anchor: 'infernal-hordes', count: 15,
+    times: ['141920','141926','141931','141938','141943','141949','141955','142002','142007','142013','142019','142024','142032','142037','142042'],
+    summary: 'D 티어 — 시즌13 너프 후 보상 빈약. 시즌 도전이 강제하지 않으면 분배 비추.',
+    bestPick: '시즌 도전 위해 최소만. Burning Aether 의존 메타 빌드 등장 시 재평가.',
+  },
+  {
+    tree: '나락', anchor: 'pit', count: 13,
+    times: ['142115','142121','142129','142135','142141','142148','142154','142201','142207','142213','142219','142225','142232'],
+    summary: 'B 티어 — 너프 후 글리프 XP 위주. 엔드게임 글리프 만렙 전까지만 분배.',
+    bestPick: 'Chorons Haste (글리프 업그레이드 +1) → Heart of Stone (진행 오브 · 클리어 단축)',
+  },
 ];
-
-## 트리별 노드 갤러리
-
-총 {groups.reduce((a, g) => a + g.times.length, 0)}개 노드 캡처. 사용자가 시간순으로 한 트리씩 캡처했다고 가정한 추정 그룹.
 
 {groups.map((g) => (
   <section id={g.anchor} class="tree-nodes-section">
-    <h3>{g.tree} <span class="kw-bone" style="font-weight:400; font-size:0.85em;">({g.times.length}개 노드)</span></h3>
+    <h3>{g.tree} <span class="kw-bone" style="font-weight:400; font-size:0.85em;">({g.count}개 노드)</span></h3>
+    <p>{g.summary}</p>
+    <p><strong class="kw-gold">추천 분배 (7포):</strong> {g.bestPick}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.5rem; margin: 1rem 0;">
       {g.times.map((t) => (
         <ImageModal
@@ -47,23 +132,34 @@ export const groups = [
   </section>
 ))}
 
-## 활용법
+## 활용법 + 초보 가이드
 
-1. **빠른 훑기** — 위 갤러리에서 트리별로 노드 아이콘 스캔
-2. **노드 효과 확인** — 아이콘 클릭 → 라이트박스에서 인-게임 툴팁 원본 확대 (휠 줌 + 드래그 패닝 지원)
-3. **트리 메인 화면 보기** — [활동 트리 개요](/activity-tree/) 의 7 트리 갤러리에서 전체 노드 그래프 확인
-4. **함정 회피** — [지하도시 트리](/activity-tree/undercity/) 의 ⚠ 시련/공물 상자 경고 필독
+### 디아4 처음 접하는 유저
+
+1. <span class="kw-gold">캐릭터 60렙 + 토먼트 1 진입</span> 까지는 본 사이트의 [빠른 시작](/quickstart/) 가이드 우선
+2. <span class="kw-gold">War Plans 시스템 잠금해제 (60렙+)</span> 후 본 페이지로 돌아옴
+3. <span class="kw-rare">위 "빌드 목적별 추천 분배" decision-flow 따라</span> 단계적 분배
+4. <span class="kw-bone">환불은 자유롭게</span> — 진행 단계마다 재분배 가정. 시즌 메타 패치 변동 항상 있음
+
+### 분배 결정 체크리스트
+
+- ☐ 내 캐릭터 레벨은? (1-70 = 레벨링, 70 = 토먼트 진행)
+- ☐ 현재 토먼트 단계는? (1-3 = 아이템 셋업, 4-6 = 신화 노림, 7+ = 엔드 글리프)
+- ☐ 메타 빌드 따라가는 중인가? (Maxroll/Mobalytics 빌드 가이드의 활동 추천 우선)
+- ☐ 환불 골드 여유 있는가? (없으면 보수적 분배 우선)
 
 ## 갱신 계획
 
-- 사용자가 정확한 트리 매핑 제공 시 그룹 갱신
-- 노드별 한국명 + 효과 요약 텍스트 추가 (트리별 별도 페이지 또는 본 갤러리 인라인)
-- 빌드 가이드 추천 노드 표시 (Maxroll/Mobalytics 메타 빌드 기준)
+- 시즌13 패치 진행에 따라 메타 빌드 + 추천 노드 갱신
+- 각 트리 별도 페이지에 노드별 한국명 + 효과 상세 추가
+- 클래스별 추천 분배 (전사·드루이드·강령·성기사·도적·원소·정수·흑마법) 매트릭스
 
 <SourceFooter
   sources={[
-    { label: 'Mobalytics — War Plans Guide', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
+    { label: 'Switchblade Gaming — War Plans Guide 2026 (7 활동 트리 + 노드 추천)', url: 'https://www.switchbladegaming.com/diablo-4/war-plans-guide/' },
+    { label: 'Mobalytics — War Plans Guide (티어 + 트리 경로)', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
     { label: 'AOEAH — Best War Plans Skill Tree Builds', url: 'https://www.aoeah.com/news/4501--diablo-4-best-war-plans-skill-tree-builds--upgrades-for-each-activity' },
+    { label: 'PlayerAuctions — Lord of Hatred War Plans', url: 'https://www.playerauctions.com/diablo-4-guide/tips-guides/lord-of-hatred-war-plans-and-activities-tree/' },
   ]}
   lastUpdated="2026-05-17"
 />
