@@ -3,6 +3,7 @@ title: 활동 트리 노드 캡처 모음 + 7 포인트 분배 가이드
 description: 시즌13 7개 활동 스킬 트리 — 노드 캡처 100여 장 + 메타 빌드 추천 분배 (Switchblade/Mobalytics 기준).
 sidebar:
   order: 10
+  label: 노드 캡처 모음
 ---
 
 import SourceFooter from '../../../components/SourceFooter.astro';
@@ -68,10 +69,10 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 각 노드 아이콘을 클릭하면 인-게임 툴팁을 확대해서 확인할 수 있습니다 (휠 줌, 드래그 패닝, ESC 닫기).
 
-:::caution[노드 한국명 등록 현황]
-- <span class="kw-gold">**속삭임의 나무 14개**</span> — 한국명 모두 등록 (검색 가능)
-- <span class="kw-bone">**나머지 6 트리**</span> — 한국명 미등록 (시간 표기). 사용자 추가 트리별 노드 캡처 제공 시 즉시 매핑
-- 매핑 완료 트리는 사이트 검색 (Pagefind) 에서 노드 이름으로 검색 가능
+:::tip[노드 한국명 100개 모두 등록 완료]
+- 7 트리 × 100 노드 한국명 매핑 완료
+- Pagefind 검색 — 사이트 검색창에서 "타락한 뿌리", "Gutter Filth", "코론의 가속" 등 노드 이름으로 검색 가능
+- alt + caption 모두 한국명 임베드
 :::
 
 export const groups = [
@@ -101,11 +102,19 @@ export const groups = [
     summary: 'A 티어 활동. 글리프 XP + 신화 풀. 빠른 완주 + 높은 잠재 보상.',
     bestPick: '우측 4포 (Treasure Goblin · 보너스 이벤트) + 좌측 3포 (사당 노드 — 사당 1회당 정예 7마리)',
     nodes: [
-      { time: '141046', name: '' }, { time: '141052', name: '' }, { time: '141058', name: '' },
-      { time: '141104', name: '' }, { time: '141111', name: '' }, { time: '141123', name: '' },
-      { time: '141131', name: '' }, { time: '141136', name: '' }, { time: '141143', name: '' },
-      { time: '141150', name: '' }, { time: '141155', name: '' }, { time: '141201', name: '' },
-      { time: '141207', name: '' },
+      { time: '141046', name: '생시의 전리품' },
+      { time: '141052', name: '연전' },
+      { time: '141058', name: '숙적' },
+      { time: '141104', name: '겁 없는 소신' },
+      { time: '141111', name: '신념의 보상' },
+      { time: '141123', name: '되살아난 공포' },
+      { time: '141131', name: '반복되는 악몽' },
+      { time: '141136', name: '갈라지는 길' },
+      { time: '141143', name: '고블린 횡재' },
+      { time: '141150', name: '호라드림 사냥꾼' },
+      { time: '141155', name: '암호 지도' },
+      { time: '141201', name: '탐욕의 제단' },
+      { time: '141207', name: '탐욕은 좋은 것' },
     ],
   },
   {
@@ -113,12 +122,23 @@ export const groups = [
     summary: 'S 티어 — 가장 효율적인 자원원 (경험치 · 잊혀진 영혼 · 둥지 열쇠). 모든 빌드의 출발점.',
     bestPick: '중앙 4포 (Duriels Suffering — 무작위 유니크) + 우측 3포 (Bounty Hunter — 깜부기 추가 보상)',
     nodes: [
-      { time: '141220', name: '' }, { time: '141228', name: '' }, { time: '141237', name: '' },
-      { time: '141243', name: '' }, { time: '141249', name: '' }, { time: '141259', name: '' },
-      { time: '141322', name: '' }, { time: '141333', name: '' }, { time: '141341', name: '' },
-      { time: '141421', name: '' }, { time: '141426', name: '' }, { time: '141431', name: '' },
-      { time: '141438', name: '' }, { time: '141444', name: '' }, { time: '141453', name: '' },
-      { time: '141500', name: '' }, { time: '141506', name: '' },
+      { time: '141220', name: '더럽혀진 신단' },
+      { time: '141228', name: '증오의 대상' },
+      { time: '141237', name: '고기 형제' },
+      { time: '141243', name: '지옥불 의례' },
+      { time: '141249', name: '밤의 공포' },
+      { time: '141259', name: '지옥어귀' },
+      { time: '141322', name: '차원 올림' },
+      { time: '141333', name: '꿈틀거림과 부패' },
+      { time: '141341', name: '진홍빛 냄새' },
+      { time: '141421', name: '혼돈의 메아리' },
+      { time: '141426', name: '터지는 벌레들' },
+      { time: '141431', name: '피로 맺힌 결속' },
+      { time: '141438', name: '뒤틀린 유해 동물' },
+      { time: '141444', name: '타락한 자의 추락' },
+      { time: '141453', name: '지옥의 포상' },
+      { time: '141500', name: '재에서 재로' },
+      { time: '141506', name: '죽지 않는 불씨' },
     ],
   },
   {
@@ -126,10 +146,17 @@ export const groups = [
     summary: 'S 티어 — 신화 파밍의 핵심. 공물 인장 시스템 + Portal Prankster 도깨비. ⚠ 시련 노드 + 공물 상자 함정 주의 (별도 [지하도시 페이지](/activity-tree/undercity/) 필독).',
     bestPick: 'Gutter Filth 우선 (Portal Prankster 도깨비 — 신화 드랍률 최고). 빌드 약하면 우측(경험치/보상 강화), 강하면 좌측(매혹석 빌드업).',
     nodes: [
-      { time: '141519', name: '' }, { time: '141525', name: '' }, { time: '141531', name: '' },
-      { time: '141537', name: '' }, { time: '141544', name: '' }, { time: '141550', name: '' },
-      { time: '141556', name: '' }, { time: '141602', name: '' }, { time: '141608', name: '' },
-      { time: '141618', name: '' }, { time: '141625', name: '' },
+      { time: '141519', name: '끝없는 무리' },
+      { time: '141525', name: '불온한 영혼들' },
+      { time: '141531', name: '오물 적출' },
+      { time: '141537', name: '시련과 공물' },
+      { time: '141544', name: '마지막 호흡' },
+      { time: '141550', name: '구슬의 날' },
+      { time: '141556', name: '전쟁의 우상' },
+      { time: '141602', name: '비취의 깨달음' },
+      { time: '141608', name: '미세 조율' },
+      { time: '141618', name: '길잡이' },
+      { time: '141625', name: '주도권' },
     ],
   },
   {
@@ -137,12 +164,23 @@ export const groups = [
     summary: 'A 티어 — 가장 빠른 활동 (수 초). 신화 풀 + 보스 트로피.',
     bestPick: 'Escalating Nemesis (보스 체인) + Hoard Chest (유니크 드랍률 ↑)',
     nodes: [
-      { time: '141655', name: '' }, { time: '141700', name: '' }, { time: '141707', name: '' },
-      { time: '141713', name: '' }, { time: '141720', name: '' }, { time: '141727', name: '' },
-      { time: '141737', name: '' }, { time: '141746', name: '' }, { time: '141752', name: '' },
-      { time: '141758', name: '' }, { time: '141803', name: '' }, { time: '141808', name: '' },
-      { time: '141815', name: '' }, { time: '141821', name: '' }, { time: '141826', name: '' },
-      { time: '141834', name: '' }, { time: '141840', name: '' },
+      { time: '141655', name: '룬의 소굴' },
+      { time: '141700', name: '풍요의 소굴' },
+      { time: '141707', name: '그리구아르의 술수' },
+      { time: '141713', name: '두리엘의 침략' },
+      { time: '141720', name: '황금빛 비축물' },
+      { time: '141727', name: '지르의 자손' },
+      { time: '141737', name: '고뇌의 불씨' },
+      { time: '141746', name: '둘씩 둘씩' },
+      { time: '141752', name: '상급 숙적' },
+      { time: '141758', name: '궁극의 숙적' },
+      { time: '141803', name: '추위로부터' },
+      { time: '141808', name: '아스타로트의 개' },
+      { time: '141815', name: '바르샨의 복수' },
+      { time: '141821', name: '바르툭의 피' },
+      { time: '141826', name: '이국의 무기고' },
+      { time: '141834', name: '숙적의 물결' },
+      { time: '141840', name: '불지옥의 기만' },
     ],
   },
   {
@@ -150,11 +188,21 @@ export const groups = [
     summary: 'D 티어 — 시즌13 너프 후 보상 빈약. 시즌 도전이 강제하지 않으면 분배 비추.',
     bestPick: '시즌 도전 위해 최소만. Burning Aether 의존 메타 빌드 등장 시 재평가.',
     nodes: [
-      { time: '141920', name: '' }, { time: '141926', name: '' }, { time: '141931', name: '' },
-      { time: '141938', name: '' }, { time: '141943', name: '' }, { time: '141949', name: '' },
-      { time: '141955', name: '' }, { time: '142002', name: '' }, { time: '142007', name: '' },
-      { time: '142013', name: '' }, { time: '142019', name: '' }, { time: '142024', name: '' },
-      { time: '142032', name: '' }, { time: '142037', name: '' }, { time: '142042', name: '' },
+      { time: '141920', name: '고귀한 의회' },
+      { time: '141926', name: '의회의 돈궤' },
+      { time: '141931', name: '지옥불 비축고' },
+      { time: '141938', name: '불길로 버린 것' },
+      { time: '141943', name: '흠 없는 발견' },
+      { time: '141949', name: '기법과 광기' },
+      { time: '141955', name: '지옥 지배' },
+      { time: '142002', name: '총체적인 혼돈' },
+      { time: '142007', name: '임박한 파멸' },
+      { time: '142013', name: '에테르의 파동' },
+      { time: '142019', name: '난리 법석' },
+      { time: '142024', name: '검은 맹약' },
+      { time: '142032', name: '절멸의 이교' },
+      { time: '142037', name: '타타메트의 비늘' },
+      { time: '142042', name: '악마의 거래' },
     ],
   },
   {
@@ -162,11 +210,19 @@ export const groups = [
     summary: 'B 티어 — 너프 후 글리프 XP 위주. 엔드게임 글리프 만렙 전까지만 분배.',
     bestPick: 'Chorons Haste (글리프 업그레이드 +1) → Heart of Stone (진행 오브 · 클리어 단축)',
     nodes: [
-      { time: '142115', name: '' }, { time: '142121', name: '' }, { time: '142129', name: '' },
-      { time: '142135', name: '' }, { time: '142141', name: '' }, { time: '142148', name: '' },
-      { time: '142154', name: '' }, { time: '142201', name: '' }, { time: '142207', name: '' },
-      { time: '142213', name: '' }, { time: '142219', name: '' }, { time: '142225', name: '' },
-      { time: '142232', name: '' },
+      { time: '142115', name: '코론의 가속' },
+      { time: '142121', name: '코론의 지름길' },
+      { time: '142129', name: '돌의 심장' },
+      { time: '142135', name: '저주받은 운명의 도둑들' },
+      { time: '142141', name: '코론의 축복' },
+      { time: '142148', name: '나락 도살자' },
+      { time: '142154', name: '코론의 호의' },
+      { time: '142201', name: '코론의 영혼' },
+      { time: '142207', name: '코론의 육신' },
+      { time: '142213', name: '코론의 내기' },
+      { time: '142219', name: '저주받은 상인' },
+      { time: '142225', name: '저주받은 의식' },
+      { time: '142232', name: '저주받은 공물' },
     ],
   },
 ];
