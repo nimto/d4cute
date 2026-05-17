@@ -1,47 +1,145 @@
 ---
 title: 활동 스킬 트리 — 전체 개요
-description: 7개 활동에 각각 붙어 있는 스킬 트리의 기본 구조, 포인트 획득 방식, 우선순위.
+description: 7개 활동에 각각 붙어 있는 스킬 트리의 기본 구조, 포인트 획득 방식, 시즌13 메타 우선순위.
 sidebar:
   order: 1
 ---
 
 import SourceFooter from '../../../components/SourceFooter.astro';
+import ImageModal from '../../../components/ImageModal.astro';
 
 ## 한 줄 요약
 
-> 헬타이드 · 악몽 던전 · 쿠라스트 지하도시 · 균열 · 둥지 보스 · 지옥의 무리 · 호라드림 금고실 — 7개 활동에 각각 **활동 스킬 트리(Activity Skill Tree)** 가 생겨, 활동의 보상과 도전 난이도를 직접 조절합니다.
+> 헬타이드 · 악몽 던전 · 쿠라스트 지하도시 · 균열(나락) · 둥지 보스 · 지옥불 군세 · 호라드림 금고실 — 각 활동에 <span class="kw-gold">**활동 스킬 트리(Activity Skill Tree)**</span> 가 생겨, 활동의 보상과 도전 난이도를 직접 조절합니다. **속삭임의 나무** 는 별도 시스템으로 다른 활동과 동시 진행 가능.
+
+<div class="summary-box">
+### 3분 안에 핵심만
+
+- **S 티어 활동** (최우선): <span class="kw-gold">헬타이드</span>, <span class="kw-gold">쿠라스트 지하도시</span>
+- **A 티어** (고우선): <span class="kw-rare">둥지 보스</span>, <span class="kw-rare">악몽 던전</span>
+- **B 티어**: <span class="kw-bone">균열(나락)</span> — 글리프 XP 위주
+- **D 티어**: <span class="kw-blood">지옥불 군세</span> — 보상 빈약 (시즌13 너프)
+- <span class="kw-danger">**위험 함정**</span>: 지하도시 트리의 <span class="kw-blood">'시련' 노드</span> + <span class="kw-blood">공물 상자 함정</span> — [지하도시 페이지](/activity-tree/undercity/) 의 경고 섹션 필독
+
+</div>
+
+## 트리 메인 화면 — 7개 활동
+
+각 트리 이미지를 클릭하면 인-게임 UI 원본을 확대해서 확인할 수 있습니다. 노드 효과 상세는 각 활동의 하위 페이지를 참고하세요.
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.85rem; margin: 1.5rem 0;">
+  <ImageModal
+    src="/images/activity-tree/icons/trees/whispers.webp"
+    lightboxSrc="/images/activity-tree/trees/whispers.webp"
+    alt="속삭임의 나무 활동 스킬 트리"
+    caption="속삭임의 나무"
+    size={140}
+  />
+  <ImageModal
+    src="/images/activity-tree/icons/trees/nightmare.webp"
+    lightboxSrc="/images/activity-tree/trees/nightmare.webp"
+    alt="악몽 던전 활동 스킬 트리"
+    caption="악몽 던전"
+    size={140}
+  />
+  <ImageModal
+    src="/images/activity-tree/icons/trees/hellwave.webp"
+    lightboxSrc="/images/activity-tree/trees/hellwave.webp"
+    alt="지옥물결 활동 스킬 트리"
+    caption="지옥물결 / 헬타이드"
+    size={140}
+  />
+  <ImageModal
+    src="/images/activity-tree/icons/trees/undercity.webp"
+    lightboxSrc="/images/activity-tree/trees/undercity.webp"
+    alt="쿠라스트 지하도시 활동 스킬 트리 — 함정 주의"
+    caption="지하도시"
+    size={140}
+  />
+  <ImageModal
+    src="/images/activity-tree/icons/trees/lair-boss.webp"
+    lightboxSrc="/images/activity-tree/trees/lair-boss.webp"
+    alt="소굴 우두머리 활동 스킬 트리"
+    caption="소굴 우두머리"
+    size={140}
+  />
+  <ImageModal
+    src="/images/activity-tree/icons/trees/infernal-hordes.webp"
+    lightboxSrc="/images/activity-tree/trees/infernal-hordes.webp"
+    alt="지옥불 군세 활동 스킬 트리"
+    caption="지옥불 군세"
+    size={140}
+  />
+  <ImageModal
+    src="/images/activity-tree/icons/trees/pit.webp"
+    lightboxSrc="/images/activity-tree/trees/pit.webp"
+    alt="나락 활동 스킬 트리"
+    caption="나락"
+    size={140}
+  />
+</div>
 
 ## 잠금해제
 
 각 활동을 1회 이상 완주하면 해당 활동의 트리가 사령부 UI에 등록됩니다. 포인트는 활동 완주 시 자동 누적됩니다.
 
-## 트리 7개 한눈에
+## 시즌13 활동 티어 (Mobalytics 메타 기준)
 
-| # | 활동 | 한글 | 트리 핵심 |
-|---|------|------|----------|
-| 1 | Helltide | 헬타이드 | 좌(난도 상승)/중(보스 트로피)/우(편의) |
-| 2 | Nightmare Dungeon | 악몽 던전 | 글리프 XP/시질 보상/도전 변형 |
-| 3 | Kurast Undercity | 쿠라스트 지하도시 | 좌(종료 보상)/중(공물 강화)/우(경험치) |
-| 4 | The Pit | 균열 | 마스터워킹 자원/층 보상/도전 |
-| 5 | Lair Boss | 둥지 보스 | 유니크 풀 강화/도전/추가 트로피 |
-| 6 | Infernal Hordes | 지옥의 무리 | Burning Aether/Boss 강화/회복 |
-| 7 | Horadric Strongroom | 호라드림 금고실 | 가루 보상/시간 압박/희귀 산출 |
+| 등급 | 활동 | 핵심 보상 | 권장 이유 |
+|------|------|----------|----------|
+| <span class="kw-gold">**S**</span> | <span class="kw-gold">헬타이드</span> | 경험치 · 둥지 열쇠 · 잊혀진 영혼 | 시즌 전체 가장 효율적 자원원 |
+| <span class="kw-gold">**S**</span> | <span class="kw-gold">쿠라스트 지하도시</span> | 공물 시스템으로 타겟 파밍 | 매혹석·인장 노림 최강 |
+| <span class="kw-rare">**A**</span> | <span class="kw-rare">소굴 우두머리</span> | 신화·유니크 풀 | 가장 빠른 활동 (수 초 소요) |
+| <span class="kw-rare">**A**</span> | <span class="kw-rare">악몽 던전</span> | 글리프 XP · 신화 풀 | 빠른 완주 + 높은 잠재 보상 |
+| <span class="kw-bone">**B**</span> | <span class="kw-bone">나락 (균열)</span> | 글리프 XP | 너프 후 글리프 위주로 축소 |
+| <span class="kw-blood">**D**</span> | <span class="kw-blood">지옥불 군세</span> | Burning Aether · 보스 트로피 | 시간 대비 보상 빈약. 메타 빌드 외에는 비추 |
+| - | <span class="kw-bone">속삭임의 나무</span> | 보관함 보상 | 다른 활동과 **병행 가능** (전쟁 계획 노드 X) |
 
-각 트리의 상세는 사이드바의 하위 페이지를 참고하세요.
+> 출처: [Mobalytics — War Plans Guide](https://mobalytics.gg/diablo-4/guides/warplans-guide). 메타는 패치마다 변동합니다.
+
+## 트리 핵심 구조 (공통 패턴)
+
+| 위치 | 일반적 역할 |
+|------|----------|
+| <span class="kw-offensive">**좌측 가지**</span> | 난도 상승·도전 (Challenge) — 클리어 시 보상 배수 증가 |
+| <span class="kw-gold">**중앙 가지**</span> | 핵심 보상 강화 (보스 트로피·반짝이는 벼락불·신화 풀) |
+| <span class="kw-defensive">**우측 가지**</span> | 편의·경험치 (이동속도·드랍률·XP 보너스) |
+
+> 빌드가 강하면 좌측(난도) → 클리어 가능한 만큼만. 빌드가 약하면 우측(편의) → 안정 클리어 우선.
 
 ## 포인트 획득 방식
 
 - 활동 완주 시 자동 누적
 - 동일 활동을 여러 번 완주할수록 포인트가 점진적으로 누적되며, 트리마다 상한이 있습니다.
-- 일부 트리는 **고난도 단계**가 올라가야 후반 노드가 잠금해제됩니다.
+- 일부 트리는 <span class="kw-gold">고난도 단계</span> 가 올라가야 후반 노드가 잠금해제됩니다.
 
 ## 일반적 분배 전략
 
-1. **시즌 초** — 가장 자주 도는 활동(보통 헬타이드)부터 좌측 경로 시작
-2. **시즌 중** — 빌드의 핵심 자원 활동(악몽 던전, 균열) 분배
-3. **시즌 말** — 신화 노림수 활동(둥지 보스) 후반 노드 마무리
+<div class="decision-flow">
+  <div class="step"><span class="step-num">1.</span> <span><strong class="kw-gold">시즌 초</strong> — <span class="kw-gold">헬타이드</span> 우측(편의/경험치) → 빠른 레벨링 + 잊혀진 영혼 수급</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">2.</span> <span><strong class="kw-gold">시즌 중반</strong> — <span class="kw-rare">악몽 던전</span> 글리프 + <span class="kw-bone">나락</span> 글리프 XP 노드 보조</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">3.</span> <span><strong class="kw-gold">신화 노림</strong> — <span class="kw-rare">소굴 우두머리</span> 신화 풀 노드 + <span class="kw-mythic">반짝이는 벼락불</span> 수급</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">4.</span> <span><strong class="kw-gold">타겟 파밍</strong> — <span class="kw-gold">쿠라스트 지하도시</span> 공물 강화 노드로 매혹석/인장 노림</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">5.</span> <span><strong class="kw-bone">시즌 말</strong> — 신규 캐릭터/빌드 대비 잉여 포인트 좌측 도전 노드로 자원 효율 극대화</span></div>
+</div>
 
 상세는 [포인트 분배 최적화](/activity-tree/optimization/) 페이지에서 다룹니다.
+
+## 위험 함정 — 반드시 알아둘 것
+
+:::danger[지하도시 시련 / 공물 상자]
+- <span class="kw-blood">**지하도시 좌측 트리의 '시련' 노드**</span> — 클리어 시간 단축 요구. 빌드가 약하면 진행 불가 → 포인트 낭비
+- <span class="kw-danger">**공물 상자 함정**</span> — 지하도시 내 일부 노드 활성화 시 상자가 등장. **실수로 클릭하면 사용 중인 공물 인장이 그 자리에서 소모**됨. 매혹석/인장 타겟 파밍이 망함
+- 자세한 안내는 [지하도시 트리 페이지](/activity-tree/undercity/) 필독
+:::
+
+:::caution[지옥불 군세 분배 주의]
+시즌13 너프 후 보상이 시간 대비 가장 빈약 (D 티어). 메타 빌드에서 Burning Aether 가 핵심이 아닌 한 포인트 분배 비추.
+:::
 
 ## FAQ
 
@@ -51,10 +149,18 @@ A. 캐릭터별로 분리되어 있습니다. 신규 캐릭터는 새로 분배�
 **Q. 한번 찍은 포인트를 회수할 수 있나요?**
 A. 일부 트리는 재설정(reset) 비용을 지불해 회수가 가능합니다. 비용은 사령부 UI에서 확인하세요.
 
+**Q. 7개 트리 다 만점 만들 필요 있나요?**
+A. <span class="kw-blood">없습니다.</span> 빌드와 메타 활동만 우선 분배. D 티어(지옥불 군세) 는 빌드가 의존하지 않는 한 후순위.
+
+**Q. 캡처가 7개 트리인데 헬타이드는 어디 있나요?**
+A. 사용자 캡처에서는 <span class="kw-bone">'지옥물결'</span> 이라는 표기가 헬타이드 카테고리 트리일 가능성이 있습니다. 정확한 한국명 표기는 게임 클라이언트가 최우선. 추가 캡처 제공 시 갱신.
+
 <SourceFooter
   sources={[
-    { label: 'Mobalytics — War Plans Guide (activity tree paths)', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
+    { label: 'Mobalytics — War Plans Guide (activity tier list + tree paths)', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
     { label: 'Mobalytics — Everything Lord of Hatred', url: 'https://mobalytics.gg/diablo-4/guides/everything-lord-of-hatred' },
+    { label: 'AOEAH — Best War Plans Skill Tree Builds', url: 'https://www.aoeah.com/news/4501--diablo-4-best-war-plans-skill-tree-builds--upgrades-for-each-activity' },
+    { label: 'PlayerAuctions — War Plans + Activities Tree', url: 'https://www.playerauctions.com/diablo-4-guide/tips-guides/lord-of-hatred-war-plans-and-activities-tree/' },
   ]}
-  lastUpdated="2026-05-16"
+  lastUpdated="2026-05-17"
 />

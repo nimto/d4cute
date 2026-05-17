@@ -1,0 +1,9 @@
+[
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 140654.png", "out": "trees/whispers",         "icon": { "out": "icons/trees/whispers" }, "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 140701.png", "out": "trees/nightmare",        "icon": { "out": "icons/trees/nightmare" }, "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 140708.png", "out": "trees/hellwave",         "icon": { "out": "icons/trees/hellwave" }, "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 140715.png", "out": "trees/undercity",        "icon": { "out": "icons/trees/undercity" }, "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 140720.png", "out": "trees/lair-boss",        "icon": { "out": "icons/trees/lair-boss" }, "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 140726.png", "out": "trees/infernal-hordes",  "icon": { "out": "icons/trees/infernal-hordes" }, "maxSize": 800, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 140732.png", "out": "trees/pit",              "icon": { "out": "icons/trees/pit" }, "maxSize": 800, "quality": 90 }
+]

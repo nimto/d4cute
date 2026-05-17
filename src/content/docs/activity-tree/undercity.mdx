@@ -1,58 +1,120 @@
 ---
 title: 쿠라스트 지하도시 트리
-description: 쿠라스트 지하도시 활동 스킬 트리의 Left/Middle/Right 경로 비교, 공물 활용 시너지.
+description: 쿠라스트 지하도시 활동 스킬 트리의 Left/Middle/Right 경로 비교, 공물 활용 시너지, 위험 함정.
 sidebar:
   order: 4
 ---
 
 import SourceFooter from '../../../components/SourceFooter.astro';
+import ImageModal from '../../../components/ImageModal.astro';
 
 ## 한 줄 요약
 
-> **지하도시 트리**는 좌(종료 보상 강화) · 중(조상 무기 공물 활성화) · 우(경험치 + 공물 보상)으로 갈립니다. 인장 타겟 파밍의 핵심 활동입니다.
+> <span class="kw-gold">**지하도시 트리**</span>는 좌(종료 보상 강화) · 중(조상 무기 공물 활성화) · 우(경험치 + 공물 보상)으로 갈립니다. <span class="kw-gold">인장 타겟 파밍의 핵심 활동</span> 이지만 <span class="kw-danger">**가장 위험한 함정 트리**</span> 이기도 합니다.
+
+<div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+  <ImageModal
+    src="/images/activity-tree/icons/trees/undercity.webp"
+    lightboxSrc="/images/activity-tree/trees/undercity.webp"
+    alt="쿠라스트 지하도시 활동 스킬 트리 전체 구조"
+    caption="지하도시 트리 — 클릭해서 확대"
+    size={200}
+  />
+</div>
+
+:::danger[⚠ 지하도시 트리 — 가장 위험한 함정 3가지]
+
+### 1. <span class="kw-blood">시련(Trial) 노드</span> — 클리어 시간 단축 강제
+
+시련 계열 노드는 클리어를 **타임어택 모드**로 전환. 빌드 데미지가 부족하면:
+- 시간 부족 → 종료 보상 0
+- 누적 시간 초과 → 활동 자체 실패
+- **트리 포인트는 받지만 보상 받지 못함**
+
+→ <span class="kw-gold">빌드가 토먼트 1~3 안정 클리어 가능한 시점에만 분배</span>. 시즌 초 약한 빌드에 시련 노드 분배는 자해.
+
+### 2. <span class="kw-danger">공물 상자(Tribute Chest) 함정</span> — **실수 클릭 시 인장 소모**
+
+지하도시 내 일부 노드 활성화 시 던전 안에 <span class="kw-blood">**공물 상자**</span> 가 등장. 클릭 시:
+- <span class="kw-danger">**현재 사용 중인 공물 인장(Tribute Seal) 이 즉시 소모됨**</span>
+- 보상은 그 인장의 풀에서 추가 1회 추첨
+- 그러나 입장 시 정해진 보상 풀이 깨짐 → 타겟 파밍 망함
+
+→ 매혹석/인장 타겟 파밍 중이라면 <span class="kw-danger">**공물 상자 절대 클릭 금지**</span>. 일반 파밍 모드에서만 활용.
+
+### 3. <span class="kw-blood">중간 경로 잘못 분배</span> — 빌드와 안 맞으면 보상 손실
+
+중간 경로의 **조상 무기 공물(Ancestral Armament)** 은 무기/방어구 신화 풀. 매혹석/인장 노림 빌드엔 무의미.
+
+→ 노림 보상 카테고리 확인 후 분배. 매혹석 노림이면 좌측·우측만.
+
+:::
 
 ## 잠금해제
 
 쿠라스트 지하도시 1회 완주 시 등록.
 
-## 좌측 경로 (Left Path)
+## 좌측 경로 (Left Path) — 매혹석 빌드업
 
-- 종료 보상함 강화
+- <span class="kw-gold">**종료 보상함 강화**</span>
 - 도깨비(Goblin) 처치 시 추가 드롭
-- **Forgotten Souls** 추가 산출
+- <span class="kw-gold">**잊혀진 영혼(Forgotten Souls) 추가 산출**</span>
 
-> 매혹석/인장이 떨어지는 비율은 좌측에서 가장 높아, 초반 부적 빌드업에 적합합니다.
+> 매혹석/인장 떨어지는 비율 최고. 시즌 초~중반 부적 빌드업에 적합.
 
-## 중간 경로 (Middle Path)
+## 중간 경로 (Middle Path) — 조상 무기 노림
 
-- **조상 무기 공물(Ancestral Armament Tribute)** 드롭 활성화
+- <span class="kw-rare">**조상 무기 공물(Ancestral Armament Tribute)** 드롭 활성화</span>
 - 공물 종류 다변화 — 다양한 인장 셋 추첨 가능
 
-## 우측 경로 (Right Path)
+> 무기/방어구 신화 노림수. <span class="kw-danger">매혹석 빌드업과 무관</span> — 잘못 분배하면 손해.
 
-- 경험치 증가
+## 우측 경로 (Right Path) — 경험치 + 보상 강화
+
+- <span class="kw-gold">경험치 증가</span>
 - 모든 공물 보상 강화
+- 안전한 분배 — 빌드 약해도 손해 없음
 
-## 권장 선택
+## 권장 선택 — 빌드/시점별
 
-| 캐릭터 상태 | 권장 경로 |
-|------------|----------|
-| 시즌 초 매혹석 풀 비어 있음 | 좌측 |
-| 인장 셋 완성 단계 | 중간 (조상 무기 공물) |
-| 경험치/레벨업 우선 | 우측 |
+| 빌드 상태 | 캐릭터 진행 | 권장 경로 |
+|----------|------------|----------|
+| <span class="kw-bone">시즌 초</span> 매혹석 풀 비어있음 | 토먼트 1~2 안정 | <span class="kw-gold">좌측</span> (도전 노드 회피) |
+| <span class="kw-rare">중반</span> 인장 셋 완성 단계 | 토먼트 3~4 | <span class="kw-rare">우측 + 일부 중간</span> |
+| <span class="kw-gold">중후반</span> 인장 셋 완성 | 토먼트 5+ 안정 | <span class="kw-rare">중간</span> (조상 무기 공물) |
+| <span class="kw-bone">레벨링</span> | 어느 토먼트든 | <span class="kw-bone">우측</span> (경험치) |
 
 ## 공물 시너지
 
 지하도시 입장 직전에 [공물(Tribute)](/tributes/) 종류를 선택해 보상 풀을 좁힐 수 있습니다. 트리의 중간 경로와 결합하면 원하는 인장 셋을 효과적으로 노릴 수 있습니다.
+
+:::tip[공물 인장 보존 워크플로]
+1. <span class="kw-gold">**입장 전 공물 인장 선택**</span> — 노림 매혹석/인장 셋 결정
+2. <span class="kw-gold">**던전 진입 후 공물 상자 보이면 무시**</span> — 클릭 금지
+3. <span class="kw-gold">**일반 몬스터·정예만 처치**</span>
+4. <span class="kw-gold">**최종 보스 처치 → 종료 보상 풀에서만 매혹석/인장 획득**</span>
+
+공물 상자는 "추가 1회 추첨" 으로 보이지만 입장 시 인장 풀이 깨지는 부작용이 크므로, 타겟 파밍 시 절대 비추.
+:::
 
 ## FAQ
 
 **Q. 타임어택 실패 시에도 트리 포인트가 누적되나요?**
 A. 일정 단계까지 진행했다면 부분 포인트가 누적됩니다. 다만 종료 보상은 받지 못합니다.
 
+**Q. 공물 상자 클릭하면 정말 인장이 사라지나요?**
+A. <span class="kw-danger">네.</span> 클릭 시 현재 입장 인장이 그 자리에서 소모되고, 상자에서 추가 보상 1회 등장. 단 입장 시 정해진 풀 자체가 깨지므로 타겟 파밍이 망가집니다. 일반 파밍 모드에서만 활용하세요.
+
+**Q. 시련 노드 잘못 찍었는데 포인트 회수 가능한가요?**
+A. 일부 트리는 재설정 비용을 지불해 회수 가능. [활동 트리 개요](/activity-tree/) 페이지의 FAQ 참고.
+
+**Q. 좌측이랑 우측 둘 다 찍을 수 있나요?**
+A. 트리 포인트 상한 내에서 분기 일부 노드를 양쪽 찍을 수 있으나, 후반 노드는 한쪽으로 집중해야 도달 가능. 일반적으로 빌드/시즌 단계에 맞춰 한 경로 우선.
+
 <SourceFooter
   sources={[
     { label: 'Mobalytics — War Plans Guide (Undercity Tree)', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
+    { label: 'PlayerAuctions — Lord of Hatred War Plans + Activities Tree', url: 'https://www.playerauctions.com/diablo-4-guide/tips-guides/lord-of-hatred-war-plans-and-activities-tree/' },
   ]}
-  lastUpdated="2026-05-16"
+  lastUpdated="2026-05-17"
 />
