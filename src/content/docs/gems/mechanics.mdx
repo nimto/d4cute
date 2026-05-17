@@ -43,6 +43,52 @@ import SourceFooter from '../../../components/SourceFooter.astro';
 
 > 정확한 카테고리 묶음은 빌드 가이드 사이트(Maxroll, Mobalytics)의 빌드별 곱셈 라인 정리를 참고하시는 것을 권장드립니다.
 
+## 변성 신규 옵션 — 이 아이템의 보석위력 (Gem Strength)
+
+큐브 **재제련(Transfigure)** 시 신규 등장한 전설 어픽스. 무기 보석이 곱연산으로 변경되면서 이 옵션이 시즌13 엔드게임의 <span class="kw-mythic">**범용 최상위 추첨**(universal chase affix)</span> 으로 자리잡았습니다.
+
+:::tip[핵심 수치]
+이 아이템에 박힌 보석의 <span class="kw-gold">**위력을 150~200% 추가**</span>로 증폭. 본 어픽스가 박힌 무기 + 결정(다이아) 2개를 동시에 사용하면 빌드 데미지가 토먼트 12 클리어 수준까지 올라간다는 외부 보고가 다수.
+:::
+
+### 어디에 붙는가?
+
+| 슬롯 | 효과 | 우선순위 |
+|------|------|---------|
+| <span class="kw-gold">**무기**</span> | 박힌 보석의 곱연산 효과를 직접 증폭 | <span class="kw-mythic">**최우선**</span> |
+| <span class="kw-bone">방어구</span> | 박힌 보석의 가산/저항 효과 증폭 | 보조 |
+| <span class="kw-bone">목걸이</span> | 쿨리언 프리즘 사용 시에만 전설 어픽스 추가 가능 — 보석 위력은 우선순위 낮음 | 선택 |
+
+### 프리즘 선택 — **무프리즘**이 정답
+
+<div class="decision-flow">
+  <div class="step"><span class="step-num">1.</span> <span>재제련 대상: <strong class="kw-gold">전설 / 유니크 / 신화 무기</strong> 선택</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">2.</span> <span>재료: <strong>Volatile Primordial Dust × 1</strong> 만 투입</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">3.</span> <span><span class="kw-danger">⚠ 조율 프리즘 절대 비워둘 것</span> — <span class="kw-blood">엔트로피의 조율 프리즘</span> 사용 시 보석 위력 어픽스 풀에서 제외됨</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">4.</span> <span>완전 무작위 풀 → <span class="kw-mythic">"이 아이템의 보석위력"</span> 등장 확률 보존</span></div>
+</div>
+
+:::danger[엔트로피의 조율 프리즘 [542] 함정]
+<span class="kw-blood">**엔트로피 프리즘 [542]**</span> 은 "100% 속성 변경 불가" 효과로 결과를 카테고리 단위로 고정시킵니다. 강력해 보이지만 **이 어픽스가 가능한 어픽스 풀에서 보석 위력을 제외**시키는 부작용. 보석 위력 노릴 때는 절대 사용 금지.
+:::
+
+### 권장 워크플로
+
+1. <span class="kw-gold">**무기 확보**</span> — 전설/유니크/신화 무기 (선조 등급 권장)
+2. <span class="kw-gold">**Volatile Primordial Dust 수급**</span> — 호라드림 금고실, 비밀 레시피 부산물
+3. <span class="kw-gold">**무프리즘 재제련 반복**</span> — 결과 안 나오면 새 같은 부위 아이템으로 재시도
+4. <span class="kw-mythic">**보석 위력 어픽스 등장 시 즉시 보석 장착**</span>
+5. <span class="kw-gold">**완벽한 다이아 2개**</span> 무기에 박기 (곱연산 × 위력 증폭 동시 적용)
+
+### 왜 이 어픽스가 메타를 깬다?
+
+확장팩 변경 — 무기 보석 = 곱연산. 곱연산 라인 자체가 데미지 곱셈 계층 (vulnerable·CC·DoT·boss 다음 새 라인). 여기에 **보석 위력 어픽스가 그 카테고리 자체를 1.5~2배** 로 부풀림. 즉 빌드 데미지 천장이 한 단계 더 위로 이동.
+
+> 외부 빌드 분석가 일치된 평가 — **현재 시즌13 PvE 최강 빌드 모두 이 어픽스를 노림**. 자세한 빌드별 적용은 Maxroll/Mobalytics 의 시즌 메타 페이지 참고.
+
 ## FAQ
 
 **Q. 모든 보석이 무기 슬롯에서 동일한 곱연산 폭을 갖나요?**
@@ -51,9 +97,21 @@ A. 보석 색·등급에 따라 폭이 다릅니다. 일반적으로 동일 등�
 **Q. 같은 빌드에서 보석 색 2종을 섞으면 어떻게 되나요?**
 A. 곱연산 라인이 색별로 별개 카테고리로 적용될 수 있어, 종종 한 색만 쓰는 것보다 효율이 좋습니다. 빌드별 최적 조합은 별도 가이드 참고.
 
+**Q. 보석 위력 어픽스 + 무질서의 프리즘을 같이 쓰면 어떻게 되나요?**
+A. <span class="kw-blood">무질서의 프리즘은 결과를 카테고리 단위로 영구 잠금</span> — 보석 위력이 이미 박힌 상태에서 사용하면 보존되지만, 그 이전 단계에서 사용 시 풀에서 제외될 수 있습니다. 무프리즘 재제련으로 보석 위력 확보 → 그 뒤 무질서 프리즘으로 최종 잠금 순서가 안전.
+
+**Q. 목걸이에는 보석 위력이 안 붙나요?**
+A. <span class="kw-bone">목걸이는 쿨리언 조율 프리즘 [369] 사용 시</span> 전설 어픽스 추가 가능. 단 보석은 목걸이 슬롯에서 무기만큼 강력하지 않으므로 우선순위는 무기 다음. 자세한 슬롯별 차이는 [슬롯별 효과](/gems/slots/) 페이지 참고.
+
+**Q. 보석 위력 % 수치가 결과마다 다른가요?**
+A. <span class="kw-gold">150~200%</span> 범위에서 무작위 굴림. 200% 결과가 나올 때까지 재시도하거나, <span class="kw-rare">유니크 파워 재롤</span> 과 유사한 자원 굴림 방식으로 보석 위력 어픽스 자체의 수치만 굴리는 보조 레시피는 없습니다.
+
 <SourceFooter
   sources={[
     { label: 'Icy-Veins — Launch Patch Notes (Gem Rework)', url: 'https://www.icy-veins.com/d4/news/diablo-4-lord-of-hatred-launch-patch-notes/' },
+    { label: 'GameRant — Gem Strength Meta Break', url: 'https://gamerant.com/diablo-4-lord-of-hatred-horadric-cube-gem-strength-transfiguration/' },
+    { label: 'AOEAH — Transfigure Items Guide', url: 'https://www.aoeah.com/news/4544--diablo-4-transfigure-items-outcomes-tuning-prism-affixes--usefarm-guide-season-13--loh' },
+    { label: 'PlayerAuctions — Season 13 Transfiguration Strategy', url: 'https://www.playerauctions.com/diablo-4-guide/tips-guides/season-13-transfiguration-ultimate-horadric-cube-strategy/' },
   ]}
-  lastUpdated="2026-05-16"
+  lastUpdated="2026-05-17"
 />
