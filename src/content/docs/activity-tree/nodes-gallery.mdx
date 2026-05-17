@@ -1,0 +1,69 @@
+---
+title: 활동 트리 노드 캡처 모음
+description: 7개 활동 스킬 트리의 노드 100여 개를 인-게임 툴팁으로 모은 갤러리. 클릭 시 라이트박스 확대.
+sidebar:
+  order: 10
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+import ImageModal from '../../../components/ImageModal.astro';
+
+## 한 줄 요약
+
+> 시즌13 활동 스킬 트리 노드 100여 개의 인-게임 툴팁 캡처. 트리별로 시간순 그룹화. 각 아이콘 클릭 시 라이트박스로 확대해서 효과 텍스트 확인 가능.
+
+:::caution[트리 매핑 안내]
+캡처 시간 그룹 기반 추정 매핑입니다. 실제 트리 소속이 다를 수 있습니다. 정확한 노드-트리 매핑은 게임 클라이언트에서 직접 확인하세요. 오류 발견 시 [GitHub Issues](https://github.com/nimto/d4cute/issues) 로 제보 부탁드립니다.
+:::
+
+export const groups = [
+  { tree: '속삭임의 나무', anchor: 'whispers', times: ['140746','140759','140823','140836','140843','140850','140859','140906','140914','140923','140954','141006','141012','141017'] },
+  { tree: '악몽 던전 (추정)', anchor: 'nightmare', times: ['141046','141052','141058','141104','141111','141123','141131','141136','141143','141150','141155','141201','141207','141220','141228','141237','141243','141249','141259','141322','141333','141341'] },
+  { tree: '지옥물결 / 헬타이드 (추정)', anchor: 'hellwave', times: ['141421','141426','141431','141438','141444','141453','141500','141506','141519','141525','141531','141537','141544'] },
+  { tree: '쿠라스트 지하도시 (추정)', anchor: 'undercity', times: ['141550','141556','141602','141608','141618','141625'] },
+  { tree: '소굴 우두머리 (추정)', anchor: 'lair-boss', times: ['141655','141700','141707','141713','141720','141727','141737','141746','141752','141758','141803','141808','141815','141821','141826','141834','141840'] },
+  { tree: '지옥불 군세 (추정)', anchor: 'infernal-hordes', times: ['141920','141926','141931','141938','141943','141949','141955','142002','142007','142013','142019','142024','142032','142037','142042'] },
+  { tree: '나락 / 균열 (추정)', anchor: 'pit', times: ['142115','142121','142129','142135','142141','142148','142154','142201','142207','142213','142219','142225','142232'] },
+];
+
+## 트리별 노드 갤러리
+
+총 {groups.reduce((a, g) => a + g.times.length, 0)}개 노드 캡처. 사용자가 시간순으로 한 트리씩 캡처했다고 가정한 추정 그룹.
+
+{groups.map((g) => (
+  <section id={g.anchor} class="tree-nodes-section">
+    <h3>{g.tree} <span class="kw-bone" style="font-weight:400; font-size:0.85em;">({g.times.length}개 노드)</span></h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.5rem; margin: 1rem 0;">
+      {g.times.map((t) => (
+        <ImageModal
+          src={`/images/activity-tree/nodes/node-${t}.webp`}
+          lightboxSrc={`/images/activity-tree/nodes/node-${t}.webp`}
+          alt={`${g.tree} 노드 — 캡처 ${t}`}
+          caption={t.slice(0,2) + ':' + t.slice(2,4) + ':' + t.slice(4,6)}
+          size={96}
+        />
+      ))}
+    </div>
+  </section>
+))}
+
+## 활용법
+
+1. **빠른 훑기** — 위 갤러리에서 트리별로 노드 아이콘 스캔
+2. **노드 효과 확인** — 아이콘 클릭 → 라이트박스에서 인-게임 툴팁 원본 확대 (휠 줌 + 드래그 패닝 지원)
+3. **트리 메인 화면 보기** — [활동 트리 개요](/activity-tree/) 의 7 트리 갤러리에서 전체 노드 그래프 확인
+4. **함정 회피** — [지하도시 트리](/activity-tree/undercity/) 의 ⚠ 시련/공물 상자 경고 필독
+
+## 갱신 계획
+
+- 사용자가 정확한 트리 매핑 제공 시 그룹 갱신
+- 노드별 한국명 + 효과 요약 텍스트 추가 (트리별 별도 페이지 또는 본 갤러리 인라인)
+- 빌드 가이드 추천 노드 표시 (Maxroll/Mobalytics 메타 빌드 기준)
+
+<SourceFooter
+  sources={[
+    { label: 'Mobalytics — War Plans Guide', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
+    { label: 'AOEAH — Best War Plans Skill Tree Builds', url: 'https://www.aoeah.com/news/4501--diablo-4-best-war-plans-skill-tree-builds--upgrades-for-each-activity' },
+  ]}
+  lastUpdated="2026-05-17"
+/>
