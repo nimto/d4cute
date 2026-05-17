@@ -1,30 +1,74 @@
 ---
 title: 레시피 — 룬 제작 (Rune Crafting)
-description: 의식 룬(Ritual)과 발현 룬(Invocation)의 종류, 제작 비용, 권장 조합.
+description: 의식의 룬(Ritual)과 기원의 룬(Invocation)의 종류, 제작 비용, 권장 조합 — 시즌13 기준 33개 룬 카탈로그.
 sidebar:
   order: 6
 ---
 
 import SourceFooter from '../../../components/SourceFooter.astro';
 import RecipeCard from '../../../components/RecipeCard.astro';
+import RuneGrid from '../../../components/RuneGrid.astro';
+import { ritualRunes, invocationRunes, byRarity } from '../../../data/runes';
+
+export const ritual = byRarity(ritualRunes);
+export const invocation = byRarity(invocationRunes);
 
 ## 한 줄 요약
 
-> 룬은 **의식 룬(Ritual)** 과 **발현 룬(Invocation)** 두 종류로 나뉘며, 같은 등급 룬을 큐브에서 합성해 더 강한 룬을 만듭니다. 제작 비용이 높아 빌드 마무리 단계에서 사용됩니다.
+> 룬은 <span class="kw-gold">의식의 룬(Ritual)</span> 과 <span class="kw-gold">기원의 룬(Invocation)</span> 두 종류로 나뉘며, 의식 룬이 누적시킨 <span class="kw-resource">공물</span> 을 기원 룬이 소모해 강력한 효과를 발동시킵니다.
+
+<div class="summary-box">
+### 3분 안에 핵심만
+
+- **목적**: 의식 룬이 <span class="kw-gold">공물(Offerings)</span> 을 누적 → 기원 룬이 소모해 효과 발동.
+- **장착 방법**: 한 쌍(의식 + 기원) 동시 장착이 표준. 단독 장착도 가능하지만 효율 급감.
+- **희소도 순서**: <span class="kw-magic">마법</span> &lt; <span class="kw-rare">희귀</span> &lt; <span class="kw-legendary">전설</span>
+- **합성**: 같은 트리거 카테고리(의식↔의식, 기원↔기원)만 합성 가능. 다른 종류 섞으면 실패.
+
+</div>
 
 ## 잠금해제
 
-룬 자체는 본편부터 존재했으며, 확장팩에서 큐브 합성 레시피가 추가되었습니다. 호라드림 큐브 잠금해제와 동시에 룬 제작 카테고리가 열립니다.
+룬 자체는 본편부터 존재했으며, 확장팩에서 큐브 합성 레시피가 추가되었습니다. <span class="kw-gold">호라드림 큐브 잠금해제</span> 와 동시에 룬 제작 카테고리가 열립니다.
 
 ## 룬 종류
 
 | 분류 | 영문 | 역할 |
 |------|------|------|
-| 의식 룬 | Ritual Rune | 특정 조건을 만족하면 자원/마나/오펜시브 옵션을 누적시키는 트리거 룬 |
-| 발현 룬 | Invocation Rune | 누적된 의식 자원을 소모해 강력한 효과를 발동시키는 트리거 룬 |
+| <span class="kw-gold">의식의 룬</span> | Ritual Rune | 특정 조건을 만족하면 <span class="kw-resource">공물</span> 을 누적시키는 트리거 룬 |
+| <span class="kw-gold">기원의 룬</span> | Invocation Rune | 누적된 공물을 소모해 강력한 효과를 발동시키는 트리거 룬 |
 
-대표적인 의식 룬: **Bac, Igni, Tam, Yul**
-대표적인 발현 룬: **Eom, Jah, Ohm, Vex, Yom**
+## 시즌13 룬 카탈로그
+
+각 룬 아이콘을 클릭하면 인-게임 툴팁 전체를 확대해서 확인할 수 있습니다. 총 **{ritualRunes.length + invocationRunes.length}개** ({ritualRunes.length} 의식 + {invocationRunes.length} 기원).
+
+### 의식의 룬 (Ritual) — 공물 누적
+
+#### <span class="kw-legendary">전설</span> ({ritual.legendary.length}개)
+
+<RuneGrid runes={ritual.legendary} />
+
+#### <span class="kw-rare">희귀</span> ({ritual.rare.length}개)
+
+<RuneGrid runes={ritual.rare} />
+
+#### <span class="kw-magic">마법</span> ({ritual.magic.length}개)
+
+<RuneGrid runes={ritual.magic} />
+
+### 기원의 룬 (Invocation) — 공물 소모, 효과 발동
+
+#### <span class="kw-legendary">전설</span> ({invocation.legendary.length}개)
+
+<RuneGrid runes={invocation.legendary} />
+
+#### <span class="kw-rare">희귀</span> ({invocation.rare.length}개)
+
+<RuneGrid runes={invocation.rare} />
+
+#### <span class="kw-magic">마법</span> ({invocation.magic.length}개)
+
+<RuneGrid runes={invocation.magic} />
 
 ## 룬 제작 레시피
 
@@ -32,43 +76,54 @@ import RecipeCard from '../../../components/RecipeCard.astro';
   name="의식 룬 합성"
   inputs={[{ qty: 1, name: '기본 의식 룬' }, { qty: 5, name: '레어 등급 룬' }, { qty: 5, name: '전설 등급 의식 룬' }]}
   output="다음 등급의 의식 룬 1개"
-  notes="발현 룬과 종류가 섞이면 합성 실패. 같은 트리거 카테고리만 가능."
+  notes="기원 룬과 종류가 섞이면 합성 실패. 같은 트리거 카테고리만 가능."
 />
 
 <RecipeCard
-  name="발현 룬 합성"
-  inputs={[{ qty: 1, name: '기본 발현 룬' }, { qty: 5, name: '레어 등급 룬' }, { qty: 5, name: '전설 등급 발현 룬' }]}
-  output="다음 등급의 발현 룬 1개"
+  name="기원 룬 합성"
+  inputs={[{ qty: 1, name: '기본 기원 룬' }, { qty: 5, name: '레어 등급 룬' }, { qty: 5, name: '전설 등급 기원 룬' }]}
+  output="다음 등급의 기원 룬 1개"
 />
 
 ## 권장 조합 예시 (개념)
 
-> 본 사이트는 시즌 메타 빌드의 특정 룬 조합 추천은 별도 빌드 가이드 사이트(Maxroll, Mobalytics 등)를 참고하시는 것을 권장드립니다. 본 페이지는 **시스템 이해** 목적으로 일반 원리만 다룹니다.
+> 본 사이트는 시즌 메타 빌드의 특정 룬 조합 추천은 별도 빌드 가이드 사이트(Maxroll, Mobalytics 등)를 참고하시는 것을 권장드립니다. 본 페이지는 <span class="kw-gold">시스템 이해</span> 목적으로 일반 원리만 다룹니다.
 
-| 의식 룬 | 발현 룬 | 일반적 활용 |
+| 의식 룬 | 기원 룬 | 일반적 활용 |
 |---------|---------|-------------|
-| Igni (피해 누적) | Ohm (광역 폭발) | 광역 클리어 빌드 |
-| Tam (이동 누적) | Jah (자원 회복) | 자원 부족 빌드 |
-| Yul (조건 충족) | Vex (강력 단일 타격) | 보스 단일 빌드 |
+| <span class="kw-gold">**이그니**</span> (비기본 기술 시) | <span class="kw-legendary">**오움**</span> (피해 증가 6초) | 비기본 기술 중심 빌드 |
+| <span class="kw-gold">**탐**</span> (핵심 기술 시) | <span class="kw-legendary">**벡스**</span> (기술 +1) | 핵심 기술 강화 빌드 |
+| <span class="kw-gold">**율**</span> (재사용 대기 기술 시) | <span class="kw-legendary">**에옴**</span> (대기시간 감소) | 쿨다운 가속 빌드 |
+| <span class="kw-gold">**나구**</span> (소환수 유지) | <span class="kw-magic">**세흐**</span> (늑대 소환) | 소환수 / 펫 빌드 |
+| <span class="kw-gold">**잔**</span> (궁극기 시) | <span class="kw-legendary">**자**</span> (점멸 적격불가) | 보스/단일 빌드 |
 
 ## 자원 효율 팁
 
-- **저급 룬 합성 우선** — 레어 룬은 모든 활동에서 가장 자주 떨어지므로, 모인 5개씩을 즉시 합성에 사용합니다.
-- **합성은 끝물 작업** — 빌드의 핵심 아이템·매혹석 세팅이 끝난 뒤에 룬 합성에 자원을 투입합니다.
-- **시즌 종료 전 합성** — 시즌 종료 직전 잉여 룬을 합성해 영원으로 보내는 것이 흔한 운용법입니다.
+:::tip[효율적 자원 사용]
+- <span class="kw-gold">**저급 룬 합성 우선**</span> — 마법·희귀 룬은 모든 활동에서 가장 자주 떨어지므로, 모인 5개씩을 즉시 합성에 사용합니다.
+- <span class="kw-gold">**합성은 끝물 작업**</span> — 빌드의 핵심 아이템·매혹석 세팅이 끝난 뒤에 룬 합성에 자원을 투입합니다.
+- <span class="kw-bone">**시즌 종료 전 합성**</span> — 시즌 종료 직전 잉여 룬을 합성해 영원으로 보내는 것이 흔한 운용법입니다.
+- <span class="kw-rare">**전설 룬 우선순위**</span> — <span class="kw-legendary">에옴 [18]</span>, <span class="kw-legendary">벡스 [19]</span> 같이 가격 낮은 전설은 거래소에서 저렴하게 확보 가능.
+:::
 
 ## FAQ
 
-**Q. 룬을 의식+발현 한 쌍만 장착해야 하나요?**
-A. 동시에 한 쌍을 가장 많이 활용하지만, 의식 또는 발현 단독만 장착해도 작동은 합니다. 단, 발현 룬의 강력한 효과는 의식 룬이 누적해주지 않으면 발동 빈도가 낮아집니다.
+**Q. 룬을 의식+기원 한 쌍만 장착해야 하나요?**
+A. 동시에 한 쌍을 가장 많이 활용하지만, 의식 또는 기원 단독만 장착해도 작동은 합니다. 단, 기원 룬의 강력한 효과는 의식 룬이 누적해주지 않으면 발동 빈도가 낮아집니다.
 
 **Q. 합성 도중 일부 룬을 잃었는데, 환불이 되나요?**
-A. 합성은 확정 산출이며 환불되지 않습니다. 실수 방지를 위해 큐브 UI의 확인 단계에서 룬 종류와 등급을 다시 확인하세요.
+A. <span class="kw-danger">**합성은 확정 산출이며 환불되지 않습니다.**</span> 실수 방지를 위해 큐브 UI의 확인 단계에서 룬 종류와 등급을 다시 확인하세요.
+
+**Q. 룬 이름이 "바크", "이그니" 같은 짧은 음절인 이유는?**
+A. 디아블로4 원작 영문 표기(Bac, Igni 등)의 한국어 음역입니다. 게임 내 표기 그대로 사용했습니다.
+
+**Q. 가격이 [3], [8] 같이 낮은 룬은 왜 그렇게 싼가요?**
+A. 시즌 인기도와 메타 빌드 의존도에 따라 시세가 결정됩니다. 본 페이지의 가격 수치는 캡처 시점(2026-05-17) 기준이며, 실시간 거래소 시세와는 다를 수 있습니다.
 
 <SourceFooter
   sources={[
     { label: 'Fextralife Wiki — Horadric Cube', url: 'https://diablo4.wiki.fextralife.com/Horadric+Cube' },
     { label: 'Maxroll — 3.0.2 Patch Notes', url: 'https://maxroll.gg/d4/news/lord-of-hatred-3-0-2-patch-notes' },
   ]}
-  lastUpdated="2026-05-16"
+  lastUpdated="2026-05-17"
 />

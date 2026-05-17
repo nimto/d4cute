@@ -1,18 +1,21 @@
 ---
 interface Props {
   src: string;
+  lightboxSrc?: string;
   alt: string;
   caption?: string;
   size?: number;
 }
-const { src, alt, caption, size = 80 } = Astro.props as Props;
+const { src, lightboxSrc, alt, caption, size = 80 } = Astro.props as Props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const fullSrc = src.startsWith('http') ? src : `${base}${src.startsWith('/') ? src : `/${src}`}`;
+const toFull = (s) => s.startsWith('http') ? s : `${base}${s.startsWith('/') ? s : `/${s}`}`;
+const fullThumb = toFull(src);
+const fullModal = lightboxSrc ? toFull(lightboxSrc) : fullThumb;
 ---
 
 <figure class="img-thumb">
-  <button class="img-thumb-btn" data-img-src={fullSrc} data-img-alt={alt} data-img-caption={caption ?? ''} type="button" aria-label={`이미지 확대: ${alt}`}>
-    <img src={fullSrc} alt={alt} width={size} height={size} loading="lazy" decoding="async" />
+  <button class="img-thumb-btn" data-img-src={fullModal} data-img-alt={alt} data-img-caption={caption ?? ''} type="button" aria-label={`이미지 확대: ${alt}`}>
+    <img src={fullThumb} alt={alt} width={size} height={size} loading="lazy" decoding="async" />
   </button>
   {caption && <figcaption>{caption}</figcaption>}
 </figure>

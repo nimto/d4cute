@@ -1,0 +1,38 @@
+[
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113534.png", "out": "ritual/bach",   "icon": { "out": "icons/ritual-bach" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113636.png", "out": "ritual/igni",   "icon": { "out": "icons/ritual-igni" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113645.png", "out": "ritual/tam",    "icon": { "out": "icons/ritual-tam" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113652.png", "out": "ritual/yul",    "icon": { "out": "icons/ritual-yul" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113700.png", "out": "ritual/nagu",   "icon": { "out": "icons/ritual-nagu" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113707.png", "out": "ritual/neho",   "icon": { "out": "icons/ritual-neho" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113713.png", "out": "ritual/nok",    "icon": { "out": "icons/ritual-nok" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113719.png", "out": "ritual/pok",    "icon": { "out": "icons/ritual-pok" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113725.png", "out": "ritual/jan",    "icon": { "out": "icons/ritual-jan" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113732.png", "out": "ritual/chem",   "icon": { "out": "icons/ritual-chem" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113740.png", "out": "ritual/sir",    "icon": { "out": "icons/ritual-sir" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113747.png", "out": "ritual/moni",   "icon": { "out": "icons/ritual-moni" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113753.png", "out": "ritual/ureu",   "icon": { "out": "icons/ritual-ureu" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113800.png", "out": "ritual/yaks",   "icon": { "out": "icons/ritual-yaks" }, "maxSize": 700, "quality": 90 },
+
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113806.png", "out": "invocation/eom",   "icon": { "out": "icons/invocation-eom" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113812.png", "out": "invocation/ja",    "icon": { "out": "icons/invocation-ja" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113818.png", "out": "invocation/oum",   "icon": { "out": "icons/invocation-oum" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113823.png", "out": "invocation/vex",   "icon": { "out": "icons/invocation-vex" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113829.png", "out": "invocation/yom",   "icon": { "out": "icons/invocation-yom" }, "maxSize": 700, "quality": 90 },
+
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113837.png", "out": "invocation/kel",   "icon": { "out": "icons/invocation-kel" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113843.png", "out": "invocation/rak",   "icon": { "out": "icons/invocation-rak" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113849.png", "out": "invocation/mot",   "icon": { "out": "icons/invocation-mot" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113854.png", "out": "invocation/kume",  "icon": { "out": "icons/invocation-kume" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113901.png", "out": "invocation/jul",   "icon": { "out": "icons/invocation-jul" }, "maxSize": 700, "quality": 90 },
+
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113907.png", "out": "invocation/wat",   "icon": { "out": "icons/invocation-wat" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113914.png", "out": "invocation/seh",   "icon": { "out": "icons/invocation-seh" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113919.png", "out": "invocation/gar",   "icon": { "out": "icons/invocation-gar" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113927.png", "out": "invocation/krami", "icon": { "out": "icons/invocation-krami" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113935.png", "out": "invocation/ner",   "icon": { "out": "icons/invocation-ner" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113942.png", "out": "invocation/prid",  "icon": { "out": "icons/invocation-prid" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113948.png", "out": "invocation/kuma",  "icon": { "out": "icons/invocation-kuma" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 113955.png", "out": "invocation/teb",   "icon": { "out": "icons/invocation-teb" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 114002.png", "out": "invocation/chik",  "icon": { "out": "icons/invocation-chik" }, "maxSize": 700, "quality": 90 }
+]
