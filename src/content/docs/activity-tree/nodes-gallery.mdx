@@ -55,7 +55,7 @@ import ImageModal from '../../../components/ImageModal.astro';
   <div class="step-arrow">▼</div>
   <div class="step"><span class="step-num">2.</span> <span><strong class="kw-gold">아이템 셋업 단계</strong> (토먼트 1-4) — <span class="kw-gold">지옥물결 중앙</span>(유니크) + <span class="kw-rare">소굴 우두머리 중앙</span>(유니크 + 보스 체인) + <span class="kw-gold">지하도시 좌측</span>(매혹석)</span></div>
   <div class="step-arrow">▼</div>
-  <div class="step"><span class="step-num">3.</span> <span><strong class="kw-mythic">신화 노림 단계</strong> (토먼트 5+ 단계) — <span class="kw-mythic">지하도시 Gutter Filth</span> + <span class="kw-rare">소굴 우두머리 좌측</span>(Escalating Nemesis) + <span class="kw-gold">속삭임 보관함 강화</span></span></div>
+  <div class="step"><span class="step-num">3.</span> <span><strong class="kw-mythic">신화 노림 단계</strong> (토먼트 5+) — <span class="kw-mythic">지하도시 Gutter Filth</span> + <span class="kw-rare">소굴 우두머리 좌측</span>(Escalating Nemesis) + <span class="kw-gold">속삭임 보관함 강화</span></span></div>
   <div class="step-arrow">▼</div>
   <div class="step"><span class="step-num">4.</span> <span><strong class="kw-gold">엔드게임 빌드 완성</strong> — <span class="kw-rare">나락 Choron's Haste</span>(글리프 업그레이드) + <span class="kw-rare">악몽 사당 정예 7마리</span>(피해 누적)</span></div>
 </div>
@@ -68,64 +68,122 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 각 노드 아이콘을 클릭하면 인-게임 툴팁을 확대해서 확인할 수 있습니다 (휠 줌, 드래그 패닝, ESC 닫기).
 
+:::caution[노드 한국명 등록 현황]
+- <span class="kw-gold">**속삭임의 나무 14개**</span> — 한국명 모두 등록 (검색 가능)
+- <span class="kw-bone">**나머지 6 트리**</span> — 한국명 미등록 (시간 표기). 사용자 추가 트리별 노드 캡처 제공 시 즉시 매핑
+- 매핑 완료 트리는 사이트 검색 (Pagefind) 에서 노드 이름으로 검색 가능
+:::
+
 export const groups = [
   {
-    tree: '속삭임의 나무', anchor: 'whispers', count: 14,
-    times: ['140746','140759','140823','140836','140843','140850','140859','140906','140914','140923','140954','141006','141012','141017'],
+    tree: '속삭임의 나무', anchor: 'whispers',
     summary: '병행 활동 — War Plans 와 동시 진행. 포인트는 7개 트리에 포함 안 됨 (별도 시스템). 보관함 보상 강화 중심.',
     bestPick: 'Wisdom of Whispers (보관함 XP +50%) → Fortune of Fame (보상 품질 강화)',
+    nodes: [
+      { time: '140746', name: '타락한 뿌리' },
+      { time: '140759', name: '부패머리 잔치' },
+      { time: '140823', name: '힘의 뿌리' },
+      { time: '140836', name: '풍요의 나무' },
+      { time: '140843', name: '속삭임의 지혜' },
+      { time: '140850', name: '섬뜩한 수수께끼' },
+      { time: '140859', name: '반짝이는 은총' },
+      { time: '140906', name: '풍요 또는 기근' },
+      { time: '140914', name: '소박한 선물' },
+      { time: '140923', name: '혼돈의 은총' },
+      { time: '140954', name: '풍족한 재료' },
+      { time: '141006', name: '악랄한 음보' },
+      { time: '141012', name: '거대한 적' },
+      { time: '141017', name: '악의적인 침략' },
+    ],
   },
   {
-    tree: '악몽 던전', anchor: 'nightmare', count: 13,
-    times: ['141046','141052','141058','141104','141111','141123','141131','141136','141143','141150','141155','141201','141207'],
+    tree: '악몽 던전', anchor: 'nightmare',
     summary: 'A 티어 활동. 글리프 XP + 신화 풀. 빠른 완주 + 높은 잠재 보상.',
     bestPick: '우측 4포 (Treasure Goblin · 보너스 이벤트) + 좌측 3포 (사당 노드 — 사당 1회당 정예 7마리)',
+    nodes: [
+      { time: '141046', name: '' }, { time: '141052', name: '' }, { time: '141058', name: '' },
+      { time: '141104', name: '' }, { time: '141111', name: '' }, { time: '141123', name: '' },
+      { time: '141131', name: '' }, { time: '141136', name: '' }, { time: '141143', name: '' },
+      { time: '141150', name: '' }, { time: '141155', name: '' }, { time: '141201', name: '' },
+      { time: '141207', name: '' },
+    ],
   },
   {
-    tree: '지옥물결 (헬타이드)', anchor: 'hellwave', count: 17,
-    times: ['141220','141228','141237','141243','141249','141259','141322','141333','141341','141421','141426','141431','141438','141444','141453','141500','141506'],
+    tree: '지옥물결 (헬타이드)', anchor: 'hellwave',
     summary: 'S 티어 — 가장 효율적인 자원원 (경험치 · 잊혀진 영혼 · 둥지 열쇠). 모든 빌드의 출발점.',
     bestPick: '중앙 4포 (Duriels Suffering — 무작위 유니크) + 우측 3포 (Bounty Hunter — 깜부기 추가 보상)',
+    nodes: [
+      { time: '141220', name: '' }, { time: '141228', name: '' }, { time: '141237', name: '' },
+      { time: '141243', name: '' }, { time: '141249', name: '' }, { time: '141259', name: '' },
+      { time: '141322', name: '' }, { time: '141333', name: '' }, { time: '141341', name: '' },
+      { time: '141421', name: '' }, { time: '141426', name: '' }, { time: '141431', name: '' },
+      { time: '141438', name: '' }, { time: '141444', name: '' }, { time: '141453', name: '' },
+      { time: '141500', name: '' }, { time: '141506', name: '' },
+    ],
   },
   {
-    tree: '쿠라스트 지하도시', anchor: 'undercity', count: 11,
-    times: ['141519','141525','141531','141537','141544','141550','141556','141602','141608','141618','141625'],
+    tree: '쿠라스트 지하도시', anchor: 'undercity',
     summary: 'S 티어 — 신화 파밍의 핵심. 공물 인장 시스템 + Portal Prankster 도깨비. ⚠ 시련 노드 + 공물 상자 함정 주의 (별도 [지하도시 페이지](/activity-tree/undercity/) 필독).',
     bestPick: 'Gutter Filth 우선 (Portal Prankster 도깨비 — 신화 드랍률 최고). 빌드 약하면 우측(경험치/보상 강화), 강하면 좌측(매혹석 빌드업).',
+    nodes: [
+      { time: '141519', name: '' }, { time: '141525', name: '' }, { time: '141531', name: '' },
+      { time: '141537', name: '' }, { time: '141544', name: '' }, { time: '141550', name: '' },
+      { time: '141556', name: '' }, { time: '141602', name: '' }, { time: '141608', name: '' },
+      { time: '141618', name: '' }, { time: '141625', name: '' },
+    ],
   },
   {
-    tree: '소굴 우두머리', anchor: 'lair-boss', count: 17,
-    times: ['141655','141700','141707','141713','141720','141727','141737','141746','141752','141758','141803','141808','141815','141821','141826','141834','141840'],
+    tree: '소굴 우두머리', anchor: 'lair-boss',
     summary: 'A 티어 — 가장 빠른 활동 (수 초). 신화 풀 + 보스 트로피.',
     bestPick: 'Escalating Nemesis (보스 체인) + Hoard Chest (유니크 드랍률 ↑)',
+    nodes: [
+      { time: '141655', name: '' }, { time: '141700', name: '' }, { time: '141707', name: '' },
+      { time: '141713', name: '' }, { time: '141720', name: '' }, { time: '141727', name: '' },
+      { time: '141737', name: '' }, { time: '141746', name: '' }, { time: '141752', name: '' },
+      { time: '141758', name: '' }, { time: '141803', name: '' }, { time: '141808', name: '' },
+      { time: '141815', name: '' }, { time: '141821', name: '' }, { time: '141826', name: '' },
+      { time: '141834', name: '' }, { time: '141840', name: '' },
+    ],
   },
   {
-    tree: '지옥불 군세', anchor: 'infernal-hordes', count: 15,
-    times: ['141920','141926','141931','141938','141943','141949','141955','142002','142007','142013','142019','142024','142032','142037','142042'],
+    tree: '지옥불 군세', anchor: 'infernal-hordes',
     summary: 'D 티어 — 시즌13 너프 후 보상 빈약. 시즌 도전이 강제하지 않으면 분배 비추.',
     bestPick: '시즌 도전 위해 최소만. Burning Aether 의존 메타 빌드 등장 시 재평가.',
+    nodes: [
+      { time: '141920', name: '' }, { time: '141926', name: '' }, { time: '141931', name: '' },
+      { time: '141938', name: '' }, { time: '141943', name: '' }, { time: '141949', name: '' },
+      { time: '141955', name: '' }, { time: '142002', name: '' }, { time: '142007', name: '' },
+      { time: '142013', name: '' }, { time: '142019', name: '' }, { time: '142024', name: '' },
+      { time: '142032', name: '' }, { time: '142037', name: '' }, { time: '142042', name: '' },
+    ],
   },
   {
-    tree: '나락', anchor: 'pit', count: 13,
-    times: ['142115','142121','142129','142135','142141','142148','142154','142201','142207','142213','142219','142225','142232'],
+    tree: '나락', anchor: 'pit',
     summary: 'B 티어 — 너프 후 글리프 XP 위주. 엔드게임 글리프 만렙 전까지만 분배.',
     bestPick: 'Chorons Haste (글리프 업그레이드 +1) → Heart of Stone (진행 오브 · 클리어 단축)',
+    nodes: [
+      { time: '142115', name: '' }, { time: '142121', name: '' }, { time: '142129', name: '' },
+      { time: '142135', name: '' }, { time: '142141', name: '' }, { time: '142148', name: '' },
+      { time: '142154', name: '' }, { time: '142201', name: '' }, { time: '142207', name: '' },
+      { time: '142213', name: '' }, { time: '142219', name: '' }, { time: '142225', name: '' },
+      { time: '142232', name: '' },
+    ],
   },
 ];
 
 {groups.map((g) => (
   <section id={g.anchor} class="tree-nodes-section">
-    <h3>{g.tree} <span class="kw-bone" style="font-weight:400; font-size:0.85em;">({g.count}개 노드)</span></h3>
+    <h3>{g.tree} <span class="kw-bone" style="font-weight:400; font-size:0.85em;">({g.nodes.length}개 노드)</span></h3>
     <p>{g.summary}</p>
     <p><strong class="kw-gold">추천 분배 (7포):</strong> {g.bestPick}</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.5rem; margin: 1rem 0;">
-      {g.times.map((t) => (
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; margin: 1rem 0;">
+      {g.nodes.map((n) => (
         <ImageModal
-          src={`/images/activity-tree/nodes/node-${t}.webp`}
-          lightboxSrc={`/images/activity-tree/nodes/node-${t}.webp`}
-          alt={`${g.tree} 노드 — 캡처 ${t}`}
-          caption={t.slice(0,2) + ':' + t.slice(2,4) + ':' + t.slice(4,6)}
-          size={96}
+          src={`/images/activity-tree/nodes/node-${n.time}.webp`}
+          lightboxSrc={`/images/activity-tree/nodes/node-${n.time}.webp`}
+          alt={n.name ? `${g.tree} — ${n.name}` : `${g.tree} 노드 — ${n.time}`}
+          caption={n.name || (n.time.slice(0,2) + ':' + n.time.slice(2,4) + ':' + n.time.slice(4,6))}
+          size={108}
         />
       ))}
     </div>
@@ -150,9 +208,9 @@ export const groups = [
 
 ## 갱신 계획
 
-- 시즌13 패치 진행에 따라 메타 빌드 + 추천 노드 갱신
-- 각 트리 별도 페이지에 노드별 한국명 + 효과 상세 추가
-- 클래스별 추천 분배 (전사·드루이드·강령·성기사·도적·원소·정수·흑마법) 매트릭스
+- 사용자가 트리별 노드 캡처 제공 시 한국명 매핑 추가
+- 노드별 효과 요약 텍스트 (한국명 매핑 후 단계적 추가)
+- 빌드 가이드 추천 노드 표시 (Maxroll/Mobalytics 메타 빌드 기준)
 
 <SourceFooter
   sources={[
