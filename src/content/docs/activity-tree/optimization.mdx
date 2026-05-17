@@ -1,6 +1,6 @@
 ---
-title: 포인트 분배 최적화
-description: 7개 활동 트리 사이의 포인트 배분 전략, 시즌 단계별 우선순위, 일반 함정 정리.
+title: 포인트 분배 최적화 — 시즌 단계별 마스터플랜
+description: 7개 활동 트리 사이의 포인트 배분 전략, 시즌 단계별 우선순위, 일반 함정 정리, 환불 활용법.
 sidebar:
   order: 9
 ---
@@ -9,40 +9,84 @@ import SourceFooter from '../../../components/SourceFooter.astro';
 
 ## 한 줄 요약
 
-> 트리 7개에 포인트를 동시에 분배하면 어떤 트리도 의미 있는 노드까지 도달하지 못합니다. **시즌 단계별로 2~3개 트리에 집중**한 뒤, 한 트리가 마무리되면 다음 트리로 이동하는 방식이 효율적입니다.
+> 7개 활동 트리에 포인트를 <span class="kw-blood">동시에 분배하면 어떤 트리도 의미 있는 노드까지 도달 못함</span>. **시즌 단계별로 2-3개 트리에 집중** → 한 트리 마무리 후 다음 트리로 이동 + **환불 비용으로 재분배**.
 
-## 시즌 단계별 우선순위
+<div class="summary-box">
+### 3분 안에 핵심만
 
-### 시즌 초 (~1주차)
+- **각 트리 7 포인트** — 분산 분배 함정 회피
+- **시즌 단계별 2-3 트리 집중** → 다음 단계 진입 시 환불 + 재분배
+- **시즌 초 우선**: <span class="kw-gold">헬타이드 (잊혀진 영혼)</span> + <span class="kw-rare">악몽 던전 (글리프 XP)</span> + <span class="kw-gold">지하도시 (매혹석)</span>
+- **시즌 중 우선**: <span class="kw-rare">소굴 우두머리 (유니크 풀)</span> + <span class="kw-bone">나락 (마스터워킹)</span> + <span class="kw-rare">금고실 (가루)</span>
+- **시즌 말 우선**: <span class="kw-mythic">소굴 우두머리 (신화 풀)</span> + <span class="kw-blood">헬타이드 좌측 (자원 폭주)</span>
 
-1. **헬타이드 (중간)** — 보스 트로피 누적
-2. **악몽 던전 (글리프 XP)** — 빌드 글리프 빠른 성장
-3. **쿠라스트 지하도시 (좌측 또는 우측)** — 부적 풀 채우기
+</div>
 
-### 시즌 중 (2~3주차)
+## 시즌 단계별 마스터플랜
 
-1. **둥지 보스 (유니크 풀 강화)** — 본 빌드의 유니크 확보
-2. **균열 (마스터워킹 자원)** — 아이템 마무리
-3. **호라드림 금고실 (가루 보상)** — 프리즘 안정 공급
+### 1주차 — 레벨링 + 부적 셋업
 
-### 시즌 말 (4주차~)
+| 트리 | 분배 | 핵심 노드 | 목적 |
+|------|------|---------|------|
+| <span class="kw-gold">**헬타이드**</span> | 우측 4 + 좌측 3 | Bounty Hunter · Profane Mindcage | 시더/잊혀진 영혼/경험치 |
+| <span class="kw-rare">**악몽 던전**</span> | 중앙 5 + 우측 2 | 글리프 XP +20% | 글리프 빠른 성장 |
+| <span class="kw-gold">**지하도시**</span> | 좌측 4 + 우측 3 | 종료 보상 강화 + 경험치 | 매혹석 풀 채우기 |
+| <span class="kw-bone">속삭임의 나무</span> (병행) | 모두 분배 | Wisdom of Whispers (XP +50%) | 레벨링 가속 |
 
-1. **둥지 보스 (신화 풀)** — 신화 유니크 시도
-2. **헬타이드 (좌측)** — 마지막 자원 폭주 수급
-3. **지옥의 무리 (Aether 누적)** — 환산 보상 마무리
+### 2-3주차 — 빌드 셋업
+
+| 트리 | 분배 | 핵심 노드 | 목적 |
+|------|------|---------|------|
+| <span class="kw-gold">**헬타이드**</span> | 중앙 4 + 우측 3 | Duriels Suffering · Bounty Hunter | 무작위 유니크 노림 (메타 표준) |
+| <span class="kw-rare">**소굴 우두머리**</span> | 중앙 4 + 좌측 3 | Escalating Nemesis · Hoard Chest | 본 빌드 유니크 확보 |
+| <span class="kw-bone">**나락**</span> | 좌측 4 + 중앙 3 | Chorons Haste · Heart of Stone | 글리프 만렙 가속 |
+| <span class="kw-rare">**호라드림 금고실**</span> | 중앙 4 + 우측 3 | 가루 상위 비율 ↑ · 프리즘 ↑ | 큐브 자원 안정 |
+
+### 4주차+ — 신화 노림수
+
+| 트리 | 분배 | 핵심 노드 | 목적 |
+|------|------|---------|------|
+| <span class="kw-mythic">**소굴 우두머리**</span> | 중앙 5 + 우측 2 | 신화 풀 + 보스 트로피 | 신화 유니크 시도 |
+| <span class="kw-mythic">**지하도시**</span> | Gutter Filth + 보조 | Portal Prankster | <span class="kw-mythic">신화 드랍률 최고</span> |
+| <span class="kw-blood">**헬타이드**</span> | 좌측 7 | Profane Mindcage 자동 | 마지막 자원 폭주 |
+| <span class="kw-mythic">**호라드림 금고실**</span> | 우측 5 + 중앙 2 | 반짝이는 벼락불 노림 | 신화 제작 자원 |
 
 ## 일반 함정
 
-- **모든 트리에 1포인트씩 분배** — 의미 있는 시점에 도달하지 못해 실효 보상이 작아집니다.
-- **빌드와 맞지 않는 도전 변형 노드** — 시간 제한 도전은 빌드가 광역 클리어에 매우 강할 때만 의미가 있습니다.
-- **트리 리셋 비용 무시** — 리셋 비용은 트리마다 다르므로, 분배 직전에 비용을 확인하세요.
+:::danger[분배 함정 모음]
+
+### 1. <span class="kw-blood">모든 트리에 1포씩 분배</span>
+의미 있는 시점에 도달하지 못해 실효 보상이 작아짐. **2-3 트리 집중 후 다음으로 이동**.
+
+### 2. <span class="kw-blood">빌드와 맞지 않는 도전 변형 노드</span>
+시간 제한 도전은 빌드가 광역 클리어에 매우 강할 때만 의미. <span class="kw-bone">빌드 약하면 도전 노드 금물</span>.
+
+### 3. <span class="kw-blood">트리 환불 비용 무시</span>
+환불 비용은 트리마다 다름. 분배 직전 비용 확인. 골드 부족 시 보수적 분배 우선.
+
+### 4. <span class="kw-blood">지하도시 시련 + 공물 상자 함정</span>
+[지하도시 페이지](/activity-tree/undercity/) 의 ⚠ 경고 필독. 공물 상자 클릭 시 인장 즉시 소모.
+
+### 5. <span class="kw-blood">지옥불 군세 D 티어 분배</span>
+시즌 도전이 강제하지 않는 한 분배 비추. 다른 활동 우선.
+
+:::
 
 ## 권장 점검 체크리스트
 
-- [ ] 한 트리에 최소 3개 노드 이상 누적되어 있는가?
-- [ ] 본 빌드의 자원 부족 항목과 트리 노드가 일치하는가?
-- [ ] 전쟁 계획 5단계 체인의 단골 활동에 우선 분배했는가?
-- [ ] 시즌 종료까지 남은 기간을 고려해 신화 풀 노드까지 도달 가능한가?
+- ☐ 한 트리에 <span class="kw-gold">**최소 3개 노드 이상 누적**</span> 되어 있는가?
+- ☐ 본 빌드의 자원 부족 항목과 트리 노드가 일치하는가?
+- ☐ 전쟁 계획 5단계 체인의 단골 활동에 우선 분배했는가?
+- ☐ 시즌 종료까지 남은 기간을 고려해 신화 풀 노드까지 도달 가능한가?
+- ☐ 환불 비용을 위한 골드 여유가 있는가?
+
+## 환불 활용법
+
+:::tip[효율 극대화]
+- <span class="kw-gold">**단계 진입 시 일괄 환불 + 재분배**</span> — 1주차 분배 그대로 4주차까지 가져가지 말 것
+- <span class="kw-bone">**골드 여유 시 자주 환불**</span> — 빌드 검증 후 효율 낮은 노드 즉시 회수
+- <span class="kw-rare">**메타 패치 후 즉시 점검**</span> — 시즌 진행 중 패치로 노드 효율 변동. 패치 노트 확인 + 재분배
+:::
 
 ## FAQ
 
@@ -52,10 +96,18 @@ A. 시즌 캐릭터의 영원 이관 시 포인트도 함께 이관됩니다.
 **Q. 신규 트리가 추가되면 어떻게 알 수 있나요?**
 A. 본 사이트의 [패치 노트](/patch-notes/) 페이지를 확인하세요.
 
+**Q. 7포 트리 4개 다 만렙 만들 수 있나요?**
+A. <span class="kw-gold">한 시즌 안에 가능</span>. 7×4 = 28포인트 필요. 활동 자주 도는 캐릭터는 시즌 중반에 도달.
+
+**Q. 환불 비용이 부담될 때?**
+A. <span class="kw-bone">시즌 초 분배는 우측(편의/안전) 우선 → 환불 비용 절감</span>. 중반에 본격 분배 시작.
+
 <SourceFooter
   sources={[
     { label: 'Mobalytics — War Plans Guide', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
     { label: 'Mobalytics — Everything Lord of Hatred', url: 'https://mobalytics.gg/diablo-4/guides/everything-lord-of-hatred' },
+    { label: 'Switchblade Gaming — War Plans Guide 2026', url: 'https://www.switchbladegaming.com/diablo-4/war-plans-guide/' },
+    { label: 'AOEAH — Best War Plans Skill Tree Builds', url: 'https://www.aoeah.com/news/4501--diablo-4-best-war-plans-skill-tree-builds--upgrades-for-each-activity' },
   ]}
-  lastUpdated="2026-05-16"
+  lastUpdated="2026-05-17"
 />

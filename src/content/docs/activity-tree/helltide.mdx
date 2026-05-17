@@ -1,56 +1,90 @@
 ---
-title: 헬타이드 트리 — Left/Middle/Right 분석
-description: 헬타이드 활동 스킬 트리의 좌/중/우 경로 비교, 추천 경로, 보스 트로피 누적.
+title: 헬타이드 트리 — 7 포인트 분배 + 메타
+description: 시즌13 헬타이드(지옥물결) 활동 스킬 트리의 좌/중/우 경로 분석, 7 포인트 최적 분배, Duriels Suffering 메타 빌드.
 sidebar:
   order: 2
 ---
 
 import SourceFooter from '../../../components/SourceFooter.astro';
+import ImageModal from '../../../components/ImageModal.astro';
 
 ## 한 줄 요약
 
-> **헬타이드 트리**는 좌(보상 강화 + 난도 상승) · 중(헬윔 매복 + 보스 트로피) · 우(편의 + 안전망)으로 갈립니다. **중간 경로**가 보편적으로 가장 추천되며, 보스 트로피 누적의 핵심 경로입니다.
+> <span class="kw-gold">**헬타이드 트리 (S 티어)**</span> — 시즌 전체 가장 효율적인 자원원. 7 포인트 분배는 <span class="kw-rare">중앙 4 (Duriels Suffering) + 우측 3 (Bounty Hunter)</span> 가 해외 메타 표준.
+
+<div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+  <ImageModal
+    src="/images/activity-tree/icons/trees/hellwave.webp"
+    lightboxSrc="/images/activity-tree/trees/hellwave.webp"
+    alt="지옥물결 (헬타이드) 활동 스킬 트리 전체"
+    caption="헬타이드 트리 — 클릭해서 확대"
+    size={200}
+  />
+</div>
+
+<div class="summary-box">
+### 3분 안에 핵심만
+
+- **티어**: <span class="kw-gold">S</span> — 시즌 전체 1순위. 모든 빌드의 출발점
+- **핵심 보상**: 경험치 · 잊혀진 영혼 · 둥지 열쇠 · 시더(Cinder) · 보스 트로피 · 무작위 유니크
+- **메타 분배** (해외): <span class="kw-rare">중앙 4 (Duriels Suffering)</span> + <span class="kw-rare">우측 3 (Bounty Hunter)</span>
+- **War Plans 효과**: 활동 경험치 <span class="kw-gold">25배</span> — 항상 묶어서 진행
+
+</div>
 
 ## 잠금해제
 
-헬타이드 1회 완주 시 자동 등록. 후반 노드는 고난도 단계 상승으로 잠금해제됩니다.
+헬타이드 1회 완주 시 자동 등록. 후반 노드는 고난도(토먼트) 단계 상승으로 잠금해제됩니다.
 
-## 좌측 경로 (Left Path) — 난도 상승형
+## 7 포인트 최적 분배 — 사냥 목적별
 
-- **핵심 효과**: 보상 강화 + 더불어 적의 강도가 올라가는 변형 적용
-- **예시 효과**:
-  - 신성한 망상(Profane Mindcage) 자동 적용 — 적 강도 상승, 시더(Cinder)·경험치·드롭 증가
-- **추천 빌드**: 광역 처치력이 매우 강한 빌드. 적이 강해져도 클리어 속도가 거의 일정한 캐릭터.
+| 목적 | 분배 | 핵심 노드 | 활용 시점 |
+|------|------|---------|----------|
+| <span class="kw-gold">**유니크 노림 (표준)**</span> | <span class="kw-rare">중앙 4 + 우측 3</span> | Duriels Suffering · Bounty Hunter | <span class="kw-gold">메타 표준 — 디폴트 선택</span> |
+| <span class="kw-rare">**보스 트로피 누적**</span> | <span class="kw-rare">중앙 7</span> | Hellwyrm 매복 · Pang of Duriel | <span class="kw-rare">[큐브 합성](/horadric-cube/amalgamation/) 노림수</span> |
+| <span class="kw-bone">**레벨링 (1-70)**</span> | <span class="kw-bone">우측 4 + 좌측 3</span> | Bounty Hunter · Profane Mindcage | <span class="kw-bone">시더/경험치/잊혀진 영혼 안정 수급</span> |
+| <span class="kw-blood">**고숙련 도전**</span> | <span class="kw-blood">좌측 7</span> | Profane Mindcage 자동 + 적 강도 ↑ | <span class="kw-blood">빌드 완성 + 토먼트 5+ 안정 클리어</span> |
 
-## 중간 경로 (Middle Path, 추천)
+## 경로별 상세
 
-- **핵심 효과**: 헬윔(Hellwyrm) 매복 트리거. 매복 시 **구더기(Maggots) + 듀리엘의 고통(Pang of Duriel)** 등장
-- **부가 효과**:
-  - **구더기는 경험치와 보스 트로피를 대량 산출** — 호라드림 큐브에서 유니크 합성 추첨에 사용
-  - 보스 트로피 효율이 단연 최고
+### 중앙 경로 (Middle Path) — <span class="kw-gold">표준 추천</span>
 
-> **인용 (Mobalytics)**: "Maggots drop considerable amounts of experience and Boss Trophies which can be turned in at the Horadric Cube for Uniques."
+- **핵심**: <span class="kw-rare">**Duriels Suffering**</span> — 무작위 유니크 드랍 트리거
+- **부가**: <span class="kw-rare">Hellwyrm 매복</span> 트리거 — 매복 시 <span class="kw-gold">구더기(Maggots) + Pang of Duriel</span> 등장
+- **인용 (Mobalytics)**: *"Maggots drop considerable amounts of experience and Boss Trophies which can be turned in at the Horadric Cube for Uniques."*
 
-## 우측 경로 (Right Path) — 편의 + 안전망
+### 우측 경로 (Right Path) — <span class="kw-rare">편의 + 자원 보존</span>
 
-- **핵심 효과**: 시더 보존, 추가 보상함
-- **예시 효과**:
-  - 사망 시 시더 손실 방지
-  - 100시더 모을 때마다 추가 10시더 자동 획득
-  - 666시더로 구입 가능한 **지옥의 보상(Hell's Prize) 상자** 추가
+- <span class="kw-rare">**Bounty Hunter**</span> — 깜부기(Cinder) 추가 보상
+- 사망 시 시더 손실 방지
+- 100시더 모을 때마다 추가 10시더 자동 획득
+- 666시더로 구입 가능한 <span class="kw-gold">**지옥의 보상(Hell's Prize) 상자**</span> 추가
 
-## 권장 선택
+### 좌측 경로 (Left Path) — 도전형
 
-| 캐릭터 상태 | 권장 경로 |
-|------------|----------|
-| 빌드가 약하고 매혹석 풀이 비어 있음 | 우측 → 안전망 + 시더 보존 |
-| 빌드가 본격적 광역에 진입 | 중간 → 보스 트로피 누적 |
-| 빌드가 완성 단계, 자원만 부족 | 좌측 → 시더/가루 대량 수급 |
+- <span class="kw-blood">**Profane Mindcage**</span> 자동 적용 — 적 강도 상승, 시더·경험치·드롭 증가
+- 빌드가 본격 광역에 진입한 후에만 효율
+
+## 권장 선택 — 빌드 상태 매트릭스
+
+| 캐릭터 상태 | 권장 분배 | 환불 타이밍 |
+|------------|---------|-----------|
+| 시즌 초 1-70 레벨링 | <span class="kw-bone">우측 4 + 좌측 3</span> | 토먼트 진입 후 |
+| 토먼트 1-4 아이템 셋업 | <span class="kw-gold">중앙 4 + 우측 3 (표준)</span> | 보스 트로피 충분히 모인 후 |
+| 토먼트 5+ 신화 노림 | <span class="kw-rare">중앙 7</span> | 빌드 완성 후 좌측 7 |
+| 엔드 빌드 완성 | <span class="kw-blood">좌측 7</span> | 시즌 종료 시 |
 
 ## 자원 효율 팁
 
-- **중간 경로 + 전쟁 계획 헬타이드 슬롯 2회** — 같은 시간에 가장 많은 보스 트로피 누적
-- **트리 포인트 회수** — 시즌 중반에 우측에서 중간으로 재분배하는 케이스가 흔합니다.
+:::tip[효율 극대화]
+- <span class="kw-gold">**중앙 경로 + War Plans 헬타이드 슬롯 2회**</span> — 같은 시간에 가장 많은 보스 트로피 누적
+- <span class="kw-bone">**트리 포인트 회수**</span> — 시즌 중반에 우측에서 중간으로 재분배가 흔함. 환불 골드 비용 항상 여유 있게
+- <span class="kw-mythic">**잊혀진 영혼 부족**</span> 시 우측 Bounty Hunter 최우선
+:::
+
+:::caution[지옥의 보상 상자 비용]
+666시더는 상당히 큰 비용. <span class="kw-blood">시더 모자라면 보상함 포기</span> 더 효율적. 우측 경로 분배 후에만 시도.
+:::
 
 ## FAQ
 
@@ -60,9 +94,16 @@ A. 매복 자체는 가능하지만, 중간 경로 포인트가 누적될수록 
 **Q. 보스 트로피 잉여분이 너무 많으면 어디에 쓰나요?**
 A. [호라드림 큐브 합성](/horadric-cube/amalgamation/)에서 유니크 풀 추첨에 사용하거나, [비밀 레시피](/horadric-cube/secret-recipes/)의 신화 유니크 추첨에 투입합니다.
 
+**Q. War Plans 안에서 헬타이드를 안 돌고 단독 진입하면 손해인가요?**
+A. <span class="kw-blood">네 — War Plans 안에서 활동 경험치 25배</span>. 항상 War Plans 슬롯에 헬타이드 포함시켜 진행.
+
+**Q. 시즌 초 어떤 노드부터 찍나요?**
+A. <span class="kw-bone">우측 Bounty Hunter 1포</span> → <span class="kw-bone">우측 시더 보존 1포</span> → 활동 누적되면 중앙 Duriels Suffering 로 전환.
+
 <SourceFooter
   sources={[
     { label: 'Mobalytics — War Plans Guide (Helltide Tree)', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
+    { label: 'Switchblade Gaming — War Plans Guide 2026', url: 'https://www.switchbladegaming.com/diablo-4/war-plans-guide/' },
   ]}
-  lastUpdated="2026-05-16"
+  lastUpdated="2026-05-17"
 />
