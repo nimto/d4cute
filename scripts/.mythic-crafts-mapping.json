@@ -1,0 +1,12 @@
+[
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125723.png", "out": "crafts/shroud-of-false-death", "icon": { "out": "icons/crafts/shroud-of-false-death" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125730.png", "out": "crafts/doombringer",           "icon": { "out": "icons/crafts/doombringer" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125736.png", "out": "crafts/shattered-vow",         "icon": { "out": "icons/crafts/shattered-vow" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125742.png", "out": "crafts/ring-of-starless-skies","icon": { "out": "icons/crafts/ring-of-starless-skies" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125750.png", "out": "crafts/melted-heart-of-selig", "icon": { "out": "icons/crafts/melted-heart-of-selig" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125757.png", "out": "crafts/andariels-visage",      "icon": { "out": "icons/crafts/andariels-visage" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125813.png", "out": "crafts/heir-of-perdition",     "icon": { "out": "icons/crafts/heir-of-perdition" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125819.png", "out": "crafts/tyraels-might",         "icon": { "out": "icons/crafts/tyraels-might" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125825.png", "out": "crafts/the-grandfather",       "icon": { "out": "icons/crafts/the-grandfather" }, "maxSize": 700, "quality": 90 },
+  { "src": "C:/Users/nimto/Pictures/Screenshots/스크린샷 2026-05-17 125830.png", "out": "crafts/harlequin-crest",       "icon": { "out": "icons/crafts/harlequin-crest" }, "maxSize": 700, "quality": 90 }
+]

@@ -1,0 +1,147 @@
+---
+title: 신화 아이템 카탈로그 (Mythic Uniques)
+description: 시즌13 큐브에서 직접 제작 가능한 선조 신화 아이템 10종 + 드랍 전용 신화 정리. 재료, 룬 조합, 드랍처 매핑.
+sidebar:
+  order: 9
+---
+
+import SourceFooter from '../../../components/SourceFooter.astro';
+import MythicCard from '../../../components/MythicCard.astro';
+import { craftedMythics, dropMythics, groupBySlot } from '../../../data/mythic-items';
+
+export const craftBySlot = groupBySlot(craftedMythics);
+
+## 한 줄 요약
+
+> 시즌13 부터 호라드림 큐브에서 <span class="kw-mythic">**선조 신화 고유 아이템**</span> 10종을 직접 제작할 수 있습니다. 재료는 공통 <span class="kw-gold">반짝이는 벼락불 × 2</span> + <span class="kw-resource">룬 3종 × 6개</span> + <span class="kw-price">5,000</span> 골드.
+
+<div class="summary-box">
+### 3분 안에 핵심만
+
+- **제작 가능 신화**: <span class="kw-mythic">{craftedMythics.length}종</span> (가슴 2, 투구 3, 무기 3, 반지 1, 목걸이 1)
+- **공통 재료**: <span class="kw-mythic">반짝이는 벼락불 × 2</span> + 룬 3종 × 6개 + 5,000 골드
+- **위력 고정**: <span class="kw-gold">아이템 위력 900</span> 으로 고정 (선조 등급 자동)
+- **룬 우선 확보**: 같은 룬이 여러 신화에 공통 사용됨 (예: <span class="kw-legendary">탐</span> → 안다리엘의 두개골 + 한마비)
+- **드랍 전용**: 비밀 레시피의 보스 트로피 추첨, 둥지 보스 신화 풀로만 획득
+
+</div>
+
+## 큐브 제작 가능 신화 ({craftedMythics.length}종)
+
+각 카드의 아이콘을 클릭하면 인-게임 제작 UI 원본을 확대해서 확인할 수 있습니다.
+
+### 가슴 방어구
+
+{craftBySlot['가슴 방어구']?.map((item) => (
+  <MythicCard item={item} />
+))}
+
+### 투구
+
+{craftBySlot['투구']?.map((item) => (
+  <MythicCard item={item} />
+))}
+
+### 무기
+
+{[
+  ...(craftBySlot['한손 도검 (베는 무기)'] ?? []),
+  ...(craftBySlot['양손 도검 (베는 무기)'] ?? []),
+  ...(craftBySlot['미늘창 (베는 무기)'] ?? []),
+].map((item) => (
+  <MythicCard item={item} />
+))}
+
+### 장신구 (반지 / 목걸이)
+
+{[
+  ...(craftBySlot['반지'] ?? []),
+  ...(craftBySlot['목걸이'] ?? []),
+].map((item) => (
+  <MythicCard item={item} />
+))}
+
+## 드랍 전용 신화
+
+큐브에서 직접 제작할 수 없고, **비밀 레시피의 보스 트로피 추첨** 또는 **둥지 보스 신화 풀** 을 통해서만 획득합니다.
+
+{dropMythics.length > 0 ? dropMythics.map((item) => (
+  <MythicCard item={item} />
+)) : <p><em>드랍 전용 신화 데이터 갱신 중입니다. 시즌13 패치 진행에 따라 추가됩니다.</em></p>}
+
+:::caution[드랍 전용 신화 목록 갱신]
+시즌13 (Lord of Hatred 확장팩) 의 신화 풀은 패치마다 변동합니다. 정확한 시즌 최신 목록은 [Maxroll Mythic Unique 페이지](https://maxroll.gg/d4/mythic-uniques) 또는 [공식 패치 노트](https://news.blizzard.com/ko-kr/diablo4) 를 우선 참고합니다.
+:::
+
+## 재료 정리
+
+### 공통 재료 — 반짝이는 벼락불 (Sparkling Thunderbolt)
+
+- 신화 1개 제작당 <span class="kw-mythic">**2개 필요**</span>
+- 주요 출처:
+  - <span class="kw-gold">**호라드림 금고실(Strongroom)**</span> — 신화 보장 보상 노드
+  - <span class="kw-gold">**비밀 레시피 — 보스 트로피 추첨**</span> — 부산물
+  - <span class="kw-gold">**고난도 보스 처치**</span> 보상 풀 (확률)
+  - <span class="kw-gold">**전쟁 계획 함**</span> 최종 보상 (확률)
+
+### 룬 재료
+
+각 신화는 의식/기원 룬 3종 × 6개씩 요구. 룬 종류는 [룬 제작 페이지](/horadric-cube/runes/) 의 33개 카탈로그 참고. 룬 카드의 아이콘을 클릭하면 인-게임 툴팁을 확인할 수 있습니다.
+
+#### 룬 → 신화 매핑 (빠른 조회)
+
+| 자주 쓰이는 룬 | 사용 신화 |
+|---|---|
+| <span class="kw-legendary">**탐**</span> (의식 전설) | 안다리엘의 두개골 · 한마비 |
+| <span class="kw-rare">**녹**</span> (의식 희귀) | 거짓된 죽음의 수의 · 궤멸자 |
+| <span class="kw-rare">**잔**</span> (의식 희귀) | 안다리엘의 두개골 |
+| <span class="kw-magic">**쳄**</span> (의식 마법) | 별 없는 하늘의 반지 |
+| <span class="kw-legendary">**에옴**</span> (기원 전설) | 할리퀸 관모 |
+| <span class="kw-rare">**라크**</span> (기원 희귀) | 할리퀸 관모 |
+| <span class="kw-magic">**테브**</span> (기원 마법) | 박살난 맹세 |
+
+> 같은 룬을 요구하는 신화들은 동시에 노리지 않는 것이 자원 효율적입니다. 우선순위 빌드 1개 정하고 → 그 신화에 필요한 룬만 집중 파밍.
+
+## 제작 절차 (큐브 UI)
+
+<div class="decision-flow">
+  <div class="step"><span class="step-num">1.</span> <span><strong class="kw-gold">큐브 메뉴 → 아이템 변환 → 신화 제작</strong> 선택</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">2.</span> <span>원하는 <strong class="kw-mythic">신화 아이템</strong> 클릭 → 재료 확인</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">3.</span> <span><strong>재료 충족</strong> 시 "제작" 버튼 활성 → 클릭</span></div>
+  <div class="step-arrow">▼</div>
+  <div class="step"><span class="step-num">4.</span> <span><strong class="kw-mythic">선조 신화 아이템 (900 위력)</strong> 인벤토리 추가</span></div>
+</div>
+
+## 자원 절약 팁
+
+:::tip[효율적 신화 파밍]
+- <span class="kw-gold">**룬 우선순위 1개 신화 결정**</span> — 빌드 가이드(Maxroll) 에서 추천 신화 1개 픽 → 그 룬만 집중 파밍.
+- <span class="kw-bone">**금고실 + 비밀 레시피 병행**</span> — 반짝이는 벼락불 안정 수급.
+- <span class="kw-gold">**거래소 활용**</span> — 룬 시세는 [3]~[101] 가격대 다양. <span class="kw-legendary">전설 룬</span> 중 가격 낮은 것들 직접 매수가 효율적.
+- <span class="kw-danger">**조급한 제작 금지**</span> — 신화는 한 번 제작하면 환불 불가. 빌드 확정 후에만.
+:::
+
+## FAQ
+
+**Q. 제작한 신화 아이템도 거래 가능한가요?**
+A. <span class="kw-danger">큐브에서 제작한 신화는 계정 귀속</span> 입니다. 거래소 판매 불가. 단, 드랍받은 신화 중 일부는 거래 가능합니다.
+
+**Q. 한마비(The Grandfather) 와 양손 도검 다른 신화가 있나요?**
+A. 한마비가 시즌13 시점의 유일한 양손 도검 신화입니다. 미늘창은 박살난 맹세, 한손 도검은 궤멸자.
+
+**Q. 룬을 거래소에서 사면 제작비가 얼마나 드나요?**
+A. 룬 가격 + 반짝이는 벼락불 2개 + 5,000 골드. 룬 시세는 [3]~[101] 사이지만 6개씩 필요하므로 평균 100~600 골드(룬 1개당) × 18개 = 약 1,800~10,800 골드 + 벼락불 시세 (시즌 초 매우 비쌈).
+
+**Q. 드랍 전용 신화는 어떻게 노리나요?**
+A. [비밀 레시피](/horadric-cube/secret-recipes/) 의 **신화 유니크 추첨** 또는 **보스 트로피 추첨** 사용. 둥지 보스 트리의 신화 풀 노드 활성화도 병행.
+
+<SourceFooter
+  sources={[
+    { label: 'Maxroll — Mythic Uniques', url: 'https://maxroll.gg/d4/mythic-uniques' },
+    { label: 'Mobalytics — Mythic Items Guide', url: 'https://mobalytics.gg/diablo-4/guides' },
+    { label: 'Fextralife — Horadric Cube', url: 'https://diablo4.wiki.fextralife.com/Horadric+Cube' },
+  ]}
+  lastUpdated="2026-05-17"
+/>

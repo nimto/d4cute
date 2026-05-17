@@ -1,0 +1,145 @@
+---
+import ImageModal from './ImageModal.astro';
+import type { MythicItem } from '../data/mythic-items';
+
+interface Props {
+  item: MythicItem;
+}
+const { item } = Astro.props as Props;
+const isCraft = item.source === 'crafted' || item.source === 'both';
+---
+
+<article class={`mythic-card mythic-source-${item.source}`} aria-labelledby={`mythic-${item.slug}-name`}>
+  <div class="mythic-card-icon">
+    {item.iconSrc ? (
+      <ImageModal
+        src={item.iconSrc}
+        lightboxSrc={item.tooltipSrc ?? item.iconSrc}
+        alt={`${item.name} — 인-게임 툴팁`}
+        caption=""
+        size={96}
+      />
+    ) : (
+      <div class="mythic-card-placeholder" aria-hidden="true">
+        <span>{item.slotKr.split(' ')[0]}</span>
+      </div>
+    )}
+  </div>
+  <div class="mythic-card-body">
+    <header class="mythic-card-head">
+      <h4 id={`mythic-${item.slug}-name`} class="mythic-card-name">
+        {item.name}
+      </h4>
+      <span class="mythic-source-badge">{item.source === 'crafted' ? '큐브 제작' : item.source === 'drop' ? '드랍 전용' : '제작 + 드랍'}</span>
+    </header>
+    {item.enName && <p class="mythic-card-en">{item.enName}</p>}
+    <dl class="mythic-card-meta">
+      <div><dt>슬롯</dt><dd>{item.slotKr}</dd></div>
+      {item.itemPower && (
+        <div><dt>위력</dt><dd>{item.itemPower[0]}–{item.itemPower[1]}</dd></div>
+      )}
+      {isCraft && item.materials && (
+        <>
+          {item.materials.sparklingThunderbolt && (
+            <div><dt>벼락불</dt><dd><span class="kw-mythic">반짝이는 벼락불 × {item.materials.sparklingThunderbolt}</span></dd></div>
+          )}
+          {item.materials.runes && item.materials.runes.length > 0 && (
+            <div><dt>룬 재료</dt><dd>
+              {item.materials.runes.map((r, i) => (
+                <span class="rune-pill">{r.name} × {r.qty}{i < item.materials!.runes!.length - 1 ? ' · ' : ''}</span>
+              ))}
+            </dd></div>
+          )}
+          {item.materials.goldCost && (
+            <div><dt>골드</dt><dd><span class="kw-gold">{item.materials.goldCost.toLocaleString()}</span></dd></div>
+          )}
+        </>
+      )}
+      {item.source === 'drop' && item.dropSource && (
+        <div><dt>드랍처</dt><dd><span class="kw-bone">{item.dropSource}</span></dd></div>
+      )}
+      {item.passive && (
+        <div><dt>패시브</dt><dd>{item.passive}</dd></div>
+      )}
+    </dl>
+  </div>
+</article>
+
+<style>
+  .mythic-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    background: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+    border-left-width: 4px;
+    border-left-color: #ff4d5a;
+    border-radius: 4px;
+    margin: 0.6rem 0;
+  }
+  .mythic-source-drop { border-left-color: #b864ff; }
+  .mythic-source-both { border-left-color: #eac333; }
+
+  .mythic-card-icon { display: flex; align-items: flex-start; }
+  .mythic-card-icon :global(.img-thumb) { margin: 0; }
+  .mythic-card-placeholder {
+    width: 96px; height: 96px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(184, 100, 255, 0.08);
+    border: 1px dashed rgba(184, 100, 255, 0.4);
+    border-radius: 4px;
+    color: var(--d4-bone);
+    font-size: 0.78em;
+    text-align: center;
+  }
+
+  .mythic-card-body { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+  .mythic-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+  .mythic-card-name {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #ff4d5a;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+  .mythic-card-en {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--sl-color-gray-3);
+    font-style: italic;
+  }
+  .mythic-source-badge {
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    color: #ff4d5a;
+    background: rgba(255, 77, 90, 0.08);
+  }
+  .mythic-source-drop .mythic-source-badge {
+    color: #b864ff;
+    background: rgba(184, 100, 255, 0.08);
+  }
+
+  .mythic-card-meta { margin: 0.25rem 0 0; font-size: 0.85rem; line-height: 1.45; }
+  .mythic-card-meta div { display: grid; grid-template-columns: 5rem 1fr; gap: 0.5rem; margin: 0.15rem 0; }
+  .mythic-card-meta dt { color: var(--sl-color-gray-3); font-weight: 600; }
+  .mythic-card-meta dd { margin: 0; color: var(--sl-color-text, #e6dcc6); }
+  .rune-pill {
+    color: var(--d4-gold);
+    font-weight: 500;
+  }
+
+  /* Light theme */
+  [data-theme='light'] .mythic-card { background: rgba(0, 0, 0, 0.03); border-color: rgba(0, 0, 0, 0.12); border-left-color: #8a0521; }
+  [data-theme='light'] .mythic-source-drop { border-left-color: #6a1f9a; }
+  [data-theme='light'] .mythic-card-name { color: #8a0521; }
+  [data-theme='light'] .mythic-card-en { color: #5a4a2e; }
+  [data-theme='light'] .mythic-source-badge { color: #8a0521; background: rgba(255, 77, 90, 0.12); }
+  [data-theme='light'] .mythic-source-drop .mythic-source-badge { color: #6a1f9a; background: rgba(184, 100, 255, 0.12); }
+  [data-theme='light'] .mythic-card-meta dt { color: #5a4a2e; }
+  [data-theme='light'] .mythic-card-meta dd { color: #2a1a08; }
+  [data-theme='light'] .rune-pill { color: #7a5a0a; }
+</style>
