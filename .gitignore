@@ -27,3 +27,6 @@ giscus-rendered.png
 
 # Playwright/dev screenshots
 transfig-*.png
+
+# Claude Code internal lock files
+.claude/
