@@ -1,7 +1,14 @@
 {
-  "generatedAt": "2026-05-18T12:22:10.906Z",
+  "generatedAt": "2026-05-18T12:30:45.417Z",
   "count": 40,
   "items": [
+    {
+      "url": "/activity/",
+      "title": "내 활동 + 최신 변경",
+      "date": "2026-05-18T20:22:41+08:00",
+      "commit": "feat: /activity 페이지 — 내 댓글 빠른 링크 + 최신 변경 문서 리스트",
+      "hash": "6c4cffc"
+    },
     {
       "url": "/horadric-cube/secret-recipes/",
       "title": "비밀 레시피 (Secret Recipes) — 초보 가이드",
@@ -274,13 +281,6 @@
       "date": "2026-05-17T03:07:08+08:00",
       "commit": "feat: 댓글 백엔드를 Facebook 에서 Giscus 로 전환",
       "hash": "2079f51"
-    },
-    {
-      "url": "/terms/",
-      "title": "서비스 약관",
-      "date": "2026-05-17T00:58:31+08:00",
-      "commit": "feat: Facebook App 제출용 법적 페이지 + 1024 아이콘 추가",
-      "hash": "7de3e7e"
     }
   ]
 }

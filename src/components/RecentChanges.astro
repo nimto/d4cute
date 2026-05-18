@@ -24,14 +24,46 @@ function shortCommit(s: string) {
 }
 ---
 
-<div class={`recent-changes ${compact ? 'is-compact' : ''}`}>
+<div class={`recent-changes ${compact ? 'is-compact' : ''}`} data-recent-changes>
+  {!compact && items.length > 0 && (
+    <div class="recent-changes-controls">
+      <label class="recent-changes-search">
+        <span class="recent-changes-search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          data-rc-search
+          placeholder="문서 제목 또는 커밋 메시지 검색…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button type="button" class="recent-changes-search-clear" data-rc-clear aria-label="검색어 지우기" hidden>×</button>
+      </label>
+      <label class="recent-changes-sort">
+        <span class="recent-changes-sort-label">정렬</span>
+        <select data-rc-sort>
+          <option value="date-desc" selected>최신순 (날짜 ↓)</option>
+          <option value="date-asc">오래된순 (날짜 ↑)</option>
+          <option value="title-asc">제목 A-Z / ㄱ-ㅎ</option>
+          <option value="title-desc">제목 Z-A / ㅎ-ㄱ</option>
+          <option value="commit-asc">커밋 메시지 A-Z</option>
+        </select>
+      </label>
+    </div>
+  )}
+
   {items.length === 0 && (
     <p class="recent-changes-empty">변경 내역이 없습니다.</p>
   )}
   {items.length > 0 && (
-    <ol class="recent-changes-list">
+    <ol class="recent-changes-list" data-rc-list>
       {items.map((it: any) => (
-        <li class="recent-changes-item">
+        <li
+          class="recent-changes-item"
+          data-rc-item
+          data-title={it.title}
+          data-commit={it.commit}
+          data-date={it.date}
+        >
           <a class="recent-changes-link" href={toFull(it.url)}>
             <div class="recent-changes-main">
               <span class="recent-changes-title">{it.title}</span>
@@ -46,6 +78,11 @@ function shortCommit(s: string) {
       ))}
     </ol>
   )}
+
+  {!compact && items.length > 0 && (
+    <p class="recent-changes-status" data-rc-status hidden></p>
+  )}
+
   {!compact && (
     <p class="recent-changes-note">
       마지막 갱신: <time datetime={recentChanges.generatedAt}>{fmtDate(recentChanges.generatedAt)}</time>
@@ -53,6 +90,88 @@ function shortCommit(s: string) {
     </p>
   )}
 </div>
+
+{!compact && items.length > 0 && (
+  <script is:inline>
+    (function () {
+      const roots = document.querySelectorAll('[data-recent-changes]');
+      roots.forEach(function (root) {
+        if (root.dataset.rcBound) return;
+        root.dataset.rcBound = '1';
+        const search = root.querySelector('[data-rc-search]');
+        const clearBtn = root.querySelector('[data-rc-clear]');
+        const sort = root.querySelector('[data-rc-sort]');
+        const list = root.querySelector('[data-rc-list]');
+        const status = root.querySelector('[data-rc-status]');
+        if (!list) return;
+
+        const allItems = Array.from(list.querySelectorAll('[data-rc-item]'));
+
+        function applyFilter() {
+          const q = (search && search.value || '').trim().toLowerCase();
+          if (clearBtn) clearBtn.hidden = q.length === 0;
+          let visible = 0;
+          allItems.forEach(function (it) {
+            if (!q) {
+              it.hidden = false;
+              visible++;
+              return;
+            }
+            const t = (it.dataset.title || '').toLowerCase();
+            const c = (it.dataset.commit || '').toLowerCase();
+            const match = t.indexOf(q) >= 0 || c.indexOf(q) >= 0;
+            it.hidden = !match;
+            if (match) visible++;
+          });
+          if (status) {
+            if (q) {
+              status.hidden = false;
+              status.textContent = '"' + q + '" 결과: ' + visible + '건';
+            } else {
+              status.hidden = true;
+              status.textContent = '';
+            }
+          }
+        }
+
+        function applySort() {
+          const v = sort && sort.value || 'date-desc';
+          const sorted = allItems.slice().sort(function (a, b) {
+            const ta = a.dataset.title || '';
+            const tb = b.dataset.title || '';
+            const ca = a.dataset.commit || '';
+            const cb = b.dataset.commit || '';
+            const da = a.dataset.date || '';
+            const db = b.dataset.date || '';
+            if (v === 'date-asc') return da.localeCompare(db);
+            if (v === 'title-asc') return ta.localeCompare(tb, 'ko');
+            if (v === 'title-desc') return tb.localeCompare(ta, 'ko');
+            if (v === 'commit-asc') return ca.localeCompare(cb, 'ko');
+            return db.localeCompare(da); // date-desc default
+          });
+          sorted.forEach(function (it) { list.appendChild(it); });
+        }
+
+        if (search) {
+          search.addEventListener('input', applyFilter);
+        }
+        if (clearBtn) {
+          clearBtn.addEventListener('click', function () {
+            if (search) {
+              search.value = '';
+              search.focus();
+            }
+            applyFilter();
+          });
+        }
+        if (sort) {
+          sort.addEventListener('change', applySort);
+        }
+        applyFilter();
+      });
+    })();
+  </script>
+)}
 
 <style>
   .recent-changes-list {
@@ -136,6 +255,99 @@ function shortCommit(s: string) {
     font-size: 0.82rem;
     color: var(--sl-color-gray-3);
   }
+  .recent-changes-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0 0 0.85rem;
+    align-items: center;
+  }
+  .recent-changes-search {
+    position: relative;
+    flex: 1 1 16rem;
+    min-width: 12rem;
+    display: flex;
+    align-items: center;
+  }
+  .recent-changes-search-icon {
+    position: absolute;
+    left: 0.6rem;
+    pointer-events: none;
+    font-size: 0.95rem;
+    opacity: 0.7;
+  }
+  .recent-changes-search input {
+    flex: 1;
+    padding: 0.45rem 2rem 0.45rem 2rem;
+    background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    color: var(--sl-color-text);
+    font-size: 0.92rem;
+    font-family: inherit;
+    width: 100%;
+  }
+  .recent-changes-search input:focus {
+    outline: none;
+    border-color: var(--d4-gold, #eac333);
+    box-shadow: 0 0 0 2px rgba(234, 195, 51, 0.18);
+  }
+  .recent-changes-search input::-webkit-search-cancel-button { display: none; }
+  .recent-changes-search-clear {
+    position: absolute;
+    right: 0.4rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--sl-color-text);
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+  }
+  .recent-changes-search-clear:hover {
+    background: rgba(192, 16, 32, 0.15);
+    color: #c01020;
+    opacity: 1;
+  }
+  .recent-changes-sort {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex: 0 0 auto;
+  }
+  .recent-changes-sort-label {
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-3);
+    font-weight: 600;
+  }
+  .recent-changes-sort select {
+    padding: 0.42rem 0.6rem;
+    background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    color: var(--sl-color-text);
+    font-size: 0.88rem;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .recent-changes-sort select:focus {
+    outline: none;
+    border-color: var(--d4-gold, #eac333);
+    box-shadow: 0 0 0 2px rgba(234, 195, 51, 0.18);
+  }
+  .recent-changes-status {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    color: var(--d4-gold, #eac333);
+    font-weight: 600;
+  }
+  [data-theme='light'] .recent-changes-status { color: #8a6a00; }
 
   .is-compact .recent-changes-link {
     padding: 0.45rem 0.65rem;
