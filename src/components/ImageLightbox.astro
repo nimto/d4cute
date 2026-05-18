@@ -4,13 +4,21 @@
 <div class="img-lightbox" data-state="closed" role="dialog" aria-modal="true" aria-label="이미지 확대 보기" hidden>
   <button class="img-lightbox-close" type="button" aria-label="닫기">×</button>
   <div class="img-lightbox-zoominfo" aria-hidden="true">100%</div>
+  <div class="img-lightbox-counter" aria-live="polite">1 / 1</div>
   <figure class="img-lightbox-figure">
     <div class="img-lightbox-canvas">
       <img alt="" draggable="false" />
     </div>
     <figcaption></figcaption>
   </figure>
-  <div class="img-lightbox-help" aria-hidden="true">휠: 확대/축소 · 드래그: 이동 · 더블클릭: 원래대로 · Esc: 닫기</div>
+  <nav class="img-lightbox-nav" aria-label="이미지 갤러리 탐색">
+    <button class="img-lightbox-navbtn" data-nav="first" type="button" aria-label="처음 이미지" title="처음 (Home)">&laquo;</button>
+    <button class="img-lightbox-navbtn" data-nav="prev" type="button" aria-label="이전 이미지" title="이전 (←)">&lsaquo;</button>
+    <span class="img-lightbox-navindex">1 / 1</span>
+    <button class="img-lightbox-navbtn" data-nav="next" type="button" aria-label="다음 이미지" title="다음 (→)">&rsaquo;</button>
+    <button class="img-lightbox-navbtn" data-nav="last" type="button" aria-label="마지막 이미지" title="마지막 (End)">&raquo;</button>
+  </nav>
+  <div class="img-lightbox-help" aria-hidden="true">휠: 확대/축소 · 드래그: 이동 · 더블클릭: 원래대로 · ← →: 이전/다음 · Esc: 닫기</div>
 </div>
 
 <style is:global>
@@ -118,6 +126,88 @@
     border-radius: 999px;
     pointer-events: none;
   }
+  .img-lightbox-counter {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--d4-gold, #eac333);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 0.3rem 0.85rem;
+    border: 1px solid rgba(234, 195, 51, 0.4);
+    border-radius: 999px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .img-lightbox-nav {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.4rem 0.6rem;
+    border: 1px solid rgba(234, 195, 51, 0.35);
+    border-radius: 999px;
+    z-index: 3;
+  }
+  .img-lightbox-navbtn {
+    background: transparent;
+    border: 1px solid var(--d4-gold, #eac333);
+    color: var(--d4-gold, #eac333);
+    min-width: 2.4rem;
+    height: 2.4rem;
+    padding: 0 0.6rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, transform 0.1s ease, opacity 0.15s ease;
+    font-family: inherit;
+  }
+  .img-lightbox-navbtn:hover:not(:disabled),
+  .img-lightbox-navbtn:focus-visible {
+    background: rgba(234, 195, 51, 0.2);
+    outline: none;
+    transform: scale(1.08);
+  }
+  .img-lightbox-navbtn:active:not(:disabled) { transform: scale(0.96); }
+  .img-lightbox-navbtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  .img-lightbox-navindex {
+    color: var(--d4-bone, #d8c8a0);
+    font-size: 0.92rem;
+    font-variant-numeric: tabular-nums;
+    padding: 0 0.6rem;
+    min-width: 4rem;
+    text-align: center;
+    user-select: none;
+  }
+  @media (max-width: 640px) {
+    .img-lightbox-nav {
+      bottom: 3rem;
+      gap: 0.3rem;
+      padding: 0.3rem 0.4rem;
+    }
+    .img-lightbox-navbtn {
+      min-width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
+      padding: 0 0.4rem;
+    }
+    .img-lightbox-navindex { font-size: 0.85rem; min-width: 3rem; }
+    .img-lightbox-help { font-size: 0.7rem; bottom: 0.5rem; }
+    .img-lightbox-counter { font-size: 0.75rem; padding: 0.2rem 0.6rem; }
+  }
 </style>
 
 <script is:inline>
@@ -129,6 +219,12 @@
     const closeBtn = lb.querySelector('.img-lightbox-close');
     const canvas = lb.querySelector('.img-lightbox-canvas');
     const zoomInfo = lb.querySelector('.img-lightbox-zoominfo');
+    const counter = lb.querySelector('.img-lightbox-counter');
+    const navIndex = lb.querySelector('.img-lightbox-navindex');
+    const navFirst = lb.querySelector('[data-nav="first"]');
+    const navPrev = lb.querySelector('[data-nav="prev"]');
+    const navNext = lb.querySelector('[data-nav="next"]');
+    const navLast = lb.querySelector('[data-nav="last"]');
 
     let scale = 1;
     let tx = 0, ty = 0;
@@ -136,6 +232,9 @@
     const MAX_SCALE = 6;
     let isPanning = false;
     let panStart = null;
+
+    let gallery = [];      // current page's img-thumb-btn list
+    let currentIdx = -1;
 
     const applyTransform = () => {
       img.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
@@ -146,11 +245,41 @@
       scale = 1; tx = 0; ty = 0;
       applyTransform();
     };
-    const open = (src, alt, caption) => {
-      img.src = src;
-      img.alt = alt || '';
-      cap.textContent = caption || '';
+
+    const refreshGallery = () => {
+      gallery = Array.from(document.querySelectorAll('.img-thumb-btn'));
+    };
+    const updateNav = () => {
+      const total = gallery.length;
+      const label = total > 0 ? `${currentIdx + 1} / ${total}` : '1 / 1';
+      navIndex.textContent = label;
+      counter.textContent = label;
+      const disabled = total <= 1;
+      navFirst.disabled = disabled || currentIdx <= 0;
+      navPrev.disabled = disabled || currentIdx <= 0;
+      navNext.disabled = disabled || currentIdx >= total - 1;
+      navLast.disabled = disabled || currentIdx >= total - 1;
+    };
+    const loadIdx = (idx) => {
+      if (idx < 0 || idx >= gallery.length) return;
+      const btn = gallery[idx];
+      currentIdx = idx;
+      img.src = btn.dataset.imgSrc || '';
+      img.alt = btn.dataset.imgAlt || '';
+      cap.textContent = btn.dataset.imgCaption || '';
       resetTransform();
+      updateNav();
+    };
+
+    const open = (triggerBtn) => {
+      refreshGallery();
+      currentIdx = gallery.indexOf(triggerBtn);
+      if (currentIdx < 0) {
+        // standalone open (no gallery match) — single-image mode
+        gallery = [triggerBtn];
+        currentIdx = 0;
+      }
+      loadIdx(currentIdx);
       lb.hidden = false;
       lb.dataset.state = 'open';
       document.body.style.overflow = 'hidden';
@@ -160,24 +289,38 @@
       lb.dataset.state = 'closed';
       img.src = '';
       resetTransform();
+      gallery = [];
+      currentIdx = -1;
       document.body.style.overflow = '';
     };
+    const goFirst = () => { if (gallery.length > 0) loadIdx(0); };
+    const goPrev = () => { if (currentIdx > 0) loadIdx(currentIdx - 1); };
+    const goNext = () => { if (currentIdx < gallery.length - 1) loadIdx(currentIdx + 1); };
+    const goLast = () => { if (gallery.length > 0) loadIdx(gallery.length - 1); };
 
     document.addEventListener('click', (e) => {
       const btn = e.target.closest('.img-thumb-btn');
       if (btn) {
         e.preventDefault();
-        open(btn.dataset.imgSrc, btn.dataset.imgAlt, btn.dataset.imgCaption);
+        open(btn);
       }
     });
 
     lb.addEventListener('click', (e) => {
       if (e.target.closest('.img-lightbox-close')) { close(); return; }
+      if (e.target.closest('[data-nav="first"]')) { goFirst(); return; }
+      if (e.target.closest('[data-nav="prev"]')) { goPrev(); return; }
+      if (e.target.closest('[data-nav="next"]')) { goNext(); return; }
+      if (e.target.closest('[data-nav="last"]')) { goLast(); return; }
       if (e.target === lb) close();
     });
     document.addEventListener('keydown', (e) => {
       if (lb.dataset.state !== 'open') return;
       if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
+      else if (e.key === 'Home') { e.preventDefault(); goFirst(); }
+      else if (e.key === 'End') { e.preventDefault(); goLast(); }
       else if (e.key === '+' || e.key === '=') { scale = Math.min(MAX_SCALE, scale * 1.2); applyTransform(); }
       else if (e.key === '-' || e.key === '_') { scale = Math.max(MIN_SCALE, scale / 1.2); if (scale === MIN_SCALE) { tx = 0; ty = 0; } applyTransform(); }
       else if (e.key === '0') resetTransform();
