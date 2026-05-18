@@ -26,7 +26,8 @@ const imageSrc = term?.image ? toFull(term.image) : (term?.externalImage ?? '');
       {displayText}
       {showEn && <span class="term-en"> ({term.en})</span>}
     </span>
-    <span class="term-popup" role="tooltip">
+    <span class="term-popup" role="tooltip" data-placement="top">
+      <span class="term-popup-arrow" aria-hidden="true"></span>
       {imageSrc && (
         <span class="term-popup-image">
           <img src={imageSrc} alt={term.kr} loading="lazy" />
@@ -87,10 +88,10 @@ const imageSrc = term?.image ? toFull(term.image) : (term?.externalImage ?? '');
   }
 
   .term-popup {
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%) scale(0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-9999px, -9999px) scale(0.95);
     transform-origin: bottom center;
     background: var(--sl-color-bg, #0f0d0e);
     border: 1px solid var(--d4-gold, #eac333);
@@ -102,8 +103,8 @@ const imageSrc = term?.image ? toFull(term.image) : (term?.externalImage ?? '');
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0.15s;
-    z-index: 100;
+    transition: opacity 0.15s ease, visibility 0s linear 0.15s;
+    z-index: 10000;
     display: flex;
     gap: 0.75rem;
     font-weight: 400;
@@ -117,27 +118,38 @@ const imageSrc = term?.image ? toFull(term.image) : (term?.externalImage ?? '');
     border-color: #b08800;
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
   }
-  .term-tooltip:hover .term-popup,
-  .term-tooltip:focus-visible .term-popup,
-  .term-tooltip:focus-within .term-popup {
+  .term-popup[data-open='true'] {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateX(-50%) scale(1);
-    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0s;
+    transition: opacity 0.15s ease, visibility 0s linear 0s;
   }
-  .term-popup::after {
-    content: '';
+  .term-popup-arrow {
     position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+  }
+  .term-popup[data-placement='top'] .term-popup-arrow {
     top: 100%;
-    left: 50%;
+    left: var(--arrow-x, 50%);
     transform: translateX(-50%);
     border-width: 8px 8px 0 8px;
-    border-style: solid;
-    border-color: var(--d4-gold, #eac333) transparent transparent transparent;
+    border-top-color: var(--d4-gold, #eac333);
   }
-  [data-theme='light'] .term-popup::after {
+  .term-popup[data-placement='bottom'] .term-popup-arrow {
+    bottom: 100%;
+    left: var(--arrow-x, 50%);
+    transform: translateX(-50%);
+    border-width: 0 8px 8px 8px;
+    border-bottom-color: var(--d4-gold, #eac333);
+  }
+  [data-theme='light'] .term-popup[data-placement='top'] .term-popup-arrow {
     border-top-color: #b08800;
+  }
+  [data-theme='light'] .term-popup[data-placement='bottom'] .term-popup-arrow {
+    border-bottom-color: #b08800;
   }
 
   .term-popup-image {
@@ -230,3 +242,121 @@ const imageSrc = term?.image ? toFull(term.image) : (term?.externalImage ?? '');
     color: #c01020;
   }
 </style>
+
+<script is:inline>
+  (function () {
+    if (window.__termTooltipBound) return;
+    window.__termTooltipBound = true;
+
+    const MARGIN = 8;
+    const VIEWPORT_PAD = 12;
+    let activePopup = null;
+    let activeTrigger = null;
+    let rafId = null;
+
+    function positionPopup(trigger) {
+      const popup = trigger.querySelector('.term-popup');
+      if (!popup) return;
+
+      popup.style.transform = '';
+      popup.style.maxWidth = '';
+
+      const triggerRect = trigger.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+
+      const maxW = Math.min(360, vw - VIEWPORT_PAD * 2);
+      popup.style.maxWidth = maxW + 'px';
+
+      const popupRect = popup.getBoundingClientRect();
+      const popupW = popupRect.width;
+      const popupH = popupRect.height;
+
+      const triggerCenterX = triggerRect.left + triggerRect.width / 2;
+      let placement = 'top';
+      let top = triggerRect.top - popupH - MARGIN;
+      if (top < VIEWPORT_PAD) {
+        placement = 'bottom';
+        top = triggerRect.bottom + MARGIN;
+      }
+      if (top + popupH > vh - VIEWPORT_PAD) {
+        top = Math.max(VIEWPORT_PAD, vh - popupH - VIEWPORT_PAD);
+      }
+
+      let left = triggerCenterX - popupW / 2;
+      if (left < VIEWPORT_PAD) left = VIEWPORT_PAD;
+      if (left + popupW > vw - VIEWPORT_PAD) left = vw - popupW - VIEWPORT_PAD;
+
+      const arrowX = triggerCenterX - left;
+      const clampedArrowX = Math.max(16, Math.min(popupW - 16, arrowX));
+
+      popup.style.transform = 'translate(' + Math.round(left) + 'px, ' + Math.round(top) + 'px) scale(1)';
+      popup.dataset.placement = placement;
+      popup.style.setProperty('--arrow-x', clampedArrowX + 'px');
+    }
+
+    function showPopup(trigger) {
+      if (activeTrigger && activeTrigger !== trigger) hidePopup();
+      activeTrigger = trigger;
+      const popup = trigger.querySelector('.term-popup');
+      if (!popup) return;
+      activePopup = popup;
+      popup.dataset.open = 'true';
+      positionPopup(trigger);
+      requestAnimationFrame(function () { positionPopup(trigger); });
+    }
+
+    function hidePopup() {
+      if (!activePopup) return;
+      activePopup.dataset.open = 'false';
+      activePopup.style.transform = 'translate(-9999px, -9999px) scale(0.95)';
+      activePopup = null;
+      activeTrigger = null;
+    }
+
+    document.addEventListener('mouseenter', function (e) {
+      const t = e.target;
+      if (t && t.classList && t.classList.contains('term-tooltip')) {
+        showPopup(t);
+      }
+    }, true);
+
+    document.addEventListener('mouseleave', function (e) {
+      const t = e.target;
+      if (t && t.classList && t.classList.contains('term-tooltip') && t === activeTrigger) {
+        hidePopup();
+      }
+    }, true);
+
+    document.addEventListener('focusin', function (e) {
+      const t = e.target;
+      if (t && t.classList && t.classList.contains('term-tooltip')) {
+        showPopup(t);
+      }
+    });
+
+    document.addEventListener('focusout', function (e) {
+      const t = e.target;
+      if (t && t.classList && t.classList.contains('term-tooltip') && t === activeTrigger) {
+        hidePopup();
+      }
+    });
+
+    function onScrollOrResize() {
+      if (!activeTrigger) return;
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(function () {
+        if (activeTrigger) positionPopup(activeTrigger);
+      });
+    }
+    window.addEventListener('scroll', onScrollOrResize, true);
+    window.addEventListener('resize', onScrollOrResize);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && activeTrigger) {
+        activeTrigger.blur();
+        hidePopup();
+      }
+    });
+  })();
+</script>
