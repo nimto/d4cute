@@ -1,0 +1,232 @@
+---
+import { getTerm } from '../data/glossary';
+
+interface Props {
+  id: string;
+  text?: string;        // 표시할 텍스트 (생략 시 term.kr 사용)
+  showEn?: boolean;     // 영문명 인라인 표시 여부
+  className?: string;
+}
+const { id, text, showEn = false, className = '' } = Astro.props as Props;
+const term = getTerm(id);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const toFull = (s: string) => s.startsWith('http') ? s : `${base}${s.startsWith('/') ? s : `/${s}`}`;
+
+if (!term) {
+  // missing term — render plain text fallback
+}
+
+const displayText = text || term?.kr || id;
+const imageSrc = term?.image ? toFull(term.image) : (term?.externalImage ?? '');
+---
+
+{term ? (
+  <span class={`term-tooltip ${className}`} tabindex="0" data-term-id={term.id}>
+    <span class="term-text">
+      {displayText}
+      {showEn && <span class="term-en"> ({term.en})</span>}
+    </span>
+    <span class="term-popup" role="tooltip">
+      {imageSrc && (
+        <span class="term-popup-image">
+          <img src={imageSrc} alt={term.kr} loading="lazy" />
+        </span>
+      )}
+      <span class="term-popup-body">
+        <span class="term-popup-title">
+          {term.kr}
+          {!term.verified && <span class="term-popup-unverified" title="공식 출처 확인 필요">⚠</span>}
+        </span>
+        <span class="term-popup-en">{term.en}</span>
+        <span class="term-popup-short">{term.short}</span>
+        <span class="term-popup-desc" set:html={term.desc}></span>
+        {term.source && (
+          <a class="term-popup-source" href={term.source} target="_blank" rel="noopener noreferrer">
+            출처 ↗
+          </a>
+        )}
+      </span>
+    </span>
+  </span>
+) : (
+  <span class="term-tooltip term-missing">{displayText}</span>
+)}
+
+<style is:global>
+  .term-tooltip {
+    position: relative;
+    display: inline;
+    border-bottom: 1px dotted var(--d4-gold, #eac333);
+    cursor: help;
+    color: var(--sl-color-text-accent, var(--d4-gold, #eac333));
+    font-weight: 600;
+  }
+  .term-tooltip:hover,
+  .term-tooltip:focus-visible {
+    background: rgba(234, 195, 51, 0.1);
+    outline: none;
+  }
+  .term-tooltip:focus-visible {
+    box-shadow: 0 0 0 2px var(--d4-gold, #eac333);
+    border-radius: 2px;
+  }
+  [data-theme='light'] .term-tooltip {
+    color: #8a6a00;
+    border-bottom-color: #b08800;
+  }
+  [data-theme='light'] .term-tooltip:hover,
+  [data-theme='light'] .term-tooltip:focus-visible {
+    background: rgba(176, 136, 0, 0.12);
+  }
+
+  .term-en {
+    font-size: 0.85em;
+    opacity: 0.75;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .term-popup {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    transform-origin: bottom center;
+    background: var(--sl-color-bg, #0f0d0e);
+    border: 1px solid var(--d4-gold, #eac333);
+    border-radius: 8px;
+    padding: 0.75rem;
+    min-width: 280px;
+    max-width: 360px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(234, 195, 51, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0.15s;
+    z-index: 100;
+    display: flex;
+    gap: 0.75rem;
+    font-weight: 400;
+    color: var(--sl-color-text);
+    text-align: left;
+    line-height: 1.5;
+    font-size: 0.92em;
+  }
+  [data-theme='light'] .term-popup {
+    background: #fff;
+    border-color: #b08800;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  }
+  .term-tooltip:hover .term-popup,
+  .term-tooltip:focus-visible .term-popup,
+  .term-tooltip:focus-within .term-popup {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0s;
+  }
+  .term-popup::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px 8px 0 8px;
+    border-style: solid;
+    border-color: var(--d4-gold, #eac333) transparent transparent transparent;
+  }
+  [data-theme='light'] .term-popup::after {
+    border-top-color: #b08800;
+  }
+
+  .term-popup-image {
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    background: var(--sl-color-gray-6, rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .term-popup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .term-popup-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+  .term-popup-title {
+    font-weight: 700;
+    color: var(--d4-gold, #eac333);
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  [data-theme='light'] .term-popup-title {
+    color: #8a6a00;
+  }
+  .term-popup-unverified {
+    color: #c01020;
+    font-size: 0.85em;
+    cursor: help;
+  }
+  .term-popup-en {
+    font-size: 0.82em;
+    opacity: 0.7;
+    font-style: italic;
+  }
+  .term-popup-short {
+    margin-top: 0.15rem;
+    font-size: 0.88em;
+    color: var(--sl-color-gray-2);
+    font-weight: 600;
+  }
+  [data-theme='light'] .term-popup-short {
+    color: #555;
+  }
+  .term-popup-desc {
+    margin-top: 0.35rem;
+    font-size: 0.9em;
+    color: var(--sl-color-text);
+  }
+  .term-popup-desc strong {
+    color: var(--d4-gold, #eac333);
+  }
+  [data-theme='light'] .term-popup-desc strong {
+    color: #8a6a00;
+  }
+  .term-popup-source {
+    margin-top: 0.5rem;
+    font-size: 0.82em;
+    color: var(--sl-color-accent, var(--d4-blood, #c01020));
+    text-decoration: none;
+    align-self: flex-start;
+  }
+  .term-popup-source:hover {
+    text-decoration: underline;
+  }
+
+  /* Mobile: tooltip below (no hover), use focus */
+  @media (max-width: 640px) {
+    .term-popup {
+      min-width: 240px;
+      max-width: calc(100vw - 2rem);
+      font-size: 0.85em;
+    }
+  }
+
+  .term-missing {
+    border-bottom-color: #c01020;
+    color: #c01020;
+  }
+</style>

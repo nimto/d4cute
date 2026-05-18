@@ -66,42 +66,42 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
 
 <RecipeCard
   name="어픽스 추가 (Add Affix)"
-  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: 'Coarse Primordial Dust' }, { qty: 5, name: 'Raw Primordial Dust' }]}
+  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: '거친 태고의 가루 (Coarse)' }, { qty: 5, name: '미가공 태고의 가루 (Raw)' }]}
   output="아이템에 무작위 어픽스 1개 추가"
   notes="조율 프리즘 선택. 어떤 어픽스가 붙을지 통제력이 낮아 비효율적일 수 있습니다."
 />
 
 <RecipeCard
   name="어픽스 제거 (Remove Affix)"
-  inputs={[{ qty: 1, name: '매직/레어 아이템' }, { qty: 1, name: 'Refined Primordial Dust' }, { qty: 15, name: 'Raw Primordial Dust' }]}
+  inputs={[{ qty: 1, name: '매직/레어 아이템' }, { qty: 1, name: '정제된 태고의 가루 (Refined)' }, { qty: 15, name: '미가공 태고의 가루 (Raw)' }]}
   output="무작위 어픽스 1개 제거"
   notes="레어 아이템 정리용. 전설/유니크에는 직접 적용되지 않음에 유의."
 />
 
 <RecipeCard
   name="카테고리 재롤 (Chaotic Reroll)"
-  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: 'Refined Primordial Dust' }, { qty: 15, name: 'Raw Primordial Dust' }]}
+  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: '정제된 태고의 가루 (Refined)' }, { qty: 15, name: '미가공 태고의 가루 (Raw)' }]}
   output="무작위 어픽스 1개를 다른 카테고리의 어픽스로 변경"
   notes="원치 않는 카테고리 어픽스를 갈아엎을 때 사용. 빌드 어픽스 확보의 첫 단계."
 />
 
 <RecipeCard
   name="같은 카테고리 재롤 (Focused Reroll)"
-  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: 'Refined Primordial Dust' }, { qty: 15, name: 'Raw Primordial Dust' }, { qty: 1, name: 'Tuning Prism' }]}
+  inputs={[{ qty: 1, name: '대상 아이템' }, { qty: 1, name: '정제된 태고의 가루 (Refined)' }, { qty: 15, name: '미가공 태고의 가루 (Raw)' }, { qty: 1, name: '조율의 분광경 (Tuning Prism)' }]}
   output="무작위 어픽스 1개를 같은 카테고리 내 다른 어픽스로 변경"
   notes="원하는 어픽스 카테고리는 맞는데 세부 값/종류만 바꾸고 싶을 때 사용."
 />
 
 <RecipeCard
   name="재제련 (Transfigure Item)"
-  inputs={[{ qty: 1, name: '전설/유니크/신화 아이템' }, { qty: 1, name: 'Volatile Primordial Dust' }]}
+  inputs={[{ qty: 1, name: '전설/유니크/신화 아이템' }, { qty: 1, name: '일촉즉발의 태고의 가루 (Volatile)' }]}
   output="아이템에 강력한 무작위 변형 적용"
   notes="조율 프리즘 선택. 무질서의 프리즘 사용 시 결과가 카테고리 단위로 고정되며 더 이상 수정 불가."
 />
 
 <RecipeCard
   name="유니크 파워 재롤 (Unique Power Reroll)"
-  inputs={[{ qty: 1, name: '태고 유니크 (Ancestral)' }, { qty: 1, name: 'Attuned Primordial Dust' }, { qty: 100, name: 'Raw Primordial Dust' }]}
+  inputs={[{ qty: 1, name: '태고 유니크 (Ancestral)' }, { qty: 1, name: '조율된 태고의 가루 (Attuned)' }, { qty: 100, name: '미가공 태고의 가루 (Raw)' }]}
   output="유니크 파워의 수치(가변 범위) 재추첨"
   notes="유니크의 고정 옵션 수치를 빌드에 맞게 끌어올릴 때 사용."
 />
