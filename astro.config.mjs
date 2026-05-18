@@ -80,6 +80,12 @@ export default defineConfig({
         },
         { label: '시작하기', link: '/quickstart/' },
         { label: '📋 내 활동 · 최신 변경', link: '/activity/' },
+        {
+          label: '🎯 시즌 가이드 (시즌 13)',
+          collapsed: false,
+          items: [{ autogenerate: { directory: 'season-guide' } }],
+          badge: { text: 'S13', variant: 'note' },
+        },
         { label: '호라드림 큐브', collapsed: false, items: [{ autogenerate: { directory: 'horadric-cube' } }] },
         { label: '보석', collapsed: true, items: [{ autogenerate: { directory: 'gems' } }] },
         { label: '부적 & 인장', collapsed: true, items: [{ autogenerate: { directory: 'talismans' } }] },
