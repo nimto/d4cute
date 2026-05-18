@@ -17,7 +17,7 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 - **S 티어 활동** (최우선): <span class="kw-gold">헬타이드</span>, <span class="kw-gold">쿠라스트 지하도시</span>
 - **A 티어** (고우선): <span class="kw-rare">둥지 보스</span>, <span class="kw-rare">악몽 던전</span>
-- **B 티어**: <span class="kw-bone">균열(나락)</span> — 글리프 XP 위주
+- **B 티어**: <span class="kw-bone">균열(나락)</span> — 문양 XP 위주
 - **D 티어**: <span class="kw-blood">지옥불 군세</span> — 보상 빈약 (시즌13 너프)
 - <span class="kw-danger">**위험 함정**</span>: 지하도시 트리의 <span class="kw-blood">'시련' 노드</span> + <span class="kw-blood">공물 상자 함정</span> — [지하도시 페이지](/activity-tree/undercity/) 의 경고 섹션 필독
 
@@ -83,17 +83,17 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 ## 잠금해제
 
-각 활동을 1회 이상 완주하면 해당 활동의 트리가 사령부 UI에 등록됩니다. 포인트는 활동 완주 시 자동 누적됩니다.
+각 활동을 1회 이상 완주하면 해당 활동의 트리가 전쟁 계획 메뉴에 등록됩니다. 포인트는 활동 완주 시 자동 누적됩니다.
 
 ## 시즌13 활동 티어 (Mobalytics 메타 기준)
 
 | 등급 | 활동 | 핵심 보상 | 권장 이유 |
 |------|------|----------|----------|
-| <span class="kw-gold">**S**</span> | <span class="kw-gold">헬타이드</span> | 경험치 · 둥지 열쇠 · 잊혀진 영혼 | 시즌 전체 가장 효율적 자원원 |
+| <span class="kw-gold">**S**</span> | <span class="kw-gold">헬타이드</span> | 경험치 · 둥지 열쇠 · 잊힌 영혼 | 시즌 전체 가장 효율적 자원원 |
 | <span class="kw-gold">**S**</span> | <span class="kw-gold">쿠라스트 지하도시</span> | 공물 시스템으로 타겟 파밍 | 매혹석·인장 노림 최강 |
 | <span class="kw-rare">**A**</span> | <span class="kw-rare">소굴 우두머리</span> | 신화·유니크 풀 | 가장 빠른 활동 (수 초 소요) |
-| <span class="kw-rare">**A**</span> | <span class="kw-rare">악몽 던전</span> | 글리프 XP · 신화 풀 | 빠른 완주 + 높은 잠재 보상 |
-| <span class="kw-bone">**B**</span> | <span class="kw-bone">나락 (균열)</span> | 글리프 XP | 너프 후 글리프 위주로 축소 |
+| <span class="kw-rare">**A**</span> | <span class="kw-rare">악몽 던전</span> | 문양 XP · 신화 풀 | 빠른 완주 + 높은 잠재 보상 |
+| <span class="kw-bone">**B**</span> | <span class="kw-bone">나락 (균열)</span> | 문양 XP | 너프 후 문양 위주로 축소 |
 | <span class="kw-blood">**D**</span> | <span class="kw-blood">지옥불 군세</span> | Burning Aether · 보스 트로피 | 시간 대비 보상 빈약. 메타 빌드 외에는 비추 |
 | - | <span class="kw-bone">속삭임의 나무</span> | 보관함 보상 | 다른 활동과 **병행 가능** (전쟁 계획 노드 X) |
 
@@ -118,9 +118,9 @@ import ImageModal from '../../../components/ImageModal.astro';
 ## 일반적 분배 전략
 
 <div class="decision-flow">
-  <div class="step"><span class="step-num">1.</span> <span><strong class="kw-gold">시즌 초</strong> — <span class="kw-gold">헬타이드</span> 우측(편의/경험치) → 빠른 레벨링 + 잊혀진 영혼 수급</span></div>
+  <div class="step"><span class="step-num">1.</span> <span><strong class="kw-gold">시즌 초</strong> — <span class="kw-gold">헬타이드</span> 우측(편의/경험치) → 빠른 레벨링 + 잊힌 영혼 수급</span></div>
   <div class="step-arrow">▼</div>
-  <div class="step"><span class="step-num">2.</span> <span><strong class="kw-gold">시즌 중반</strong> — <span class="kw-rare">악몽 던전</span> 글리프 + <span class="kw-bone">나락</span> 글리프 XP 노드 보조</span></div>
+  <div class="step"><span class="step-num">2.</span> <span><strong class="kw-gold">시즌 중반</strong> — <span class="kw-rare">악몽 던전</span> 문양 + <span class="kw-bone">나락</span> 문양 XP 노드 보조</span></div>
   <div class="step-arrow">▼</div>
   <div class="step"><span class="step-num">3.</span> <span><strong class="kw-gold">신화 노림</strong> — <span class="kw-rare">소굴 우두머리</span> 신화 풀 노드 + <span class="kw-mythic">반짝이는 벼락불</span> 수급</span></div>
   <div class="step-arrow">▼</div>
@@ -149,7 +149,7 @@ import ImageModal from '../../../components/ImageModal.astro';
 A. 캐릭터별로 분리되어 있습니다. 신규 캐릭터는 새로 분배해야 합니다.
 
 **Q. 한번 찍은 포인트를 회수할 수 있나요?**
-A. 일부 트리는 재설정(reset) 비용을 지불해 회수가 가능합니다. 비용은 사령부 UI에서 확인하세요.
+A. 일부 트리는 재설정(reset) 비용을 지불해 회수가 가능합니다. 비용은 전쟁 계획 메뉴에서 확인하세요.
 
 **Q. 7개 트리 다 만점 만들 필요 있나요?**
 A. <span class="kw-blood">없습니다.</span> 빌드와 메타 활동만 우선 분배. D 티어(지옥불 군세) 는 빌드가 의존하지 않는 한 후순위.

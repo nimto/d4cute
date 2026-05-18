@@ -1,0 +1,252 @@
+---
+interface DetailRow {
+  label: string;
+  text: string;
+}
+interface Entry {
+  id: string;
+  image?: string;
+  imageAlt?: string;
+  name: string;
+  nameClass?: string;
+  cols: string[];
+  details: DetailRow[];
+}
+interface Props {
+  headers: string[];
+  entries: Entry[];
+  modalId: string;
+}
+const { headers, entries, modalId } = Astro.props as Props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const toFull = (s: string) => s.startsWith('http') ? s : `${base}${s.startsWith('/') ? s : `/${s}`}`;
+---
+
+<table class="dust-detail-table">
+  <thead>
+    <tr>
+      {headers.map((h) => <th set:html={h}></th>)}
+      <th class="dust-action-col" aria-label="상세 보기"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {entries.map((e) => (
+      <tr class="dust-row" data-dust-modal={modalId} data-dust-id={e.id} tabindex="0" role="button" aria-label={`${e.name} 상세 설명 열기`}>
+        {e.cols.map((c) => <td set:html={c}></td>)}
+        <td class="dust-row-hint">자세히 ▶</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+<div class="dust-modal" id={modalId} hidden role="dialog" aria-modal="true" aria-labelledby={`${modalId}-title`}>
+  <div class="dust-modal-backdrop" data-dust-close></div>
+  <div class="dust-modal-content">
+    <button class="dust-modal-close" type="button" data-dust-close aria-label="닫기">×</button>
+    <div class="dust-modal-body">
+      {entries.map((e) => (
+        <div class="dust-modal-panel" data-dust-panel={e.id} hidden>
+          {e.image && (
+            <div class="dust-modal-image-wrap">
+              <img src={toFull(e.image)} alt={e.imageAlt || e.name} class="dust-modal-image" />
+            </div>
+          )}
+          <h3 id={`${modalId}-title`} class={`dust-modal-title ${e.nameClass || ''}`} set:html={e.name}></h3>
+          <dl class="dust-modal-details">
+            {e.details.map((d) => (
+              <div class="dust-modal-row">
+                <dt set:html={d.label}></dt>
+                <dd set:html={d.text}></dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    if (window.__dustModalsBound) return;
+    window.__dustModalsBound = true;
+
+    function openModal(modalEl, dustId) {
+      modalEl.querySelectorAll('[data-dust-panel]').forEach(function (p) {
+        p.hidden = p.getAttribute('data-dust-panel') !== dustId;
+      });
+      modalEl.hidden = false;
+      document.body.dataset.dustModalOpen = '1';
+      document.body.style.overflow = 'hidden';
+      var closeBtn = modalEl.querySelector('.dust-modal-close');
+      if (closeBtn) closeBtn.focus();
+    }
+    function closeAll() {
+      document.querySelectorAll('.dust-modal').forEach(function (m) { m.hidden = true; });
+      delete document.body.dataset.dustModalOpen;
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', function (e) {
+      var closeEl = e.target.closest && e.target.closest('[data-dust-close]');
+      if (closeEl) { closeAll(); return; }
+      var trigger = e.target.closest && e.target.closest('[data-dust-modal]');
+      if (trigger) {
+        var modalId = trigger.getAttribute('data-dust-modal');
+        var modal = document.getElementById(modalId);
+        var dustId = trigger.getAttribute('data-dust-id');
+        if (modal && dustId) {
+          openModal(modal, dustId);
+          e.preventDefault();
+        }
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && document.body.dataset.dustModalOpen) { closeAll(); return; }
+      var ae = document.activeElement;
+      if ((e.key === 'Enter' || e.key === ' ') && ae && ae.matches && ae.matches('[data-dust-modal]')) {
+        e.preventDefault();
+        ae.click();
+      }
+    });
+  })();
+</script>
+
+<style>
+  .dust-detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .dust-detail-table th,
+  .dust-detail-table td {
+    padding: 0.7rem 0.85rem;
+    border-bottom: 1px solid var(--sl-color-hairline);
+    text-align: left;
+    vertical-align: top;
+  }
+  .dust-detail-table thead th {
+    background: var(--sl-color-gray-6, rgba(255, 255, 255, 0.04));
+    font-weight: 700;
+    font-size: 0.92em;
+  }
+  .dust-detail-table .dust-action-col { width: 5.5rem; }
+  .dust-row {
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  .dust-row:hover,
+  .dust-row:focus-visible {
+    background: rgba(234, 195, 51, 0.07);
+    outline: none;
+  }
+  [data-theme='light'] .dust-row:hover,
+  [data-theme='light'] .dust-row:focus-visible {
+    background: rgba(234, 195, 51, 0.18);
+  }
+  .dust-row:focus-visible {
+    box-shadow: inset 0 0 0 2px var(--d4-gold, #eac333);
+  }
+  .dust-row-hint {
+    color: var(--d4-gold, #eac333);
+    font-size: 0.82em;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  .dust-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .dust-modal[hidden] { display: none; }
+  .dust-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 3, 4, 0.88);
+    cursor: pointer;
+  }
+  .dust-modal-content {
+    position: relative;
+    max-width: 680px;
+    width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    background: var(--sl-color-bg, #0f0d0e);
+    border: 1px solid var(--d4-gold, #eac333);
+    border-radius: 10px;
+    padding: 2rem 1.75rem 1.75rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    z-index: 1;
+  }
+  [data-theme='light'] .dust-modal-content {
+    background: var(--sl-color-bg, #fff);
+    border-color: var(--d4-gold, #b08800);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  }
+  .dust-modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.85rem;
+    line-height: 1;
+    color: var(--sl-color-text, currentColor);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  .dust-modal-close:hover,
+  .dust-modal-close:focus-visible {
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+  }
+  [data-theme='light'] .dust-modal-close:hover,
+  [data-theme='light'] .dust-modal-close:focus-visible {
+    background: rgba(0, 0, 0, 0.08);
+  }
+  .dust-modal-image-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+  .dust-modal-image {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    background: var(--sl-color-gray-6, rgba(255, 255, 255, 0.03));
+    padding: 6px;
+  }
+  .dust-modal-title {
+    text-align: center;
+    margin: 0 0 1.25rem;
+    font-size: 1.35rem;
+    border-bottom: 1px solid var(--sl-color-hairline);
+    padding-bottom: 0.75rem;
+  }
+  .dust-modal-details { margin: 0; }
+  .dust-modal-row { margin-bottom: 0.9rem; }
+  .dust-modal-row:last-child { margin-bottom: 0; }
+  .dust-modal-row dt {
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: var(--d4-gold, #eac333);
+    font-size: 0.95em;
+  }
+  [data-theme='light'] .dust-modal-row dt {
+    color: var(--d4-gold-light, #a07a00);
+  }
+  .dust-modal-row dd {
+    margin: 0;
+    line-height: 1.7;
+    color: var(--sl-color-text);
+  }
+</style>

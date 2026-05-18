@@ -8,6 +8,7 @@ sidebar:
 import SourceFooter from '../../../components/SourceFooter.astro';
 import RecipeCard from '../../../components/RecipeCard.astro';
 import ImageModal from '../../../components/ImageModal.astro';
+import DustDetailTable from '../../../components/DustDetailTable.astro';
 
 ## 한 줄 요약
 
@@ -138,12 +139,86 @@ import ImageModal from '../../../components/ImageModal.astro';
   />
 </div>
 
-| 분광경 | 등급 | 특징 |
-|--------|------|------|
-| <span class="kw-bone">**클레의 조율**</span> | <span class="kw-bone">전설 (소비용품)</span> | <span class="kw-bone">목걸이 전용</span>. 호라드림의 합 *변성* 결과에 영향 없음 — 일반 변성용 기본 자원 |
-| <span class="kw-blood">**엔트로피의 조율**</span> | <span class="kw-blood">전설 (소비용품)</span> | 변성 결과에 영향. <span class="kw-danger">100% 확률로 속성 변경 불가</span> 상태 — 가장 위험하지만 가장 강력한 결과 |
-| <span class="kw-rare">**숙련자의 조율**</span> | <span class="kw-rare">희귀</span> | 변환 시 속성 범위를 <span class="kw-gold">기술 핵심 능력치</span>로 좁힘 |
-| <span class="kw-rare">**다채로운 조율**</span> | <span class="kw-rare">희귀</span> | 변환 시 속성 범위를 <span class="kw-gold">모든 속성</span>으로 확장 |
+<p class="dust-table-hint">👇 표의 각 줄을 <strong>클릭</strong>하면 분광경별 상세 설명·사용 시점·예시를 모달로 볼 수 있습니다.</p>
+
+<DustDetailTable
+  modalId="dust-modal-basic"
+  headers={['분광경', '등급', '특징']}
+  entries={[
+    {
+      id: 'clear',
+      image: '/images/horadric-cube/transfiguration/dust-clear-attunement.webp',
+      imageAlt: '클레의 조율의 분광경',
+      name: '<span class="kw-bone">클레의 조율의 분광경</span>',
+      cols: [
+        '<span class="kw-bone"><strong>클레의 조율</strong></span>',
+        '<span class="kw-bone">전설 (소비용품)</span>',
+        '<span class="kw-bone">목걸이 전용</span>. 결과를 좁히지 않는 가장 단순한 분광경',
+      ],
+      details: [
+        { label: '한 줄 정리', text: '<strong>목걸이를 변성할 때만</strong> 쓰는 가장 기본 분광경. 결과 카테고리를 좁히거나 잠그지 않습니다.' },
+        { label: '언제 쓰나요?', text: '<span class="kw-gold">목걸이</span>의 어픽스를 다듬을 때. 다른 부위 (투구·가슴·무기 등) 에는 추천하지 않습니다.' },
+        { label: '작동 방식', text: '변성 시 결과를 무작위로 갱신만 합니다. 다른 분광경처럼 "공격/방어 카테고리로 좁히기" 같은 추가 효과가 없습니다.' },
+        { label: '왜 목걸이 전용?', text: '<span class="kw-gold">목걸이는 변성 후에도 다시 수정할 수 있습니다.</span> 그래서 결과를 영구 잠그는 엔트로피나 카테고리를 좁히는 다른 분광경을 굳이 쓸 필요가 없습니다.' },
+        { label: '예시 흐름', text: '목걸이 카테고리 재롤 → <span class="kw-bone">클레의 조율</span> 사용 → 무질서의 프리즘 없이 결과 확인 → 마음에 안 들면 다시 시도.' },
+      ],
+    },
+    {
+      id: 'entropy',
+      image: '/images/horadric-cube/transfiguration/dust-entropy-attunement.webp',
+      imageAlt: '엔트로피의 조율의 분광경',
+      name: '<span class="kw-blood">엔트로피의 조율의 분광경</span>',
+      cols: [
+        '<span class="kw-blood"><strong>엔트로피의 조율</strong></span>',
+        '<span class="kw-blood">전설 (소비용품)</span>',
+        '변성 결과에 영향. <span class="kw-danger">100% 확률 속성 변경 불가</span> — 가장 위험·가장 강력',
+      ],
+      details: [
+        { label: '한 줄 정리', text: '변성 결과를 <strong>카테고리 단위로 영구 잠금</strong>. 가장 강력하지만 한 번 쓰면 되돌릴 수 없습니다.' },
+        { label: '언제 쓰나요?', text: '빌드 어픽스가 <span class="kw-gold">완전히 확정</span>된 직후 마무리 단계. 더 이상 카테고리 변경이 필요 없을 때만.' },
+        { label: '"100% 속성 변경 불가" 가 무슨 뜻?', text: '변성 후 아이템의 어픽스 카테고리가 <span class="kw-danger">영구 고정</span>됩니다. 이후엔 어떤 분광경을 써도 카테고리 재롤이 불가능합니다. = <span class="kw-blood">무질서의 프리즘과 같은 효과</span>를 자동 부여.' },
+        { label: '⚠ 주의', text: '잘못 사용하면 <span class="kw-danger">동일 부위 새 아이템을 처음부터 작업</span>해야 합니다. 빌드 어픽스 4개 모두 원하는 상태인지 반드시 확인.' },
+        { label: '예시 흐름', text: '카테고리 재롤로 4개 어픽스 모두 원하는 카테고리 확보 → 수치도 만족 → <span class="kw-blood">엔트로피의 조율</span>로 잠금 → 이후 명품화·유니크 파워 재롤만 가능.' },
+      ],
+    },
+    {
+      id: 'expert',
+      image: '/images/horadric-cube/transfiguration/dust-expert-attunement.webp',
+      imageAlt: '숙련자의 조율의 분광경',
+      name: '<span class="kw-rare">숙련자의 조율의 분광경</span>',
+      cols: [
+        '<span class="kw-rare"><strong>숙련자의 조율</strong></span>',
+        '<span class="kw-rare">희귀</span>',
+        '변환 시 속성 범위를 <span class="kw-gold">기술 핵심 능력치</span>로 좁힘',
+      ],
+      details: [
+        { label: '한 줄 정리', text: '같은 카테고리 내에서 <strong>클래스의 기술 핵심 능력치</strong> 위주로 결과를 좁힙니다.' },
+        { label: '언제 쓰나요?', text: '<span class="kw-gold">같은 카테고리 재롤 (Focused Reroll)</span> 단계. 카테고리는 맞는데 클래스 핵심 어픽스 (예: 도적 = 민첩, 야만 = 힘) 를 노릴 때.' },
+        { label: '작동 방식', text: '변성 결과 후보 풀에서 <span class="kw-gold">"기술 핵심 능력치"</span> 어픽스 비중을 크게 늘립니다. 잡옵 비중은 줄어듭니다.' },
+        { label: '다채로운과 차이', text: '<span class="kw-rare">숙련자 = 좁힘 (핵심 집중)</span> ↔ <span class="kw-rare">다채로운 = 넓힘 (범용)</span>. 클래스 핵심 어픽스를 노리면 숙련자, 어떤 옵션이든 다양화 원하면 다채로운.' },
+        { label: '예시 흐름', text: '도적 무기 변성 후 "민첩" 외 잡옵이 떴음 → <span class="kw-rare">숙련자의 조율</span>로 Focused Reroll → 민첩 위주 어픽스로 좁혀짐.' },
+      ],
+    },
+    {
+      id: 'diverse',
+      image: '/images/horadric-cube/transfiguration/dust-diverse-attunement.webp',
+      imageAlt: '다채로운 조율의 분광경',
+      name: '<span class="kw-rare">다채로운 조율의 분광경</span>',
+      cols: [
+        '<span class="kw-rare"><strong>다채로운 조율</strong></span>',
+        '<span class="kw-rare">희귀</span>',
+        '변환 시 속성 범위를 <span class="kw-gold">모든 속성</span>으로 확장',
+      ],
+      details: [
+        { label: '한 줄 정리', text: '같은 카테고리 안에서 <strong>모든 어픽스 종류를 풀로 열어둡니다</strong>. 범용 자원.' },
+        { label: '언제 쓰나요?', text: '클래스 핵심 어픽스 외에도 다양한 옵션을 후보로 두고 싶을 때. 또는 보조 부위에 옵션을 다양화하고 싶을 때.' },
+        { label: '작동 방식', text: '결과 후보를 좁히지 않고 <span class="kw-gold">같은 카테고리 내 모든 어픽스 종류</span>로 균등 추첨.' },
+        { label: '숙련자와 비교', text: '핵심 어픽스가 명확히 정해진 빌드 = <span class="kw-rare">숙련자</span> 추천. 옵션 폭이 넓어도 OK = <span class="kw-rare">다채로운</span> 추천.' },
+        { label: '예시 흐름', text: '보조 부위 변성 → <span class="kw-rare">다채로운 조율</span> → 카테고리 내 잡옵 다양화 → 빌드에 맞는 조합 발견 시 다음 단계로.' },
+      ],
+    },
+  ]}
+/>
 
 ### 카테고리 지향 분광경 (마법 등급)
 
@@ -176,12 +251,86 @@ import ImageModal from '../../../components/ImageModal.astro';
   />
 </div>
 
-| 분광경 | 카테고리 | 사용 시점 |
-|--------|---------|----------|
-| <span class="kw-offensive">**공격적인 조율**</span> | <span class="kw-offensive">공격 속성</span> | 피해량·치명타·취약 등 <span class="kw-offensive">공격 카테고리</span> 어픽스를 노릴 때 |
-| <span class="kw-defensive">**보호자의 조율**</span> | <span class="kw-defensive">방어 속성</span> | 방어력·생명력·저항 등 <span class="kw-defensive">생존 카테고리</span> 어픽스를 노릴 때 |
-| <span class="kw-utility">**실용적인 조율**</span> | <span class="kw-utility">기동성/보호</span> | 이동속도·우회·회피·이로운 효과 지속 등 <span class="kw-utility">실용 카테고리</span> |
-| <span class="kw-abundance">**풍족한 조율**</span> | <span class="kw-abundance">자원/소비</span> | 자원 재생·소비 감소·이로운 효과 강화 등 <span class="kw-abundance">자원 카테고리</span> |
+<p class="dust-table-hint">👇 표의 각 줄을 <strong>클릭</strong>하면 카테고리별 어픽스 풀·사용 예시·비교 가이드를 모달로 볼 수 있습니다.</p>
+
+<DustDetailTable
+  modalId="dust-modal-category"
+  headers={['분광경', '카테고리', '사용 시점']}
+  entries={[
+    {
+      id: 'offensive',
+      image: '/images/horadric-cube/transfiguration/dust-offensive-attunement.webp',
+      imageAlt: '공격적인 조율의 분광경',
+      name: '<span class="kw-offensive">공격적인 조율의 분광경</span>',
+      cols: [
+        '<span class="kw-offensive"><strong>공격적인 조율</strong></span>',
+        '<span class="kw-offensive">공격 속성</span>',
+        '피해량·치명타·취약 등 <span class="kw-offensive">공격 카테고리</span> 어픽스 노림',
+      ],
+      details: [
+        { label: '한 줄 정리', text: '변성 결과 풀을 <strong>공격 카테고리로만 좁힙니다</strong>. DPS 빌드 핵심 자원.' },
+        { label: '어떤 어픽스가 나와요?', text: '<span class="kw-offensive">피해 증가 · 치명타 확률/피해 · 취약 적에게 피해 · 핵심 스킬 피해 · 가까운 적에게 피해</span> 등 공격 카테고리 어픽스 전반.' },
+        { label: '언제 쓰나요?', text: '빌드 어픽스 카테고리가 <span class="kw-gold">"공격" 으로 확정</span>됐을 때. 카테고리 재롤 (Chaotic) 단계에서 사용.' },
+        { label: '어느 부위에?', text: '주로 <span class="kw-offensive">무기 · 장갑 · 반지</span>. 빌드에 따라 투구·목걸이도 공격 카테고리로 갈 수 있습니다.' },
+        { label: '예시 흐름', text: '무기에 잡옵이 떴음 → Chaotic Reroll + <span class="kw-offensive">공격적인 조율</span> → 결과가 공격 카테고리로만 나옴 → 원하는 어픽스 (치명타 등) 확보까지 반복.' },
+      ],
+    },
+    {
+      id: 'defensive',
+      image: '/images/horadric-cube/transfiguration/dust-defensive-attunement.webp',
+      imageAlt: '보호자의 조율의 분광경',
+      name: '<span class="kw-defensive">보호자의 조율의 분광경</span>',
+      cols: [
+        '<span class="kw-defensive"><strong>보호자의 조율</strong></span>',
+        '<span class="kw-defensive">방어 속성</span>',
+        '방어력·생명력·저항 등 <span class="kw-defensive">생존 카테고리</span> 어픽스 노림',
+      ],
+      details: [
+        { label: '한 줄 정리', text: '변성 결과를 <strong>방어/생존 카테고리로만 좁힙니다</strong>. 고난도 진입 생존 빌드 핵심.' },
+        { label: '어떤 어픽스가 나와요?', text: '<span class="kw-defensive">최대 생명력 · 방어력 · 모든 저항 · 원소별 저항 · 받는 피해 감소 · 가시 피해</span> 등 생존 카테고리 전반.' },
+        { label: '언제 쓰나요?', text: '<span class="kw-gold">고난도 단계 상향</span>으로 생존이 부족할 때. 또는 빌드의 방어 슬롯 어픽스 확정 시.' },
+        { label: '어느 부위에?', text: '주로 <span class="kw-defensive">투구 · 가슴 · 하의</span>. 목걸이·반지 1개를 방어로 두는 빌드도 있습니다.' },
+        { label: '예시 흐름', text: '가슴에 공격 어픽스가 떴음 → Chaotic Reroll + <span class="kw-defensive">보호자의 조율</span> → 결과가 방어 카테고리로 나옴 → 생명력·저항 확보.' },
+      ],
+    },
+    {
+      id: 'utility',
+      image: '/images/horadric-cube/transfiguration/dust-utility-attunement.webp',
+      imageAlt: '실용적인 조율의 분광경',
+      name: '<span class="kw-utility">실용적인 조율의 분광경</span>',
+      cols: [
+        '<span class="kw-utility"><strong>실용적인 조율</strong></span>',
+        '<span class="kw-utility">기동성/보호</span>',
+        '이동속도·우회·회피·이로운 효과 지속 등 <span class="kw-utility">실용 카테고리</span>',
+      ],
+      details: [
+        { label: '한 줄 정리', text: '변성 결과를 <strong>기동성·우회·이로운 효과</strong> 카테고리로 좁힙니다.' },
+        { label: '어떤 어픽스가 나와요?', text: '<span class="kw-utility">이동 속도 · 우회 확률 · 회피 · 이로운 효과 지속 시간 · 해로운 효과 지속 시간 감소</span> 등 기동·생존 보조 카테고리.' },
+        { label: '언제 쓰나요?', text: '빌드가 <span class="kw-gold">이동 속도 · 이로운 효과 의존</span>일 때. 또는 부츠·장갑처럼 실용 어픽스 슬롯이 정해진 부위.' },
+        { label: '어느 부위에?', text: '주로 <span class="kw-utility">부츠 · 장갑</span>. 일부 빌드는 반지·목걸이 실용 카테고리도 사용.' },
+        { label: '예시 흐름', text: '부츠에 자원 어픽스가 떴음 → Chaotic Reroll + <span class="kw-utility">실용적인 조율</span> → 이동속도·회피 확보.' },
+      ],
+    },
+    {
+      id: 'abundance',
+      image: '/images/horadric-cube/transfiguration/dust-abundance-attunement.webp',
+      imageAlt: '풍족한 조율의 분광경',
+      name: '<span class="kw-abundance">풍족한 조율의 분광경</span>',
+      cols: [
+        '<span class="kw-abundance"><strong>풍족한 조율</strong></span>',
+        '<span class="kw-abundance">자원/소비</span>',
+        '자원 재생·소비 감소·이로운 효과 강화 등 <span class="kw-abundance">자원 카테고리</span>',
+      ],
+      details: [
+        { label: '한 줄 정리', text: '변성 결과를 <strong>자원 재생·소비 감소</strong> 카테고리로 좁힙니다. 스킬 자원 부족 빌드의 핵심.' },
+        { label: '어떤 어픽스가 나와요?', text: '<span class="kw-abundance">자원 재생 · 자원 비용 감소 · 이로운 효과 강화 · 회복 속도 · 치유 효과 강화</span> 등 자원·소비 카테고리.' },
+        { label: '언제 쓰나요?', text: '빌드가 <span class="kw-gold">자원에 의존</span>해 스킬을 자주 사용해야 할 때 (예: 마나 빌드의 원소술사, 분노 빌드의 야만용사).' },
+        { label: '어느 부위에?', text: '주로 <span class="kw-abundance">반지 · 목걸이 · 무기</span>. 자원 부족 정도에 따라 부위 분배.' },
+        { label: '예시 흐름', text: '핵심 스킬을 자주 못 쓰는 빌드 → 반지 Chaotic Reroll + <span class="kw-abundance">풍족한 조율</span> → 자원 비용 감소 어픽스 확보.' },
+      ],
+    },
+  ]}
+/>
 
 :::caution[공통 제약]
 위 4종 모두 <span class="kw-blood">분해 불가</span>, 거래소 판매 불가의 <span class="kw-magic">마법 등급</span> 소비용품입니다. 출처: 전쟁 계획의 함 전리품, 속삭임의 나무 보관함 보상, 정예 괴물.

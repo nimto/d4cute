@@ -20,10 +20,10 @@ import ImageModal from '../../../components/ImageModal.astro';
 - 환불: 골드를 내면 포인트 회수 가능 — 빌드 바뀌면 재분배
 - 시즌 초 추천: <span class="kw-gold">지옥물결(헬타이드)</span> + <span class="kw-gold">나락(균열)</span> 부터 — 가장 자주 도는 활동
 - 빠른 효율 픽 (해외 메타 기준):
-  - 나락: <span class="kw-rare">Choron's Haste</span> (글리프 업그레이드 +1)
+  - 나락: <span class="kw-rare">Choron's Haste</span> (문양 업그레이드 +1)
   - 지옥물결: <span class="kw-rare">Duriel's Suffering</span> (무작위 유니크)
   - 악몽 던전: <span class="kw-rare">사당 노드</span> (사당 1회당 정예 7마리)
-  - 지하도시: <span class="kw-mythic">Gutter Filth</span> (Portal Prankster 도깨비, 신화 드랍률 최고)
+  - 지하도시: <span class="kw-mythic">Gutter Filth</span> (Portal Prankster 보물 고블린, 신화 드랍률 최고)
   - 소굴 우두머리: <span class="kw-rare">Hoard Chest</span> (유니크 드랍률 ↑)
 - D 티어 회피: <span class="kw-blood">지옥불 군세</span> — 시즌 도전 외에는 분배 비추
 
@@ -39,11 +39,11 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 | 등급 | 활동 | 핵심 노드 (해외 메타) | 추천 분배 (7포) | 사냥 목적 |
 |------|------|------------------|---------------|----------|
-| <span class="kw-gold">S</span> | 지옥물결 (헬타이드) | Duriel's Suffering · Bounty Hunter | 중앙 4 + 우측 3 | <span class="kw-rare">유니크 드랍 + 깜부기 잊혀진 영혼</span> |
-| <span class="kw-gold">S</span> | 쿠라스트 지하도시 | Gutter Filth (Portal Prankster) | 좌측 또는 우측 (빌드별) | <span class="kw-mythic">신화 드랍 (Portal Prankster 도깨비)</span> · 매혹석 타겟 파밍 |
+| <span class="kw-gold">S</span> | 지옥물결 (헬타이드) | Duriel's Suffering · Bounty Hunter | 중앙 4 + 우측 3 | <span class="kw-rare">유니크 드랍 + 깜부기 잊힌 영혼</span> |
+| <span class="kw-gold">S</span> | 쿠라스트 지하도시 | Gutter Filth (Portal Prankster) | 좌측 또는 우측 (빌드별) | <span class="kw-mythic">신화 드랍 (Portal Prankster 보물 고블린)</span> · 매혹석 타겟 파밍 |
 | <span class="kw-rare">A</span> | 소굴 우두머리 | Escalating Nemesis · Hoard Chest | 중앙 + 좌측 | <span class="kw-rare">유니크 드랍률 ↑ · 보스 체인</span> |
-| <span class="kw-rare">A</span> | 악몽 던전 | Treasure Goblin · 사당(Shrine) 정예 7마리 | 우측 4 + 좌측 3 | <span class="kw-gold">글리프 XP · 정예 누적 처치</span> |
-| <span class="kw-bone">B</span> | 나락 (균열) | Choron's Haste · Heart of Stone | 좌측 우선 | <span class="kw-rare">글리프 업그레이드 +1 · 클리어 단축</span> |
+| <span class="kw-rare">A</span> | 악몽 던전 | Treasure Goblin · 사당(Shrine) 정예 7마리 | 우측 4 + 좌측 3 | <span class="kw-gold">문양 XP · 정예 누적 처치</span> |
+| <span class="kw-bone">B</span> | 나락 (균열) | Choron's Haste · Heart of Stone | 좌측 우선 | <span class="kw-rare">문양 업그레이드 +1 · 클리어 단축</span> |
 | <span class="kw-blood">D</span> | 지옥불 군세 | — | 분배 비추 | <span class="kw-blood">시즌 도전 외 비효율</span> |
 | - | <span class="kw-bone">속삭임의 나무</span> (병행) | Wisdom of Whispers · Fortune of Fame | 모두 | <span class="kw-gold">보관함 XP +50% · 보상 품질 ↑</span> |
 
@@ -52,17 +52,17 @@ import ImageModal from '../../../components/ImageModal.astro';
 ## 빌드 목적별 추천 분배 (디아4 초보 친화)
 
 <div class="decision-flow">
-  <div class="step"><span class="step-num">1.</span> <span><strong class="kw-gold">레벨링·잎차기 단계</strong> (1-70) — <span class="kw-gold">지옥물결 우측</span>(깜부기/잊혀진 영혼) + <span class="kw-bone">속삭임 우측</span>(XP +50%) + <span class="kw-bone">악몽 우측</span>(보너스 이벤트)</span></div>
+  <div class="step"><span class="step-num">1.</span> <span><strong class="kw-gold">레벨링·잎차기 단계</strong> (1-70) — <span class="kw-gold">지옥물결 우측</span>(깜부기/잊힌 영혼) + <span class="kw-bone">속삭임 우측</span>(XP +50%) + <span class="kw-bone">악몽 우측</span>(보너스 이벤트)</span></div>
   <div class="step-arrow">▼</div>
   <div class="step"><span class="step-num">2.</span> <span><strong class="kw-gold">아이템 셋업 단계</strong> (토먼트 1-4) — <span class="kw-gold">지옥물결 중앙</span>(유니크) + <span class="kw-rare">소굴 우두머리 중앙</span>(유니크 + 보스 체인) + <span class="kw-gold">지하도시 좌측</span>(매혹석)</span></div>
   <div class="step-arrow">▼</div>
   <div class="step"><span class="step-num">3.</span> <span><strong class="kw-mythic">신화 노림 단계</strong> (토먼트 5+) — <span class="kw-mythic">지하도시 Gutter Filth</span> + <span class="kw-rare">소굴 우두머리 좌측</span>(Escalating Nemesis) + <span class="kw-gold">속삭임 보관함 강화</span></span></div>
   <div class="step-arrow">▼</div>
-  <div class="step"><span class="step-num">4.</span> <span><strong class="kw-gold">엔드게임 빌드 완성</strong> — <span class="kw-rare">나락 Choron's Haste</span>(글리프 업그레이드) + <span class="kw-rare">악몽 사당 정예 7마리</span>(피해 누적)</span></div>
+  <div class="step"><span class="step-num">4.</span> <span><strong class="kw-gold">엔드게임 빌드 완성</strong> — <span class="kw-rare">나락 Choron's Haste</span>(문양 업그레이드) + <span class="kw-rare">악몽 사당 정예 7마리</span>(피해 누적)</span></div>
 </div>
 
 :::tip[환불 활용]
-시즌 진행 단계가 바뀌면 골드 지불하고 환불해서 새 빌드에 맞춰 재분배. 환불 비용은 사령부 UI 에서 확인. 시즌 초 분배는 과감하게 환불 가정하고 진행 — 어차피 메타가 패치로 바뀝니다.
+시즌 진행 단계가 바뀌면 골드 지불하고 환불해서 새 빌드에 맞춰 재분배. 환불 비용은 전쟁 계획 메뉴 에서 확인. 시즌 초 분배는 과감하게 환불 가정하고 진행 — 어차피 메타가 패치로 바뀝니다.
 :::
 
 ## 트리별 노드 갤러리 + 추천 분배
@@ -99,7 +99,7 @@ export const groups = [
   },
   {
     tree: '악몽 던전', anchor: 'nightmare',
-    summary: 'A 티어 활동. 글리프 XP + 신화 풀. 빠른 완주 + 높은 잠재 보상.',
+    summary: 'A 티어 활동. 문양 XP + 신화 풀. 빠른 완주 + 높은 잠재 보상.',
     bestPick: '우측 4포 (Treasure Goblin · 보너스 이벤트) + 좌측 3포 (사당 노드 — 사당 1회당 정예 7마리)',
     nodes: [
       { time: '141046', name: '생시의 전리품' },
@@ -119,7 +119,7 @@ export const groups = [
   },
   {
     tree: '지옥물결 (헬타이드)', anchor: 'hellwave',
-    summary: 'S 티어 — 가장 효율적인 자원원 (경험치 · 잊혀진 영혼 · 둥지 열쇠). 모든 빌드의 출발점.',
+    summary: 'S 티어 — 가장 효율적인 자원원 (경험치 · 잊힌 영혼 · 둥지 열쇠). 모든 빌드의 출발점.',
     bestPick: '중앙 4포 (Duriels Suffering — 무작위 유니크) + 우측 3포 (Bounty Hunter — 깜부기 추가 보상)',
     nodes: [
       { time: '141220', name: '더럽혀진 신단' },
@@ -143,8 +143,8 @@ export const groups = [
   },
   {
     tree: '쿠라스트 지하도시', anchor: 'undercity',
-    summary: 'S 티어 — 신화 파밍의 핵심. 공물 인장 시스템 + Portal Prankster 도깨비. ⚠ 시련 노드 + 공물 상자 함정 주의 (별도 [지하도시 페이지](/activity-tree/undercity/) 필독).',
-    bestPick: 'Gutter Filth 우선 (Portal Prankster 도깨비 — 신화 드랍률 최고). 빌드 약하면 우측(경험치/보상 강화), 강하면 좌측(매혹석 빌드업).',
+    summary: 'S 티어 — 신화 파밍의 핵심. 공물 인장 시스템 + Portal Prankster 보물 고블린. ⚠ 시련 노드 + 공물 상자 함정 주의 (별도 [지하도시 페이지](/activity-tree/undercity/) 필독).',
+    bestPick: 'Gutter Filth 우선 (Portal Prankster 보물 고블린 — 신화 드랍률 최고). 빌드 약하면 우측(경험치/보상 강화), 강하면 좌측(매혹석 빌드업).',
     nodes: [
       { time: '141519', name: '끝없는 무리' },
       { time: '141525', name: '불온한 영혼들' },
@@ -207,8 +207,8 @@ export const groups = [
   },
   {
     tree: '나락', anchor: 'pit',
-    summary: 'B 티어 — 너프 후 글리프 XP 위주. 엔드게임 글리프 만렙 전까지만 분배.',
-    bestPick: 'Chorons Haste (글리프 업그레이드 +1) → Heart of Stone (진행 오브 · 클리어 단축)',
+    summary: 'B 티어 — 너프 후 문양 XP 위주. 엔드게임 문양 만렙 전까지만 분배.',
+    bestPick: 'Chorons Haste (문양 업그레이드 +1) → Heart of Stone (진행 오브 · 클리어 단축)',
     nodes: [
       { time: '142115', name: '코론의 가속' },
       { time: '142121', name: '코론의 지름길' },
@@ -258,7 +258,7 @@ export const groups = [
 ### 분배 결정 체크리스트
 
 - ☐ 내 캐릭터 레벨은? (1-70 = 레벨링, 70 = 토먼트 진행)
-- ☐ 현재 토먼트 단계는? (1-3 = 아이템 셋업, 4-6 = 신화 노림, 7+ = 엔드 글리프)
+- ☐ 현재 토먼트 단계는? (1-3 = 아이템 셋업, 4-6 = 신화 노림, 7+ = 엔드 문양)
 - ☐ 메타 빌드 따라가는 중인가? (Maxroll/Mobalytics 빌드 가이드의 활동 추천 우선)
 - ☐ 환불 골드 여유 있는가? (없으면 보수적 분배 우선)
 

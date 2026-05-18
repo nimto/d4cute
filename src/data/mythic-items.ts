@@ -195,7 +195,7 @@ export const mythicItems: MythicItem[] = [
     itemPower: [900, 900],
     source: 'crafted',
     iconSrc: `${ICON_DROP}/nesekem-the-herald.webp`,
-    passive: '정수술사 전용 양손 글레이브 — 패시브는 룬과 글리프 동기화 기반',
+    passive: '정수술사 전용 양손 글레이브 — 패시브는 룬과 문양 동기화 기반',
   },
   {
     slug: 'ahavarion-spear-of-lycander',
