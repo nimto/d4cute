@@ -12,6 +12,15 @@ const term = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
 <div class="comments-wrapper">
   <h2>💬 댓글</h2>
 
+  <details class="comments-howto">
+    <summary>댓글 수정·삭제 방법 (펼쳐 보기)</summary>
+    <div class="comments-howto-body">
+      <p><strong>본인 댓글</strong> — 작성한 댓글 오른쪽 위 <code>···</code> (더보기) 아이콘 → <code>Edit</code> (수정) 또는 <code>Delete</code> (삭제). GitHub 로그인 상태에서만 보입니다.</p>
+      <p><strong>관리자 모더레이션</strong> — 부적절한 댓글 발견 시 우측 <code>···</code> 메뉴의 <code>Report</code> 사용. 사이트 관리자 (<code>@nimto</code>) 가 검토 후 GitHub Discussions에서 직접 삭제·잠금 처리합니다.</p>
+      <p><strong>익명 작성</strong> — Giscus는 GitHub 계정이 필요합니다. 익명 댓글은 지원하지 않습니다.</p>
+    </div>
+  </details>
+
   {isPlaceholder ? (
     <div class="comments-placeholder">
       <strong>Giscus 댓글 위젯 비활성화 상태</strong>
@@ -59,5 +68,53 @@ const term = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
     padding: 1rem;
     color: var(--sl-color-gray-3);
     font-size: 0.9em;
+  }
+  .comments-howto {
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 6px;
+    background: var(--sl-color-gray-6, rgba(255, 255, 255, 0.03));
+    overflow: hidden;
+  }
+  .comments-howto summary {
+    cursor: pointer;
+    padding: 0.65rem 0.95rem;
+    font-weight: 600;
+    color: var(--d4-gold, #eac333);
+    font-size: 0.92rem;
+    list-style: none;
+    user-select: none;
+    transition: background 0.15s ease;
+  }
+  .comments-howto summary::-webkit-details-marker { display: none; }
+  .comments-howto summary::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 0.7em;
+    transition: transform 0.2s ease;
+  }
+  .comments-howto[open] summary::before { transform: rotate(90deg); }
+  .comments-howto summary:hover {
+    background: rgba(234, 195, 51, 0.08);
+  }
+  .comments-howto-body {
+    padding: 0.5rem 1rem 1rem;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--sl-color-text);
+    border-top: 1px solid var(--sl-color-gray-5);
+  }
+  .comments-howto-body p { margin: 0.4rem 0; }
+  .comments-howto-body code {
+    background: rgba(234, 195, 51, 0.12);
+    color: var(--d4-gold, #eac333);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-size: 0.92em;
+  }
+  [data-theme='light'] .comments-howto-body code {
+    background: rgba(234, 195, 51, 0.22);
+    color: #8a6a00;
   }
 </style>
