@@ -1,92 +1,319 @@
 ---
-title: 큐브 재료 (Materials)
-description: 원시의 가루(Primordial Dust) 7등급, 조율 프리즘, 호라드림 수지 등 모든 큐브 재료의 종류와 획득처.
+title: 호라드림의 함 재료 — 8종 태고의 가루 + 수액 전수
+description: 시즌13 호라드림의 함 모든 제작 재료의 게임 내 공식 설명, 사용처, 출처, 최적 파밍 경로.
 sidebar:
   order: 2
+season: 13
 ---
 
 import SourceFooter from '../../../components/SourceFooter.astro';
-import MaterialBadge from '../../../components/MaterialBadge.astro';
+import Term from '../../../components/Term.astro';
+import ImageModal from '../../../components/ImageModal.astro';
 
 ## 한 줄 요약
 
-> 호라드림 큐브의 모든 작업은 **원시의 가루(Primordial Dust)** 7단계와 **조율 프리즘(Tuning Prism)**, 그리고 보조 재료 **주입된 호라드림 수지(Infused Horadric Resin)** 를 조합해 수행됩니다.
-
-## 잠금해제 / 획득 조건
-
-- 모든 가루는 캠페인 클리어 직후부터 떨어지지만, **고난도(Torment) 1단계 이상** 에서 상위 등급(Volatile, Attuned, Enhanced, Pure)의 드롭 빈도가 크게 올라갑니다.
-
-## 원시의 가루 (Primordial Dust) — 7단계
-
-| 단계 | 영문 | 주 사용처 | 주 획득처 |
-|-----|------|-----------|-----------|
-| 1 | Raw | 모든 작업의 기본 소모재 | 모든 활동 부수 보상 |
-| 2 | Coarse | 어픽스 추가 | 헬타이드, 악몽 던전 |
-| 3 | Refined | 어픽스 제거·재롤 | 균열(The Pit), 엘리트 |
-| 4 | Volatile | 재제련(Transfigure) | 전쟁 계획 보상 |
-| 5 | Attuned | 유니크 파워 재롤 | 둥지 보스, 고난도 엘리트 |
-| 6 | Enhanced | 유니크/매혹석 제작 | 고난도 보스 둥지 |
-| 7 | Pure | 레어 → 전설 업그레이드 | 고난도 후반 활동 보상 |
-
-### 시각적 구분
-
-<div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin:1rem 0;">
-  <MaterialBadge type="dust-shadow" name="Raw" />
-  <MaterialBadge type="dust-shadow" name="Coarse" />
-  <MaterialBadge type="dust-shadow" name="Refined" />
-  <MaterialBadge type="dust-flame" name="Volatile" />
-  <MaterialBadge type="dust-frost" name="Attuned" />
-  <MaterialBadge type="dust-poison" name="Enhanced" />
-  <MaterialBadge type="dust-primordial" name="Pure" />
+<div style="display: flex; justify-content: center; margin: 1.25rem 0;">
+  <ImageModal
+    src="/images/horadric-cube/materials/inventory-overview.webp"
+    alt="호라드림의 함 재료 인벤토리 전체"
+    caption="호라드림의 함 재료 — 인벤토리 화면"
+    size={280}
+  />
 </div>
 
-## 조율 프리즘 (Tuning Prism)
+> 호라드림의 함은 **9종 재료**를 사용합니다. <span class="kw-gold">**8종 태고의 가루**</span>(미가공·거친·정제된·일촉즉발의·순수한·향상된·조율된·공명하는) + <span class="kw-bone">**주입된 호라드림 수액**</span>. 공통 출처: <span class="kw-rare">전쟁 계획의 함 전리품 · 속삭임의 나무 보관함 보상 · 정예 괴물</span>.
 
-큐브 작업의 결과를 **카테고리** 수준에서 고정하는 보조 재료입니다.
+:::tip[게임 내 공식 명칭 기준]
+본 문서의 명칭과 설명은 **게임 내 클라이언트 툴팁 원문**을 기반으로 작성되었습니다. fan-translation 이 아닌 인-게임 공식 한국어 표기를 그대로 사용합니다.
+:::
 
-| 종류 | 영문 | 효과 | 비고 |
-|------|------|------|------|
-| 무질서의 프리즘 | Entropic Prism | 재제련 결과를 카테고리 수준에서 고정. **이후 해당 아이템은 더 이상 수정 불가** | 가장 안전한 종료 경로 |
-| 쿨리언 프리즘 | Kullean Prism | 목걸이 전용. 재제련 후에도 아이템을 수정 가능 상태로 유지 | 목걸이 빌드 핵심 자원 |
+<div class="summary-box">
+### 3분 안에 핵심만
 
-### 획득처
+- **9종 재료** — 가루 8종 + 호라드림 수액 1종
+- **공통 출처 3대장**: <span class="kw-rare">전쟁 계획의 함 전리품</span>, <span class="kw-rare">속삭임의 나무 보관함 보상</span>, <span class="kw-bone">정예 괴물</span>
+- **호라드림 수액**: 부적·문장 분해 시 획득 (제작 1순위 자원)
+- **희귀도별 우선순위**: 마법 → 희귀 → 전설 → 고유 등급 가루
+- **파밍 최적**: 전쟁 계획 5단계 (함 전리품) + 속삭임 누적 반납
 
-- 전쟁 계획(War Plans) 전쟁 상자 보상
-- 고난도 엘리트 드롭
-- 호라드림 금고실 활동 종료 보상
+</div>
 
-## 주입된 호라드림 수지 (Infused Horadric Resin)
+## 호라드림의 함 — 9종 재료 전수
 
-매혹석(Charm) · 인장(Seal) 을 큐브에서 해체하면 획득합니다. 셋 매혹석(Set Charm) 리롤과 유니크 매혹석 제작의 핵심 재료입니다.
+각 재료를 클릭하면 게임 내 원본 툴팁을 확대해서 볼 수 있습니다.
 
-| 사용처 | 비용 (예시) |
-|--------|------------|
-| 셋 매혹석 리롤 | 50 수지 + 25 Raw Dust |
-| 유니크 매혹석 제작 | 100 수지 + 50 Raw Dust + 1 Enhanced Dust |
+### 1. 주입된 호라드림 수액 (Infused Horadric Resin)
 
-## 보스 트로피 (Boss Trophy)
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/infused-resin.webp"
+    alt="주입된 호라드림 수액"
+    caption="주입된 호라드림 수액"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
 
-특정 둥지 보스 처치 시 드롭되며, **유니크 합성(Amalgamation)** 에서 해당 보스 풀의 유니크를 추첨하는 데 사용합니다. 헬타이드 활동 트리의 중간 경로(Hellwyrm 매복)에서도 자주 떨어집니다.
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-magic">마법 제작 재료</span> |
+| 용도 | <span class="kw-gold">**부적과 문장 제작**</span>에 사용되는 끈끈한 물질 |
+| 게임 내 설명 | "호라드림의 함으로 <span class="kw-gold">부적과 문장을 만들 때 사용되는 끈끈한 물질</span>입니다." |
+| 출처 | <span class="kw-bone">영물 부적·문장 분해</span> |
 
-## 메아리의 흔적 (Trace of Echoes)
+  </div>
+</div>
 
-**메아리치는 증오(Echoing Hatred)** 활동의 입장 키 역할을 합니다. 일정 확률로 떨어지는 소비형 아이템이며, 다양한 활동에서 부수적으로 획득합니다.
+> 💡 **얻는 법** — 영물 인벤토리의 잉여 부적·문장을 분해하면 누적. 일반 활동에서 직접 드랍 안 됨.
+
+### 2. 미가공 태고의 가루 (Raw Primordial Dust)
+
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/dust-raw.webp"
+    alt="미가공 태고의 가루"
+    caption="미가공 태고의 가루"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
+
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-bone">제작 재료</span> (가장 흔한 기본형) |
+| 용도 | <span class="kw-gold">**대부분의 변환**</span>에 부재료로 사용 |
+| 게임 내 설명 | "호라드림의 함을 사용하는 <span class="kw-gold">대부분의 변환에 사용되는 마법 재료</span>입니다." |
+| 흔히 나오는 출처 | <span class="kw-bone">정예 괴물</span> |
+| 드물게 나오는 출처 | <span class="kw-rare">전쟁 계획의 함 전리품 · 속삭임의 나무 보관함 보상</span> |
+
+  </div>
+</div>
+
+> 💡 **가장 빨리 소진되는 자원** — 정예 처치 = 헬타이드·악몽 던전·필드 어느 곳이든. 따로 노릴 필요 없이 일반 파밍에서 자연 누적.
+
+### 3. 거친 태고의 가루 (Coarse Primordial Dust)
+
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/dust-coarse.webp"
+    alt="거친 태고의 가루"
+    caption="거친 태고의 가루"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
+
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-magic">마법 제작 재료</span> |
+| 용도 | <span class="kw-gold">**속성 추가**</span> 변환 (어픽스 추가) |
+| 게임 내 설명 | "호라드림의 함으로 <span class="kw-gold">속성을 추가하는 변환에 사용되는 마법 재료</span>입니다." |
+| 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+
+  </div>
+</div>
+
+### 4. 정제된 태고의 가루 (Refined Primordial Dust)
+
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/dust-refined.webp"
+    alt="정제된 태고의 가루"
+    caption="정제된 태고의 가루"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
+
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-rare">희귀 제작 재료</span> |
+| 용도 | <span class="kw-gold">**속성 변경·제거**</span> 변환 (어픽스 재롤·제거) |
+| 게임 내 설명 | "호라드림의 함으로 <span class="kw-gold">속성을 변경하거나 제거하는 변환에 사용되는 마법 재료</span>입니다." |
+| 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+
+  </div>
+</div>
+
+> 💡 **빌드업 핵심** — 어픽스 재롤이 빌드 완성의 절반. 시즌 초중반 가장 빠르게 소진됨.
+
+### 5. 일촉즉발의 태고의 가루 (Volatile Primordial Dust)
+
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/dust-volatile.webp"
+    alt="일촉즉발의 태고의 가루"
+    caption="일촉즉발의 태고의 가루"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
+
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-legendary">전설 제작 재료</span> |
+| 용도 | <span class="kw-gold">**아이템 변신(재제련)**</span>에 사용되는 특별한 재료 |
+| 게임 내 설명 | "호라드림의 함으로 <span class="kw-gold">아이템을 변신할 때 사용되는 특별한 재료</span>입니다." |
+| 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+
+  </div>
+</div>
+
+> 💡 **재제련(Transfigure) 전용** — 빌드 마감 단계에서 한 번에 다수 소모.
+
+### 6. 순수한 태고의 가루 (Pure Primordial Dust)
+
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/dust-pure.webp"
+    alt="순수한 태고의 가루"
+    caption="순수한 태고의 가루"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
+
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-legendary">전설 제작 재료</span> |
+| 용도 | <span class="kw-gold">**전설 아이템 제작 변환**</span>에 사용되는 특별한 재료 |
+| 게임 내 설명 | "호라드림의 함으로 <span class="kw-gold">전설 아이템을 만드는 변환에 사용되는 특별한 재료</span>입니다." |
+| 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+
+  </div>
+</div>
+
+### 7. 향상된 태고의 가루 (Enhanced Primordial Dust)
+
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/dust-enhanced.webp"
+    alt="향상된 태고의 가루"
+    caption="향상된 태고의 가루"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
+
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-unique">고유 제작 재료</span> |
+| 용도 | <span class="kw-gold">**고유 아이템 제작 변환**</span>에 사용되는 특별한 재료 |
+| 게임 내 설명 | "호라드림의 함으로 <span class="kw-gold">고유 아이템을 만드는 변환에 사용되는 특별한 재료</span>입니다." |
+| 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+
+  </div>
+</div>
+
+### 8. 조율된 태고의 가루 (Attuned Primordial Dust)
+
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/dust-attuned.webp"
+    alt="조율된 태고의 가루"
+    caption="조율된 태고의 가루"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
+
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-unique">고유 제작 재료</span> |
+| 용도 | <span class="kw-gold">**고유 아이템의 능력 수치 교체**</span> (유니크 파워 재롤) |
+| 게임 내 설명 | "호라드림의 함으로 <span class="kw-gold">고유 아이템의 능력 수치를 교체하는 데 사용되는 희귀 재료</span>입니다." |
+| 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+
+  </div>
+</div>
+
+> 💡 **신화 추첨에도 사용** — [비밀 레시피](/horadric-cube/secret-recipes/) 의 보스 트로피 신화 추첨 입력에도 들어감.
+
+### 9. 공명하는 태고의 가루 (Resonant Primordial Dust)
+
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/horadric-cube/materials/dust-resonant.webp"
+    alt="공명하는 태고의 가루"
+    caption="공명하는 태고의 가루"
+    size={120}
+  />
+  <div style="flex: 1; min-width: 220px;">
+
+| 항목 | 값 |
+|------|----|
+| 등급 | <span class="kw-legendary">전설 제작 재료</span> (추정) |
+| 용도 | <span class="kw-gold">**상위 변성·신화 추첨**</span> 단계 자원 |
+| 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+
+  </div>
+</div>
+
+## 재료 등급별 정리
+
+| 등급 | 재료 | 주 사용처 | 희소도 |
+|------|------|---------|--------|
+| <span class="kw-bone">제작 재료</span> | 미가공 태고의 가루 | 모든 변환 부재료 | <span class="kw-bone">매우 흔함</span> |
+| <span class="kw-magic">마법 제작 재료</span> | 주입된 호라드림 수액 · 거친 태고의 가루 | 부적/문장 · 속성 추가 | <span class="kw-magic">흔함</span> |
+| <span class="kw-rare">희귀 제작 재료</span> | 정제된 태고의 가루 | 속성 변경·제거 | <span class="kw-rare">보통</span> |
+| <span class="kw-legendary">전설 제작 재료</span> | 일촉즉발의 · 순수한 · 공명하는 태고의 가루 | 재제련 · 전설 제작 · 상위 변성 | <span class="kw-legendary">드뭄</span> |
+| <span class="kw-unique">고유 제작 재료</span> | 향상된 · 조율된 태고의 가루 | 고유 아이템 제작·수치 교체 | <span class="kw-unique">매우 드뭄</span> |
+
+## 파밍 최적 경로 — 시즌 단계별
+
+### 시즌 초반 (1주차)
+
+| 우선 | 활동 | 주 획득 재료 |
+|------|------|------------|
+| 1 | <span class="kw-gold">캠페인 + 시즌 등급 1-2장</span> | 미가공 + 거친 가루 |
+| 2 | <span class="kw-gold">속삭임 누적 반납 (5묶음 즉시 회수)</span> | 거친 · 정제된 가루 |
+| 3 | <span class="kw-bone">정예 사냥 (헬타이드)</span> | 미가공 + 호라드림 수액 (영물 부적 분해 시) |
+
+### 시즌 중반 (2-3주차)
+
+| 우선 | 활동 | 주 획득 재료 |
+|------|------|------------|
+| 1 | <span class="kw-rare">**전쟁 계획 5단계 (함 전리품)**</span> | **모든 가루 종류 + 최고 등급 가루 빈출** |
+| 2 | <span class="kw-rare">속삭임 누적 반납 (보관함 보상)</span> | 정제된 · 일촉즉발의 가루 |
+| 3 | <span class="kw-bone">악몽 던전 + 헬타이드</span> | 정예 누적 = 미가공 기본 누적 |
+
+### 시즌 후반 (빌드 완성)
+
+| 우선 | 활동 | 주 획득 재료 |
+|------|------|------------|
+| 1 | <span class="kw-mythic">전쟁 계획 (고난도 함 전리품)</span> | 향상된 · 조율된 가루 (고유 제작) |
+| 2 | <span class="kw-legendary">속삭임 (선조 보관함 노림)</span> | 순수한 · 공명하는 가루 |
+| 3 | <span class="kw-blood">우두머리 처치</span> | <Term id="resplendent-spark" /> + 보스 트로피 |
+
+## 자원 효율 팁
+
+:::tip[효율 극대화]
+- <span class="kw-gold">**전쟁 계획 함 전리품이 핵심**</span> — 8종 가루 모두 빈출. 시즌 5장 도달 후 5단계 활성화가 최우선
+- <span class="kw-gold">**속삭임 5묶음 = 1회 보관함**</span> — 모이는 즉시 반납 (창고 차면 손실)
+- <span class="kw-bone">**호라드림 수액 부족 시**</span> — 잉여 부적·문장을 모두 분해. 영물 인벤토리는 매혹 효과 셋 우선
+- <span class="kw-blood">**정예 우선 사냥**</span> — 미가공 가루는 정예에서만 흔하게 떨어짐. 일반 몹 사냥은 비효율
+- <span class="kw-mythic">**고급 가루 (향상된/조율된) 비축**</span> — 신화 고유 추첨용. 빌드 완성 후 일괄 소모
+:::
 
 ## FAQ
 
-**Q. 거친 원시의 가루가 너무 빨리 떨어집니다. 효율적으로 쓰는 법은?**
-A. Raw는 거의 모든 레시피의 기본 소모재라 항상 빠르게 소진됩니다. **어픽스 추가**는 무작위성이 높으므로 우선순위를 낮추고, **카테고리 재롤(Chaotic Reroll)** 에 집중하는 것이 일반적입니다.
+**Q. "Primordial Dust" 의 한국 공식 명칭이 무엇인가요?**
+A. **태고의 가루**. 인-게임 클라이언트의 정확한 표기이며 wowhead 한국 페이지에서도 확인 가능합니다.
 
-**Q. 조율 프리즘을 모았는데 어디에 쓰는 게 가장 효율적인가요?**
-A. **무질서의 프리즘**은 핵심 빌드 아이템의 어픽스를 카테고리 단위로 잠그는 마무리 단계에서, **쿨리언 프리즘**은 목걸이 슬롯에 전용으로 사용합니다.
+**Q. 미가공 태고의 가루가 너무 많이 쌓이는데 어떻게 활용?**
+A. 거의 모든 큐브 레시피의 부재료로 들어가므로 자연히 소진됩니다. 시즌 초중반엔 풍족하지만 빌드 완성 후엔 부족해질 수 있으니 무리하게 분해하지 마세요.
 
-**Q. 영원 캐릭터에서도 가루가 동일하게 떨어지나요?**
-A. 모든 가루는 영원/시즌 공통이며, 시즌 종료 시 영원으로 자동 이관됩니다.
+**Q. 가루 등급이 높을수록 더 좋은 건가요?**
+A. **사용처가 다릅니다**. 고급 가루 (향상된/조율된) 는 양이 적지만 고유 아이템·신화 추첨에 필수. 기본 가루 (미가공) 는 양이 많이 필요한 부재료. 등급별로 따로 누적해야 합니다.
+
+**Q. 영원 캐릭터에서도 같은 가루가 떨어지나요?**
+A. 모든 가루는 시즌/영원 공통이며, 시즌 종료 시 영원으로 자동 이관됩니다.
+
+**Q. 가루를 거래소에서 살 수 있나요?**
+A. **불가능**. 모든 태고의 가루는 거래 불가 (계정 귀속). 직접 파밍만 가능.
 
 <SourceFooter
   sources={[
-    { label: 'Keengamer — Horadric Cube Guide', url: 'https://www.keengamer.com/articles/guides/diablo-iv-lord-of-hatred-horadric-cube-guide/' },
-    { label: 'Fextralife Wiki — Horadric Cube', url: 'https://diablo4.wiki.fextralife.com/Horadric+Cube' },
+    { label: '미가공 태고의 가루 — wowhead', url: 'https://www.wowhead.com/diablo-4/item/raw-primordial-dust-2502409' },
+    { label: '거친 태고의 가루 — wowhead', url: 'https://www.wowhead.com/diablo-4/item/coarse-primordial-dust-2502432' },
+    { label: '정제된 태고의 가루 — wowhead', url: 'https://www.wowhead.com/diablo-4/item/refined-primordial-dust-2502435' },
+    { label: '일촉즉발의 태고의 가루 — wowhead', url: 'https://www.wowhead.com/diablo-4/item/volatile-primordial-dust-2502440' },
+    { label: '순수한 태고의 가루 — wowhead', url: 'https://www.wowhead.com/diablo-4/item/pure-primordial-dust-2502443' },
+    { label: '향상된 태고의 가루 — wowhead', url: 'https://www.wowhead.com/diablo-4/item/enhanced-primordial-dust-2530716' },
+    { label: '조율된 태고의 가루 — wowhead', url: 'https://www.wowhead.com/diablo-4/item/attuned-primordial-dust-2530719' },
+    { label: '공명하는 태고의 가루 — wowhead', url: 'https://www.wowhead.com/diablo-4/item/resonant-primordial-dust-2530723' },
   ]}
-  lastUpdated="2026-05-16"
+  lastUpdated="2026-05-19"
 />
