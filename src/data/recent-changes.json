@@ -1,7 +1,28 @@
 {
-  "generatedAt": "2026-05-18T13:44:59.374Z",
+  "generatedAt": "2026-05-18T16:31:55.365Z",
   "count": 40,
   "items": [
+    {
+      "url": "/season-guide/",
+      "title": "시즌 가이드 — 시즌 13 결전의 시즌",
+      "date": "2026-05-18T21:45:36+08:00",
+      "commit": "feat: 시즌 가이드 그룹 신규 + 시즌 14 대비 구분 전략 수립",
+      "hash": "ee558f0"
+    },
+    {
+      "url": "/season-guide/seasonal-blessings/",
+      "title": "시즌 축복 + 이글거리는 재 — 초보 가이드",
+      "date": "2026-05-18T21:45:36+08:00",
+      "commit": "feat: 시즌 가이드 그룹 신규 + 시즌 14 대비 구분 전략 수립",
+      "hash": "ee558f0"
+    },
+    {
+      "url": "/season-guide/seasonal-journey/",
+      "title": "시즌 여정 (시즌 등급) — 초보 가이드",
+      "date": "2026-05-18T21:45:36+08:00",
+      "commit": "feat: 시즌 가이드 그룹 신규 + 시즌 14 대비 구분 전략 수립",
+      "hash": "ee558f0"
+    },
     {
       "url": "/activity/",
       "title": "내 활동 + 최신 변경",
@@ -260,27 +281,6 @@
       "date": "2026-05-17T07:34:01+08:00",
       "commit": "feat: 사이드바 YouTube 채널 + 메인 대시보드 임베드/클랜 카드 + 라이트 테마 가독성",
       "hash": "3a4ded8"
-    },
-    {
-      "url": "/about/",
-      "title": "사이트 소개 (About)",
-      "date": "2026-05-17T03:07:08+08:00",
-      "commit": "feat: 댓글 백엔드를 Facebook 에서 Giscus 로 전환",
-      "hash": "2079f51"
-    },
-    {
-      "url": "/data-deletion/",
-      "title": "데이터 삭제 안내",
-      "date": "2026-05-17T03:07:08+08:00",
-      "commit": "feat: 댓글 백엔드를 Facebook 에서 Giscus 로 전환",
-      "hash": "2079f51"
-    },
-    {
-      "url": "/privacy/",
-      "title": "개인정보처리방침",
-      "date": "2026-05-17T03:07:08+08:00",
-      "commit": "feat: 댓글 백엔드를 Facebook 에서 Giscus 로 전환",
-      "hash": "2079f51"
     }
   ]
 }

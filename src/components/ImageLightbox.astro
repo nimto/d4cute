@@ -12,11 +12,29 @@
     <figcaption></figcaption>
   </figure>
   <nav class="img-lightbox-nav" aria-label="이미지 갤러리 탐색">
-    <button class="img-lightbox-navbtn" data-nav="first" type="button" aria-label="처음 이미지" title="처음 (Home)">&laquo;</button>
-    <button class="img-lightbox-navbtn" data-nav="prev" type="button" aria-label="이전 이미지" title="이전 (←)">&lsaquo;</button>
+    <button class="img-lightbox-navbtn" data-nav="first" type="button" aria-label="처음 이미지" title="처음 (Home)">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="11 17 6 12 11 7"/>
+        <polyline points="18 17 13 12 18 7"/>
+      </svg>
+    </button>
+    <button class="img-lightbox-navbtn" data-nav="prev" type="button" aria-label="이전 이미지" title="이전 (←)">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
     <span class="img-lightbox-navindex">1 / 1</span>
-    <button class="img-lightbox-navbtn" data-nav="next" type="button" aria-label="다음 이미지" title="다음 (→)">&rsaquo;</button>
-    <button class="img-lightbox-navbtn" data-nav="last" type="button" aria-label="마지막 이미지" title="마지막 (End)">&raquo;</button>
+    <button class="img-lightbox-navbtn" data-nav="next" type="button" aria-label="다음 이미지" title="다음 (→)">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+    <button class="img-lightbox-navbtn" data-nav="last" type="button" aria-label="마지막 이미지" title="마지막 (End)">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="13 17 18 12 13 7"/>
+        <polyline points="6 17 11 12 6 7"/>
+      </svg>
+    </button>
   </nav>
   <div class="img-lightbox-help" aria-hidden="true">휠: 확대/축소 · 드래그: 이동 · 더블클릭: 원래대로 · ← →: 이전/다음 · Esc: 닫기</div>
 </div>
@@ -165,17 +183,20 @@
     height: 2.4rem;
     padding: 0;
     border-radius: 50%;
-    font-size: 1.15rem;
-    line-height: 1;
+    line-height: 0;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
     font-family: inherit;
-    font-variant-numeric: tabular-nums;
     box-sizing: border-box;
     vertical-align: middle;
+  }
+  .img-lightbox-navbtn svg {
+    display: block;
+    flex: 0 0 auto;
+    pointer-events: none;
   }
   .img-lightbox-navbtn:hover:not(:disabled),
   .img-lightbox-navbtn:focus-visible {
@@ -197,6 +218,7 @@
     font-variant-numeric: tabular-nums;
     font-weight: 600;
     letter-spacing: 0.04em;
+    line-height: 1;
     padding: 0 0.5rem;
     min-width: 4.5rem;
     height: 2.4rem;
@@ -217,8 +239,8 @@
     .img-lightbox-navbtn {
       width: 2rem;
       height: 2rem;
-      font-size: 1rem;
     }
+    .img-lightbox-navbtn svg { width: 14px; height: 14px; }
     .img-lightbox-navindex {
       font-size: 0.85rem;
       min-width: 3.4rem;
