@@ -38,7 +38,7 @@ const ICON_CRAFT = '/images/horadric-cube/mythic/icons/crafts';
 const ICON_DROP = '/images/horadric-cube/mythic/icons/drops';
 const TIP_CRAFT = '/images/horadric-cube/mythic/crafts';
 
-// === 시즌13 신화 유니크 (장비) 전체 13종 ===
+// === 시즌13 신화 고유 (장비) 전체 13종 ===
 // 모두 큐브 jeweler 에서 specific 제작 가능 (반짝이는 벼락불 × 2 + 룬 3종 × 6 + 골드)
 // 모두 보스 드랍으로도 획득 가능 (Belial / general mythic pool / Resplendent Spark 2 → random mythic)
 export const mythicItems: MythicItem[] = [
