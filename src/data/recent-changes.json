@@ -1,0 +1,286 @@
+{
+  "generatedAt": "2026-05-18T12:22:10.906Z",
+  "count": 40,
+  "items": [
+    {
+      "url": "/horadric-cube/secret-recipes/",
+      "title": "비밀 레시피 (Secret Recipes) — 초보 가이드",
+      "date": "2026-05-18T11:14:15+08:00",
+      "commit": "feat: D4 KR 공식 용어 hover 툴팁 + 태고의 가루 8종 정확한 명칭",
+      "hash": "bbfadd2"
+    },
+    {
+      "url": "/horadric-cube/transfiguration/",
+      "title": "레시피 — 어픽스 수정 (Transfiguration)",
+      "date": "2026-05-18T11:14:15+08:00",
+      "commit": "feat: D4 KR 공식 용어 hover 툴팁 + 태고의 가루 8종 정확한 명칭",
+      "hash": "bbfadd2"
+    },
+    {
+      "url": "/activity-tree/helltide/",
+      "title": "헬타이드 트리 — 7 포인트 분배 + 메타",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/activity-tree/lair-boss/",
+      "title": "소굴 우두머리 트리 (Lair Boss) — 7 포인트 분배 + 메타",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/activity-tree/optimization/",
+      "title": "포인트 분배 최적화 — 시즌 단계별 마스터플랜",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/horadric-cube/amalgamation/",
+      "title": "레시피 — 합성 (Amalgamation)",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/horadric-cube/mythic-items/",
+      "title": "신화 아이템 카탈로그 (Mythic Uniques)",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/horadric-cube/transmutation/",
+      "title": "레시피 — 아이템 변환 (Transmutation)",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/talismans/mythic/",
+      "title": "신화 매혹석 & 신화 인장 (Mythic)",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/war-plans/activities/",
+      "title": "5단계 체인 — 활동 선택",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/war-plans/daily-routine/",
+      "title": "일일 추천 루틴",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/war-plans/routing/",
+      "title": "효율적 경로 선택 (Routing)",
+      "date": "2026-05-18T10:54:16+08:00",
+      "commit": "docs: 비밀 레시피 페이지 명료화 + 신화 유니크 → 신화 고유 통일",
+      "hash": "e601385"
+    },
+    {
+      "url": "/activity-tree/",
+      "title": "활동 스킬 트리 — 전체 개요",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/activity-tree/infernal-hordes/",
+      "title": "지옥불 군세 트리 (Infernal Hordes) — 7 포인트 분배 + 경고",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/activity-tree/nightmare/",
+      "title": "악몽 던전 트리 — 7 포인트 분배 + 메타",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/activity-tree/nodes-gallery/",
+      "title": "활동 트리 노드 캡처 모음 + 7 포인트 분배 가이드",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/activity-tree/pit/",
+      "title": "나락 트리 (The Pit) — 7 포인트 분배 + 메타",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/activity-tree/undercity/",
+      "title": "쿠라스트 지하도시 트리",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/glossary/",
+      "title": "용어 사전 (Glossary)",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/horadric-cube/farming/",
+      "title": "재료 파밍 가이드",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/patch-notes/3-0-0/",
+      "title": "3.0.0 — 증오의 군주 출시",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/patch-notes/3-0-2/",
+      "title": "3.0.2 — 셋 매혹석 / 전쟁 계획 텔레포트",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/quickstart/",
+      "title": "빠른 시작 (Quickstart)",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/talismans/farming/",
+      "title": "부적 파밍 / 거래 가이드",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/tributes/",
+      "title": "공물 (Tributes) — 개요",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/tributes/targeted-farming/",
+      "title": "타겟 파밍 가이드",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/tributes/types/",
+      "title": "공물 종류 (Types)",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/tributes/undercity/",
+      "title": "쿠라스트 지하도시 (Undercity) 운영",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/war-plans/",
+      "title": "전쟁 계획 (War Plans) — 개요",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/war-plans/unlock/",
+      "title": "잠금해제 및 위치",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/war-plans/war-chest/",
+      "title": "전쟁 상자 (War Chest) 보상",
+      "date": "2026-05-18T10:40:44+08:00",
+      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
+      "hash": "b73759e"
+    },
+    {
+      "url": "/activity-tree/strongroom/",
+      "title": "호라드림 금고실 트리 (Horadric Strongroom) — 7 포인트 분배",
+      "date": "2026-05-17T22:37:52+08:00",
+      "commit": "feat: 활동 트리 100 노드 한국명 전수 매핑 + 사이드바 label 단순화",
+      "hash": "36605fe"
+    },
+    {
+      "url": "/gems/mechanics/",
+      "title": "시즌13 보석 메커니즘 (곱연산)",
+      "date": "2026-05-17T15:30:28+08:00",
+      "commit": "fix: [숫자] 표기 = 보유 수량이므로 가격/식별번호로 잘못 사용한 모든 곳 정정",
+      "hash": "4183bcd"
+    },
+    {
+      "url": "/horadric-cube/runes/",
+      "title": "레시피 — 룬 제작 (Rune Crafting)",
+      "date": "2026-05-17T15:30:28+08:00",
+      "commit": "fix: [숫자] 표기 = 보유 수량이므로 가격/식별번호로 잘못 사용한 모든 곳 정정",
+      "hash": "4183bcd"
+    },
+    {
+      "url": "/gems/",
+      "title": "보석 — 개요와 시즌13 변경점",
+      "date": "2026-05-17T14:40:06+08:00",
+      "commit": "feat: gems 페이지에 시즌13 변성 신규 어픽스 '이 아이템의 보석위력' 정보 추가",
+      "hash": "69b2840"
+    },
+    {
+      "url": "/",
+      "title": "디아블로4 시즌13 한국어 가이드",
+      "date": "2026-05-17T07:34:01+08:00",
+      "commit": "feat: 사이드바 YouTube 채널 + 메인 대시보드 임베드/클랜 카드 + 라이트 테마 가독성",
+      "hash": "3a4ded8"
+    },
+    {
+      "url": "/about/",
+      "title": "사이트 소개 (About)",
+      "date": "2026-05-17T03:07:08+08:00",
+      "commit": "feat: 댓글 백엔드를 Facebook 에서 Giscus 로 전환",
+      "hash": "2079f51"
+    },
+    {
+      "url": "/data-deletion/",
+      "title": "데이터 삭제 안내",
+      "date": "2026-05-17T03:07:08+08:00",
+      "commit": "feat: 댓글 백엔드를 Facebook 에서 Giscus 로 전환",
+      "hash": "2079f51"
+    },
+    {
+      "url": "/privacy/",
+      "title": "개인정보처리방침",
+      "date": "2026-05-17T03:07:08+08:00",
+      "commit": "feat: 댓글 백엔드를 Facebook 에서 Giscus 로 전환",
+      "hash": "2079f51"
+    },
+    {
+      "url": "/terms/",
+      "title": "서비스 약관",
+      "date": "2026-05-17T00:58:31+08:00",
+      "commit": "feat: Facebook App 제출용 법적 페이지 + 1024 아이콘 추가",
+      "hash": "7de3e7e"
+    }
+  ]
+}

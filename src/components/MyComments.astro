@@ -1,0 +1,234 @@
+---
+const REPO = 'nimto/d4cute';
+---
+
+<div class="my-comments">
+  <p class="my-comments-intro">
+    GitHub 사용자명을 입력하면 <strong>본인이 작성한 댓글·토론</strong>이 있는 GitHub Discussions 페이지로 빠르게 이동할 수 있습니다.
+    Giscus는 GitHub Discussions 기반이므로 댓글 목록은 GitHub에서 직접 관리합니다.
+  </p>
+
+  <form class="my-comments-form" id="myCommentsForm" autocomplete="off">
+    <label class="my-comments-label">
+      <span>GitHub 사용자명</span>
+      <input
+        type="text"
+        id="myCommentsUser"
+        name="user"
+        placeholder="예: nimto"
+        pattern="[a-zA-Z0-9-]{1,39}"
+        title="GitHub 사용자명 (영문/숫자/하이픈)"
+        autocapitalize="off"
+        autocomplete="off"
+        spellcheck="false"
+        required
+      />
+      <button type="submit">저장 + 보기</button>
+    </label>
+  </form>
+
+  <div class="my-comments-links" id="myCommentsLinks" hidden>
+    <p class="my-comments-active">
+      현재 사용자명: <strong id="myCommentsCurrent"></strong>
+      <button type="button" class="my-comments-clear" id="myCommentsClear" aria-label="사용자명 삭제">×</button>
+    </p>
+    <ul class="my-comments-quick">
+      <li>
+        <a id="lnkMyAll" href="#" target="_blank" rel="noopener noreferrer">📝 내가 작성한 토론·댓글 전체</a>
+        <span class="my-comments-hint">— 본인이 시작한 모든 Discussions</span>
+      </li>
+      <li>
+        <a id="lnkMyParticipated" href="#" target="_blank" rel="noopener noreferrer">💬 내가 참여한 토론</a>
+        <span class="my-comments-hint">— 댓글을 단 다른 사람의 Discussions 포함</span>
+      </li>
+      <li>
+        <a id="lnkAllDiscussions" href="#" target="_blank" rel="noopener noreferrer">📂 사이트 전체 댓글 보기</a>
+        <span class="my-comments-hint">— 모든 페이지의 Discussions 목록</span>
+      </li>
+    </ul>
+    <p class="my-comments-tip">
+      💡 <strong>편집·삭제</strong>: 본인 댓글의 우측 위 <code>···</code> 메뉴 → <code>Edit</code> 또는 <code>Delete</code> (GitHub 로그인 필요).
+    </p>
+  </div>
+</div>
+
+<script is:inline define:vars={{ REPO }}>
+  (function () {
+    const KEY = 'd4cute_gh_user';
+    const form = document.getElementById('myCommentsForm');
+    const input = document.getElementById('myCommentsUser');
+    const linksWrap = document.getElementById('myCommentsLinks');
+    const currentLbl = document.getElementById('myCommentsCurrent');
+    const clearBtn = document.getElementById('myCommentsClear');
+    const lnkMyAll = document.getElementById('lnkMyAll');
+    const lnkMyParticipated = document.getElementById('lnkMyParticipated');
+    const lnkAllDiscussions = document.getElementById('lnkAllDiscussions');
+    if (!form || !input) return;
+
+    function setUser(user) {
+      const base = 'https://github.com/' + REPO + '/discussions';
+      const enc = encodeURIComponent(user);
+      lnkMyAll.href = base + '?discussions_q=' + encodeURIComponent('author:' + user);
+      lnkMyParticipated.href = base + '?discussions_q=' + encodeURIComponent('involves:' + user);
+      lnkAllDiscussions.href = base;
+      currentLbl.textContent = user;
+      linksWrap.hidden = false;
+    }
+    function clearUser() {
+      try { localStorage.removeItem(KEY); } catch {}
+      linksWrap.hidden = true;
+      input.value = '';
+    }
+
+    let saved = null;
+    try { saved = localStorage.getItem(KEY); } catch {}
+    if (saved) {
+      input.value = saved;
+      setUser(saved);
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const user = input.value.trim().replace(/^@/, '');
+      if (!user) return;
+      if (!/^[a-zA-Z0-9-]{1,39}$/.test(user)) {
+        alert('GitHub 사용자명 형식이 올바르지 않습니다 (영문/숫자/하이픈, 최대 39자).');
+        return;
+      }
+      try { localStorage.setItem(KEY, user); } catch {}
+      setUser(user);
+    });
+
+    clearBtn.addEventListener('click', function () {
+      clearUser();
+    });
+  })();
+</script>
+
+<style>
+  .my-comments {
+    margin: 1.5rem 0;
+  }
+  .my-comments-intro {
+    font-size: 0.92rem;
+    color: var(--sl-color-text);
+    line-height: 1.6;
+  }
+  .my-comments-form { margin: 1rem 0; }
+  .my-comments-label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .my-comments-label > span {
+    font-weight: 600;
+    color: var(--d4-gold, #eac333);
+    margin-right: 0.5rem;
+  }
+  [data-theme='light'] .my-comments-label > span { color: #8a6a00; }
+  .my-comments-label input {
+    flex: 1;
+    min-width: 12rem;
+    padding: 0.45rem 0.7rem;
+    background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    color: var(--sl-color-text);
+    font-size: 0.95rem;
+    font-family: inherit;
+  }
+  .my-comments-label input:focus {
+    outline: none;
+    border-color: var(--d4-gold, #eac333);
+    box-shadow: 0 0 0 2px rgba(234, 195, 51, 0.18);
+  }
+  .my-comments-label button {
+    background: var(--d4-gold, #eac333);
+    color: #1a1612;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .my-comments-label button:hover { filter: brightness(1.1); }
+  .my-comments-label button:active { transform: translateY(1px); }
+
+  .my-comments-links {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--d4-gold, #eac333);
+    border-radius: 8px;
+    background: rgba(234, 195, 51, 0.05);
+  }
+  .my-comments-active {
+    margin: 0 0 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+  }
+  .my-comments-active strong {
+    color: var(--d4-gold, #eac333);
+  }
+  [data-theme='light'] .my-comments-active strong { color: #8a6a00; }
+  .my-comments-clear {
+    margin-left: auto;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: 1px solid var(--sl-color-hairline);
+    background: transparent;
+    color: var(--sl-color-text);
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .my-comments-clear:hover { background: rgba(192, 16, 32, 0.15); border-color: #c01020; color: #c01020; }
+  .my-comments-quick {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .my-comments-quick li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .my-comments-quick a {
+    color: var(--d4-gold, #eac333);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dotted var(--d4-gold, #eac333);
+  }
+  [data-theme='light'] .my-comments-quick a { color: #8a6a00; border-bottom-color: #b08800; }
+  .my-comments-quick a:hover { background: rgba(234, 195, 51, 0.1); }
+  .my-comments-hint {
+    font-size: 0.85em;
+    color: var(--sl-color-gray-3);
+  }
+  .my-comments-tip {
+    margin: 0.85rem 0 0;
+    font-size: 0.85rem;
+    color: var(--sl-color-text);
+    padding: 0.55rem 0.75rem;
+    background: rgba(0, 0, 0, 0.18);
+    border-left: 3px solid var(--d4-bone, #d8c8a0);
+    border-radius: 0 6px 6px 0;
+  }
+  [data-theme='light'] .my-comments-tip { background: rgba(0, 0, 0, 0.04); }
+  .my-comments-tip code {
+    background: rgba(234, 195, 51, 0.15);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+  }
+</style>

@@ -1,0 +1,152 @@
+---
+import recentChanges from '../data/recent-changes.json';
+
+interface Props {
+  limit?: number;
+  compact?: boolean;
+}
+const { limit = 30, compact = false } = Astro.props as Props;
+const items = (recentChanges.items || []).slice(0, limit);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const toFull = (s: string) => s.startsWith('http') ? s : `${base}${s.startsWith('/') ? s : `/${s}`}`;
+
+function fmtDate(iso: string) {
+  try {
+    const d = new Date(iso);
+    return d.toLocaleDateString('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\s/g, '');
+  } catch {
+    return iso.slice(0, 10);
+  }
+}
+function shortCommit(s: string) {
+  // strip "type:" prefix for compact view
+  return s.replace(/^[a-z]+(\([^)]+\))?:\s*/, '');
+}
+---
+
+<div class={`recent-changes ${compact ? 'is-compact' : ''}`}>
+  {items.length === 0 && (
+    <p class="recent-changes-empty">변경 내역이 없습니다.</p>
+  )}
+  {items.length > 0 && (
+    <ol class="recent-changes-list">
+      {items.map((it: any) => (
+        <li class="recent-changes-item">
+          <a class="recent-changes-link" href={toFull(it.url)}>
+            <div class="recent-changes-main">
+              <span class="recent-changes-title">{it.title}</span>
+              <span class="recent-changes-commit" title={it.commit}>{shortCommit(it.commit)}</span>
+            </div>
+            <div class="recent-changes-meta">
+              <time class="recent-changes-date" datetime={it.date}>{fmtDate(it.date)}</time>
+              <span class="recent-changes-hash">{it.hash}</span>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ol>
+  )}
+  {!compact && (
+    <p class="recent-changes-note">
+      마지막 갱신: <time datetime={recentChanges.generatedAt}>{fmtDate(recentChanges.generatedAt)}</time>
+      · 총 {recentChanges.count}개 문서
+    </p>
+  )}
+</div>
+
+<style>
+  .recent-changes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .recent-changes-item {
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+  .recent-changes-item:last-child { border-bottom: none; }
+  .recent-changes-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.7rem 0.95rem;
+    color: var(--sl-color-text);
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .recent-changes-link:hover,
+  .recent-changes-link:focus-visible {
+    background: rgba(234, 195, 51, 0.08);
+    outline: none;
+  }
+  [data-theme='light'] .recent-changes-link:hover,
+  [data-theme='light'] .recent-changes-link:focus-visible {
+    background: rgba(234, 195, 51, 0.18);
+  }
+  .recent-changes-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+    flex: 1;
+  }
+  .recent-changes-title {
+    font-weight: 600;
+    color: var(--d4-gold, #eac333);
+    font-size: 0.97em;
+    line-height: 1.4;
+  }
+  [data-theme='light'] .recent-changes-title { color: #8a6a00; }
+  .recent-changes-commit {
+    font-size: 0.83em;
+    color: var(--sl-color-gray-2, #c8bda1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.4;
+  }
+  [data-theme='light'] .recent-changes-commit { color: #555; }
+  .recent-changes-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    flex: 0 0 auto;
+    font-size: 0.78em;
+  }
+  .recent-changes-date {
+    color: var(--sl-color-gray-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .recent-changes-hash {
+    color: var(--d4-bone, #d8c8a0);
+    font-family: var(--sl-font-mono, ui-monospace, monospace);
+    font-size: 0.9em;
+    opacity: 0.7;
+  }
+  .recent-changes-empty {
+    color: var(--sl-color-gray-3);
+    font-style: italic;
+  }
+  .recent-changes-note {
+    margin-top: 0.85rem;
+    font-size: 0.82rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  .is-compact .recent-changes-link {
+    padding: 0.45rem 0.65rem;
+    gap: 0.5rem;
+  }
+  .is-compact .recent-changes-title { font-size: 0.85em; }
+  .is-compact .recent-changes-commit { display: none; }
+  .is-compact .recent-changes-meta { font-size: 0.72em; }
+
+  @media (max-width: 640px) {
+    .recent-changes-link { flex-direction: column; gap: 0.35rem; }
+    .recent-changes-meta { flex-direction: row; align-items: center; }
+  }
+</style>
