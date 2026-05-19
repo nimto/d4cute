@@ -1,7 +1,14 @@
 {
-  "generatedAt": "2026-05-19T18:28:40.637Z",
+  "generatedAt": "2026-05-19T18:33:26.308Z",
   "count": 40,
   "items": [
+    {
+      "url": "/horadric-cube/transfiguration/",
+      "title": "레시피 — 어픽스 수정 (Transfiguration)",
+      "date": "2026-05-20T02:29:27+08:00",
+      "commit": "feat(transfiguration): 분광경 6종 — 변성 시 등장하는 어픽스 풀 게임 내 표시 그대로 추가",
+      "hash": "700c9ed"
+    },
     {
       "url": "/tributes/advanced/",
       "title": "상급/신화 공물 6종 — 지하도시 운영 + 차원문 장난꾼 + 봉화 룰",
@@ -71,13 +78,6 @@
       "date": "2026-05-18T21:45:36+08:00",
       "commit": "feat: 시즌 가이드 그룹 신규 + 시즌 14 대비 구분 전략 수립",
       "hash": "ee558f0"
-    },
-    {
-      "url": "/horadric-cube/transfiguration/",
-      "title": "레시피 — 어픽스 수정 (Transfiguration)",
-      "date": "2026-05-18T11:14:15+08:00",
-      "commit": "feat: D4 KR 공식 용어 hover 툴팁 + 태고의 가루 8종 정확한 명칭",
-      "hash": "bbfadd2"
     },
     {
       "url": "/activity-tree/helltide/",
