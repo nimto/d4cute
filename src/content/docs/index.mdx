@@ -19,46 +19,32 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import SourceFooter from '../../components/SourceFooter.astro';
+import LiveChannel from '../../components/LiveChannel.astro';
+import ClanProfile from '../../components/ClanProfile.astro';
 
-<div class="channel-promo">
-  <div class="channel-embed">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/7xefDv5NCJ4?rel=0"
-      title="삼촌안잔다잉 — 디아블로4 채널 영상"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-      loading="lazy"
-    ></iframe>
-  </div>
-  <div class="channel-meta">
-    <div class="channel-badge">📺 추천 채널</div>
-    <h3 class="channel-name"><a href="https://youtu.be/7xefDv5NCJ4" target="_blank" rel="noopener noreferrer">삼촌안잔다잉</a></h3>
-    <p class="channel-desc">디아블로4 시즌13 공략·빌드·뉴스를 한국어로 다루는 영상 채널입니다. 본 사이트와 함께 보면 텍스트 가이드 + 영상 가이드를 동시에 활용할 수 있습니다.</p>
-    <div class="channel-actions">
-      <a class="channel-btn primary" href="https://youtu.be/7xefDv5NCJ4" target="_blank" rel="noopener noreferrer">▶ 영상 시청</a>
-      <a class="channel-btn" href="https://discord.gg/yQw7hKWYVf" target="_blank" rel="noopener noreferrer">💬 Discord 참여</a>
-      <a class="channel-btn" href="https://www.youtube.com/results?search_query=%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer">🔍 채널 검색</a>
-    </div>
-  </div>
-</div>
+> 🛡️ **클랜 `<앙증맞은> 무지개날개`** (디아블로4 인게임 한국 클랜) 와 클랜장 **대한민국** 이(가) 운영하는 유튜브 채널 **삼촌안잔다잉** 의 공식 가이드 사이트입니다. 두 항목은 별개입니다 — 아래에서 각각 확인하세요.
 
-<div class="clan-card">
-  <div class="clan-header">
-    <span class="clan-emblem" aria-hidden="true">🛡️</span>
-    <div>
-      <div class="clan-badge">길드원 모집</div>
-      <h3 class="clan-title">삼촌안잔다잉 · 대한민국 길드</h3>
-    </div>
-  </div>
-  <div class="clan-body">
-    <p><strong>📺 방송 채널</strong>: 유튜브 · 치지직에서 <code>삼촌안잔다잉</code> 검색 → 구독·팔로우</p>
-    <p><strong>💬 Discord</strong>: <a href="https://discord.gg/yQw7hKWYVf" target="_blank" rel="noopener noreferrer">discord.gg/yQw7hKWYVf</a> — 방송 입장 시 음성으로 친절히 안내</p>
-    <p><strong>🎮 배틀넷 런처 길드</strong>: 10일 이상 미접속 길드원 자리 양보 정책 운영 — 새 길드원 환영</p>
-    <p class="clan-note">방송 시간에 디스코드 들어오시면 빌드·공략·시즌 진행을 음성으로 바로 알려드립니다.</p>
-  </div>
-</div>
+<LiveChannel
+  channelId="UCSPPr4E6P1iGa25VDMJkFpQ"
+  channelHandle="삼촌안잔다잉"
+  channelName="삼촌안잔다잉 (YouTube 채널)"
+  fallbackVideoId="7xefDv5NCJ4"
+  description="디아블로4 시즌13 공략·빌드·뉴스를 한국어로 다루는 클랜장 대한민국 운영 유튜브 채널입니다. 방송 중이면 라이브, 아니면 최신 녹화 영상으로 자동 연결됩니다."
+  discord="https://discord.gg/yQw7hKWYVf"
+/>
+
+<ClanProfile
+  tag="앙증맞은"
+  name="무지개날개"
+  leader="대한민국"
+  createdAt="2023. 8. 4."
+  size="150 / 150"
+  description="가입 신청 후 잠시 기다려 주세요. 클랜장이 수락 처리 후 활동 가능합니다. 인게임 길드 메시지: <code>(O =&gt; N 수락)</code>"
+  labels={["한국어", "캐주얼", "PvE", "PvP", "레벨 업", "친목"]}
+  discord="https://discord.gg/yQw7hKWYVf"
+  youtubeHandle="삼촌안잔다잉"
+  youtubeChannelName="삼촌안잔다잉"
+/>
 
 <div class="hero-card">
   <strong>🩸 시즌13 핵심 요약</strong>

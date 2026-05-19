@@ -74,9 +74,9 @@ export default defineConfig({
       sidebar: [
         {
           label: '🎬 삼촌안잔다잉 채널',
-          link: 'https://youtu.be/7xefDv5NCJ4',
+          link: 'https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89/live',
           attrs: { target: '_blank', rel: 'noopener noreferrer' },
-          badge: { text: 'YouTube', variant: 'tip' },
+          badge: { text: 'LIVE/최신', variant: 'tip' },
         },
         { label: '시작하기', link: '/quickstart/' },
         { label: '📋 내 활동 · 최신 변경', link: '/activity/' },

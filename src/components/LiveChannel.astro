@@ -1,0 +1,374 @@
+---
+interface Props {
+  channelId: string;
+  channelHandle: string;
+  channelName: string;
+  fallbackVideoId: string;
+  description?: string;
+  discord?: string;
+}
+const {
+  channelId,
+  channelHandle,
+  channelName,
+  fallbackVideoId,
+  description,
+  discord,
+} = Astro.props as Props;
+
+const encodedHandle = encodeURIComponent(channelHandle);
+const liveUrl = `https://www.youtube.com/@${encodedHandle}/live`;
+const channelUrl = `https://www.youtube.com/@${encodedHandle}`;
+const fallbackUrl = `https://www.youtube.com/watch?v=${fallbackVideoId}`;
+const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideoId}?rel=0`;
+---
+
+<div
+  class="channel-promo live-channel"
+  data-channel-id={channelId}
+  data-fallback-id={fallbackVideoId}
+  data-fallback-embed={fallbackEmbedSrc}
+  data-live-url={liveUrl}
+  data-channel-url={channelUrl}
+>
+  <div class="channel-embed">
+    <iframe
+      class="lc-iframe"
+      src={fallbackEmbedSrc}
+      title={`${channelName} — 최신 영상 (라이브 시 자동 전환)`}
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+    <div class="lc-status-overlay">
+      <span class="lc-pill lc-pill-offline" data-role="offline-pill">📼 최신 녹화 영상</span>
+      <span class="lc-pill lc-pill-live" data-role="live-pill" hidden>
+        <span class="lc-dot" aria-hidden="true"></span>
+        🔴 LIVE 방송 중
+      </span>
+      <span class="lc-pill lc-pill-checking" data-role="checking-pill">⏳ 라이브 확인 중...</span>
+    </div>
+  </div>
+  <div class="channel-meta">
+    <div class="channel-badge" data-role="header-badge">📺 추천 채널</div>
+    <h3 class="channel-name">
+      <a data-role="title-link" href={liveUrl} target="_blank" rel="noopener noreferrer">{channelName}</a>
+    </h3>
+    {description && <p class="channel-desc">{description}</p>}
+    <p class="channel-status-line" data-role="status-line">
+      현재 상태 확인 중 — 클릭 시 라이브 중이면 라이브로, 아니면 채널 최신 영상으로 이동합니다.
+    </p>
+    <div class="channel-actions">
+      <a
+        class="channel-btn primary"
+        data-role="primary-link"
+        href={liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ▶ 시청 (라이브 우선)
+      </a>
+      <a
+        class="channel-btn"
+        data-role="latest-link"
+        href={fallbackUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📼 최신 녹화 영상
+      </a>
+      <a
+        class="channel-btn"
+        href={channelUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🎬 채널 홈
+      </a>
+      {discord && (
+        <a class="channel-btn" href={discord} target="_blank" rel="noopener noreferrer">
+          💬 Discord 참여
+        </a>
+      )}
+    </div>
+  </div>
+</div>
+
+<style>
+  .live-channel {
+    position: relative;
+    --lc-z-overlay: var(--sl-z-index-toc, 2);
+    --lc-live-strong: var(--d4-blood-bright, #c01020);
+    --lc-live-deep: var(--d4-blood, #960711);
+    --lc-live-edge: var(--sl-color-accent-high, #ff4d5a);
+    --lc-on-live: var(--sl-color-white, #f5ecd6);
+    --lc-pill-bg-dark: rgba(20, 20, 24, 0.75);
+    --lc-pill-bg-checking: rgba(20, 20, 24, 0.6);
+    --lc-pill-border-soft: rgba(255, 255, 255, 0.18);
+    --lc-pill-shadow: rgba(0, 0, 0, 0.35);
+    --lc-live-edge-soft: rgba(255, 64, 64, 0.35);
+    --lc-live-edge-strong: rgba(255, 64, 64, 0.6);
+    --lc-live-halo-soft: rgba(200, 15, 30, 0.45);
+    --lc-live-halo: rgba(200, 15, 30, 0.55);
+    --lc-live-halo-strong: rgba(200, 15, 30, 0.85);
+    --lc-live-embed-halo: rgba(200, 15, 30, 0.6);
+    --lc-dot-halo: rgba(255, 133, 133, 0.9);
+    --lc-status-live-fg: var(--sl-color-accent-high, #ff4d5a);
+    --lc-status-light-fg: var(--sl-color-gray-5, #2a2520);
+    --lc-status-light-live-fg: var(--d4-blood, #960711);
+    --lc-light-pill-bg: rgba(255, 255, 255, 0.85);
+    --lc-light-pill-border: var(--d4-gold-dim, #9c7f1f);
+    --lc-gold-soft: rgba(234, 195, 51, 0.55);
+  }
+  .live-channel .channel-embed {
+    position: relative;
+  }
+  .lc-status-overlay {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    z-index: var(--lc-z-overlay);
+    pointer-events: none;
+  }
+  .lc-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 1px 4px var(--lc-pill-shadow);
+    pointer-events: auto;
+    letter-spacing: 0.02em;
+  }
+  .lc-pill-offline {
+    background: var(--lc-pill-bg-dark);
+    color: var(--d4-bone);
+    border: 1px solid var(--lc-gold-soft);
+  }
+  .lc-pill-live {
+    background: linear-gradient(135deg, var(--lc-live-strong), var(--lc-live-deep));
+    color: var(--lc-on-live);
+    border: 1px solid var(--lc-live-edge);
+    box-shadow: 0 0 0 1px var(--lc-live-edge-soft), 0 0 14px var(--lc-live-halo);
+    animation: lc-live-glow 2s ease-in-out infinite;
+  }
+  .lc-pill-checking {
+    background: var(--lc-pill-bg-checking);
+    color: var(--sl-color-gray-2);
+    border: 1px solid var(--lc-pill-border-soft);
+    font-weight: 500;
+  }
+  .lc-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 0 6px currentColor, 0 0 12px var(--lc-dot-halo);
+    animation: lc-dot-blink 1.1s ease-in-out infinite;
+  }
+  .live-channel.is-live .channel-embed {
+    box-shadow: 0 0 0 2px var(--lc-live-strong), 0 0 18px var(--lc-live-embed-halo);
+  }
+  .live-channel.is-live .channel-badge {
+    background: linear-gradient(135deg, var(--lc-live-strong), var(--lc-live-deep));
+    color: var(--lc-on-live);
+    border-color: var(--lc-live-edge);
+    animation: lc-live-glow 2.4s ease-in-out infinite;
+  }
+  @keyframes lc-live-glow {
+    0%, 100% { box-shadow: 0 0 0 1px var(--lc-live-edge-soft), 0 0 14px var(--lc-live-halo-soft); }
+    50% { box-shadow: 0 0 0 2px var(--lc-live-edge-strong), 0 0 22px var(--lc-live-halo-strong); }
+  }
+  @keyframes lc-dot-blink {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.7); }
+  }
+  .channel-status-line {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--d4-bone);
+    opacity: 0.85;
+  }
+  .live-channel.is-live .channel-status-line {
+    color: var(--lc-status-live-fg);
+    font-weight: 600;
+    opacity: 1;
+  }
+  [data-theme='light'] .live-channel {
+    --lc-pill-bg-dark: var(--lc-light-pill-bg);
+    --lc-gold-soft: var(--lc-light-pill-border);
+  }
+  [data-theme='light'] .lc-pill-offline {
+    color: var(--lc-status-light-fg);
+  }
+  [data-theme='light'] .channel-status-line { color: var(--lc-status-light-fg); }
+  [data-theme='light'] .live-channel.is-live .channel-status-line { color: var(--lc-status-light-live-fg); }
+</style>
+
+<script>
+  type LiveResult =
+    | { state: 'live'; videoId: string; title?: string }
+    | { state: 'offline'; latestVideoId?: string; latestTitle?: string }
+    | { state: 'unknown' };
+
+  const PROXIES = [
+    'https://corsproxy.io/?url=',
+    'https://api.allorigins.win/raw?url=',
+  ];
+
+  async function fetchViaProxy(target: string): Promise<string | null> {
+    for (const proxy of PROXIES) {
+      try {
+        const url = proxy + encodeURIComponent(target);
+        const res = await fetch(url, { cache: 'no-store' });
+        if (res.ok) {
+          const text = await res.text();
+          if (text && text.length > 1000) return text;
+        }
+      } catch (_err) {
+        // try next proxy
+      }
+    }
+    return null;
+  }
+
+  function extractVideoIdFromLiveHtml(html: string): string | null {
+    const m =
+      html.match(/"videoDetails"\s*:\s*\{\s*"videoId"\s*:\s*"([A-Za-z0-9_-]{11})"/) ||
+      html.match(/<link rel="canonical"[^>]*href="https?:\/\/www\.youtube\.com\/watch\?v=([A-Za-z0-9_-]{11})"/) ||
+      html.match(/"liveBroadcastDetails"[^}]*"videoId":"([A-Za-z0-9_-]{11})"/) ||
+      html.match(/"isLiveBroadcast":\s*true[\s\S]{0,2000}?"videoId":"([A-Za-z0-9_-]{11})"/) ||
+      html.match(/<meta itemprop="videoId" content="([A-Za-z0-9_-]{11})"/) ||
+      html.match(/"isLive"\s*:\s*true[\s\S]{0,4000}?"videoId":"([A-Za-z0-9_-]{11})"/);
+    return m ? m[1] : null;
+  }
+
+  function isHtmlLive(html: string): boolean {
+    if (/"isLiveBroadcast"\s*:\s*true/.test(html)) return true;
+    if (/"isLive"\s*:\s*true/.test(html)) return true;
+    if (/"isLiveContent"\s*:\s*true/.test(html)) return true;
+    if (/"isLiveNow"\s*:\s*true/.test(html)) return true;
+    if (/"liveBroadcastDetails"\s*:\s*\{[^}]*"isLiveNow"\s*:\s*true/.test(html)) return true;
+    return false;
+  }
+
+  function extractLatestVideoIdFromRss(xml: string): { id?: string; title?: string } {
+    const idMatch = xml.match(/<yt:videoId>([A-Za-z0-9_-]{11})<\/yt:videoId>/);
+    const titleMatch = xml.match(/<entry>[\s\S]*?<title>([^<]+)<\/title>/);
+    return { id: idMatch?.[1], title: titleMatch?.[1] };
+  }
+
+  async function checkChannel(channelId: string): Promise<LiveResult> {
+    const liveUrl = `https://www.youtube.com/channel/${channelId}/live`;
+    const liveHtml = await fetchViaProxy(liveUrl);
+    if (liveHtml && isHtmlLive(liveHtml)) {
+      const videoId = extractVideoIdFromLiveHtml(liveHtml);
+      if (videoId) return { state: 'live', videoId };
+    }
+
+    const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+    const rssXml = await fetchViaProxy(rssUrl);
+    if (rssXml) {
+      const latest = extractLatestVideoIdFromRss(rssXml);
+      if (latest.id) {
+        return { state: 'offline', latestVideoId: latest.id, latestTitle: latest.title };
+      }
+    }
+
+    if (liveHtml) return { state: 'offline' };
+    return { state: 'unknown' };
+  }
+
+  function applyLive(el: HTMLElement, videoId: string) {
+    const liveUrl = el.dataset.liveUrl || `https://www.youtube.com/watch?v=${videoId}`;
+    const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
+    const iframe = el.querySelector<HTMLIFrameElement>('.lc-iframe');
+    if (iframe) iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&rel=0`;
+    el.querySelector('[data-role="offline-pill"]')?.setAttribute('hidden', '');
+    el.querySelector('[data-role="checking-pill"]')?.setAttribute('hidden', '');
+    el.querySelector('[data-role="live-pill"]')?.removeAttribute('hidden');
+    const titleLink = el.querySelector<HTMLAnchorElement>('[data-role="title-link"]');
+    if (titleLink) titleLink.href = watchUrl;
+    const primary = el.querySelector<HTMLAnchorElement>('[data-role="primary-link"]');
+    if (primary) {
+      primary.href = watchUrl;
+      primary.textContent = '🔴 LIVE 시청 (현재 방송 중)';
+    }
+    const status = el.querySelector<HTMLElement>('[data-role="status-line"]');
+    if (status) status.textContent = '🔴 지금 LIVE 방송 중 — 시청 버튼을 누르면 라이브로 이동합니다.';
+    const badge = el.querySelector<HTMLElement>('[data-role="header-badge"]');
+    if (badge) badge.textContent = '🔴 지금 방송 중';
+    el.classList.add('is-live');
+  }
+
+  function applyOffline(el: HTMLElement, latestVideoId?: string, latestTitle?: string) {
+    const targetId = latestVideoId || el.dataset.fallbackId;
+    const watchUrl = targetId ? `https://www.youtube.com/watch?v=${targetId}` : el.dataset.channelUrl || '#';
+    const iframe = el.querySelector<HTMLIFrameElement>('.lc-iframe');
+    if (iframe && targetId) iframe.src = `https://www.youtube-nocookie.com/embed/${targetId}?rel=0`;
+    el.querySelector('[data-role="checking-pill"]')?.setAttribute('hidden', '');
+    el.querySelector('[data-role="live-pill"]')?.setAttribute('hidden', '');
+    el.querySelector('[data-role="offline-pill"]')?.removeAttribute('hidden');
+    const titleLink = el.querySelector<HTMLAnchorElement>('[data-role="title-link"]');
+    if (titleLink) titleLink.href = watchUrl;
+    const primary = el.querySelector<HTMLAnchorElement>('[data-role="primary-link"]');
+    if (primary) {
+      primary.href = watchUrl;
+      primary.textContent = '📼 최신 녹화 영상 시청';
+    }
+    const latest = el.querySelector<HTMLAnchorElement>('[data-role="latest-link"]');
+    if (latest) latest.href = watchUrl;
+    const status = el.querySelector<HTMLElement>('[data-role="status-line"]');
+    if (status) {
+      status.textContent = latestTitle
+        ? `현재 라이브 아님 — 최신 녹화 영상: "${latestTitle}"`
+        : '현재 라이브 아님 — 최신 녹화 영상으로 이동합니다.';
+    }
+    const badge = el.querySelector<HTMLElement>('[data-role="header-badge"]');
+    if (badge) badge.textContent = '📺 추천 채널 (오프라인)';
+    el.classList.remove('is-live');
+  }
+
+  function applyUnknown(el: HTMLElement) {
+    el.querySelector('[data-role="checking-pill"]')?.setAttribute('hidden', '');
+    const status = el.querySelector<HTMLElement>('[data-role="status-line"]');
+    if (status) {
+      status.textContent = '라이브 상태 확인 실패 — "시청" 버튼은 라이브면 라이브로, 아니면 최신 영상으로 자동 라우팅됩니다.';
+    }
+  }
+
+  async function init() {
+    const containers = document.querySelectorAll<HTMLElement>('.live-channel');
+    for (const el of Array.from(containers)) {
+      const channelId = el.dataset.channelId;
+      if (!channelId) {
+        applyUnknown(el);
+        continue;
+      }
+      try {
+        const result = await checkChannel(channelId);
+        if (result.state === 'live') applyLive(el, result.videoId);
+        else if (result.state === 'offline') applyOffline(el, result.latestVideoId, result.latestTitle);
+        else applyUnknown(el);
+      } catch (_err) {
+        applyUnknown(el);
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>

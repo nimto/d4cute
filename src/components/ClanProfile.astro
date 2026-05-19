@@ -1,0 +1,382 @@
+---
+interface Props {
+  tag: string;
+  name: string;
+  leader: string;
+  createdAt: string;
+  size: string;
+  description: string;
+  labels: string[];
+  discord?: string;
+  youtubeHandle?: string;
+  youtubeChannelName?: string;
+}
+const {
+  tag,
+  name,
+  leader,
+  createdAt,
+  size,
+  description,
+  labels,
+  discord,
+  youtubeHandle,
+  youtubeChannelName,
+} = Astro.props as Props;
+const youtubeUrl = youtubeHandle
+  ? `https://www.youtube.com/@${encodeURIComponent(youtubeHandle)}/live`
+  : null;
+---
+
+<aside class="clan-profile" aria-labelledby="clan-profile-name">
+  <div class="clan-profile-grid">
+    <div class="clan-profile-banner" aria-hidden="true">
+      <div class="clan-profile-banner-inner">
+        <span class="clan-profile-banner-label">문장</span>
+        <span class="clan-profile-banner-icon">⚔️</span>
+        <span class="clan-profile-banner-foot">마지막 수정: {leader}</span>
+      </div>
+    </div>
+    <div class="clan-profile-main">
+      <div class="clan-profile-header">
+        <span class="clan-profile-tag">&lt;{tag}&gt;</span>
+        <h3 id="clan-profile-name" class="clan-profile-name">{name}</h3>
+        <p class="clan-profile-sub">
+          <span class="clan-profile-kind">디아블로4 한국 클랜</span>
+          <span class="clan-profile-sep" aria-hidden="true">·</span>
+          <span class="clan-profile-leader">클랜장 <strong>{leader}</strong></span>
+        </p>
+      </div>
+
+      <div class="clan-profile-stats">
+        <div class="clan-profile-stat">
+          <div class="clan-profile-stat-label">📅 생성 날짜</div>
+          <div class="clan-profile-stat-value">{createdAt}</div>
+        </div>
+        <div class="clan-profile-stat">
+          <div class="clan-profile-stat-label">👑 클랜장</div>
+          <div class="clan-profile-stat-value">{leader}</div>
+        </div>
+        <div class="clan-profile-stat">
+          <div class="clan-profile-stat-label">👥 인원</div>
+          <div class="clan-profile-stat-value">{size}</div>
+        </div>
+      </div>
+
+      <div class="clan-profile-desc">
+        <div class="clan-profile-desc-label">📝 가입 안내</div>
+        <p set:html={description}></p>
+      </div>
+
+      <div class="clan-profile-meta">
+        <div class="clan-profile-meta-label">🌍 지역 · 라벨</div>
+        <div class="clan-profile-tags">
+          {labels.map((l) => (
+            <span class="clan-profile-chip">{l}</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="clan-profile-cta">
+        {discord && (
+          <a class="clan-profile-btn primary" href={discord} target="_blank" rel="noopener noreferrer">
+            💬 Discord 입장
+          </a>
+        )}
+        {youtubeUrl && (
+          <a class="clan-profile-btn" href={youtubeUrl} target="_blank" rel="noopener noreferrer">
+            🎬 클랜장 유튜브 {youtubeChannelName && (<>(<strong>{youtubeChannelName}</strong>)</>)}
+          </a>
+        )}
+      </div>
+
+      {youtubeChannelName && (
+        <p class="clan-profile-foot">
+          🎬 클랜장 <strong>{leader}</strong> 이(가) 운영하는 유튜브 채널 <strong>{youtubeChannelName}</strong> 에서 디아블로4 시즌 가이드를 다룹니다.
+          라이브 방송 시간에 디스코드에 들어오시면 음성으로 가입·빌드·공략 안내를 받으실 수 있습니다.
+          위쪽 영상 카드는 <strong>현재 방송 중이면 라이브로 자동 전환</strong>, 아니면 최신 녹화 영상을 보여줍니다.
+        </p>
+      )}
+    </div>
+  </div>
+</aside>
+
+<style>
+  .clan-profile {
+    --cp-accent: var(--d4-gold, #eac333);
+    --cp-accent-dim: var(--d4-gold-dim, #9c7f1f);
+    --cp-blood: var(--d4-blood-bright, #c01020);
+    --cp-blood-deep: var(--d4-blood, #960711);
+    --cp-bone: var(--d4-bone, #d8c8a0);
+    --cp-bg-stop-a: rgba(150, 7, 17, 0.18);
+    --cp-bg-stop-b: rgba(0, 0, 0, 0.45);
+    --cp-banner-bg-a: rgba(150, 7, 17, 0.55);
+    --cp-banner-bg-b: rgba(40, 4, 8, 0.65);
+    --cp-card-border: rgba(150, 7, 17, 0.45);
+    --cp-stat-bg: rgba(0, 0, 0, 0.32);
+    --cp-stat-border: rgba(234, 195, 51, 0.18);
+    --cp-chip-border: rgba(234, 195, 51, 0.5);
+    --cp-chip-bg: rgba(234, 195, 51, 0.08);
+    --cp-desc-bg: rgba(0, 0, 0, 0.28);
+    --cp-cta-hover: rgba(234, 195, 51, 0.16);
+    --cp-foot-bg: rgba(150, 7, 17, 0.1);
+    --cp-light-bg-a: rgba(150, 7, 17, 0.08);
+    --cp-light-bg-b: rgba(234, 195, 51, 0.14);
+    --cp-light-stat-bg: rgba(255, 255, 255, 0.55);
+    --cp-light-text: #2a1a08;
+    --cp-light-leader: #7a5a0a;
+    --cp-light-foot-bg: rgba(150, 7, 17, 0.06);
+    --cp-card-shadow: rgba(0, 0, 0, 0.25);
+    --cp-banner-icon-shadow: rgba(0, 0, 0, 0.6);
+
+    margin: 1.25rem 0 1.5rem;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, var(--cp-bg-stop-a), var(--cp-bg-stop-b));
+    border: 1px solid var(--cp-card-border);
+    border-left: 4px solid var(--cp-blood);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px var(--cp-card-shadow);
+  }
+
+  .clan-profile-grid {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 1.4rem;
+    align-items: stretch;
+  }
+  @media (max-width: 720px) {
+    .clan-profile-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .clan-profile-banner {
+    border: 1px solid var(--cp-card-border);
+    border-radius: 8px;
+    background: linear-gradient(180deg, var(--cp-banner-bg-a), var(--cp-banner-bg-b));
+    padding: 0.7rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 220px;
+  }
+  .clan-profile-banner-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+  .clan-profile-banner-label {
+    font-size: 0.85rem;
+    color: var(--cp-bone);
+    letter-spacing: 0.1em;
+    text-transform: none;
+    border-bottom: 1px solid var(--cp-card-border);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.4rem;
+  }
+  .clan-profile-banner-icon {
+    font-size: 5rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 6px var(--cp-banner-icon-shadow));
+  }
+  .clan-profile-banner-foot {
+    font-size: 0.72rem;
+    color: var(--cp-bone);
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--cp-card-border);
+    width: 100%;
+  }
+
+  .clan-profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+    min-width: 0;
+  }
+
+  .clan-profile-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    border-bottom: 1px solid var(--cp-card-border);
+    padding-bottom: 0.7rem;
+  }
+  .clan-profile-tag {
+    font-size: 0.92rem;
+    color: var(--cp-bone);
+    letter-spacing: 0.02em;
+  }
+  .clan-profile-name {
+    margin: 0;
+    font-size: 1.7rem;
+    line-height: 1.15;
+    color: var(--cp-accent);
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .clan-profile-sub {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: var(--cp-bone);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.55rem;
+    align-items: baseline;
+  }
+  .clan-profile-sub .clan-profile-sep { opacity: 0.5; }
+  .clan-profile-sub strong { color: var(--cp-accent); }
+
+  .clan-profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+  @media (max-width: 520px) {
+    .clan-profile-stats { grid-template-columns: 1fr; }
+  }
+  .clan-profile-stat {
+    background: var(--cp-stat-bg);
+    border: 1px solid var(--cp-stat-border);
+    border-radius: 6px;
+    padding: 0.55rem 0.7rem;
+  }
+  .clan-profile-stat-label {
+    font-size: 0.78rem;
+    color: var(--cp-bone);
+    opacity: 0.85;
+    margin-bottom: 0.2rem;
+  }
+  .clan-profile-stat-value {
+    font-size: 1rem;
+    color: var(--cp-accent);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .clan-profile-desc {
+    background: var(--cp-desc-bg);
+    border: 1px solid var(--cp-stat-border);
+    border-radius: 6px;
+    padding: 0.65rem 0.85rem;
+  }
+  .clan-profile-desc-label {
+    font-size: 0.8rem;
+    color: var(--cp-bone);
+    opacity: 0.85;
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.04em;
+  }
+  .clan-profile-desc p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--cp-bone);
+  }
+  .clan-profile-desc code {
+    background: var(--cp-chip-bg);
+    color: var(--cp-accent);
+    padding: 0.05rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.85em;
+  }
+
+  .clan-profile-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .clan-profile-meta-label {
+    font-size: 0.8rem;
+    color: var(--cp-bone);
+    opacity: 0.85;
+    letter-spacing: 0.04em;
+  }
+  .clan-profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .clan-profile-chip {
+    display: inline-block;
+    padding: 0.18rem 0.65rem;
+    font-size: 0.82rem;
+    color: var(--cp-accent);
+    background: var(--cp-chip-bg);
+    border: 1px solid var(--cp-chip-border);
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .clan-profile-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .clan-profile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.95rem;
+    border: 1px solid var(--cp-accent);
+    color: var(--cp-accent);
+    background: transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .clan-profile-btn:hover {
+    background: var(--cp-cta-hover);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+  .clan-profile-btn.primary {
+    background: var(--cp-blood);
+    border-color: var(--cp-blood);
+    color: var(--cp-bone);
+  }
+  .clan-profile-btn.primary:hover {
+    background: var(--cp-blood-deep);
+    color: var(--cp-bone);
+  }
+  .clan-profile-btn strong { color: inherit; }
+
+  .clan-profile-foot {
+    margin: 0;
+    padding: 0.65rem 0.85rem;
+    background: var(--cp-foot-bg);
+    border-left: 3px solid var(--cp-blood);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: var(--cp-bone);
+  }
+  .clan-profile-foot strong { color: var(--cp-accent); }
+
+  [data-theme='light'] .clan-profile {
+    --cp-bg-stop-a: var(--cp-light-bg-a);
+    --cp-bg-stop-b: var(--cp-light-bg-b);
+    --cp-stat-bg: var(--cp-light-stat-bg);
+    --cp-desc-bg: var(--cp-light-stat-bg);
+    --cp-foot-bg: var(--cp-light-foot-bg);
+    --cp-bone: var(--cp-light-text);
+    color: var(--cp-light-text);
+  }
+  [data-theme='light'] .clan-profile-name,
+  [data-theme='light'] .clan-profile-sub strong,
+  [data-theme='light'] .clan-profile-stat-value,
+  [data-theme='light'] .clan-profile-chip,
+  [data-theme='light'] .clan-profile-btn,
+  [data-theme='light'] .clan-profile-foot strong {
+    color: var(--cp-light-leader);
+  }
+</style>
