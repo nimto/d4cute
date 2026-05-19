@@ -30,3 +30,6 @@ transfig-*.png
 
 # Claude Code internal lock files
 .claude/
+
+# Build-time generated comments index (fetched fresh in CI with GITHUB_TOKEN)
+src/data/comments-index.json

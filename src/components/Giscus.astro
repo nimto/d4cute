@@ -9,7 +9,7 @@ const rawPath = Astro.url.pathname.replace(/^\/d4cute/, '') || '/';
 const term = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
 ---
 
-<div class="comments-wrapper">
+<div class="comments-wrapper" id="page-comments">
   <h2>💬 댓글</h2>
 
   <details class="comments-howto">

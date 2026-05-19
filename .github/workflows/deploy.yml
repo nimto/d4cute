@@ -9,6 +9,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  discussions: read
 
 concurrency:
   group: pages
@@ -37,6 +38,9 @@ jobs:
           PUBLIC_GISCUS_REPO_ID: ${{ vars.PUBLIC_GISCUS_REPO_ID || 'PLACEHOLDER' }}
           PUBLIC_GISCUS_CATEGORY: ${{ vars.PUBLIC_GISCUS_CATEGORY || 'Comments' }}
           PUBLIC_GISCUS_CATEGORY_ID: ${{ vars.PUBLIC_GISCUS_CATEGORY_ID || 'PLACEHOLDER' }}
+          GITHUB_TOKEN: ${{ secrets.COMMENTS_FETCH_TOKEN || secrets.GITHUB_TOKEN }}
+          COMMENTS_REPO_OWNER: ${{ github.repository_owner }}
+          COMMENTS_REPO_NAME: ${{ github.event.repository.name }}
         run: npm run build
 
       - name: Upload Pages artifact

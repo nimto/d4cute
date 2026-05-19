@@ -8,14 +8,21 @@ sidebar:
 
 import RecentChanges from '../../components/RecentChanges.astro';
 import MyComments from '../../components/MyComments.astro';
+import AllComments from '../../components/AllComments.astro';
 
 ## 한 줄 요약
 
-> 사이트의 **최신 변경 문서**를 한 곳에서 확인하고, **본인이 작성한 댓글·토론**으로 빠르게 이동합니다.
+> 사이트의 **최신 변경 문서** + **전체 댓글 목록**을 한 곳에서 확인하고, **본인이 작성한 댓글·토론**으로 빠르게 이동합니다.
 
 ## 📝 내가 작성한 댓글
 
 <MyComments />
+
+## 💬 모든 댓글 — 검색 · 정렬
+
+검색하지 않으면 사이트 전체 댓글이 신규 순으로 표시됩니다. 작성자·본문·페이지 제목으로 검색할 수 있고, 항목을 클릭하면 **해당 페이지의 댓글 영역**으로 이동합니다. 우측 `GitHub 원본 ↗` 링크는 외부 GitHub Discussions 의 원본 댓글로 이동합니다.
+
+<AllComments />
 
 ## 🔄 최신 변경된 문서
 

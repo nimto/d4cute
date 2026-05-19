@@ -1,0 +1,469 @@
+---
+import commentsIndex from '../data/comments-index.json';
+
+interface CommentItem {
+  id: string;
+  body: string;
+  author: { login: string; avatarUrl: string; url: string };
+  createdAt: string;
+  commentUrl: string;
+  discussionUrl: string;
+  pagePath: string;
+  pageTitle: string;
+  pageExists: boolean;
+  parentId: string | null;
+}
+
+interface Index {
+  generatedAt: string;
+  repo: string;
+  count: number;
+  discussionCount: number;
+  items: CommentItem[];
+  note?: string;
+  error?: string;
+}
+
+const data = commentsIndex as Index;
+const items = data.items || [];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const pageHref = (pagePath: string) => {
+  if (!pagePath) return '';
+  const p = pagePath.startsWith('/') ? pagePath : `/${pagePath}`;
+  const withSlash = p.endsWith('/') ? p : `${p}/`;
+  return `${base}${withSlash}#page-comments`;
+};
+
+function fmtDate(iso: string) {
+  try {
+    const d = new Date(iso);
+    return d.toLocaleDateString('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit' });
+  } catch {
+    return iso.slice(0, 10);
+  }
+}
+
+const empty = items.length === 0;
+const hasError = !!data.error;
+const hasNote = !!data.note;
+---
+
+<div class="all-comments" data-all-comments>
+  {!empty && (
+    <div class="all-comments-controls">
+      <label class="all-comments-search">
+        <span class="all-comments-search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          data-ac-search
+          placeholder="작성자·본문·페이지 제목으로 검색…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button type="button" class="all-comments-search-clear" data-ac-clear aria-label="검색어 지우기" hidden>×</button>
+      </label>
+      <label class="all-comments-sort">
+        <span class="all-comments-sort-label">정렬</span>
+        <select data-ac-sort>
+          <option value="date-desc" selected>최신순 (날짜 ↓)</option>
+          <option value="date-asc">오래된순 (날짜 ↑)</option>
+          <option value="page-asc">페이지별 (제목 ㄱ-ㅎ)</option>
+          <option value="author-asc">작성자 A-Z / ㄱ-ㅎ</option>
+        </select>
+      </label>
+    </div>
+  )}
+
+  {empty && (
+    <div class="all-comments-empty">
+      <strong>표시할 댓글이 없습니다.</strong>
+      {hasError && <p class="all-comments-error">댓글 불러오기 실패: <code>{data.error}</code></p>}
+      {hasNote && <p class="all-comments-note">{data.note}</p>}
+      {!hasError && !hasNote && (
+        <p>아직 작성된 댓글이 없거나, 빌드 시점에 댓글 인덱스가 비어 있습니다.</p>
+      )}
+    </div>
+  )}
+
+  {!empty && (
+    <ol class="all-comments-list" data-ac-list>
+      {items.map((c) => (
+        <li
+          class="all-comments-item"
+          data-ac-item
+          data-author={c.author.login}
+          data-body={c.body}
+          data-page-title={c.pageTitle}
+          data-page-path={c.pagePath}
+          data-date={c.createdAt}
+          data-parent={c.parentId || ''}
+        >
+          <a class="all-comments-link" href={pageHref(c.pagePath)} data-page-href>
+            <div class="all-comments-head">
+              <img
+                class="all-comments-avatar"
+                src={c.author.avatarUrl}
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+              <span class="all-comments-author">@{c.author.login}</span>
+              {c.parentId && <span class="all-comments-reply-badge">↳ 답글</span>}
+              <time class="all-comments-date" datetime={c.createdAt}>{fmtDate(c.createdAt)}</time>
+            </div>
+            <p class="all-comments-body">{c.body.length > 320 ? c.body.slice(0, 320) + '…' : c.body}</p>
+            <div class="all-comments-foot">
+              <span class="all-comments-page-label">
+                📄 {c.pageTitle}
+                {!c.pageExists && c.pagePath && <span class="all-comments-page-orphan"> · 페이지 없음</span>}
+              </span>
+              <a
+                class="all-comments-extlink"
+                href={c.commentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick="event.stopPropagation();"
+              >GitHub 원본 ↗</a>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ol>
+  )}
+
+  {!empty && (
+    <p class="all-comments-status" data-ac-status hidden></p>
+  )}
+
+  <p class="all-comments-foot-meta">
+    마지막 갱신: <time datetime={data.generatedAt}>{fmtDate(data.generatedAt)}</time>
+    {!empty && (
+      <> · 총 {data.count}개 댓글 / {data.discussionCount}개 페이지</>
+    )}
+  </p>
+</div>
+
+{!empty && (
+  <script is:inline>
+    (function () {
+      const roots = document.querySelectorAll('[data-all-comments]');
+      roots.forEach(function (root) {
+        if (root.dataset.acBound) return;
+        root.dataset.acBound = '1';
+        const search = root.querySelector('[data-ac-search]');
+        const clearBtn = root.querySelector('[data-ac-clear]');
+        const sort = root.querySelector('[data-ac-sort]');
+        const list = root.querySelector('[data-ac-list]');
+        const status = root.querySelector('[data-ac-status]');
+        if (!list) return;
+
+        const allItems = Array.from(list.querySelectorAll('[data-ac-item]'));
+
+        function applyFilter() {
+          const q = (search && search.value || '').trim().toLowerCase();
+          if (clearBtn) clearBtn.hidden = q.length === 0;
+          let visible = 0;
+          allItems.forEach(function (it) {
+            if (!q) {
+              it.hidden = false;
+              visible++;
+              return;
+            }
+            const a = (it.dataset.author || '').toLowerCase();
+            const b = (it.dataset.body || '').toLowerCase();
+            const t = (it.dataset.pageTitle || '').toLowerCase();
+            const p = (it.dataset.pagePath || '').toLowerCase();
+            const match = a.indexOf(q) >= 0 || b.indexOf(q) >= 0 || t.indexOf(q) >= 0 || p.indexOf(q) >= 0;
+            it.hidden = !match;
+            if (match) visible++;
+          });
+          if (status) {
+            if (q) {
+              status.hidden = false;
+              status.textContent = '"' + q + '" 결과: ' + visible + '건';
+            } else {
+              status.hidden = true;
+              status.textContent = '';
+            }
+          }
+        }
+
+        function applySort() {
+          const v = sort && sort.value || 'date-desc';
+          const sorted = allItems.slice().sort(function (a, b) {
+            const da = a.dataset.date || '';
+            const db = b.dataset.date || '';
+            const ta = (a.dataset.pageTitle || '').toLowerCase();
+            const tb = (b.dataset.pageTitle || '').toLowerCase();
+            const au = (a.dataset.author || '').toLowerCase();
+            const bu = (b.dataset.author || '').toLowerCase();
+            if (v === 'date-asc') return da.localeCompare(db);
+            if (v === 'page-asc') {
+              const t = ta.localeCompare(tb, 'ko');
+              return t !== 0 ? t : db.localeCompare(da);
+            }
+            if (v === 'author-asc') {
+              const t = au.localeCompare(bu, 'ko');
+              return t !== 0 ? t : db.localeCompare(da);
+            }
+            return db.localeCompare(da);
+          });
+          sorted.forEach(function (it) { list.appendChild(it); });
+        }
+
+        if (search) {
+          search.addEventListener('input', applyFilter);
+        }
+        if (clearBtn) {
+          clearBtn.addEventListener('click', function () {
+            if (search) {
+              search.value = '';
+              search.focus();
+            }
+            applyFilter();
+          });
+        }
+        if (sort) {
+          sort.addEventListener('change', applySort);
+        }
+        applyFilter();
+      });
+    })();
+  </script>
+)}
+
+<style>
+  .all-comments {
+    --ac-accent: var(--d4-gold, #eac333);
+    --ac-accent-soft: var(--d4-gold-dim, #9c7f1f);
+    --ac-accent-bg: rgba(234, 195, 51, 0.08);
+    --ac-accent-bg-strong: rgba(234, 195, 51, 0.18);
+    --ac-accent-ring: rgba(234, 195, 51, 0.22);
+    --ac-blood: var(--d4-blood-bright, #c01020);
+    --ac-blood-bg: rgba(192, 16, 32, 0.15);
+    --ac-orphan: var(--sl-color-gray-3, #948a73);
+    margin: 1rem 0 1.25rem;
+  }
+
+  .all-comments-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0 0 0.85rem;
+    align-items: center;
+  }
+  .all-comments-search {
+    position: relative;
+    flex: 1 1 16rem;
+    min-width: 12rem;
+    display: flex;
+    align-items: center;
+  }
+  .all-comments-search-icon {
+    position: absolute;
+    left: 0.6rem;
+    pointer-events: none;
+    font-size: 0.95rem;
+    opacity: 0.7;
+  }
+  .all-comments-search input {
+    flex: 1;
+    padding: 0.45rem 2rem;
+    background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    color: var(--sl-color-text);
+    font-size: 0.92rem;
+    font-family: inherit;
+    width: 100%;
+  }
+  .all-comments-search input:focus {
+    outline: none;
+    border-color: var(--ac-accent);
+    box-shadow: 0 0 0 2px var(--ac-accent-ring);
+  }
+  .all-comments-search input::-webkit-search-cancel-button { display: none; }
+  .all-comments-search-clear {
+    position: absolute;
+    right: 0.4rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--sl-color-text);
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+  }
+  .all-comments-search-clear:hover {
+    background: var(--ac-blood-bg);
+    color: var(--ac-blood);
+    opacity: 1;
+  }
+
+  .all-comments-sort {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex: 0 0 auto;
+  }
+  .all-comments-sort-label {
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-3);
+    font-weight: 600;
+  }
+  .all-comments-sort select {
+    padding: 0.42rem 0.6rem;
+    background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    color: var(--sl-color-text);
+    font-size: 0.88rem;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .all-comments-sort select:focus {
+    outline: none;
+    border-color: var(--ac-accent);
+    box-shadow: 0 0 0 2px var(--ac-accent-ring);
+  }
+
+  .all-comments-status {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    color: var(--ac-accent);
+    font-weight: 600;
+  }
+  [data-theme='light'] .all-comments-status { color: var(--ac-accent-soft); }
+
+  .all-comments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .all-comments-item {
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+  .all-comments-item:last-child { border-bottom: none; }
+  .all-comments-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.8rem 0.95rem;
+    color: var(--sl-color-text);
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .all-comments-link:hover,
+  .all-comments-link:focus-visible {
+    background: var(--ac-accent-bg);
+    outline: none;
+  }
+  [data-theme='light'] .all-comments-link:hover,
+  [data-theme='light'] .all-comments-link:focus-visible {
+    background: var(--ac-accent-bg-strong);
+  }
+
+  .all-comments-head {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+  }
+  .all-comments-avatar {
+    border-radius: 50%;
+    background: var(--sl-color-gray-5);
+    flex: 0 0 auto;
+  }
+  .all-comments-author {
+    font-weight: 600;
+    color: var(--ac-accent);
+  }
+  [data-theme='light'] .all-comments-author { color: var(--ac-accent-soft); }
+  .all-comments-reply-badge {
+    font-size: 0.72rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 999px;
+    background: var(--ac-accent-bg);
+    color: var(--ac-accent);
+    border: 1px solid var(--ac-accent-ring);
+  }
+  .all-comments-date {
+    margin-left: auto;
+    color: var(--sl-color-gray-3);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+  }
+
+  .all-comments-body {
+    margin: 0;
+    font-size: 0.93rem;
+    line-height: 1.55;
+    color: var(--sl-color-text);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .all-comments-foot {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+  }
+  .all-comments-page-label {
+    color: var(--d4-bone, #d8c8a0);
+    font-weight: 600;
+  }
+  [data-theme='light'] .all-comments-page-label { color: var(--sl-color-gray-5); }
+  .all-comments-page-orphan {
+    color: var(--ac-orphan);
+    font-weight: 400;
+    font-style: italic;
+  }
+  .all-comments-extlink {
+    margin-left: auto;
+    color: var(--sl-color-gray-3);
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+  }
+  .all-comments-extlink:hover { color: var(--ac-accent); }
+
+  .all-comments-empty {
+    border: 1px dashed var(--sl-color-hairline);
+    padding: 1rem;
+    border-radius: 6px;
+    color: var(--sl-color-gray-3);
+    font-size: 0.9rem;
+  }
+  .all-comments-empty strong { color: var(--sl-color-text); }
+  .all-comments-error code {
+    background: var(--ac-blood-bg);
+    color: var(--ac-blood);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.85em;
+  }
+
+  .all-comments-foot-meta {
+    margin: 0.7rem 0 0;
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  @media (max-width: 640px) {
+    .all-comments-date { margin-left: 0; }
+    .all-comments-extlink { margin-left: 0; }
+  }
+</style>
