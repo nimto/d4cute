@@ -1,6 +1,6 @@
 ---
-title: 상급/신화 공물 6종 — 지하도시 운영 + 봉화 룰
-description: 시즌 13 나한투의 쿠라스트 지하도시 상급 공물 6종 게임 내 공식 설명, 활동 트리 오물 적출 분기 전략, 클랜 봉화 룰까지 한 페이지에 정리.
+title: 상급/신화 공물 6종 — 지하도시 운영 + 차원문 장난꾼 + 봉화 룰
+description: 시즌 13 나한투의 쿠라스트 지하도시 상급 공물 6종 + 오물 적출 노드의 차원문 장난꾼 보너스 상자 메커니즘 + 시련/공물 분기 페널티 + 봉화 점화 자격까지 게임 내 공식 툴팁 기준 정리.
 sidebar:
   order: 6
 season: 13
@@ -12,7 +12,7 @@ import Term from '../../../components/Term.astro';
 
 ## 한 줄 요약
 
-> **나한투의 쿠라스트 지하도시 (고행 난이도 전용)** 의 상급 공물은 **전설 5종 + 신화 1종**. <span class="kw-gold">**조율 등급 1 이상으로 완료**</span> 해야 막대한 보상이 떨어집니다. 활동 트리는 <span class="kw-gold">**좌측 줄기 "오물 적출" 까지만 찍고** 시련 분기와 공물 강화 분기는 절대 안 찍는 것</span> 이 클랜 표준 룰입니다.
+> **나한투의 쿠라스트 지하도시 (고행 난이도 전용)** 의 상급 공물은 **전설 5종 + 신화 1종**. <span class="kw-gold">**조율 등급 1 이상으로 완료**</span> 해야 막대한 보상이 떨어집니다. 활동 트리는 <span class="kw-gold">**좌측 줄기 "오물 적출" 까지만 찍기**</span> — 봉화 점화 시 <span class="kw-gold">**차원문 장난꾼(Portal Prankster)** 추첨 확률을 부여</span> 받아 마지막 보스 후 **보너스 상자**를 노리는 게 진짜 목적. 시련/공물 강화 분기는 페널티만 누적되므로 비활성 유지.
 
 :::tip[게임 내 공식 명칭 기준]
 본 문서의 명칭·수치·설명은 **시즌 13 인-게임 클라이언트 툴팁 원문**을 기반으로 합니다. 모든 6종 공물은 <span class="kw-mythic">고행 난이도에서만 사용 가능</span>, 던전은 <span class="kw-rare">나한투의 쿠라스트 지하도시</span> 고정.
@@ -24,7 +24,8 @@ import Term from '../../../components/Term.astro';
 - 상위 공물 = 신화 1종 + 전설 5종 — **모두 고행 전용**
 - 보상 강화 조건: <span class="kw-gold">**조율 등급 1 이상**</span> (1성 잠금 해제) 완료
 - 활동 트리: <span class="kw-gold">**좌측 줄기 "오물 적출" 까지만 찍기**</span> — 시련 분기 ❌ / 공물 강화 분기 ❌
-- 봉화 룰: <span class="kw-blood">**오물 적출 트리를 그대로 찍은 사람만 봉화 점화**</span> — 잘못 찍은 사람이 켜면 파티 전체 손해
+- "오물 적출" 효과: 봉화 활성 시 <span class="kw-gold">**차원문 장난꾼(Portal Prankster) 낮은 확률 소환 → 처치 시 마지막 보스 후 보너스 상자 1개**</span> (공물·룬·아이템)
+- 봉화 룰: <span class="kw-blood">**오물 적출 노드 찍은 사람만 봉화 점화**</span> — 안 찍은 사람이 켜면 추첨 확률 0 → 파티 전체 보너스 기회 손실
 - 전쟁 계획에서 5단계 지하도시 활성화 → 매 사이클 1회 보장 보상
 
 </div>
@@ -206,60 +207,107 @@ import Term from '../../../components/Term.astro';
 
 ## 지하도시 활동 트리 — "오물 적출까지만" 룰
 
-지하도시 활동 트리는 **좌측 줄기 (메인) + 시련 분기 + 공물 강화 분기** 구조. 클랜 표준 운영은 **좌측 줄기의 "오물 적출" 노드까지만 찍고 두 분기는 비활성** 유지입니다.
+지하도시 활동 트리는 **좌측 줄기 (메인 — 오물 적출 노드 포함) + 시련 분기 + 공물 강화 분기** 구조. 클랜 표준 운영은 **좌측 줄기의 "오물 적출" 노드까지만 찍고 두 분기는 비활성** 유지입니다.
 
-### 왜 오물 적출까지만 찍나?
+### "오물 적출" 노드 — 게임 내 공식 효과
 
-#### 1. <span class="kw-blood">시련(Trial) 분기 — 클리어 시간 단축 강제</span>
+<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
+  <ImageModal
+    src="/images/tributes/advanced/node-cleansing-filth.webp"
+    alt="오물 적출 노드 게임 내 툴팁"
+    caption="오물 적출 — 차원문 장난꾼 소환 노드"
+    size={300}
+  />
+  <div style="flex: 1; min-width: 260px;">
 
-**시련 분기** 노드는 클리어 시간 페널티가 누적되는 구간. 빌드 강도가 충분하지 않으면:
+| 항목 | 값 |
+|------|----|
+| 노드 이름 | <span class="kw-gold">**오물 적출 (Cleansing the Filth)**</span> |
+| 효과 (원문) | "지하도시 내에서 아무 봉화나 활성화하면 <span class="kw-gold">**낮은 확률로 차원문 장난꾼이 소환됩니다**</span>." |
+| 부가 효과 | "때때로 **침공 차원문**이 일정하지 않은 수의 쥐를 소환합니다." (보너스 시간/처치 점수) |
+| 환불 비용 | <span class="kw-rare">50,000,000 골드 (5천만)</span> |
+| 차원문 장난꾼 | "지하세계에서 추가 보상을 주는 **희귀한 보물 고블린**" |
 
-- 시작 시간 60초 → **45초/30초**로 단축
+  </div>
+</div>
+
+### 차원문 장난꾼(Portal Prankster) 메커니즘
+
+오물 적출까지 찍는 진짜 이유 = <span class="kw-gold">**봉화 점화 시 차원문 장난꾼이 등장할 확률**</span> 을 얻기 위함:
+
+- 차원문 장난꾼 = **지하도시 전용 보물 고블린**. 일반 보물 고블린과 달리 던전 안에서만 등장.
+- **차원문 사이로 도망 → 짧은 시간 안에 추격 처치 필요** (광역/추격 빌드 유리).
+- 처치 성공 시 <span class="kw-gold">**마지막 보스 처치 후 종료 시점에 보너스 상자 1개 추가**</span> 등장.
+- 보너스 상자 = <span class="kw-gold">**공물 · 룬 · 추가 아이템**</span> 등 좋은 보상.
+- **패치 2.0.4 이후** — 보너스 상자도 **거래(Bargain) 보상 강화 영향 받음** ([Wowhead 패치 노트](https://www.wowhead.com/diablo-4/news/kurast-undercity-portal-prankster-chests-will-be-affected-by-bargains-diablo-4-349279)).
+- 적은 확률이라 모든 사이클에 등장하진 않지만, **봉화 켤 때마다 추첨**. 사이클 누적할수록 보너스 누적.
+
+→ **봉화 점화 = 차원문 장난꾼 추첨 트리거**. **오물 적출 노드를 안 찍은 사람이 봉화 켜면 추첨 확률 0** = 파티 전체 보너스 기회 손실.
+
+:::tip[차원문 장난꾼 관련 자료]
+- [Icy Veins — Portal Prankster Patch 2.0.4 Loot Change](https://www.icy-veins.com/d4/news/diablo-iv-patch-2-0-4-huge-loot-change-for-portal-prankster-runs/)
+- [Wowhead — Bargain 보상 적용 패치 노트](https://www.wowhead.com/diablo-4/news/kurast-undercity-portal-prankster-chests-will-be-affected-by-bargains-diablo-4-349279)
+- [Icy Veins — Kurast Undercity Season 13 Guide](https://www.icy-veins.com/d4/guides/kurast-undercity-guide/)
+- [Maxroll — Kurast Undercity](https://maxroll.gg/d4/resources/kurast-undercity)
+:::
+
+### 그러면 왜 시련 / 공물 강화 분기는 안 찍나?
+
+차원문 장난꾼 효과는 **오물 적출 1개 노드만으로 확보**. 그 너머 분기는 **부수 효과 없이 페널티만 누적**:
+
+#### 1. <span class="kw-blood">시련(Trial) 분기 — 클리어 시간 단축</span>
+
+**시련 분기** 노드는 클리어 시간을 직접 깎습니다:
+
+- 시작 시간 60초 → **45초/30초** 까지 단축
 - 추가 시간 획득 페널티 -35% → **-50%** 누적
 - 광역 처치 시간 안에 종료 못 하면 **클리어 실패 → 공물 환불 X**
+- **차원문 장난꾼 등장해도 추적 처치 시간 부족** → 보너스 상자 기회까지 잃음
 
-→ **신화 병기의 공물 단독으로도 시작 45초** 인데 시련까지 누적하면 사실상 클리어 불가능. 시즌 초·중반 빌드엔 자해 트리.
+→ **신화 병기의 공물 단독으로도 시작 45초** 인데 시련 분기까지 누적하면 사실상 클리어 불가능. 시즌 초·중반 빌드엔 자해.
 
-#### 2. <span class="kw-blood">공물(Tribute) 강화 분기 — 다른 공물 풀 섞임</span>
+#### 2. <span class="kw-blood">공물(Tribute) 강화 분기 — 보상 풀 희석</span>
 
-**공물 강화 분기** 노드는 일반 공물 보상 풀까지 활성화. 문제:
+**공물 강화 분기** 노드는 일반 공물 보상 풀까지 활성화시킵니다:
 
-- 입장 시 선택한 **상급 공물 1종의 풀이 다른 공물 풀과 섞임**
-- 타겟 파밍 효율 급감 — 막대한 양의 명품화 재료를 노렸는데 일반 재료가 섞여 나옴
-- 일반 풀 보상은 [큐브 변환](/horadric-cube/transmutation/) 으로도 보강 가능 → 트리 포인트 낭비
+- 입장 시 선택한 **상급 공물 1종의 풀이 일반 공물 풀과 섞임**
+- 타겟 파밍 효율 급감 — 막대한 양의 명품화 재료를 노렸는데 일반 잡템이 섞여 나옴
+- 일반 풀 보상은 [큐브 변환](/horadric-cube/transmutation/) · [3-to-1 매혹석 변환](/talismans/) 으로도 보강 가능 → 트리 포인트 낭비
 
 → 상급/신화 공물의 강점인 "막대한 양" 효과를 살리려면 **다른 풀이 섞이지 않도록 비활성** 유지.
 
-#### 3. <span class="kw-gold">"오물 적출" 까지가 보상 강화 최대 효율 지점</span>
+#### 3. <span class="kw-gold">"오물 적출" 까지가 트리 효율의 정점</span>
 
 좌측 줄기의 **오물 적출(Cleansing the Filth)** 노드는:
 
-- 종료 보상함의 **상급 공물 풀 확률 직접 증가**
-- 추가 페널티/시간 단축 없음
+- 봉화 활성화 시 **차원문 장난꾼 등장 확률** 부여 — 보너스 상자 기회
+- 추가 페널티/시간 단축 **없음**
 - 시련/공물 강화 분기에 포인트 누수 없이 도달 가능한 가장 깊은 노드
 
-→ 거기까지 찍고 멈추는 게 **빌드 강도와 무관하게 안전 + 효율 최대**.
+→ 거기까지 찍고 멈추는 게 **빌드 강도와 무관하게 안전 + 보너스 상자 추첨 가동 + 다른 페널티 0**.
 
 ### 분기 분배 비교
 
-| 분배 | 보상 효율 | 클리어 안정성 | 빌드 강도 필요 |
-|------|----------|--------------|----------------|
-| <span class="kw-gold">**좌측 → 오물 적출까지**</span> | <span class="kw-gold">**최대**</span> | <span class="kw-gold">**안정**</span> | <span class="kw-bone">낮음</span> |
-| 좌측 + 시련 분기 일부 | 중간 | 위험 (시간 압박) | <span class="kw-rare">높음</span> |
-| 좌측 + 공물 강화 분기 | 낮음 (풀 섞임) | 안정 | <span class="kw-bone">낮음</span> |
-| 시련 + 공물 강화 양쪽 분배 | 매우 낮음 | 매우 위험 | <span class="kw-mythic">매우 높음</span> |
+| 분배 | 보너스 상자 추첨 | 클리어 안정성 | 보상 풀 순도 | 빌드 강도 필요 |
+|------|---------------|--------------|------------|----------------|
+| <span class="kw-gold">**좌측 → 오물 적출까지**</span> | <span class="kw-gold">**O (확률 부여)**</span> | <span class="kw-gold">**안정**</span> | <span class="kw-gold">**순수**</span> | <span class="kw-bone">낮음</span> |
+| 좌측 + 시련 분기 추가 | O | <span class="kw-blood">위험 (시간 압박)</span> | <span class="kw-gold">순수</span> | <span class="kw-rare">높음</span> |
+| 좌측 + 공물 강화 분기 추가 | O | 안정 | <span class="kw-blood">희석</span> | <span class="kw-bone">낮음</span> |
+| 시련 + 공물 강화 양쪽 추가 | O | <span class="kw-blood">매우 위험</span> | <span class="kw-blood">희석</span> | <span class="kw-mythic">매우 높음</span> |
 
-## 봉화(Beacon) 룰 — 클랜 표준 운영
+→ **추첨 확률은 오물 적출 1개 노드로 얻는 것**. 추가 분기는 모두 페널티만 누적. 트리 포인트는 한정 자원 → **좌측 줄기 깊이 (오물 적출까지) 에 모두 투자** 가 최적해.
 
-쿠라스트 지하도시 입장 시 **봉화/신호석** 을 켜는 사람의 활동 트리 분배가 파티 전체에 적용됩니다. 따라서:
+## 봉화(Beacon/Brazier) 룰 — 클랜 표준 운영
 
-:::danger[봉화 점화 규칙 — 매너 룰]
+쿠라스트 지하도시 입장 시 던전 내 **봉화** 를 켜야 다음 층 진행 + 차원문 장난꾼 추첨이 시작됩니다. **봉화를 켜는 사람의 활동 트리 분배** 가 추첨 확률·페널티에 영향을 주므로 점화 자격이 중요합니다.
 
-### <span class="kw-blood">오물 적출 트리를 정확히 찍은 사람만 봉화 점화</span>
+:::danger[봉화 점화 규칙 — 공팟/클랜 매너 룰]
 
-- 활동 트리에 **시련 분기/공물 강화 분기를 찍은 사람이 봉화 켜면** 파티 전체가 그 페널티 또는 풀 섞임을 받음
-- **시간 압박 시련 활성** → 약한 빌드 파티원이 클리어 못 함 → 모두 공물 환불 X
-- **공물 강화 분기 활성** → 타겟 파밍 풀 깨짐 → 모두 손해
+### <span class="kw-blood">오물 적출 노드를 찍은 사람만 봉화 점화</span>
+
+- **오물 적출 노드를 찍지 않은 사람이 점화하면 차원문 장난꾼 추첨 확률 0** → 파티 전체 보너스 상자 기회 손실
+- **시련 분기까지 찍은 사람이 점화하면** → 클리어 시간 단축 페널티가 파티 클리어 안정성을 위협
+- **공물 강화 분기까지 찍은 사람이 점화하면** → 타겟 파밍 풀 희석 → 모두가 의도한 보상 못 받음
 
 ### 점화 자격 체크리스트
 
@@ -273,12 +321,12 @@ import Term from '../../../components/Term.astro';
 ### 자격 없는 사람의 운영
 
 - 자기 캐릭으로는 공물 들고 입장만
-- 봉화 점화는 자격자 (오물 적출 트리) 에게 위임
+- 봉화 점화는 자격자 (오물 적출 트리 + 시련/공물 분기 0) 에게 위임
 - 시즌 진행하며 자기 트리도 표준으로 재분배 → 다음 사이클부터 자격 획득
 
 :::
 
-> 💡 **트리 재분배 비용** — 지하도시 활동 트리는 재설정 가능 (골드 소비). 잘못 찍은 노드는 회수 후 표준 트리로 재정렬 후 자격 획득.
+> 💡 **트리 재분배 비용** — 오물 적출 노드 환불 비용 = <span class="kw-rare">**5천만 골드**</span> (게임 내 툴팁 확인). 잘못 찍은 시련/공물 분기 노드는 회수해서 좌측 줄기로 재투자.
 
 ## 가장 이상적인 전쟁 계획 배치
 
@@ -303,8 +351,9 @@ import Term from '../../../components/Term.astro';
 
 ## 시련 + 공물 양쪽 찍으면 안 되는 이유 (요약)
 
-- <span class="kw-blood">시련</span> = 시간 페널티 누적 → 빌드 강도 부족 시 **클리어 실패 + 공물 환불 X**
-- <span class="kw-blood">공물 강화</span> = 다른 공물 풀 활성 → **상급 공물의 "막대한 양" 효과 희석**
+- <span class="kw-gold">오물 적출 노드 1개</span>만 찍어도 차원문 장난꾼 추첨 확률 발생 — 보너스 상자 효과는 이미 확보됨
+- <span class="kw-blood">시련 분기</span> = 시간 페널티 누적 → 빌드 부족 시 **클리어 실패 + 공물 환불 X + 차원문 장난꾼 추적 시간 부족**
+- <span class="kw-blood">공물 강화 분기</span> = 다른 공물 풀 활성 → **상급 공물의 "막대한 양" 효과 희석**
 - 양쪽 동시 = **클리어 실패 + 보상 풀 망함** → 시간/공물 둘 다 손해
 - 트리 포인트는 한정 자원 → **좌측 줄기 깊이 (오물 적출까지) 에 모두 투자** 가 최적해
 
@@ -330,10 +379,16 @@ A. 지하도시 클리어 후 종료 보상 화로의 **조율(Attunement) 진�
 A. **빌드가 위력 +4 안정 클리어 가능 + 추가 시간 -50% 페널티 안에서 광역 처치 가능** 시. 보통 시즌 후반 (3-4주차+) 빌드 완성 후. 신화 고유 추첨도 시즌 마감 단계.
 
 **Q. 양쪽 분기에 한두 개씩만 찍어도 정말 손해인가요?**
-A. **네.** 시련 노드 1개라도 시간 페널티 누적, 공물 강화 노드 1개라도 풀 섞임 시작. 클랜 봉화 룰은 **0개 기준** 입니다.
+A. **네.** 시련 노드 1개라도 시간 페널티 누적, 공물 강화 노드 1개라도 풀 섞임 시작. 차원문 장난꾼 추첨 확률은 오물 적출 1개 노드로 이미 확보되므로 그 너머 분기는 페널티만 추가. 클랜 봉화 룰은 **0개 기준**.
+
+**Q. 차원문 장난꾼은 매번 등장하나요?**
+A. **아닙니다** — "낮은 확률" (게임 내 툴팁 원문) 로 봉화 점화 시 추첨됩니다. 사이클을 누적할수록 보너스 상자 빈도가 산술적으로 오릅니다. 패치 2.0.4 이후 보너스 상자도 [거래(Bargain)](/tributes/bargains/) 효과 적용.
+
+**Q. 차원문 장난꾼을 놓치면 어떻게 되나요?**
+A. **추적 처치 실패 시 보너스 상자 없음**. 차원문 사이로 도망가므로 광역/이동기 빌드가 유리. 시련 분기까지 찍어 시간이 더 짧아진 상태면 추격 자체가 불가능.
 
 **Q. 봉화를 자격 없는 사람이 켰을 때 활동 취소 가능한가요?**
-A. **불가능** — 봉화 점화 = 입장 확정. 공물 사용 + 사이클 시간 모두 소진. 사전에 자격 확인이 유일한 방어.
+A. **불가능** — 봉화 점화 = 진행 확정. 공물 사용 + 사이클 시간 모두 소진. 사전에 자격 확인이 유일한 방어.
 
 **Q. 신화 병기의 공물 9개, 상급 정련 41개 등 보유량이 다른 이유?**
 A. **상급 공물별 드롭률 차이** — 시련/일반 활동 보상 + 큐브 합성. 신화 병기는 가장 희귀 (사이클 다수 누적 필요), 상급 정련은 명품화 수요 맞춰 풍족하게 드롭.
@@ -343,11 +398,16 @@ A. 가능하지만 **빌드가 위력 +2/+4 위에 추가 거래 페널티까지
 
 <SourceFooter
   sources={[
-    { label: '시즌 13 인-게임 공물 툴팁 (스크린샷 6종)', url: '/tributes/advanced/' },
+    { label: '시즌 13 인-게임 공물 + 오물 적출 노드 툴팁 (스크린샷 7종)', url: '/tributes/advanced/' },
     { label: '쿠라스트 지하도시 활동 트리', url: '/activity-tree/undercity/' },
     { label: '공물 개요', url: '/tributes/' },
     { label: '호라드림 함 재료', url: '/horadric-cube/materials/' },
+    { label: 'Icy Veins — Patch 2.0.4 Portal Prankster 보상 변경', url: 'https://www.icy-veins.com/d4/news/diablo-iv-patch-2-0-4-huge-loot-change-for-portal-prankster-runs/' },
+    { label: 'Icy Veins — Kurast Undercity Season 13 Guide', url: 'https://www.icy-veins.com/d4/guides/kurast-undercity-guide/' },
+    { label: 'Wowhead — Bargain 적용 Portal Prankster Chest', url: 'https://www.wowhead.com/diablo-4/news/kurast-undercity-portal-prankster-chests-will-be-affected-by-bargains-diablo-4-349279' },
+    { label: 'Maxroll — Kurast Undercity Resource', url: 'https://maxroll.gg/d4/resources/kurast-undercity' },
+    { label: 'WowCarry — Portal Prankster Guide', url: 'https://wowcarry.com/blog/diablo-4/introducing-the-portal-trickster-diablo-4s-newest-treasure-goblin-vessel-of-hatred' },
     { label: 'Mobalytics — War Plans Guide (Undercity Tree)', url: 'https://mobalytics.gg/diablo-4/guides/warplans-guide' },
   ]}
-  lastUpdated="2026-05-19"
+  lastUpdated="2026-05-20"
 />

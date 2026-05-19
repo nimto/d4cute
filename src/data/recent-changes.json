@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-19T14:39:33.088Z",
+  "generatedAt": "2026-05-19T18:09:52.418Z",
   "count": 40,
   "items": [
     {
       "url": "/tributes/advanced/",
-      "title": "상급/신화 공물 6종 — 지하도시 운영 + 봉화 룰",
-      "date": "2026-05-19T22:02:02+08:00",
-      "commit": "feat: /tributes/advanced — 상급/신화 공물 6종 + 오물 적출 트리 + 봉화 룰",
-      "hash": "b96d34c"
+      "title": "상급/신화 공물 6종 — 지하도시 운영 + 차원문 장난꾼 + 봉화 룰",
+      "date": "2026-05-19T22:39:41+08:00",
+      "commit": "fix(tributes/advanced): 메인 분기 표기 정정 — 중앙 → 좌측 줄기",
+      "hash": "8be2e5c"
     },
     {
       "url": "/tributes/",
