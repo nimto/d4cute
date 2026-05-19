@@ -9,6 +9,14 @@
   --d4-gold-dim: #9c7f1f;
   --d4-bone: #d8c8a0;
   --d4-shadow: rgba(0, 0, 0, 0.6);
+
+  /* 카테고리 색상 토큰 — kw-* 와 dust-card-* 공유 */
+  --d4-cat-offensive: #ff5a45;
+  --d4-cat-defensive: #4dc0ff;
+  --d4-cat-utility:   #d864ff;
+  --d4-cat-abundance: #ffc847;
+  --d4-cat-rare:      #f5d447;
+  --d4-on-gold:       #1a1208;
 }
 
 :root[data-theme='dark'] {
@@ -540,4 +548,173 @@
   color: #8a6a00;
   background: rgba(234, 195, 51, 0.18);
   border-left-color: #b08800;
+}
+
+/* ============================================================
+   6종 분광경 한눈 정리 카드 그리드
+   - 색상 토큰: 기존 kw-* (offensive/defensive/utility/abundance/rare)
+   - 등급 뱃지: 기존 kw-magic / kw-rare
+   ============================================================ */
+.dust-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 1.25rem;
+}
+.dust-summary-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.85rem 1rem 0.95rem;
+  background: rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(234, 195, 51, 0.18);
+  border-left: 4px solid var(--d4-gold, #eac333);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.dust-summary-card.dust-card-offensive { border-left-color: var(--d4-cat-offensive); }
+.dust-summary-card.dust-card-defensive { border-left-color: var(--d4-cat-defensive); }
+.dust-summary-card.dust-card-utility   { border-left-color: var(--d4-cat-utility); }
+.dust-summary-card.dust-card-abundance { border-left-color: var(--d4-cat-abundance); }
+.dust-summary-card.dust-card-expert    { border-left-color: var(--d4-cat-rare); }
+.dust-summary-card.dust-card-diverse   { border-left-color: var(--d4-cat-rare); }
+
+.dust-summary-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(234, 195, 51, 0.18);
+}
+.dust-summary-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--d4-gold, #eac333);
+  color: var(--d4-on-gold);
+  font-weight: 800;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 auto;
+}
+.dust-summary-name {
+  font-size: 1.02rem;
+  font-weight: 700;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.dust-summary-grade {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid currentColor;
+  letter-spacing: 0.02em;
+  flex: 0 0 auto;
+}
+.dust-summary-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--d4-bone, #d8c8a0);
+  opacity: 0.95;
+  letter-spacing: 0.01em;
+}
+.dust-summary-row {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--d4-bone, #d8c8a0);
+  padding: 0.4rem 0.55rem;
+  background: rgba(234, 195, 51, 0.05);
+  border-radius: 4px;
+  border-left: 2px solid rgba(234, 195, 51, 0.25);
+}
+.dust-summary-row .dust-row-label {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+.dust-summary-row.dust-row-greater   .dust-row-label { color: var(--d4-blood-bright, #c01020); }
+.dust-summary-row.dust-row-common    .dust-row-label { color: var(--d4-bone, #d8c8a0); }
+.dust-summary-row.dust-row-stat      .dust-row-label { color: var(--d4-gold, #eac333); }
+.dust-summary-row.dust-row-none      { opacity: 0.7; font-style: italic; }
+.dust-summary-row.dust-row-note {
+  background: rgba(192, 16, 32, 0.1);
+  border-left-color: var(--d4-blood-bright, #c01020);
+  font-size: 0.8rem;
+}
+
+/* 실전 4단계 흐름 */
+.dust-workflow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 1.25rem;
+}
+.dust-workflow-step {
+  position: relative;
+  padding: 0.85rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(234, 195, 51, 0.18);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.dust-workflow-step .dust-step-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dust-workflow-step .dust-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: var(--d4-blood, #960711);
+  color: var(--d4-bone, #d8c8a0);
+  font-weight: 800;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+.dust-workflow-step .dust-step-title {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--d4-gold, #eac333);
+}
+.dust-workflow-step .dust-step-body {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--d4-bone, #d8c8a0);
+}
+
+/* 라이트 테마 보정 */
+[data-theme='light'] .dust-summary-card {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(150, 7, 17, 0.22);
+}
+[data-theme='light'] .dust-summary-row {
+  color: #2a1a08;
+  background: rgba(234, 195, 51, 0.16);
+  border-left-color: rgba(150, 7, 17, 0.3);
+}
+[data-theme='light'] .dust-summary-tag,
+[data-theme='light'] .dust-workflow-step .dust-step-body {
+  color: #2a1a08;
+}
+[data-theme='light'] .dust-summary-grade {
+  background: rgba(255, 255, 255, 0.7);
+  color: #2a1a08;
+}
+[data-theme='light'] .dust-workflow-step {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(150, 7, 17, 0.22);
 }

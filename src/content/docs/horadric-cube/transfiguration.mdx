@@ -342,6 +342,127 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
 위 4종 모두 <span class="kw-blood">분해 불가</span>, 거래소 판매 불가의 <span class="kw-magic">마법 등급</span> 소비용품입니다. 출처: 전쟁 계획의 함 전리품, 속삭임의 나무 보관함 보상, 정예 괴물.
 :::
 
+## 6종 분광경 한눈 정리
+
+> 게임 내 표기 기준 통합 요약입니다. <span class="kw-danger">빨강 = 상급 어픽스(Greater Affix)</span> 후보 · <span class="kw-bone">회색 = 일반 어픽스</span> · <span class="kw-gold">노랑 = 주 능력치</span>.
+
+<div class="dust-summary-grid">
+
+  <div class="dust-summary-card dust-card-offensive">
+    <div class="dust-summary-head">
+      <span class="dust-summary-num">1</span>
+      <span class="dust-summary-name kw-offensive">공격적인 조율</span>
+      <span class="dust-summary-grade kw-magic">마법</span>
+    </div>
+    <div class="dust-summary-tag">⚔️ 공격 · DPS 빌드 (가장 자주 쓰이는 기본 딜러용)</div>
+    <div class="dust-summary-row dust-row-greater"><span class="dust-row-label">상급:</span> 무기 피해 · 모든 피해 배율 · 공격 속도 · 극대화 확률 · 극대화 피해 배율 · 취약 피해 배율</div>
+    <div class="dust-summary-row dust-row-common"><span class="dust-row-label">일반:</span> 지속 피해 배율 · 화염/물리/암흑 피해 배율 · 가시</div>
+    <div class="dust-summary-row dust-row-stat"><span class="dust-row-label">주 능력치:</span> 힘 · 지능 · 의지력 · 민첩</div>
+  </div>
+
+  <div class="dust-summary-card dust-card-utility">
+    <div class="dust-summary-head">
+      <span class="dust-summary-num">2</span>
+      <span class="dust-summary-name kw-utility">실용적인 조율</span>
+      <span class="dust-summary-grade kw-magic">마법</span>
+    </div>
+    <div class="dust-summary-tag">⚡ 기동성 + 보조 (회피·쿨감 빌드 필수)</div>
+    <div class="dust-summary-row dust-row-greater"><span class="dust-row-label">상급:</span> 이동 속도 · 재사용 대기시간 감소</div>
+    <div class="dust-summary-row dust-row-common"><span class="dust-row-label">일반:</span> 행운의 적중 확률 · 회피 충전수 · 회피 재사용 대기시간 감소 · 회피 후 이동 속도 증가 · 받는 치유 증가 · 물약 소지량</div>
+  </div>
+
+  <div class="dust-summary-card dust-card-expert">
+    <div class="dust-summary-head">
+      <span class="dust-summary-num">3</span>
+      <span class="dust-summary-name kw-rare">숙련자의 조율</span>
+      <span class="dust-summary-grade kw-rare">희귀</span>
+    </div>
+    <div class="dust-summary-tag">📘 기술 + 핵심 능력치 (스킬 레벨업 / 패시브 작업 핵심)</div>
+    <div class="dust-summary-row dust-row-greater"><span class="dust-row-label">상급:</span> 모든 기술 등급</div>
+    <div class="dust-summary-row dust-row-common"><span class="dust-row-label">일반:</span> 핵심 기술 등급 · 특정 기술군 등급 · 스킬 랭크 계열 · 핵심 능력치 계열</div>
+  </div>
+
+  <div class="dust-summary-card dust-card-defensive">
+    <div class="dust-summary-head">
+      <span class="dust-summary-num">4</span>
+      <span class="dust-summary-name kw-defensive">보호자의 조율</span>
+      <span class="dust-summary-grade kw-magic">마법</span>
+    </div>
+    <div class="dust-summary-tag">🛡️ 방어 (옵션 종류가 가장 많은 만능 분광경)</div>
+    <div class="dust-summary-row dust-row-greater"><span class="dust-row-label">상급:</span> 최대 생명력 · 방어도 · 모든 저항</div>
+    <div class="dust-summary-row dust-row-common"><span class="dust-row-label">일반:</span> 생명력 회복 · 적중/처치 시 생명력 회복 · 화염/냉기/번개 저항 · 독/암흑/물리 저항 · 피해 감소 · 회피 확률 · 보호막 생성량 · 강화 생성량 · 상태이상 감소</div>
+    <div class="dust-summary-row dust-row-note"><span class="dust-row-label">⚠ 예외:</span> 인벤 유저 보고 — <span class="kw-gold">모든 저항</span>은 다채로운(저항)이 아닌 <span class="kw-abundance">풍족한(자원)</span> 풀에서 나오는 경우가 있음</div>
+  </div>
+
+  <div class="dust-summary-card dust-card-abundance">
+    <div class="dust-summary-head">
+      <span class="dust-summary-num">5</span>
+      <span class="dust-summary-name kw-abundance">풍족한 조율</span>
+      <span class="dust-summary-grade kw-magic">마법</span>
+    </div>
+    <div class="dust-summary-tag">💧 자원 (분노·정수·영혼·마나 — 자원 빠듯한 빌드 필수)</div>
+    <div class="dust-summary-row dust-row-greater"><span class="dust-row-label">상급:</span> 행운의 적중 시 자원 회복</div>
+    <div class="dust-summary-row dust-row-common"><span class="dust-row-label">일반:</span> 최대 자원 · 자원 생성량 · 자원 소모 감소 · 처치당 자원 회복</div>
+  </div>
+
+  <div class="dust-summary-card dust-card-diverse">
+    <div class="dust-summary-head">
+      <span class="dust-summary-num">6</span>
+      <span class="dust-summary-name kw-rare">다채로운 조율</span>
+      <span class="dust-summary-grade kw-rare">희귀</span>
+    </div>
+    <div class="dust-summary-tag">🌈 저항 핀포인트 (특정 원소 저항만 콕 집어 작업)</div>
+    <div class="dust-summary-row dust-row-none"><span class="dust-row-label">상급:</span> 없음 (개별 저항은 상급 표기 X)</div>
+    <div class="dust-summary-row dust-row-common"><span class="dust-row-label">일반:</span> 화염 저항 · 냉기 저항 · 번개 저항 · 독 저항 · 암흑 저항 · 물리 저항</div>
+  </div>
+
+</div>
+
+### 💡 실전 작업 흐름 (4유효 전설템 표준)
+
+<div class="dust-workflow">
+
+  <div class="dust-workflow-step">
+    <div class="dust-step-head">
+      <span class="dust-step-num">1</span>
+      <span class="dust-step-title">선조 희귀템 확보</span>
+    </div>
+    <div class="dust-step-body"><span class="kw-danger">상급 어픽스 1~2개</span>가 이미 박힌 <span class="kw-unique">선조 등급</span> 희귀템을 먼저 확보합니다.</div>
+  </div>
+
+  <div class="dust-workflow-step">
+    <div class="dust-step-head">
+      <span class="dust-step-num">2</span>
+      <span class="dust-step-title">속성 제거</span>
+    </div>
+    <div class="dust-step-body">원치 않는 옵션을 뺄 때 → 그 옵션 <strong>계열에 해당하는 분광경</strong>을 사용.</div>
+  </div>
+
+  <div class="dust-workflow-step">
+    <div class="dust-step-head">
+      <span class="dust-step-num">3</span>
+      <span class="dust-step-title">속성 추가</span>
+    </div>
+    <div class="dust-step-body">새 옵션을 넣을 때 → <strong>원하는 옵션 계열의 분광경</strong>을 사용.</div>
+  </div>
+
+  <div class="dust-workflow-step">
+    <div class="dust-step-head">
+      <span class="dust-step-num">4</span>
+      <span class="dust-step-title">마감</span>
+    </div>
+    <div class="dust-step-body">옵션 4개 맞추고 → <span class="kw-gold">명품화</span> → 마지막 <span class="kw-gold">위상 부여</span> + <span class="kw-blood">변성</span>.</div>
+  </div>
+
+</div>
+
+:::danger[상급 어픽스 보호 — 가장 자주 하는 실수]
+상급 어픽스가 박힌 <strong>계열</strong>을 건드릴 때 상급이 같이 날아갈 수 있습니다.
+
+- 예: <span class="kw-gold">의지력</span> 상급 장비에서 의지력 제거 작업 → 상급 어픽스 손실 가능
+- 이런 경우 큐브 분광경 작업보다 <strong>마법부여(비술사)</strong> 가 더 안전합니다 (유저 공통 의견)
+:::
+
 ## 권장 작업 순서
 
 <div class="decision-flow">
