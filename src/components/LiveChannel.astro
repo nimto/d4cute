@@ -206,12 +206,16 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
   }
   [data-theme='light'] .live-channel {
     --lc-pill-bg-dark: var(--lc-light-pill-bg);
+    --lc-pill-bg-checking: var(--lc-light-pill-bg);
     --lc-gold-soft: var(--lc-light-pill-border);
+    --lc-pill-border-soft: var(--lc-light-pill-border);
   }
-  [data-theme='light'] .lc-pill-offline {
+  [data-theme='light'] .lc-pill-offline,
+  [data-theme='light'] .lc-pill-checking {
     color: var(--lc-status-light-fg);
+    font-weight: 600;
   }
-  [data-theme='light'] .channel-status-line { color: var(--lc-status-light-fg); }
+  [data-theme='light'] .channel-status-line { color: var(--lc-status-light-fg); opacity: 1; }
   [data-theme='light'] .live-channel.is-live .channel-status-line { color: var(--lc-status-light-live-fg); }
 </style>
 

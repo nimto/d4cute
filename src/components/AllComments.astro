@@ -456,6 +456,22 @@ const hasNote = !!data.note;
     font-size: 0.85em;
   }
 
+  [data-theme='light'] .all-comments-date,
+  [data-theme='light'] .all-comments-extlink,
+  [data-theme='light'] .all-comments-foot-meta,
+  [data-theme='light'] .all-comments-empty,
+  [data-theme='light'] .all-comments-page-orphan,
+  [data-theme='light'] .all-comments-sort-label {
+    color: var(--sl-color-gray-5);
+  }
+  [data-theme='light'] .all-comments-reply-badge {
+    color: var(--ac-accent-soft);
+    border-color: var(--ac-accent-soft);
+    background: var(--ac-accent-bg-strong);
+  }
+  [data-theme='light'] .all-comments-status { color: var(--ac-accent-soft); font-weight: 700; }
+  [data-theme='light'] .all-comments-body { color: var(--sl-color-text); font-weight: 500; }
+
   .all-comments-foot-meta {
     margin: 0.7rem 0 0;
     font-size: 0.8rem;

@@ -126,6 +126,14 @@ const youtubeUrl = youtubeHandle
     --cp-light-text: #2a1a08;
     --cp-light-leader: #7a5a0a;
     --cp-light-foot-bg: rgba(150, 7, 17, 0.06);
+    --cp-light-stat-border: rgba(150, 7, 17, 0.3);
+    --cp-light-chip-bg: rgba(234, 195, 51, 0.28);
+    --cp-light-card-shadow: rgba(0, 0, 0, 0.12);
+    --cp-light-banner-icon-shadow: rgba(0, 0, 0, 0.25);
+    --cp-light-banner-bg-a: rgba(150, 7, 17, 0.7);
+    --cp-light-banner-bg-b: rgba(80, 4, 12, 0.85);
+    --cp-on-blood: #fff;
+    --cp-on-banner: #f5ecd6;
     --cp-card-shadow: rgba(0, 0, 0, 0.25);
     --cp-banner-icon-shadow: rgba(0, 0, 0, 0.6);
 
@@ -366,17 +374,52 @@ const youtubeUrl = youtubeHandle
     --cp-bg-stop-a: var(--cp-light-bg-a);
     --cp-bg-stop-b: var(--cp-light-bg-b);
     --cp-stat-bg: var(--cp-light-stat-bg);
+    --cp-stat-border: var(--cp-light-stat-border);
     --cp-desc-bg: var(--cp-light-stat-bg);
     --cp-foot-bg: var(--cp-light-foot-bg);
     --cp-bone: var(--cp-light-text);
+    --cp-accent: var(--cp-light-leader);
+    --cp-accent-dim: var(--cp-light-leader);
+    --cp-chip-bg: var(--cp-light-chip-bg);
+    --cp-chip-border: var(--cp-light-leader);
+    --cp-card-shadow: var(--cp-light-card-shadow);
+    --cp-banner-icon-shadow: var(--cp-light-banner-icon-shadow);
     color: var(--cp-light-text);
+  }
+  [data-theme='light'] .clan-profile-tag,
+  [data-theme='light'] .clan-profile-sub,
+  [data-theme='light'] .clan-profile-stat-label,
+  [data-theme='light'] .clan-profile-meta-label,
+  [data-theme='light'] .clan-profile-desc-label,
+  [data-theme='light'] .clan-profile-desc p,
+  [data-theme='light'] .clan-profile-foot,
+  [data-theme='light'] .clan-profile-banner-label,
+  [data-theme='light'] .clan-profile-banner-foot {
+    color: var(--cp-light-text);
+    opacity: 1;
   }
   [data-theme='light'] .clan-profile-name,
   [data-theme='light'] .clan-profile-sub strong,
   [data-theme='light'] .clan-profile-stat-value,
   [data-theme='light'] .clan-profile-chip,
   [data-theme='light'] .clan-profile-btn,
-  [data-theme='light'] .clan-profile-foot strong {
+  [data-theme='light'] .clan-profile-foot strong,
+  [data-theme='light'] .clan-profile-desc code {
     color: var(--cp-light-leader);
+  }
+  [data-theme='light'] .clan-profile-btn {
+    border-color: var(--cp-light-leader);
+  }
+  [data-theme='light'] .clan-profile-btn.primary {
+    color: var(--cp-on-blood);
+    border-color: var(--cp-blood);
+    background: var(--cp-blood);
+  }
+  [data-theme='light'] .clan-profile-banner {
+    background: linear-gradient(180deg, var(--cp-light-banner-bg-a), var(--cp-light-banner-bg-b));
+  }
+  [data-theme='light'] .clan-profile-banner-label,
+  [data-theme='light'] .clan-profile-banner-foot {
+    color: var(--cp-on-banner);
   }
 </style>
