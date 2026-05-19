@@ -18,6 +18,8 @@ async function fetchText(url) {
     headers: {
       'User-Agent': UA,
       'Accept-Language': 'ko-KR,ko;q=0.9,en;q=0.8',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Cookie': 'CONSENT=YES+cb.20210328-17-p0.en+FX+000; PREF=hl=ko&gl=KR&f6=40000000; SOCS=CAI; YSC=randomYscValue',
     },
   });
   if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
@@ -145,6 +147,42 @@ async function fetchDetailForVideo(videoId) {
   }
 }
 
+function mergeDetail(primary, secondary) {
+  if (!primary && !secondary) return null;
+  const out = { ...(secondary || {}), ...(primary || {}) };
+  // For each field on primary that is null/undefined, fall back to secondary value.
+  if (secondary) {
+    for (const k of Object.keys(secondary)) {
+      if (out[k] == null && secondary[k] != null) out[k] = secondary[k];
+    }
+  }
+  return out;
+}
+
+function detailFromHtml(html, videoId) {
+  if (!html) return null;
+  const d = extractVideoDetail(html);
+  return {
+    videoId,
+    title: d.title || null,
+    author: d.author || null,
+    channelId: d.channelId || null,
+    viewCount: d.viewCount ? Number(d.viewCount) : null,
+    likeCount: d.likeCount ? Number(d.likeCount) : null,
+    lengthSeconds: d.lengthSeconds ? Number(d.lengthSeconds) : null,
+    isLive: !!d.isLive,
+    shortDescription: d.shortDescription || null,
+    subscriberLabel: d.subscriberLabel || null,
+    channelAvatarUrl: d.channelAvatarUrl || null,
+    startTimestamp: d.startTimestamp || null,
+    endTimestamp: d.endTimestamp || null,
+    publishDate: d.publishDate || null,
+    publishedTimeText: d.publishedTimeText || null,
+    thumbnailUrl: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+    watchUrl: `https://www.youtube.com/watch?v=${videoId}`,
+  };
+}
+
 async function main() {
   const now = new Date().toISOString();
   const liveUrl = `https://www.youtube.com/channel/${CHANNEL_ID}/live`;
@@ -156,6 +194,7 @@ async function main() {
   let latestVideoId = null;
   let latestTitle = null;
   let latestPublishedAt = null;
+  let liveDetailFromChannel = null;
   let error = null;
 
   try {
@@ -166,6 +205,7 @@ async function main() {
         state = 'live';
         liveVideoId = id;
         liveTitle = extractLiveTitle(html);
+        liveDetailFromChannel = detailFromHtml(html, id);
       } else {
         state = 'offline';
       }
@@ -186,10 +226,11 @@ async function main() {
     if (!error) error = String(err?.message || err);
   }
 
-  const [liveDetail, latestDetail] = await Promise.all([
+  const [liveDetailWatch, latestDetail] = await Promise.all([
     state === 'live' ? fetchDetailForVideo(liveVideoId) : Promise.resolve(null),
     latestVideoId && latestVideoId !== liveVideoId ? fetchDetailForVideo(latestVideoId) : Promise.resolve(null),
   ]);
+  const liveDetail = mergeDetail(liveDetailWatch, liveDetailFromChannel);
 
   const channelInfo = liveDetail?.channelAvatarUrl
     ? {
