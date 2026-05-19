@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-19T21:51:14.402Z",
+  "generatedAt": "2026-05-19T22:22:15.813Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,9 +30,10 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 23시간 전",
+      "publishedTimeText": "스트리밍 시간: 1일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/MBl-DMXapqY/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=MBl-DMXapqY"
+      "watchUrl": "https://www.youtube.com/watch?v=MBl-DMXapqY",
+      "error": "HTTP 429 https://www.youtube.com/watch?v=MBl-DMXapqY"
     }
   },
   "latest": {
@@ -54,9 +55,10 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 23시간 전",
+      "publishedTimeText": "스트리밍 시간: 1일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/MBl-DMXapqY/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=MBl-DMXapqY"
+      "watchUrl": "https://www.youtube.com/watch?v=MBl-DMXapqY",
+      "error": "HTTP 429 https://www.youtube.com/watch?v=MBl-DMXapqY"
     }
   },
   "error": null
