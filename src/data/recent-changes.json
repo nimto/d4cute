@@ -1,13 +1,34 @@
 {
-  "generatedAt": "2026-05-19T10:10:14.634Z",
+  "generatedAt": "2026-05-19T10:50:59.915Z",
   "count": 40,
   "items": [
     {
+      "url": "/activity/",
+      "title": "내 활동 + 최신 변경",
+      "date": "2026-05-19T18:43:56+08:00",
+      "commit": "feat: /activity — 전체 댓글 검색·정렬 + 해당 페이지 댓글로 이동",
+      "hash": "b688c3d"
+    },
+    {
+      "url": "/",
+      "title": "디아블로4 시즌13 한국어 가이드",
+      "date": "2026-05-19T18:43:35+08:00",
+      "commit": "feat: 메인 페이지 — 라이브 채널/클랜 프로필 분리 + 라이브 자동 감지",
+      "hash": "eca47ef"
+    },
+    {
       "url": "/horadric-cube/materials/",
       "title": "호라드림의 함 재료 — 8종 태고의 가루 + 수액 전수",
-      "date": "2026-05-19T01:03:36+08:00",
-      "commit": "feat: 호라드림의 함 재료 9종 + 전쟁 계획 재료 3종 게임 내 공식 문서화",
-      "hash": "2020c56"
+      "date": "2026-05-19T18:43:08+08:00",
+      "commit": "fix: 공명하는 태고의 가루 — 데이터마이닝 상태 명시 + 신화 매혹석 섹션 신규",
+      "hash": "02e180c"
+    },
+    {
+      "url": "/horadric-cube/secret-recipes/",
+      "title": "비밀 레시피 (Secret Recipes) — 초보 가이드",
+      "date": "2026-05-19T18:43:08+08:00",
+      "commit": "fix: 공명하는 태고의 가루 — 데이터마이닝 상태 명시 + 신화 매혹석 섹션 신규",
+      "hash": "02e180c"
     },
     {
       "url": "/war-plans/materials/",
@@ -36,20 +57,6 @@
       "date": "2026-05-18T21:45:36+08:00",
       "commit": "feat: 시즌 가이드 그룹 신규 + 시즌 14 대비 구분 전략 수립",
       "hash": "ee558f0"
-    },
-    {
-      "url": "/activity/",
-      "title": "내 활동 + 최신 변경",
-      "date": "2026-05-18T20:22:41+08:00",
-      "commit": "feat: /activity 페이지 — 내 댓글 빠른 링크 + 최신 변경 문서 리스트",
-      "hash": "6c4cffc"
-    },
-    {
-      "url": "/horadric-cube/secret-recipes/",
-      "title": "비밀 레시피 (Secret Recipes) — 초보 가이드",
-      "date": "2026-05-18T11:14:15+08:00",
-      "commit": "feat: D4 KR 공식 용어 hover 툴팁 + 태고의 가루 8종 정확한 명칭",
-      "hash": "bbfadd2"
     },
     {
       "url": "/horadric-cube/transfiguration/",
@@ -271,13 +278,6 @@
     {
       "url": "/gems/mechanics/",
       "title": "시즌13 보석 메커니즘 (곱연산)",
-      "date": "2026-05-17T15:30:28+08:00",
-      "commit": "fix: [숫자] 표기 = 보유 수량이므로 가격/식별번호로 잘못 사용한 모든 곳 정정",
-      "hash": "4183bcd"
-    },
-    {
-      "url": "/horadric-cube/runes/",
-      "title": "레시피 — 룬 제작 (Rune Crafting)",
       "date": "2026-05-17T15:30:28+08:00",
       "commit": "fix: [숫자] 표기 = 보유 수량이므로 가격/식별번호로 잘못 사용한 모든 곳 정정",
       "hash": "4183bcd"

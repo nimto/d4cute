@@ -221,25 +221,55 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     | { state: 'offline'; latestVideoId?: string; latestTitle?: string }
     | { state: 'unknown' };
 
+  interface LiveStatus {
+    schema: number;
+    generatedAt: string;
+    channelId: string;
+    handle: string;
+    state: 'live' | 'offline' | 'unknown';
+    live: { videoId: string; title?: string | null } | null;
+    latest: { videoId: string; title?: string | null; publishedAt?: string | null } | null;
+    error?: string | null;
+  }
+
+  const STATUS_FEEDS = [
+    'https://raw.githubusercontent.com/nimto/d4cute/live-status/live-status.json',
+    'https://cdn.jsdelivr.net/gh/nimto/d4cute@live-status/live-status.json',
+  ];
+
   const PROXIES = [
     'https://corsproxy.io/?url=',
+    'https://api.codetabs.com/v1/proxy?quest=',
     'https://api.allorigins.win/raw?url=',
   ];
 
-  async function fetchViaProxy(target: string): Promise<string | null> {
-    for (const proxy of PROXIES) {
-      try {
-        const url = proxy + encodeURIComponent(target);
-        const res = await fetch(url, { cache: 'no-store' });
-        if (res.ok) {
-          const text = await res.text();
-          if (text && text.length > 1000) return text;
-        }
-      } catch (_err) {
-        // try next proxy
-      }
+  async function fetchLiveStatus(): Promise<LiveStatus | null> {
+    const tasks = STATUS_FEEDS.map(async (url) => {
+      const res = await fetch(`${url}?_=${Date.now()}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      return (await res.json()) as LiveStatus;
+    });
+    try {
+      return await Promise.any(tasks);
+    } catch {
+      return null;
     }
-    return null;
+  }
+
+  async function fetchViaProxy(target: string): Promise<string | null> {
+    const attempts = PROXIES.map(async (proxy) => {
+      const url = proxy + encodeURIComponent(target);
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      const text = await res.text();
+      if (!text || text.length < 1000) throw new Error('too short');
+      return text;
+    });
+    try {
+      return await Promise.any(attempts);
+    } catch {
+      return null;
+    }
   }
 
   function extractVideoIdFromLiveHtml(html: string): string | null {
@@ -269,6 +299,22 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
   }
 
   async function checkChannel(channelId: string): Promise<LiveResult> {
+    // 1) Server-side built static JSON (cron, no CORS issues) — most reliable.
+    const status = await fetchLiveStatus();
+    if (status && (!status.channelId || status.channelId === channelId)) {
+      if (status.state === 'live' && status.live?.videoId) {
+        return { state: 'live', videoId: status.live.videoId, title: status.live.title || undefined };
+      }
+      if (status.state === 'offline') {
+        return {
+          state: 'offline',
+          latestVideoId: status.latest?.videoId,
+          latestTitle: status.latest?.title || undefined,
+        };
+      }
+    }
+
+    // 2) Client-side fallback via CORS proxies (best-effort).
     const liveUrl = `https://www.youtube.com/channel/${channelId}/live`;
     const liveHtml = await fetchViaProxy(liveUrl);
     if (liveHtml && isHtmlLive(liveHtml)) {

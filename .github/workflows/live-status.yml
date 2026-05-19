@@ -1,0 +1,84 @@
+name: Update live-status JSON
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/build-live-status.mjs'
+      - '.github/workflows/live-status.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-status
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout default branch (for script)
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build live-status.json
+        env:
+          LIVE_CHANNEL_ID: UCSPPr4E6P1iGa25VDMJkFpQ
+          LIVE_CHANNEL_HANDLE: 삼촌안잔다잉
+        run: |
+          mkdir -p .live-status-out
+          LIVE_STATUS_OUT=.live-status-out/live-status.json node scripts/build-live-status.mjs
+          cat .live-status-out/live-status.json
+
+      - name: Publish to orphan branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          OUT_FILE=.live-status-out/live-status.json
+          BRANCH=live-status
+
+          # Stash payload before we throw away the working tree.
+          cp "$OUT_FILE" /tmp/live-status.json
+
+          # Configure committer.
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Try to fetch the orphan branch; create fresh if it does not exist yet.
+          if git fetch origin "$BRANCH" --depth 1 2>/dev/null; then
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout --orphan "$BRANCH"
+            git rm -rf . >/dev/null 2>&1 || true
+            git clean -fdx
+          fi
+
+          cp /tmp/live-status.json ./live-status.json
+
+          cat > README.md <<'EOF'
+          # live-status branch
+
+          This orphan branch is auto-updated by `.github/workflows/live-status.yml`
+          (cron every 5 min). It exposes `live-status.json` via
+          `https://raw.githubusercontent.com/<owner>/<repo>/live-status/live-status.json`
+          so the client-side LiveChannel component can detect YouTube live status
+          without depending on flaky CORS proxies.
+
+          Do NOT edit by hand.
+          EOF
+
+          git add live-status.json README.md
+          if git diff --cached --quiet; then
+            echo "No change in live-status.json"
+          else
+            git commit -m "chore(live-status): refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push origin "$BRANCH"
+          fi
