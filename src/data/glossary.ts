@@ -63,8 +63,8 @@ export const glossary: Record<string, GlossaryTerm> = {
     en: 'Resonant Primordial Dust',
     verified: true,
     category: 'dust',
-    short: '고급 변성 자원 (재제련/신화)',
-    desc: '<strong>재제련(Transfigure)</strong>과 신화 추첨에 사용하는 고급 가루. 일반 가루 대비 드랍률 낮음. 빌드 마감 단계 자원.',
+    short: '신화 등급 가루 (현재 미활성)',
+    desc: '<strong>wowhead 데이터마이닝(item ID 2530723)</strong> 으로 존재 확인. 영문 설명: "무작위 어픽스 → 강력한 어픽스(Greater Affix) 업그레이드". <strong>2026-05 기준 인벤토리 미반영 버그 + 큐브 레시피 미공개</strong> — 시즌 14 추정 활성화 stub. <a href="/horadric-cube/materials/#9-공명하는-태고의-가루-resonant-primordial-dust">상세</a>.',
     source: 'https://www.wowhead.com/diablo-4/item/resonant-primordial-dust-2530723',
   },
   'enhanced-dust': {
@@ -74,7 +74,7 @@ export const glossary: Record<string, GlossaryTerm> = {
     verified: true,
     category: 'dust',
     short: '중급 변성 자원',
-    desc: '정제된과 공명하는 가루 사이 단계. 어픽스 추가·고유 능력 재추첨에 사용. 시즌 중반 핵심.',
+    desc: '고유(Unique) 아이템 제작 변환에 사용하는 중급 가루. 시즌 중반 ~ 후반 핵심.',
     source: 'https://www.wowhead.com/diablo-4/item/enhanced-primordial-dust-2530716',
   },
   'volatile-dust': {

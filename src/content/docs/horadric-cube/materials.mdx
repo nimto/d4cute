@@ -21,7 +21,7 @@ import ImageModal from '../../../components/ImageModal.astro';
   />
 </div>
 
-> 호라드림의 함은 **9종 재료**를 사용합니다. <span class="kw-gold">**8종 태고의 가루**</span>(미가공·거친·정제된·일촉즉발의·순수한·향상된·조율된·공명하는) + <span class="kw-bone">**주입된 호라드림 수액**</span>. 공통 출처: <span class="kw-rare">전쟁 계획의 함 전리품 · 속삭임의 나무 보관함 보상 · 정예 괴물</span>.
+> 호라드림의 함은 **활성 8종 + 미활성 1종 = 총 9종 재료**를 사용합니다. <span class="kw-gold">**활성 7종 태고의 가루**</span>(미가공·거친·정제된·일촉즉발의·순수한·향상된·조율된) + <span class="kw-bone">**주입된 호라드림 수액**</span> + <span class="kw-mythic">**공명하는 태고의 가루**</span>(데이터마이닝 단계, 게임 내 미사용). 공통 출처: <span class="kw-rare">전쟁 계획의 함 전리품 · 속삭임의 나무 보관함 보상 · 정예 괴물</span>.
 
 :::tip[게임 내 공식 명칭 기준]
 본 문서의 명칭과 설명은 **게임 내 클라이언트 툴팁 원문**을 기반으로 작성되었습니다. fan-translation 이 아닌 인-게임 공식 한국어 표기를 그대로 사용합니다.
@@ -30,7 +30,7 @@ import ImageModal from '../../../components/ImageModal.astro';
 <div class="summary-box">
 ### 3분 안에 핵심만
 
-- **9종 재료** — 가루 8종 + 호라드림 수액 1종
+- **9종 재료** — 활성 가루 7종 + 호라드림 수액 1종 + 공명하는 가루 1종 (미활성)
 - **공통 출처 3대장**: <span class="kw-rare">전쟁 계획의 함 전리품</span>, <span class="kw-rare">속삭임의 나무 보관함 보상</span>, <span class="kw-bone">정예 괴물</span>
 - **호라드림 수액**: 부적·문장 분해 시 획득 (제작 1순위 자원)
 - **희귀도별 우선순위**: 마법 → 희귀 → 전설 → 고유 등급 가루
@@ -223,23 +223,26 @@ import ImageModal from '../../../components/ImageModal.astro';
 
 ### 9. 공명하는 태고의 가루 (Resonant Primordial Dust)
 
-<div style="display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0; flex-wrap: wrap;">
-  <ImageModal
-    src="/images/horadric-cube/materials/dust-resonant.webp"
-    alt="공명하는 태고의 가루"
-    caption="공명하는 태고의 가루"
-    size={120}
-  />
-  <div style="flex: 1; min-width: 220px;">
+:::caution[현재 게임 내 미확정 — 데이터마이닝 단계]
+본 재료는 **wowhead 데이터마이닝(item ID 2530723)** 으로 게임 클라이언트에 존재가 확인되었지만, **2026년 5월 기준 다음 문제가 보고**되었습니다.
+
+- **인벤토리 반영 버그** — Blizzard 공식 포럼 [PC Bug Report (2026-04-29)](https://us.forums.blizzard.com/en/d4/t/resonant-primordial-dust-not-appearing-in-materials-after-looting/246831) 에서 다수 보고: 던전(주로 Undercity legendary tribute, 정예)에서 드랍 시 보라색 빔 + 신화 사운드까지 나오나, 재료 보관함에 누적되지 않고 사라짐.
+- **사용 레시피 미공개** — 사용자 측: "cant find a recipe that uses it". 큐브 UI 어떤 변환에서도 입력으로 노출되지 않음.
+- **이미지 미확보** — 실제 인벤토리 진입 사례가 거의 없어 한국 클라이언트 툴팁 스크린샷이 존재하지 않습니다. 본 문서에 사진을 첨부하지 않은 이유.
+
+⇒ **현재 상태**: 향후 패치/시즌(14 추정)에서 활성화될 stub 가능성 농후. **wowhead 영문 설명** 만 단독 출처.
+:::
 
 | 항목 | 값 |
 |------|----|
-| 등급 | <span class="kw-legendary">전설 제작 재료</span> (추정) |
-| 용도 | <span class="kw-gold">**상위 변성·신화 추첨**</span> 단계 자원 |
-| 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+| 등급 (wowhead) | <span class="kw-mythic">신화 고유 제작 재료 (Mythic Unique Crafting Material)</span> |
+| 요구 레벨 (wowhead) | 78 |
+| 영문 설명 | "An exceptionally rare material used in the Horadric Cube to upgrade a random affix into a Greater Affix." |
+| 추정 용도 | <span class="kw-gold">**무작위 어픽스 → 강력한 어픽스(Greater Affix) 업그레이드**</span> (게임 내 미검증) |
+| 데이터마이닝 출처 | <span class="kw-rare">전쟁 계획의 함 전리품</span> · <span class="kw-rare">속삭임의 나무 보관함 보상</span> · <span class="kw-bone">정예 괴물</span> |
+| 실제 보고된 드랍처 | Undercity legendary tribute (인벤토리 미반영 버그 동반) |
 
-  </div>
-</div>
+> 💡 **사용자에게는?** 현 시점에서 **파밍 대상이 아닙니다**. 빌드 자원 계산에서 제외하고, 차후 패치 노트에서 활성화 알림이 뜰 때까지 보류.
 
 ## 재료 등급별 정리
 
@@ -248,8 +251,9 @@ import ImageModal from '../../../components/ImageModal.astro';
 | <span class="kw-bone">제작 재료</span> | 미가공 태고의 가루 | 모든 변환 부재료 | <span class="kw-bone">매우 흔함</span> |
 | <span class="kw-magic">마법 제작 재료</span> | 주입된 호라드림 수액 · 거친 태고의 가루 | 부적/문장 · 속성 추가 | <span class="kw-magic">흔함</span> |
 | <span class="kw-rare">희귀 제작 재료</span> | 정제된 태고의 가루 | 속성 변경·제거 | <span class="kw-rare">보통</span> |
-| <span class="kw-legendary">전설 제작 재료</span> | 일촉즉발의 · 순수한 · 공명하는 태고의 가루 | 재제련 · 전설 제작 · 상위 변성 | <span class="kw-legendary">드뭄</span> |
+| <span class="kw-legendary">전설 제작 재료</span> | 일촉즉발의 · 순수한 태고의 가루 | 재제련 · 전설 제작 | <span class="kw-legendary">드뭄</span> |
 | <span class="kw-unique">고유 제작 재료</span> | 향상된 · 조율된 태고의 가루 | 고유 아이템 제작·수치 교체 | <span class="kw-unique">매우 드뭄</span> |
+| <span class="kw-mythic">신화 제작 재료</span> | 공명하는 태고의 가루 (미활성) | Greater Affix 업그레이드 (추정) | <span class="kw-mythic">데이터마이닝 단계</span> |
 
 ## 파밍 최적 경로 — 시즌 단계별
 
@@ -274,8 +278,10 @@ import ImageModal from '../../../components/ImageModal.astro';
 | 우선 | 활동 | 주 획득 재료 |
 |------|------|------------|
 | 1 | <span class="kw-mythic">전쟁 계획 (고난도 함 전리품)</span> | 향상된 · 조율된 가루 (고유 제작) |
-| 2 | <span class="kw-legendary">속삭임 (선조 보관함 노림)</span> | 순수한 · 공명하는 가루 |
+| 2 | <span class="kw-legendary">속삭임 (선조 보관함 노림)</span> | 순수한 가루 |
 | 3 | <span class="kw-blood">우두머리 처치</span> | <Term id="resplendent-spark" /> + 보스 트로피 |
+
+> ⚠️ **공명하는 태고의 가루는 파밍 대상 제외** — 현재 인벤토리 반영 버그 + 레시피 미공개 (#9 항목 caution 참조).
 
 ## 자원 효율 팁
 
@@ -286,6 +292,50 @@ import ImageModal from '../../../components/ImageModal.astro';
 - <span class="kw-blood">**정예 우선 사냥**</span> — 미가공 가루는 정예에서만 흔하게 떨어짐. 일반 몹 사냥은 비효율
 - <span class="kw-mythic">**고급 가루 (향상된/조율된) 비축**</span> — 신화 고유 추첨용. 빌드 완성 후 일괄 소모
 :::
+
+## 신화 매혹석 (Mythic Charm) — 재료와 획득 경로
+
+> 시즌 13 (Lord of Hatred) 부적 시스템 최상위. **현재까지 확인된 신화 매혹석은 1종 — [영벌의 후예 (Heir of Perdition)](/mythic-items/heir-of-perdition/)** (투구 슬롯).
+
+### 큐브로 제작 가능한가?
+
+**불가능합니다.** 큐브의 Unique Charm 제작 레시피는 **Mythic Unique gear 를 입력으로 받지 않습니다** (표준 Ancestral Unique 만 허용). 즉 호라드림의 함으로 신화 매혹석을 만들 수 없습니다.
+
+> 💡 데이터마이닝 된 [공명하는 태고의 가루](#9-공명하는-태고의-가루-resonant-primordial-dust) (Greater Affix 업그레이드 추정) 가 향후 신화 매혹석 갱신/제작에 쓰일 가능성은 있으나, **현재 시점 미검증**.
+
+### 획득 경로 (Icy Veins · 2026-04 보고)
+
+| 경로 | 비고 |
+|------|------|
+| <span class="kw-mythic">**전쟁 계획 완주 보상**</span> | 모든 활동 완료 후 테미스의 티라엘 NPC. 단계 8/10 도 드랍 보고됨 |
+| 드랍 방식 | <span class="kw-gold">보관함 안</span>이 아닌 **바닥에 직접 드랍** (Mythic 비주얼 효과 동반) |
+| 드랍률 | 매우 낮음 — 커뮤니티에서 시즌 13 내내 "획득 불가" 로 알려졌다 4월 말 첫 확인 영상/스크린샷 등장 |
+
+### 일반 매혹석 큐브 제작 (참고)
+
+신화 등급 외 **고유(Unique) 매혹석은 큐브로 제작 가능**. 신화 매혹석 추첨용은 아니지만 빌드 옵션 부적 확보 수단:
+
+| 레시피 | 입력 | 산출 |
+|--------|------|------|
+| 고유 매혹석 변환 | <span class="kw-rare">Ancestral 고유 장비 1</span> + <span class="kw-unique">아무 고유 매혹석 3</span> + <span class="kw-unique">향상된 태고의 가루 1</span> + <span class="kw-bone">미가공 태고의 가루 50</span> + <span class="kw-magic">주입된 호라드림 수액 100</span> | <span class="kw-unique">**무작위 고유 매혹석 1**</span> |
+| 셋 매혹석 3→1 변환 | <span class="kw-bone">동일 셋 매혹석 3</span> + <Term id="refined-dust" /> | <span class="kw-bone">동일 셋 무작위 매혹석 1</span> |
+
+> 💡 **분해 수익** — 셋 매혹석 = 수액 25 / 고유 매혹석 = 수액 50. 빌드 외 잉여는 분해 우선 (영물 인벤토리는 매혹 효과 셋 기준 정리).
+
+### 신화 인장 (Mythic Seal) 참고
+
+- **호라드림 인장**(Horadric Seal) — **큐브 제작 불가**, 드랍 전용
+- 신화 인장은 6슬롯 전부 강력 부여 발생 — 빌드 마무리 옵션
+
+<SourceFooter
+  sources={[
+    { label: '영벌의 후예 (Heir of Perdition) — 사이트 내 상세', url: '/mythic-items/heir-of-perdition/' },
+    { label: 'A Mythic Unique Charm Just Surfaced — Icy Veins (2026-04)', url: 'https://www.icy-veins.com/d4/news/a-mythic-unique-charm-just-surfaced-in-diablo-4/' },
+    { label: 'Talisman and Charms Guide — Wowhead (시즌 13)', url: 'https://www.wowhead.com/diablo-4/guide/systems/talisman' },
+    { label: 'Can You Get Mythic Charms — aoeah', url: 'https://www.aoeah.com/news/4560--can-you-get-mythic-charms-in-diablo-4--d4-s13-unique-charm-farming--crafting' },
+  ]}
+  lastUpdated="2026-05-19"
+/>
 
 ## FAQ
 
@@ -303,6 +353,12 @@ A. 모든 가루는 시즌/영원 공통이며, 시즌 종료 시 영원으로 �
 
 **Q. 가루를 거래소에서 살 수 있나요?**
 A. **불가능**. 모든 태고의 가루는 거래 불가 (계정 귀속). 직접 파밍만 가능.
+
+**Q. 9번 공명하는 태고의 가루는 왜 이미지가 없나요?**
+A. **현재 게임 내 인벤토리 진입 사례가 거의 없습니다.** wowhead 데이터마이닝(item ID 2530723) 으로 존재만 확인되었고, Blizzard 공식 포럼에서 "드랍해도 보관함에 안 들어가는 버그" 가 보고되었습니다. 한국 클라이언트 툴팁 스크린샷이 확보되는 시점에 추가합니다.
+
+**Q. 신화 매혹석은 호라드림의 함으로 제작할 수 있나요?**
+A. **불가능합니다.** Unique Charm 레시피는 Ancestral Unique gear 만 입력으로 받고, Mythic Unique gear 는 제외됩니다. 현재 확인된 신화 매혹석 [영벌의 후예](/mythic-items/heir-of-perdition/) 는 **전쟁 계획 완주 보상** 으로만 드랍됩니다 (Icy Veins 2026-04 보고).
 
 <SourceFooter
   sources={[
