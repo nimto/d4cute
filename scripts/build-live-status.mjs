@@ -89,7 +89,9 @@ function extractVideoDetail(html) {
   detail.channelId = pick(html, /"videoDetails"\s*:\s*\{[\s\S]{0,1500}?"channelId"\s*:\s*"(UC[A-Za-z0-9_-]{22})"/);
   detail.viewCount = pick(html, /"videoDetails"\s*:\s*\{[\s\S]{0,2000}?"viewCount"\s*:\s*"([0-9]+)"/);
   detail.lengthSeconds = pick(html, /"videoDetails"\s*:\s*\{[\s\S]{0,2000}?"lengthSeconds"\s*:\s*"([0-9]+)"/);
-  detail.isLive = /"isLiveContent"\s*:\s*true/.test(html);
+  detail.isLive = /"isLiveContent"\s*:\s*true/.test(html)
+    || /"isLiveBroadcast"\s*:\s*true/.test(html)
+    || /"liveBroadcastDetails"\s*:\s*\{/.test(html);
 
   const desc = pick(html, /"shortDescription"\s*:\s*"((?:[^"\\]|\\.)*)"/);
   detail.shortDescription = desc ? unescapeJsonString(desc) : null;

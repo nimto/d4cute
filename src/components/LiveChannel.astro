@@ -3,7 +3,7 @@ interface Props {
   channelId: string;
   channelHandle: string;
   channelName: string;
-  fallbackVideoId: string;
+  fallbackVideoId?: string;
   description?: string;
   discord?: string;
 }
@@ -11,7 +11,6 @@ const {
   channelId,
   channelHandle,
   channelName,
-  fallbackVideoId,
   description,
   discord,
 } = Astro.props as Props;
@@ -19,31 +18,31 @@ const {
 const encodedHandle = encodeURIComponent(channelHandle);
 const liveUrl = `https://www.youtube.com/@${encodedHandle}/live`;
 const channelUrl = `https://www.youtube.com/@${encodedHandle}`;
-const fallbackUrl = `https://www.youtube.com/watch?v=${fallbackVideoId}`;
-const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideoId}?rel=0`;
 ---
 
 <div
   class="channel-promo live-channel"
   data-channel-id={channelId}
-  data-fallback-id={fallbackVideoId}
-  data-fallback-embed={fallbackEmbedSrc}
   data-live-url={liveUrl}
   data-channel-url={channelUrl}
+  data-channel-name={channelName}
 >
-  <div class="channel-embed">
-    <iframe
-      class="lc-iframe"
-      src={fallbackEmbedSrc}
-      title={`${channelName} — 최신 영상 (라이브 시 자동 전환)`}
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-      loading="lazy"
-    ></iframe>
+  <div class="channel-embed" data-role="embed-slot">
+    <div class="lc-placeholder lc-placeholder-checking" data-role="placeholder">
+      <span class="lc-placeholder-icon" aria-hidden="true">⏳</span>
+      <p class="lc-placeholder-title" data-role="placeholder-title">라이브 상태 확인 중...</p>
+      <p class="lc-placeholder-sub" data-role="placeholder-sub">잠시만 기다려 주세요.</p>
+      <a
+        class="lc-placeholder-cta"
+        data-role="placeholder-cta"
+        href={channelUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        hidden
+      >🎬 채널 홈 방문</a>
+    </div>
     <div class="lc-status-overlay">
-      <span class="lc-pill lc-pill-offline" data-role="offline-pill">📼 최신 녹화 영상</span>
+      <span class="lc-pill lc-pill-offline" data-role="offline-pill" hidden>⚫ 현재 방송 중 아님</span>
       <span class="lc-pill lc-pill-live" data-role="live-pill" hidden>
         <span class="lc-dot" aria-hidden="true"></span>
         🔴 LIVE 방송 중
@@ -54,28 +53,29 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
   <div class="channel-meta">
     <div class="channel-badge" data-role="header-badge">📺 추천 채널</div>
     <h3 class="channel-name">
-      <a data-role="title-link" href={liveUrl} target="_blank" rel="noopener noreferrer">{channelName}</a>
+      <a data-role="title-link" href={channelUrl} target="_blank" rel="noopener noreferrer">{channelName}</a>
     </h3>
     {description && <p class="channel-desc">{description}</p>}
     <p class="channel-status-line" data-role="status-line">
-      현재 상태 확인 중 — 클릭 시 라이브 중이면 라이브로, 아니면 채널 최신 영상으로 이동합니다.
+      현재 상태 확인 중 — 방송 중이면 라이브 영상, 아니면 채널 홈으로 이동합니다.
     </p>
     <div class="channel-actions">
       <a
         class="channel-btn primary"
         data-role="primary-link"
-        href={liveUrl}
+        href={channelUrl}
         target="_blank"
         rel="noopener noreferrer"
       >
-        ▶ 시청 (라이브 우선)
+        🎬 채널 홈 방문
       </a>
       <a
         class="channel-btn"
         data-role="latest-link"
-        href={fallbackUrl}
+        href={channelUrl}
         target="_blank"
         rel="noopener noreferrer"
+        hidden
       >
         📼 최신 녹화 영상
       </a>
@@ -191,6 +191,60 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
   .live-channel .channel-embed {
     position: relative;
   }
+  .lc-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--lc-pill-shadow), var(--lc-pill-bg-dark));
+    color: var(--d4-bone);
+    border-radius: inherit;
+  }
+  .lc-placeholder-icon {
+    font-size: 2.4rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 6px var(--lc-pill-shadow));
+  }
+  .lc-placeholder-title {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--d4-gold);
+    letter-spacing: 0.02em;
+  }
+  .lc-placeholder-sub {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--d4-bone);
+    opacity: 0.85;
+    line-height: 1.5;
+    max-width: 32ch;
+  }
+  .lc-placeholder-cta {
+    margin-top: 0.45rem;
+    display: inline-block;
+    padding: 0.5rem 1.05rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--d4-bone);
+    background: var(--lc-live-deep);
+    border: 1px solid var(--lc-live-edge);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px var(--lc-pill-shadow);
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .lc-placeholder-cta:hover {
+    background: var(--lc-live-strong);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+  .lc-placeholder-cta[hidden] { display: none; }
   .lc-status-overlay {
     position: absolute;
     top: 0.6rem;
@@ -750,10 +804,43 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     if (updated) updated.textContent = new Date().toLocaleTimeString('ko-KR');
   }
 
+  function removeEmbedIframe(el: HTMLElement) {
+    const iframe = el.querySelector<HTMLIFrameElement>('.lc-iframe');
+    if (iframe) iframe.remove();
+  }
+
+  function ensureEmbedIframe(el: HTMLElement, videoId: string, channelName: string, mode: 'live' | 'vod'): HTMLIFrameElement | null {
+    const slot = el.querySelector<HTMLElement>('[data-role="embed-slot"]');
+    if (!slot) return null;
+    let iframe = slot.querySelector<HTMLIFrameElement>('.lc-iframe');
+    const params = mode === 'live'
+      ? 'autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1'
+      : 'autoplay=0&rel=0&modestbranding=1&playsinline=1';
+    const src = `https://www.youtube-nocookie.com/embed/${videoId}?${params}`;
+    const title = mode === 'live'
+      ? `${channelName} — 🔴 LIVE 방송 중`
+      : `${channelName} — 📼 최신 녹화 영상`;
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.className = 'lc-iframe';
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('loading', 'lazy');
+      slot.insertBefore(iframe, slot.firstChild);
+    }
+    iframe.title = title;
+    if (iframe.src !== src) iframe.src = src;
+    return iframe;
+  }
+
   function applyLive(el: HTMLElement, videoId: string, detail?: VideoDetail | null, channel?: ChannelInfo | null) {
     const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
-    const iframe = el.querySelector<HTMLIFrameElement>('.lc-iframe');
-    if (iframe) iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&rel=0`;
+    const channelName = el.dataset.channelName || '';
+    ensureEmbedIframe(el, videoId, channelName, 'live');
+    const placeholder = el.querySelector<HTMLElement>('[data-role="placeholder"]');
+    if (placeholder) placeholder.setAttribute('hidden', '');
     el.querySelector('[data-role="offline-pill"]')?.setAttribute('hidden', '');
     el.querySelector('[data-role="checking-pill"]')?.setAttribute('hidden', '');
     el.querySelector('[data-role="live-pill"]')?.removeAttribute('hidden');
@@ -764,6 +851,8 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
       primary.href = watchUrl;
       primary.textContent = '🔴 LIVE 시청 (현재 방송 중)';
     }
+    const latest = el.querySelector<HTMLAnchorElement>('[data-role="latest-link"]');
+    if (latest) latest.setAttribute('hidden', '');
     const status = el.querySelector<HTMLElement>('[data-role="status-line"]');
     if (status) status.textContent = '🔴 지금 LIVE 방송 중 — 시청 버튼을 누르면 라이브로 이동합니다.';
     const badge = el.querySelector<HTMLElement>('[data-role="header-badge"]');
@@ -773,27 +862,74 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
   }
 
   function applyOffline(el: HTMLElement, latestVideoId?: string, latestTitle?: string, detail?: VideoDetail | null, channel?: ChannelInfo | null) {
-    const targetId = latestVideoId || el.dataset.fallbackId;
-    const watchUrl = targetId ? `https://www.youtube.com/watch?v=${targetId}` : el.dataset.channelUrl || '#';
-    const iframe = el.querySelector<HTMLIFrameElement>('.lc-iframe');
-    if (iframe && targetId) iframe.src = `https://www.youtube-nocookie.com/embed/${targetId}?rel=0`;
+    const channelUrl = el.dataset.channelUrl || '#';
+    const channelName = el.dataset.channelName || '';
+    const watchUrl = latestVideoId ? `https://www.youtube.com/watch?v=${latestVideoId}` : channelUrl;
+    const placeholder = el.querySelector<HTMLElement>('[data-role="placeholder"]');
+    const isPastLive = !!(detail && detail.isLive);
+
+    if (latestVideoId) {
+      ensureEmbedIframe(el, latestVideoId, channelName, 'vod');
+      if (placeholder) placeholder.setAttribute('hidden', '');
+    } else {
+      removeEmbedIframe(el);
+      if (placeholder) {
+        placeholder.removeAttribute('hidden');
+        placeholder.classList.remove('lc-placeholder-checking');
+        placeholder.classList.add('lc-placeholder-offline');
+      }
+      const phIcon = el.querySelector<HTMLElement>('.lc-placeholder-icon');
+      if (phIcon) phIcon.textContent = '📺';
+      const phTitle = el.querySelector<HTMLElement>('[data-role="placeholder-title"]');
+      if (phTitle) phTitle.textContent = '최신 녹화 영상을 찾지 못했습니다';
+      const phSub = el.querySelector<HTMLElement>('[data-role="placeholder-sub"]');
+      if (phSub) phSub.textContent = '채널 홈에서 다음 방송 일정과 영상을 확인하세요.';
+      const phCta = el.querySelector<HTMLAnchorElement>('[data-role="placeholder-cta"]');
+      if (phCta) {
+        phCta.href = channelUrl;
+        phCta.textContent = '🎬 채널 홈 방문';
+        phCta.removeAttribute('hidden');
+      }
+    }
+
     el.querySelector('[data-role="checking-pill"]')?.setAttribute('hidden', '');
     el.querySelector('[data-role="live-pill"]')?.setAttribute('hidden', '');
-    el.querySelector('[data-role="offline-pill"]')?.removeAttribute('hidden');
+    const offlinePill = el.querySelector<HTMLElement>('[data-role="offline-pill"]');
+    if (offlinePill) {
+      offlinePill.textContent = isPastLive ? '📼 지난 라이브 다시보기' : '📼 최신 녹화 영상';
+      offlinePill.removeAttribute('hidden');
+    }
     const titleLink = el.querySelector<HTMLAnchorElement>('[data-role="title-link"]');
     if (titleLink) titleLink.href = watchUrl;
     const primary = el.querySelector<HTMLAnchorElement>('[data-role="primary-link"]');
     if (primary) {
-      primary.href = watchUrl;
-      primary.textContent = '📼 최신 녹화 영상 시청';
+      if (latestVideoId) {
+        primary.href = watchUrl;
+        primary.textContent = isPastLive ? '📼 지난 라이브 다시보기' : '📼 최신 녹화 영상 시청';
+      } else {
+        primary.href = channelUrl;
+        primary.textContent = '🎬 채널 홈 방문';
+      }
     }
-    const latest = el.querySelector<HTMLAnchorElement>('[data-role="latest-link"]');
-    if (latest) latest.href = watchUrl;
+    const latestBtn = el.querySelector<HTMLAnchorElement>('[data-role="latest-link"]');
+    if (latestBtn) {
+      if (latestVideoId) {
+        latestBtn.href = watchUrl;
+        latestBtn.removeAttribute('hidden');
+      } else {
+        latestBtn.setAttribute('hidden', '');
+      }
+    }
     const status = el.querySelector<HTMLElement>('[data-role="status-line"]');
     if (status) {
-      status.textContent = latestTitle
-        ? `현재 라이브 아님 — 최신 녹화 영상: "${latestTitle}"`
-        : '현재 라이브 아님 — 최신 녹화 영상으로 이동합니다.';
+      if (latestVideoId) {
+        const labelKind = isPastLive ? '지난 라이브 다시보기' : '최신 녹화 영상';
+        status.textContent = latestTitle
+          ? `⚫ 현재 라이브 아님 — ${labelKind}: "${latestTitle}"`
+          : `⚫ 현재 라이브 아님 — ${labelKind}으로 연결됩니다.`;
+      } else {
+        status.textContent = '⚫ 현재 라이브 아님 — 채널 홈으로 이동합니다.';
+      }
     }
     const badge = el.querySelector<HTMLElement>('[data-role="header-badge"]');
     if (badge) badge.textContent = '📺 추천 채널 (오프라인)';
@@ -802,11 +938,47 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
   }
 
   function applyUnknown(el: HTMLElement) {
+    const channelUrl = el.dataset.channelUrl || '#';
+    removeEmbedIframe(el);
+    const placeholder = el.querySelector<HTMLElement>('[data-role="placeholder"]');
+    if (placeholder) {
+      placeholder.removeAttribute('hidden');
+      placeholder.classList.remove('lc-placeholder-checking');
+      placeholder.classList.add('lc-placeholder-offline');
+    }
+    const phIcon = el.querySelector<HTMLElement>('.lc-placeholder-icon');
+    if (phIcon) phIcon.textContent = '📺';
+    const phTitle = el.querySelector<HTMLElement>('[data-role="placeholder-title"]');
+    if (phTitle) phTitle.textContent = '라이브 상태 확인 실패';
+    const phSub = el.querySelector<HTMLElement>('[data-role="placeholder-sub"]');
+    if (phSub) phSub.textContent = '채널 홈에서 현재 방송 여부와 최신 영상을 직접 확인하세요.';
+    const phCta = el.querySelector<HTMLAnchorElement>('[data-role="placeholder-cta"]');
+    if (phCta) {
+      phCta.href = channelUrl;
+      phCta.textContent = '🎬 채널 홈 방문';
+      phCta.removeAttribute('hidden');
+    }
     el.querySelector('[data-role="checking-pill"]')?.setAttribute('hidden', '');
+    el.querySelector('[data-role="live-pill"]')?.setAttribute('hidden', '');
+    const offlinePill = el.querySelector<HTMLElement>('[data-role="offline-pill"]');
+    if (offlinePill) {
+      offlinePill.textContent = '⚠️ 라이브 상태 확인 실패';
+      offlinePill.removeAttribute('hidden');
+    }
+    const primary = el.querySelector<HTMLAnchorElement>('[data-role="primary-link"]');
+    if (primary) {
+      primary.href = channelUrl;
+      primary.textContent = '🎬 채널 홈 방문';
+    }
+    const latestBtn = el.querySelector<HTMLAnchorElement>('[data-role="latest-link"]');
+    if (latestBtn) latestBtn.setAttribute('hidden', '');
+    const titleLink = el.querySelector<HTMLAnchorElement>('[data-role="title-link"]');
+    if (titleLink) titleLink.href = channelUrl;
     const status = el.querySelector<HTMLElement>('[data-role="status-line"]');
     if (status) {
-      status.textContent = '라이브 상태 확인 실패 — "시청" 버튼은 라이브면 라이브로, 아니면 최신 영상으로 자동 라우팅됩니다.';
+      status.textContent = '라이브 상태 확인 실패 — 채널 홈으로 이동합니다.';
     }
+    el.classList.remove('is-live');
     applyInfoPanel(el, 'unknown', null, null);
   }
 
