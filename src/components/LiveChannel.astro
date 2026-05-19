@@ -94,6 +94,71 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
       )}
     </div>
   </div>
+
+  <section class="lc-info-panel" data-role="info-panel" aria-live="polite">
+    <header class="lc-info-channel">
+      <img
+        class="lc-info-avatar"
+        data-role="channel-avatar"
+        alt=""
+        width="44"
+        height="44"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        hidden
+      />
+      <div class="lc-info-channel-meta">
+        <a
+          class="lc-info-channel-title"
+          data-role="channel-title-link"
+          href={channelUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >{channelName}</a>
+        <span class="lc-info-channel-subs" data-role="channel-subs"></span>
+      </div>
+      <span class="lc-info-mode-tag" data-role="mode-tag">⏳ 확인 중</span>
+    </header>
+
+    <p class="lc-info-title" data-role="video-title"></p>
+
+    <ul class="lc-info-stats" data-role="stats">
+      <li class="lc-info-stat" data-role="stat-viewers" hidden>
+        <span class="lc-info-stat-label">👀 동시 시청자</span>
+        <span class="lc-info-stat-value" data-role="viewers-value">-</span>
+      </li>
+      <li class="lc-info-stat" data-role="stat-likes" hidden>
+        <span class="lc-info-stat-label">👍 좋아요</span>
+        <span class="lc-info-stat-value" data-role="likes-value">-</span>
+      </li>
+      <li class="lc-info-stat" data-role="stat-elapsed" hidden>
+        <span class="lc-info-stat-label">⏱️ 방송 진행 시간</span>
+        <span class="lc-info-stat-value" data-role="elapsed-value">-</span>
+      </li>
+      <li class="lc-info-stat" data-role="stat-started" hidden>
+        <span class="lc-info-stat-label">📅 방송 시작</span>
+        <span class="lc-info-stat-value" data-role="started-value">-</span>
+      </li>
+      <li class="lc-info-stat" data-role="stat-published" hidden>
+        <span class="lc-info-stat-label">📅 업로드</span>
+        <span class="lc-info-stat-value" data-role="published-value">-</span>
+      </li>
+      <li class="lc-info-stat" data-role="stat-length" hidden>
+        <span class="lc-info-stat-label">⏱️ 영상 길이</span>
+        <span class="lc-info-stat-value" data-role="length-value">-</span>
+      </li>
+    </ul>
+
+    <p class="lc-info-desc" data-role="video-desc" hidden></p>
+
+    <footer class="lc-info-foot">
+      <span class="lc-info-updated">
+        마지막 갱신: <time data-role="updated-at">-</time>
+        · 자동 갱신 60초
+      </span>
+      <button type="button" class="lc-info-refresh" data-role="refresh-btn">🔄 새로고침</button>
+    </footer>
+  </section>
 </div>
 
 <style>
@@ -204,6 +269,158 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     font-weight: 600;
     opacity: 1;
   }
+
+  .live-channel {
+    --lc-info-bg: rgba(0, 0, 0, 0.32);
+    --lc-info-border: rgba(234, 195, 51, 0.22);
+    --lc-info-stat-bg: rgba(234, 195, 51, 0.08);
+    --lc-info-stat-border: rgba(234, 195, 51, 0.18);
+    --lc-info-foot-fg: var(--sl-color-gray-3);
+    --lc-info-refresh-hover: rgba(234, 195, 51, 0.18);
+    --lc-info-fg: var(--d4-bone);
+    --lc-info-accent: var(--d4-gold);
+    --lc-info-light-bg: rgba(255, 255, 255, 0.55);
+    --lc-info-light-stat-bg: rgba(255, 255, 255, 0.7);
+    --lc-info-light-border: var(--lc-light-pill-border);
+    --lc-info-light-fg: var(--lc-status-light-fg);
+  }
+
+  .lc-info-panel {
+    grid-column: 1 / -1;
+    margin-top: 0.6rem;
+    padding: 0.85rem 1rem;
+    background: var(--lc-info-bg);
+    border: 1px solid var(--lc-info-border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    color: var(--lc-info-fg);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .lc-info-channel {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+  .lc-info-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--lc-info-border);
+    background: var(--lc-info-stat-bg);
+    flex: 0 0 auto;
+  }
+  .lc-info-channel-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+  .lc-info-channel-title {
+    color: var(--lc-info-accent);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+  }
+  .lc-info-channel-title:hover { text-decoration: none; }
+  .lc-info-channel-subs {
+    font-size: 0.82rem;
+    color: var(--lc-info-fg);
+    opacity: 0.85;
+  }
+  .lc-info-mode-tag {
+    margin-left: auto;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    background: var(--lc-pill-bg-dark);
+    color: var(--lc-info-fg);
+    border: 1px solid var(--lc-pill-border-soft);
+    flex: 0 0 auto;
+  }
+  .live-channel.is-live .lc-info-mode-tag {
+    background: linear-gradient(135deg, var(--lc-live-strong), var(--lc-live-deep));
+    color: var(--lc-on-live);
+    border-color: var(--lc-live-edge);
+  }
+
+  .lc-info-title {
+    margin: 0;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--lc-info-accent);
+    line-height: 1.4;
+  }
+  .lc-info-title:empty { display: none; }
+
+  .lc-info-stats {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.4rem;
+  }
+  .lc-info-stat {
+    background: var(--lc-info-stat-bg);
+    border: 1px solid var(--lc-info-stat-border);
+    border-radius: 6px;
+    padding: 0.4rem 0.55rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .lc-info-stat-label {
+    font-size: 0.74rem;
+    color: var(--lc-info-fg);
+    opacity: 0.85;
+    letter-spacing: 0.02em;
+  }
+  .lc-info-stat-value {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: var(--lc-info-accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lc-info-desc {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--lc-info-fg);
+    opacity: 0.92;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .lc-info-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.78rem;
+    color: var(--lc-info-foot-fg);
+  }
+  .lc-info-updated time { font-variant-numeric: tabular-nums; }
+  .lc-info-refresh {
+    margin-left: auto;
+    padding: 0.3rem 0.65rem;
+    background: transparent;
+    border: 1px solid var(--lc-info-border);
+    color: var(--lc-info-accent);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  .lc-info-refresh:hover { background: var(--lc-info-refresh-hover); }
+  .lc-info-refresh:disabled { opacity: 0.5; cursor: progress; }
+
   [data-theme='light'] .live-channel {
     --lc-pill-bg-dark: var(--lc-light-pill-bg);
     --lc-pill-bg-checking: var(--lc-light-pill-bg);
@@ -220,9 +437,39 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
 </style>
 
 <script>
+  interface VideoDetail {
+    videoId: string;
+    title?: string | null;
+    author?: string | null;
+    channelId?: string | null;
+    viewCount?: number | null;
+    likeCount?: number | null;
+    lengthSeconds?: number | null;
+    isLive?: boolean;
+    shortDescription?: string | null;
+    subscriberLabel?: string | null;
+    channelAvatarUrl?: string | null;
+    startTimestamp?: string | null;
+    endTimestamp?: string | null;
+    publishDate?: string | null;
+    publishedTimeText?: string | null;
+    thumbnailUrl?: string | null;
+    watchUrl?: string | null;
+    error?: string | null;
+  }
+
+  interface ChannelInfo {
+    id?: string;
+    title?: string;
+    avatarUrl?: string;
+    subscriberLabel?: string | null;
+    handle?: string;
+    url?: string;
+  }
+
   type LiveResult =
-    | { state: 'live'; videoId: string; title?: string }
-    | { state: 'offline'; latestVideoId?: string; latestTitle?: string }
+    | { state: 'live'; videoId: string; title?: string; detail?: VideoDetail | null; channel?: ChannelInfo | null }
+    | { state: 'offline'; latestVideoId?: string; latestTitle?: string; detail?: VideoDetail | null; channel?: ChannelInfo | null }
     | { state: 'unknown' };
 
   interface LiveStatus {
@@ -231,8 +478,9 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     channelId: string;
     handle: string;
     state: 'live' | 'offline' | 'unknown';
-    live: { videoId: string; title?: string | null } | null;
-    latest: { videoId: string; title?: string | null; publishedAt?: string | null } | null;
+    channel?: ChannelInfo | null;
+    live: { videoId: string; title?: string | null; detail?: VideoDetail | null } | null;
+    latest: { videoId: string; title?: string | null; publishedAt?: string | null; detail?: VideoDetail | null } | null;
     error?: string | null;
   }
 
@@ -307,13 +555,21 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     const status = await fetchLiveStatus();
     if (status && (!status.channelId || status.channelId === channelId)) {
       if (status.state === 'live' && status.live?.videoId) {
-        return { state: 'live', videoId: status.live.videoId, title: status.live.title || undefined };
+        return {
+          state: 'live',
+          videoId: status.live.videoId,
+          title: status.live.title || undefined,
+          detail: status.live.detail || null,
+          channel: status.channel || null,
+        };
       }
       if (status.state === 'offline') {
         return {
           state: 'offline',
           latestVideoId: status.latest?.videoId,
           latestTitle: status.latest?.title || undefined,
+          detail: status.latest?.detail || null,
+          channel: status.channel || null,
         };
       }
     }
@@ -339,8 +595,144 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     return { state: 'unknown' };
   }
 
-  function applyLive(el: HTMLElement, videoId: string) {
-    const liveUrl = el.dataset.liveUrl || `https://www.youtube.com/watch?v=${videoId}`;
+  function fmtNumber(n: number | null | undefined): string {
+    if (n == null || Number.isNaN(n)) return '-';
+    try {
+      return new Intl.NumberFormat('ko-KR').format(n);
+    } catch {
+      return String(n);
+    }
+  }
+  function fmtDate(iso: string | null | undefined): string {
+    if (!iso) return '-';
+    try {
+      const d = new Date(iso);
+      return d.toLocaleString('ko-KR', {
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit',
+      });
+    } catch {
+      return iso;
+    }
+  }
+  function fmtTime(iso: string | null | undefined): string {
+    if (!iso) return '-';
+    try {
+      const d = new Date(iso);
+      return d.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    } catch {
+      return iso;
+    }
+  }
+  function fmtElapsed(ms: number): string {
+    const total = Math.max(0, Math.floor(ms / 1000));
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    const pad = (n: number) => String(n).padStart(2, '0');
+    return h > 0 ? `${h}시간 ${pad(m)}분 ${pad(s)}초` : `${pad(m)}분 ${pad(s)}초`;
+  }
+  function fmtDuration(seconds: number | null | undefined): string {
+    if (!seconds || seconds <= 0) return '-';
+    return fmtElapsed(seconds * 1000);
+  }
+
+  function setVisible(el: Element | null, value: string | null | undefined, valueSelector?: string) {
+    if (!el) return;
+    const filled = value != null && value !== '' && value !== '-';
+    if (filled) el.removeAttribute('hidden');
+    else el.setAttribute('hidden', '');
+    if (valueSelector) {
+      const target = el.querySelector(valueSelector);
+      if (target) target.textContent = filled ? String(value) : '-';
+    }
+  }
+
+  function applyInfoPanel(el: HTMLElement, kind: 'live' | 'offline' | 'unknown', detail: VideoDetail | null | undefined, channel: ChannelInfo | null | undefined) {
+    const panel = el.querySelector<HTMLElement>('[data-role="info-panel"]');
+    if (!panel) return;
+
+    // Channel header.
+    const avatar = panel.querySelector<HTMLImageElement>('[data-role="channel-avatar"]');
+    const avatarUrl = channel?.avatarUrl || detail?.channelAvatarUrl;
+    if (avatar) {
+      if (avatarUrl) {
+        avatar.src = avatarUrl;
+        avatar.removeAttribute('hidden');
+      } else {
+        avatar.setAttribute('hidden', '');
+        avatar.removeAttribute('src');
+      }
+    }
+    const titleLink = panel.querySelector<HTMLAnchorElement>('[data-role="channel-title-link"]');
+    if (titleLink && (channel?.title || detail?.author)) {
+      titleLink.textContent = channel?.title || detail?.author || '';
+      if (channel?.url) titleLink.href = channel.url;
+    }
+    const subs = panel.querySelector<HTMLElement>('[data-role="channel-subs"]');
+    if (subs) {
+      const sub = channel?.subscriberLabel || detail?.subscriberLabel || '';
+      subs.textContent = sub;
+    }
+    const modeTag = panel.querySelector<HTMLElement>('[data-role="mode-tag"]');
+    if (modeTag) {
+      if (kind === 'live') modeTag.textContent = '🔴 LIVE';
+      else if (kind === 'offline') modeTag.textContent = '📼 녹화 영상';
+      else modeTag.textContent = '⏳ 확인 중';
+    }
+
+    // Video title.
+    const videoTitle = panel.querySelector<HTMLElement>('[data-role="video-title"]');
+    if (videoTitle) videoTitle.textContent = detail?.title || '';
+
+    // Stats.
+    setVisible(panel.querySelector('[data-role="stat-viewers"]'), detail?.viewCount != null ? fmtNumber(detail.viewCount) + (kind === 'live' ? '명' : '회') : null, '[data-role="viewers-value"]');
+    setVisible(panel.querySelector('[data-role="stat-likes"]'), detail?.likeCount != null ? fmtNumber(detail.likeCount) + '개' : null, '[data-role="likes-value"]');
+
+    // Live elapsed / started — only when live.
+    const elapsedEl = panel.querySelector<HTMLElement>('[data-role="stat-elapsed"]');
+    const startedEl = panel.querySelector<HTMLElement>('[data-role="stat-started"]');
+    if (kind === 'live' && detail?.startTimestamp) {
+      const startMs = new Date(detail.startTimestamp).getTime();
+      el.dataset.lcLiveStartMs = String(startMs);
+      setVisible(elapsedEl, fmtElapsed(Date.now() - startMs), '[data-role="elapsed-value"]');
+      setVisible(startedEl, fmtTime(detail.startTimestamp), '[data-role="started-value"]');
+    } else {
+      delete el.dataset.lcLiveStartMs;
+      if (elapsedEl) { elapsedEl.setAttribute('hidden', ''); }
+      if (startedEl) { startedEl.setAttribute('hidden', ''); }
+    }
+
+    // Published — only when offline.
+    const publishedEl = panel.querySelector<HTMLElement>('[data-role="stat-published"]');
+    const lengthEl = panel.querySelector<HTMLElement>('[data-role="stat-length"]');
+    if (kind === 'offline') {
+      setVisible(publishedEl, fmtDate(detail?.publishDate), '[data-role="published-value"]');
+      setVisible(lengthEl, fmtDuration(detail?.lengthSeconds), '[data-role="length-value"]');
+    } else {
+      if (publishedEl) publishedEl.setAttribute('hidden', '');
+      if (lengthEl) lengthEl.setAttribute('hidden', '');
+    }
+
+    // Description — first ~280 chars.
+    const desc = panel.querySelector<HTMLElement>('[data-role="video-desc"]');
+    if (desc) {
+      const raw = (detail?.shortDescription || '').trim();
+      if (raw) {
+        desc.textContent = raw.length > 280 ? raw.slice(0, 280) + '…' : raw;
+        desc.removeAttribute('hidden');
+      } else {
+        desc.textContent = '';
+        desc.setAttribute('hidden', '');
+      }
+    }
+
+    // Updated time.
+    const updated = panel.querySelector<HTMLElement>('[data-role="updated-at"]');
+    if (updated) updated.textContent = new Date().toLocaleTimeString('ko-KR');
+  }
+
+  function applyLive(el: HTMLElement, videoId: string, detail?: VideoDetail | null, channel?: ChannelInfo | null) {
     const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
     const iframe = el.querySelector<HTMLIFrameElement>('.lc-iframe');
     if (iframe) iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&rel=0`;
@@ -359,9 +751,10 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     const badge = el.querySelector<HTMLElement>('[data-role="header-badge"]');
     if (badge) badge.textContent = '🔴 지금 방송 중';
     el.classList.add('is-live');
+    applyInfoPanel(el, 'live', detail, channel);
   }
 
-  function applyOffline(el: HTMLElement, latestVideoId?: string, latestTitle?: string) {
+  function applyOffline(el: HTMLElement, latestVideoId?: string, latestTitle?: string, detail?: VideoDetail | null, channel?: ChannelInfo | null) {
     const targetId = latestVideoId || el.dataset.fallbackId;
     const watchUrl = targetId ? `https://www.youtube.com/watch?v=${targetId}` : el.dataset.channelUrl || '#';
     const iframe = el.querySelector<HTMLIFrameElement>('.lc-iframe');
@@ -387,6 +780,7 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     const badge = el.querySelector<HTMLElement>('[data-role="header-badge"]');
     if (badge) badge.textContent = '📺 추천 채널 (오프라인)';
     el.classList.remove('is-live');
+    applyInfoPanel(el, 'offline', detail, channel);
   }
 
   function applyUnknown(el: HTMLElement) {
@@ -395,24 +789,53 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     if (status) {
       status.textContent = '라이브 상태 확인 실패 — "시청" 버튼은 라이브면 라이브로, 아니면 최신 영상으로 자동 라우팅됩니다.';
     }
+    applyInfoPanel(el, 'unknown', null, null);
+  }
+
+  async function refresh(el: HTMLElement) {
+    const channelId = el.dataset.channelId;
+    if (!channelId) {
+      applyUnknown(el);
+      return;
+    }
+    try {
+      const result = await checkChannel(channelId);
+      if (result.state === 'live') applyLive(el, result.videoId, result.detail, result.channel);
+      else if (result.state === 'offline') applyOffline(el, result.latestVideoId, result.latestTitle, result.detail, result.channel);
+      else applyUnknown(el);
+    } catch (_err) {
+      applyUnknown(el);
+    }
+  }
+
+  function startElapsedTicker(el: HTMLElement) {
+    const tick = () => {
+      const startMs = Number(el.dataset.lcLiveStartMs);
+      if (!startMs) return;
+      const elapsedEl = el.querySelector<HTMLElement>('[data-role="elapsed-value"]');
+      if (elapsedEl) elapsedEl.textContent = fmtElapsed(Date.now() - startMs);
+    };
+    tick();
+    return window.setInterval(tick, 1000);
   }
 
   async function init() {
     const containers = document.querySelectorAll<HTMLElement>('.live-channel');
     for (const el of Array.from(containers)) {
-      const channelId = el.dataset.channelId;
-      if (!channelId) {
-        applyUnknown(el);
-        continue;
+      await refresh(el);
+      startElapsedTicker(el);
+      window.setInterval(() => { refresh(el); }, 60_000);
+      const refreshBtn = el.querySelector<HTMLButtonElement>('[data-role="refresh-btn"]');
+      if (refreshBtn) {
+        refreshBtn.addEventListener('click', async () => {
+          refreshBtn.disabled = true;
+          try { await refresh(el); }
+          finally { refreshBtn.disabled = false; }
+        });
       }
-      try {
-        const result = await checkChannel(channelId);
-        if (result.state === 'live') applyLive(el, result.videoId);
-        else if (result.state === 'offline') applyOffline(el, result.latestVideoId, result.latestTitle);
-        else applyUnknown(el);
-      } catch (_err) {
-        applyUnknown(el);
-      }
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') refresh(el);
+      });
     }
   }
 
