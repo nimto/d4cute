@@ -115,7 +115,8 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
           target="_blank"
           rel="noopener noreferrer"
         >{channelName}</a>
-        <span class="lc-info-channel-subs" data-role="channel-subs"></span>
+        <!-- 구독자 수 — 임시 숨김. 향후 채널 성장 후 hidden 제거하면 노출. -->
+        <span class="lc-info-channel-subs" data-role="channel-subs" hidden></span>
       </div>
       <span class="lc-info-mode-tag" data-role="mode-tag">⏳ 확인 중</span>
     </header>
@@ -356,6 +357,14 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     line-height: 1.4;
   }
   .lc-info-title:empty { display: none; }
+
+  /* Override author display:flex so [hidden] actually hides stat cards. */
+  .lc-info-stat[hidden],
+  .lc-info-avatar[hidden],
+  .lc-info-desc[hidden],
+  .lc-info-panel [hidden] {
+    display: none;
+  }
 
   .lc-info-stats {
     list-style: none;
@@ -673,6 +682,15 @@ const fallbackEmbedSrc = `https://www.youtube-nocookie.com/embed/${fallbackVideo
     if (subs) {
       const sub = channel?.subscriberLabel || detail?.subscriberLabel || '';
       subs.textContent = sub;
+      // Auto-reveal once subscriber count crosses threshold. Lower the number
+      // here (or remove the guard entirely) when the channel grows.
+      const SUBS_REVEAL_THRESHOLD = 1000;
+      const numMatch = sub.replace(/,/g, '').match(/(\d+)/);
+      if (numMatch && Number(numMatch[1]) >= SUBS_REVEAL_THRESHOLD) {
+        subs.removeAttribute('hidden');
+      } else {
+        subs.setAttribute('hidden', '');
+      }
     }
     const modeTag = panel.querySelector<HTMLElement>('[data-role="mode-tag"]');
     if (modeTag) {
