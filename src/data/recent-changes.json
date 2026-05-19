@@ -1,7 +1,21 @@
 {
-  "generatedAt": "2026-05-19T14:01:04.189Z",
+  "generatedAt": "2026-05-19T14:39:33.088Z",
   "count": 40,
   "items": [
+    {
+      "url": "/tributes/advanced/",
+      "title": "상급/신화 공물 6종 — 지하도시 운영 + 봉화 룰",
+      "date": "2026-05-19T22:02:02+08:00",
+      "commit": "feat: /tributes/advanced — 상급/신화 공물 6종 + 오물 적출 트리 + 봉화 룰",
+      "hash": "b96d34c"
+    },
+    {
+      "url": "/tributes/",
+      "title": "공물 (Tributes) — 개요",
+      "date": "2026-05-19T22:02:02+08:00",
+      "commit": "feat: /tributes/advanced — 상급/신화 공물 6종 + 오물 적출 트리 + 봉화 룰",
+      "hash": "b96d34c"
+    },
     {
       "url": "/activity/",
       "title": "내 활동 + 최신 변경",
@@ -220,13 +234,6 @@
       "hash": "b73759e"
     },
     {
-      "url": "/tributes/",
-      "title": "공물 (Tributes) — 개요",
-      "date": "2026-05-18T10:40:44+08:00",
-      "commit": "feat: D4 한국 공식 게임 용어 통일 + 분광경 표 클릭형 모달",
-      "hash": "b73759e"
-    },
-    {
       "url": "/tributes/targeted-farming/",
       "title": "타겟 파밍 가이드",
       "date": "2026-05-18T10:40:44+08:00",
@@ -274,13 +281,6 @@
       "date": "2026-05-17T22:37:52+08:00",
       "commit": "feat: 활동 트리 100 노드 한국명 전수 매핑 + 사이드바 label 단순화",
       "hash": "36605fe"
-    },
-    {
-      "url": "/gems/mechanics/",
-      "title": "시즌13 보석 메커니즘 (곱연산)",
-      "date": "2026-05-17T15:30:28+08:00",
-      "commit": "fix: [숫자] 표기 = 보유 수량이므로 가격/식별번호로 잘못 사용한 모든 곳 정정",
-      "hash": "4183bcd"
     }
   ]
 }
