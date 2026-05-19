@@ -133,7 +133,7 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
   />
   <ImageModal
     src="/images/horadric-cube/transfiguration/dust-diverse-attunement.webp"
-    alt="다채로운 조율의 분광경 — 모든 속성 범위"
+    alt="다채로운 조율의 분광경 — 저항 속성 풀"
     caption="다채로운"
     size={120}
   />
@@ -195,8 +195,9 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
         { label: '한 줄 정리', text: '같은 카테고리 내에서 <strong>클래스의 기술 핵심 능력치</strong> 위주로 결과를 좁힙니다.' },
         { label: '언제 쓰나요?', text: '<span class="kw-gold">같은 카테고리 재롤 (Focused Reroll)</span> 단계. 카테고리는 맞는데 클래스 핵심 어픽스 (예: 도적 = 민첩, 야만 = 힘) 를 노릴 때.' },
         { label: '작동 방식', text: '변성 결과 후보 풀에서 <span class="kw-gold">"기술 핵심 능력치"</span> 어픽스 비중을 크게 늘립니다. 잡옵 비중은 줄어듭니다.' },
-        { label: '다채로운과 차이', text: '<span class="kw-rare">숙련자 = 좁힘 (핵심 집중)</span> ↔ <span class="kw-rare">다채로운 = 넓힘 (범용)</span>. 클래스 핵심 어픽스를 노리면 숙련자, 어떤 옵션이든 다양화 원하면 다채로운.' },
-        { label: '예시 흐름', text: '도적 무기 변성 후 "민첩" 외 잡옵이 떴음 → <span class="kw-rare">숙련자의 조율</span>로 Focused Reroll → 민첩 위주 어픽스로 좁혀짐.' },
+        { label: '다채로운과 차이', text: '<span class="kw-rare">숙련자 = 기술/핵심 능력치 카테고리 좁힘</span> ↔ <span class="kw-rare">다채로운 = 저항 카테고리 좁힘</span>. 다른 카테고리를 좁히는 별개 분광경이지 "좁힘 vs 넓힘" 관계가 아닙니다.' },
+        { label: '🔮 변성 시 등장하는 어픽스 풀 (게임 내 표시 — 숙련자의 조율의 분광경 ×193, 희귀 소비용품)', text: '<strong class="kw-rare">주요(빨강):</strong> 모든 기술 등급 — <strong>보조(검정):</strong> 핵심 기술 등급 · 특정 기술군 등급 · 스킬 랭크 계열 · 핵심 능력치 계열' },
+        { label: '예시 흐름', text: '도적 무기 변성 후 "민첩" 외 잡옵이 떴음 → <span class="kw-rare">숙련자의 조율</span>로 Focused Reroll → 민첩/스킬 등급 어픽스로 좁혀짐.' },
       ],
     },
     {
@@ -207,14 +208,15 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
       cols: [
         '<span class="kw-rare"><strong>다채로운 조율</strong></span>',
         '<span class="kw-rare">희귀</span>',
-        '변환 시 속성 범위를 <span class="kw-gold">모든 속성</span>으로 확장',
+        '변환 시 속성 범위를 <span class="kw-gold">저항 속성</span>으로 좁힘',
       ],
       details: [
-        { label: '한 줄 정리', text: '같은 카테고리 안에서 <strong>모든 어픽스 종류를 풀로 열어둡니다</strong>. 범용 자원.' },
-        { label: '언제 쓰나요?', text: '클래스 핵심 어픽스 외에도 다양한 옵션을 후보로 두고 싶을 때. 또는 보조 부위에 옵션을 다양화하고 싶을 때.' },
-        { label: '작동 방식', text: '결과 후보를 좁히지 않고 <span class="kw-gold">같은 카테고리 내 모든 어픽스 종류</span>로 균등 추첨.' },
-        { label: '숙련자와 비교', text: '핵심 어픽스가 명확히 정해진 빌드 = <span class="kw-rare">숙련자</span> 추천. 옵션 폭이 넓어도 OK = <span class="kw-rare">다채로운</span> 추천.' },
-        { label: '예시 흐름', text: '보조 부위 변성 → <span class="kw-rare">다채로운 조율</span> → 카테고리 내 잡옵 다양화 → 빌드에 맞는 조합 발견 시 다음 단계로.' },
+        { label: '한 줄 정리', text: '변성 결과를 <strong>속성 저항 6종</strong> 카테고리로 좁힙니다. 저항 빌드업 전용.' },
+        { label: '언제 쓰나요?', text: '고난도 단계 진입 시 <span class="kw-gold">속성 저항 어픽스</span>를 특정 부위에 채우고 싶을 때.' },
+        { label: '작동 방식', text: '결과 후보 풀을 <span class="kw-gold">속성 저항 (화염/냉기/번개/독/암흑/물리) 6종</span>으로만 좁힘. 다른 어픽스는 추첨 후보에서 제외.' },
+        { label: '숙련자와 비교', text: '<span class="kw-rare">숙련자 = 기술/핵심 능력치 카테고리</span> ↔ <span class="kw-rare">다채로운 = 저항 카테고리</span>. 둘 다 "좁힘" 분광경이지만 좁히는 카테고리가 다릅니다.' },
+        { label: '🌈 변성 시 등장하는 어픽스 풀 (게임 내 표시 — 다채로운 조율의 분광경 ×318, 희귀 소비용품)', text: '<strong class="kw-rare">저항 속성 6종:</strong> 화염 저항 · 냉기 저항 · 번개 저항 · 독 저항 · 암흑 저항 · 물리 저항' },
+        { label: '예시 흐름', text: '특정 저항 (예: 암흑) 이 부족한 부위 → Chaotic Reroll + <span class="kw-rare">다채로운 조율</span> → 저항 6종 풀로만 추첨 → 원하는 저항 어픽스 확보.' },
       ],
     },
   ]}
@@ -272,6 +274,7 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
         { label: '어떤 어픽스가 나와요?', text: '<span class="kw-offensive">피해 증가 · 치명타 확률/피해 · 취약 적에게 피해 · 핵심 스킬 피해 · 가까운 적에게 피해</span> 등 공격 카테고리 어픽스 전반.' },
         { label: '언제 쓰나요?', text: '빌드 어픽스 카테고리가 <span class="kw-gold">"공격" 으로 확정</span>됐을 때. 카테고리 재롤 (Chaotic) 단계에서 사용.' },
         { label: '어느 부위에?', text: '주로 <span class="kw-offensive">무기 · 장갑 · 반지</span>. 빌드에 따라 투구·목걸이도 공격 카테고리로 갈 수 있습니다.' },
+        { label: '🎯 변성 시 등장하는 어픽스 풀 (게임 내 표시 — 공격적인 조율의 분광경 ×164, 마법 소비용품)', text: '<strong class="kw-offensive">주요(빨강):</strong> 무기 피해 · 모든 피해 배율 · 공격 속도 · 극대화 확률 · 극대화 피해 배율 · 취약 피해 배율 — <strong>보조(검정):</strong> 지속 피해 배율 · 화염/물리/암흑 피해 배율 · 가시 — <strong class="kw-gold">스탯(노랑):</strong> 힘 · 지능 · 의지력 · 민첩' },
         { label: '예시 흐름', text: '무기에 잡옵이 떴음 → Chaotic Reroll + <span class="kw-offensive">공격적인 조율</span> → 결과가 공격 카테고리로만 나옴 → 원하는 어픽스 (치명타 등) 확보까지 반복.' },
       ],
     },
@@ -290,6 +293,7 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
         { label: '어떤 어픽스가 나와요?', text: '<span class="kw-defensive">최대 생명력 · 방어력 · 모든 저항 · 원소별 저항 · 받는 피해 감소 · 가시 피해</span> 등 생존 카테고리 전반.' },
         { label: '언제 쓰나요?', text: '<span class="kw-gold">고난도 단계 상향</span>으로 생존이 부족할 때. 또는 빌드의 방어 슬롯 어픽스 확정 시.' },
         { label: '어느 부위에?', text: '주로 <span class="kw-defensive">투구 · 가슴 · 하의</span>. 목걸이·반지 1개를 방어로 두는 빌드도 있습니다.' },
+        { label: '🛡️ 변성 시 등장하는 어픽스 풀 (게임 내 표시 — 보호자의 조율의 분광경 ×308, 마법 소비용품)', text: '<strong class="kw-defensive">주요(빨강):</strong> 최대 생명력 · 방어도 · 모든 저항 — <strong>보조(검정):</strong> 생명력 회복 · 적중/처치 시 생명력 회복 · 화염/냉기/번개 저항 · 독/암흑/물리 저항 · 피해 감소 · 회피 확률 · 보호막 생성량 · 강화 생성량 · 상태이상 감소' },
         { label: '예시 흐름', text: '가슴에 공격 어픽스가 떴음 → Chaotic Reroll + <span class="kw-defensive">보호자의 조율</span> → 결과가 방어 카테고리로 나옴 → 생명력·저항 확보.' },
       ],
     },
@@ -308,6 +312,7 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
         { label: '어떤 어픽스가 나와요?', text: '<span class="kw-utility">이동 속도 · 우회 확률 · 회피 · 이로운 효과 지속 시간 · 해로운 효과 지속 시간 감소</span> 등 기동·생존 보조 카테고리.' },
         { label: '언제 쓰나요?', text: '빌드가 <span class="kw-gold">이동 속도 · 이로운 효과 의존</span>일 때. 또는 부츠·장갑처럼 실용 어픽스 슬롯이 정해진 부위.' },
         { label: '어느 부위에?', text: '주로 <span class="kw-utility">부츠 · 장갑</span>. 일부 빌드는 반지·목걸이 실용 카테고리도 사용.' },
+        { label: '⚡ 변성 시 등장하는 어픽스 풀 (게임 내 표시 — 실용적인 조율의 분광경 ×301, 마법 소비용품)', text: '<strong class="kw-utility">주요(빨강):</strong> 이동 속도 · 재사용 대기시간 감소 — <strong>보조(검정):</strong> 행운의 적중 확률 · 회피 충전수 · 회피 재사용 대기시간 감소 · 회피 후 이동 속도 증가 · 받는 치유 증가 · 물약 소지량' },
         { label: '예시 흐름', text: '부츠에 자원 어픽스가 떴음 → Chaotic Reroll + <span class="kw-utility">실용적인 조율</span> → 이동속도·회피 확보.' },
       ],
     },
@@ -326,6 +331,7 @@ import DustDetailTable from '../../../components/DustDetailTable.astro';
         { label: '어떤 어픽스가 나와요?', text: '<span class="kw-abundance">자원 재생 · 자원 비용 감소 · 이로운 효과 강화 · 회복 속도 · 치유 효과 강화</span> 등 자원·소비 카테고리.' },
         { label: '언제 쓰나요?', text: '빌드가 <span class="kw-gold">자원에 의존</span>해 스킬을 자주 사용해야 할 때 (예: 마나 빌드의 원소술사, 분노 빌드의 야만용사).' },
         { label: '어느 부위에?', text: '주로 <span class="kw-abundance">반지 · 목걸이 · 무기</span>. 자원 부족 정도에 따라 부위 분배.' },
+        { label: '💧 변성 시 등장하는 어픽스 풀 (게임 내 표시 — 풍족한 조율의 분광경 ×328, 마법 소비용품)', text: '<strong class="kw-abundance">주요(빨강):</strong> 최대 자원 · 자원 생성량 · 자원 소모 감소 · 행운의 적중 시 자원 회복 — <strong>보조(검정):</strong> 처치당 자원 회복' },
         { label: '예시 흐름', text: '핵심 스킬을 자주 못 쓰는 빌드 → 반지 Chaotic Reroll + <span class="kw-abundance">풍족한 조율</span> → 자원 비용 감소 어픽스 확보.' },
       ],
     },

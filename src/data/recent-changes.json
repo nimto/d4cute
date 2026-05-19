@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-19T18:09:52.418Z",
+  "generatedAt": "2026-05-19T18:28:40.637Z",
   "count": 40,
   "items": [
     {
       "url": "/tributes/advanced/",
       "title": "상급/신화 공물 6종 — 지하도시 운영 + 차원문 장난꾼 + 봉화 룰",
-      "date": "2026-05-19T22:39:41+08:00",
-      "commit": "fix(tributes/advanced): 메인 분기 표기 정정 — 중앙 → 좌측 줄기",
-      "hash": "8be2e5c"
+      "date": "2026-05-20T02:10:41+08:00",
+      "commit": "fix(tributes/advanced): 오물 적출 메커니즘 정정 — 차원문 장난꾼(Portal Prankster) 보너스 상자",
+      "hash": "5cf8e60"
     },
     {
       "url": "/tributes/",
