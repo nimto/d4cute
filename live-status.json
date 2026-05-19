@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-19T19:59:52.748Z",
+  "generatedAt": "2026-05-19T20:44:13.968Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "_uAlDLavofE",
-    "title": "디아블로4 시즌13 오픈 19일차 클랜원 150명 모집완료. 변성득기원. 모르는거 빼고 다 알려드려요",
-    "publishedAt": "2026-05-19T18:27:30+00:00",
+  "live": {
+    "videoId": "MBl-DMXapqY",
+    "title": "",
     "detail": {
-      "videoId": "_uAlDLavofE",
+      "videoId": "MBl-DMXapqY",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +30,33 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "16시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/_uAlDLavofE/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=_uAlDLavofE"
+      "publishedTimeText": "21시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/MBl-DMXapqY/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=MBl-DMXapqY"
+    }
+  },
+  "latest": {
+    "videoId": "MBl-DMXapqY",
+    "title": "디아블로4 시즌13 오픈 20일차 클랜원 150명 모집완료. 변성득기원. 모르는거 빼고 다 알려드려요",
+    "publishedAt": "2026-05-19T20:00:50+00:00",
+    "detail": {
+      "videoId": "MBl-DMXapqY",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 66명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "21시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/MBl-DMXapqY/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=MBl-DMXapqY"
     }
   },
   "error": null
