@@ -29,16 +29,10 @@ const youtubeUrl = youtubeHandle
 ---
 
 <aside class="clan-profile" aria-labelledby="clan-profile-name">
-  <div class="clan-profile-grid">
-    <div class="clan-profile-banner" aria-hidden="true">
-      <div class="clan-profile-banner-inner">
-        <span class="clan-profile-banner-label">문장</span>
-        <span class="clan-profile-banner-icon">⚔️</span>
-        <span class="clan-profile-banner-foot">마지막 수정: {leader}</span>
-      </div>
-    </div>
-    <div class="clan-profile-main">
-      <div class="clan-profile-header">
+  <div class="clan-profile-main">
+    <div class="clan-profile-header">
+      <span class="clan-profile-crest" aria-hidden="true">⚔️</span>
+      <div class="clan-profile-titlebox">
         <span class="clan-profile-tag">&lt;{tag}&gt;</span>
         <h3 id="clan-profile-name" class="clan-profile-name">{name}</h3>
         <p class="clan-profile-sub">
@@ -47,6 +41,7 @@ const youtubeUrl = youtubeHandle
           <span class="clan-profile-leader">클랜장 <strong>{leader}</strong></span>
         </p>
       </div>
+    </div>
 
       <div class="clan-profile-stats">
         <div class="clan-profile-stat">
@@ -98,7 +93,6 @@ const youtubeUrl = youtubeHandle
         </p>
       )}
     </div>
-  </div>
 </aside>
 
 <style>
@@ -110,8 +104,6 @@ const youtubeUrl = youtubeHandle
     --cp-bone: var(--d4-bone, #d8c8a0);
     --cp-bg-stop-a: rgba(150, 7, 17, 0.18);
     --cp-bg-stop-b: rgba(0, 0, 0, 0.45);
-    --cp-banner-bg-a: rgba(150, 7, 17, 0.55);
-    --cp-banner-bg-b: rgba(40, 4, 8, 0.65);
     --cp-card-border: rgba(150, 7, 17, 0.45);
     --cp-stat-bg: rgba(0, 0, 0, 0.32);
     --cp-stat-border: rgba(234, 195, 51, 0.18);
@@ -129,13 +121,10 @@ const youtubeUrl = youtubeHandle
     --cp-light-stat-border: rgba(150, 7, 17, 0.3);
     --cp-light-chip-bg: rgba(234, 195, 51, 0.28);
     --cp-light-card-shadow: rgba(0, 0, 0, 0.12);
-    --cp-light-banner-icon-shadow: rgba(0, 0, 0, 0.25);
-    --cp-light-banner-bg-a: rgba(150, 7, 17, 0.7);
-    --cp-light-banner-bg-b: rgba(80, 4, 12, 0.85);
-    --cp-on-blood: #fff;
-    --cp-on-banner: #f5ecd6;
+    --cp-light-crest-shadow: rgba(0, 0, 0, 0.25);
+    --cp-on-blood: var(--d4-on-blood);
     --cp-card-shadow: rgba(0, 0, 0, 0.25);
-    --cp-banner-icon-shadow: rgba(0, 0, 0, 0.6);
+    --cp-crest-shadow: rgba(0, 0, 0, 0.6);
 
     margin: 1.25rem 0 1.5rem;
     padding: 1.25rem;
@@ -146,76 +135,32 @@ const youtubeUrl = youtubeHandle
     box-shadow: 0 6px 18px var(--cp-card-shadow);
   }
 
-  .clan-profile-grid {
-    display: grid;
-    grid-template-columns: 200px minmax(0, 1fr);
-    gap: 1.4rem;
-    align-items: stretch;
-  }
-  @media (max-width: 720px) {
-    .clan-profile-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .clan-profile-banner {
-    border: 1px solid var(--cp-card-border);
-    border-radius: 8px;
-    background: linear-gradient(180deg, var(--cp-banner-bg-a), var(--cp-banner-bg-b));
-    padding: 0.7rem 0.6rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 220px;
-  }
-  .clan-profile-banner-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    gap: 0.6rem;
-  }
-  .clan-profile-banner-label {
-    font-size: 0.85rem;
-    color: var(--cp-bone);
-    letter-spacing: 0.1em;
-    text-transform: none;
-    border-bottom: 1px solid var(--cp-card-border);
-    width: 100%;
-    text-align: center;
-    padding-bottom: 0.4rem;
-  }
-  .clan-profile-banner-icon {
-    font-size: 5rem;
-    line-height: 1;
-    filter: drop-shadow(0 2px 6px var(--cp-banner-icon-shadow));
-  }
-  .clan-profile-banner-foot {
-    font-size: 0.72rem;
-    color: var(--cp-bone);
-    opacity: 0.7;
-    text-align: center;
-    padding-top: 0.4rem;
-    border-top: 1px solid var(--cp-card-border);
-    width: 100%;
-  }
-
   .clan-profile-main {
     display: flex;
     flex-direction: column;
-    gap: 0.95rem;
+    gap: 0.9rem;
     min-width: 0;
   }
 
   .clan-profile-header {
     display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
+    align-items: center;
+    gap: 0.85rem;
     border-bottom: 1px solid var(--cp-card-border);
     padding-bottom: 0.7rem;
+  }
+  .clan-profile-crest {
+    font-size: 2.4rem;
+    line-height: 1;
+    flex: 0 0 auto;
+    filter: drop-shadow(0 2px 6px var(--cp-crest-shadow));
+  }
+  .clan-profile-titlebox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+    flex: 1 1 auto;
   }
   .clan-profile-tag {
     font-size: 0.92rem;
@@ -383,7 +328,7 @@ const youtubeUrl = youtubeHandle
     --cp-chip-bg: var(--cp-light-chip-bg);
     --cp-chip-border: var(--cp-light-leader);
     --cp-card-shadow: var(--cp-light-card-shadow);
-    --cp-banner-icon-shadow: var(--cp-light-banner-icon-shadow);
+    --cp-crest-shadow: var(--cp-light-crest-shadow);
     color: var(--cp-light-text);
   }
   [data-theme='light'] .clan-profile-tag,
@@ -392,9 +337,7 @@ const youtubeUrl = youtubeHandle
   [data-theme='light'] .clan-profile-meta-label,
   [data-theme='light'] .clan-profile-desc-label,
   [data-theme='light'] .clan-profile-desc p,
-  [data-theme='light'] .clan-profile-foot,
-  [data-theme='light'] .clan-profile-banner-label,
-  [data-theme='light'] .clan-profile-banner-foot {
+  [data-theme='light'] .clan-profile-foot {
     color: var(--cp-light-text);
     opacity: 1;
   }
@@ -414,12 +357,5 @@ const youtubeUrl = youtubeHandle
     color: var(--cp-on-blood);
     border-color: var(--cp-blood);
     background: var(--cp-blood);
-  }
-  [data-theme='light'] .clan-profile-banner {
-    background: linear-gradient(180deg, var(--cp-light-banner-bg-a), var(--cp-light-banner-bg-b));
-  }
-  [data-theme='light'] .clan-profile-banner-label,
-  [data-theme='light'] .clan-profile-banner-foot {
-    color: var(--cp-on-banner);
   }
 </style>

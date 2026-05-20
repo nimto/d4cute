@@ -133,24 +133,24 @@
   margin: 1.5rem 0;
 }
 
-/* Channel promo card on landing */
+/* Channel promo card on landing — 1-col stack (영상 full width + 메타 아래) */
 .channel-promo {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 1.5rem;
-  margin: 2rem 0 1.5rem;
-  padding: 1.25rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem;
   background: linear-gradient(135deg, rgba(234, 195, 51, 0.08), rgba(150, 7, 17, 0.12));
   border: 1px solid rgba(234, 195, 51, 0.35);
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 .channel-embed {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #000;
-  border-radius: 4px;
+  background: var(--d4-bg-deep);
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--sl-color-gray-5);
 }
@@ -221,12 +221,6 @@
   color: #fff;
 }
 .channel-btn.primary:hover { background: var(--d4-blood-bright); }
-
-@media (max-width: 50em) {
-  .channel-promo {
-    grid-template-columns: 1fr;
-  }
-}
 
 [data-theme='light'] .channel-promo {
   background: linear-gradient(135deg, rgba(234, 195, 51, 0.18), rgba(150, 7, 17, 0.08));
