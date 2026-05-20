@@ -23,6 +23,7 @@
   --d4-live-dot: #4dff7a;        /* "재생 중" / "라이브" 표식용 형광 그린 */
 
   /* z-index 토큰 */
+  --d4-z-base: 0;                /* stacking context establish 용 baseline (auto 아님) */
   --d4-z-floating: 9999;         /* floating widget (음악 플레이어 등 사이트 최상위) */
 }
 
