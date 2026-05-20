@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-19T23:45:05.840Z",
+  "generatedAt": "2026-05-20T00:15:00.829Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,34 +30,11 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
+      "publishedTimeText": "19분 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/MBl-DMXapqY/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=MBl-DMXapqY"
     }
   },
-  "latest": {
-    "videoId": "vjrhkTuhiWw",
-    "title": "선조야만. 플리커 탑재 출처및참고 : 유튜버 '이모네'",
-    "publishedAt": "2026-05-19T22:11:30+00:00",
-    "detail": {
-      "videoId": "vjrhkTuhiWw",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 66명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "14시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/vjrhkTuhiWw/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=vjrhkTuhiWw"
-    }
-  },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
