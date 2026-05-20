@@ -32,30 +32,6 @@ export default defineConfig({
           tag: 'meta',
           attrs: { property: 'og:image:height', content: '1024' },
         },
-        {
-          tag: 'script',
-          content: `
-(() => {
-  const HIDE_DELAY = 900;
-  const bind = (el) => {
-    if (!el || el.dataset.autohideBound) return;
-    el.dataset.autohideBound = '1';
-    let t;
-    el.addEventListener('scroll', () => {
-      el.classList.add('is-scrolling');
-      clearTimeout(t);
-      t = setTimeout(() => el.classList.remove('is-scrolling'), HIDE_DELAY);
-    }, { passive: true });
-  };
-  const init = () => bind(document.getElementById('starlight__sidebar'));
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init, { once: true });
-  } else { init(); }
-  // 페이지 전환(View Transitions) 대비
-  document.addEventListener('astro:page-load', init);
-})();
-          `.trim(),
-        },
       ],
       defaultLocale: 'root',
       locales: {

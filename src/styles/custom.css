@@ -71,37 +71,15 @@
   color: var(--d4-gold);
 }
 
-/* Auto-hide sidebar scrollbar (모바일 스타일: 스크롤 중에만 가늘게 표시) */
+/* Sidebar scrollbar — 항상 완전 숨김 (스크롤 작동, 바만 비표시) */
 #starlight__sidebar {
-  scrollbar-width: none;        /* Firefox: 기본 숨김 */
+  scrollbar-width: none;        /* Firefox */
   -ms-overflow-style: none;     /* IE/Edge legacy */
 }
-#starlight__sidebar.is-scrolling {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(234, 195, 51, 0.45) transparent;
-}
 #starlight__sidebar::-webkit-scrollbar {
-  width: 6px;
-  background: transparent;
-}
-#starlight__sidebar::-webkit-scrollbar-track {
-  background: transparent;
-}
-#starlight__sidebar::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 6px;
-  transition: background 0.4s ease;
-}
-#starlight__sidebar.is-scrolling::-webkit-scrollbar-thumb,
-#starlight__sidebar:hover::-webkit-scrollbar-thumb {
-  background: rgba(234, 195, 51, 0.45);
-}
-[data-theme='light'] #starlight__sidebar.is-scrolling::-webkit-scrollbar-thumb,
-[data-theme='light'] #starlight__sidebar:hover::-webkit-scrollbar-thumb {
-  background: rgba(122, 90, 10, 0.55);
-}
-[data-theme='light'] #starlight__sidebar.is-scrolling {
-  scrollbar-color: rgba(122, 90, 10, 0.55) transparent;
+  display: none;                /* Chrome/Safari/WebKit */
+  width: 0;
+  height: 0;
 }
 
 /* Tables: bone-card look */
