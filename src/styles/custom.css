@@ -17,6 +17,13 @@
   --d4-cat-abundance: #ffc847;
   --d4-cat-rare:      #f5d447;
   --d4-on-gold:       #1a1208;
+
+  /* 일반 색상 토큰 — 컴포넌트 공유 */
+  --d4-on-blood: #fff;          /* blood 배경 위 텍스트 */
+  --d4-live-dot: #4dff7a;        /* "재생 중" / "라이브" 표식용 형광 그린 */
+
+  /* z-index 토큰 */
+  --d4-z-floating: 9999;         /* floating widget (음악 플레이어 등 사이트 최상위) */
 }
 
 :root[data-theme='dark'] {
@@ -549,6 +556,73 @@
   background: rgba(234, 195, 51, 0.18);
   border-left-color: #b08800;
 }
+
+/* 대시보드 BGM 협력 카드 (index.mdx) */
+.bgm-credit {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(135deg, rgba(234, 195, 51, 0.12), rgba(150, 7, 17, 0.08));
+  border: 1px solid rgba(234, 195, 51, 0.32);
+  border-left: 4px solid var(--d4-gold);
+  border-radius: 10px;
+}
+.bgm-credit-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+.bgm-credit-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.bgm-credit-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--d4-gold) !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+.bgm-credit-title a { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+.bgm-credit-title a:hover { text-decoration: none; }
+.bgm-credit-desc {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--d4-bone);
+}
+.bgm-credit-desc strong { color: var(--d4-gold); }
+.bgm-credit-desc code {
+  background: rgba(234, 195, 51, 0.12);
+  color: var(--d4-gold);
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+.bgm-credit-meta {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--d4-bone);
+  opacity: 0.85;
+}
+.bgm-credit-meta a { color: var(--d4-gold); }
+
+[data-theme='light'] .bgm-credit {
+  background: linear-gradient(135deg, rgba(234, 195, 51, 0.22), rgba(150, 7, 17, 0.08));
+  border-color: #9c7f1f;
+}
+[data-theme='light'] .bgm-credit-title { color: #7a5a0a !important; }
+[data-theme='light'] .bgm-credit-desc,
+[data-theme='light'] .bgm-credit-meta { color: #2a1a08; }
+[data-theme='light'] .bgm-credit-desc strong,
+[data-theme='light'] .bgm-credit-desc code,
+[data-theme='light'] .bgm-credit-meta a { color: #7a5a0a; }
+[data-theme='light'] .bgm-credit-desc code { background: rgba(234, 195, 51, 0.28); }
 
 /* ============================================================
    6종 분광경 한눈 정리 카드 그리드

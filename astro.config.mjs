@@ -104,6 +104,12 @@ export default defineConfig({
             { label: '데이터 삭제 안내', link: '/data-deletion/' },
           ],
         },
+        {
+          label: '🎵 BGM — 미미네음악',
+          link: 'https://www.youtube.com/@mimi_BGM',
+          attrs: { target: '_blank', rel: 'noopener noreferrer' },
+          badge: { text: 'BGM 출처', variant: 'note' },
+        },
       ],
     }),
   ],
