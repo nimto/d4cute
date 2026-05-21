@@ -836,7 +836,12 @@ const channelUrl = `https://www.youtube.com/@${encodedHandle}`;
   }
 
   function applyLive(el: HTMLElement, videoId: string, detail?: VideoDetail | null, channel?: ChannelInfo | null) {
-    const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
+    // 라이브 클릭 라우팅은 채널 /live canonical URL 사용.
+    // YouTube 자체 redirect 가 항상 "현재 진행 중" 라이브로 보냄 →
+    // 사이트의 live-status JSON 이 stale 인 경우에도 정확한 라이브로 이동.
+    // videoId 기반 watch URL 은 백업으로만 사용 (특정 영상 직링크).
+    const liveCanonicalUrl = el.dataset.liveUrl || `https://www.youtube.com/watch?v=${videoId}`;
+    const videoWatchUrl = `https://www.youtube.com/watch?v=${videoId}`;
     const channelName = el.dataset.channelName || '';
     ensureEmbedIframe(el, videoId, channelName, 'live');
     const placeholder = el.querySelector<HTMLElement>('[data-role="placeholder"]');
@@ -845,16 +850,21 @@ const channelUrl = `https://www.youtube.com/@${encodedHandle}`;
     el.querySelector('[data-role="checking-pill"]')?.setAttribute('hidden', '');
     el.querySelector('[data-role="live-pill"]')?.removeAttribute('hidden');
     const titleLink = el.querySelector<HTMLAnchorElement>('[data-role="title-link"]');
-    if (titleLink) titleLink.href = watchUrl;
+    if (titleLink) titleLink.href = liveCanonicalUrl;
     const primary = el.querySelector<HTMLAnchorElement>('[data-role="primary-link"]');
     if (primary) {
-      primary.href = watchUrl;
+      primary.href = liveCanonicalUrl;
       primary.textContent = '🔴 LIVE 시청 (현재 방송 중)';
     }
+    // 보조 버튼: videoId 직링크 (live-status JSON 의 라이브 영상 ID)
     const latest = el.querySelector<HTMLAnchorElement>('[data-role="latest-link"]');
-    if (latest) latest.setAttribute('hidden', '');
+    if (latest) {
+      latest.href = videoWatchUrl;
+      latest.textContent = '🎥 라이브 영상 직링크';
+      latest.removeAttribute('hidden');
+    }
     const status = el.querySelector<HTMLElement>('[data-role="status-line"]');
-    if (status) status.textContent = '🔴 지금 LIVE 방송 중 — 시청 버튼을 누르면 라이브로 이동합니다.';
+    if (status) status.textContent = `🔴 지금 LIVE 방송 중 — 시청 버튼을 누르면 ${liveCanonicalUrl} 으로 이동합니다.`;
     const badge = el.querySelector<HTMLElement>('[data-role="header-badge"]');
     if (badge) badge.textContent = '🔴 지금 방송 중';
     el.classList.add('is-live');
