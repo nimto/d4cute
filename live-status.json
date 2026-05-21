@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-21T16:02:54.227Z",
+  "generatedAt": "2026-05-21T17:06:43.897Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "3ilKkcwii7s",
-    "title": "디아블로4 시즌13 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 선조 플리커!",
-    "publishedAt": "2026-05-21T15:25:23+00:00",
+  "live": {
+    "videoId": "UllNaeaeOlQ",
+    "title": "",
     "detail": {
-      "videoId": "3ilKkcwii7s",
+      "videoId": "UllNaeaeOlQ",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +30,33 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/3ilKkcwii7s/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=3ilKkcwii7s"
+      "publishedTimeText": "스트리밍 시간: 2일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/UllNaeaeOlQ/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=UllNaeaeOlQ"
+    }
+  },
+  "latest": {
+    "videoId": "UllNaeaeOlQ",
+    "title": "디아블로4 시즌13 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 선조 플리커!",
+    "publishedAt": "2026-05-21T17:03:46+00:00",
+    "detail": {
+      "videoId": "UllNaeaeOlQ",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 73명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "스트리밍 시간: 2일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/UllNaeaeOlQ/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=UllNaeaeOlQ"
     }
   },
   "error": null
