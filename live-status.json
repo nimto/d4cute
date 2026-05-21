@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-21T19:17:44.591Z",
+  "generatedAt": "2026-05-21T20:04:28.619Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 73명",
+    "subscriberLabel": "구독자 77명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,15 +25,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 73명",
+      "subscriberLabel": "구독자 77명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
       "publishedTimeText": "5개월 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/UllNaeaeOlQ/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=UllNaeaeOlQ",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=UllNaeaeOlQ"
+      "watchUrl": "https://www.youtube.com/watch?v=UllNaeaeOlQ"
     }
   },
   "latest": {
@@ -50,15 +49,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 73명",
+      "subscriberLabel": "구독자 77명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
       "publishedTimeText": "5개월 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/UllNaeaeOlQ/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=UllNaeaeOlQ",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=UllNaeaeOlQ"
+      "watchUrl": "https://www.youtube.com/watch?v=UllNaeaeOlQ"
     }
   },
   "error": null
