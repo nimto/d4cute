@@ -1,16 +1,41 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-22T06:18:04.323Z",
+  "generatedAt": "2026-05-22T07:37:40.795Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
+    "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+    "subscriberLabel": "구독자 81명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": null,
-  "latest": null,
-  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
+  "latest": {
+    "videoId": "UllNaeaeOlQ",
+    "title": "디아블로4 시즌13 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 선조 플리커!",
+    "publishedAt": "2026-05-22T02:58:49+00:00",
+    "detail": {
+      "videoId": "UllNaeaeOlQ",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 81명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "6개월 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/UllNaeaeOlQ/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=UllNaeaeOlQ"
+    }
+  },
+  "error": null
 }
