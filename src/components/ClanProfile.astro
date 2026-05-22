@@ -97,42 +97,31 @@ const youtubeUrl = youtubeHandle
 
 <style>
   .clan-profile {
-    --cp-accent: var(--d4-gold, #eac333);
-    --cp-accent-dim: var(--d4-gold-dim, #9c7f1f);
-    --cp-blood: var(--d4-blood-bright, #c01020);
-    --cp-blood-deep: var(--d4-blood, #960711);
-    --cp-bone: var(--d4-bone, #d8c8a0);
-    --cp-bg-stop-a: rgba(150, 7, 17, 0.18);
-    --cp-bg-stop-b: rgba(0, 0, 0, 0.45);
-    --cp-card-border: rgba(150, 7, 17, 0.45);
-    --cp-stat-bg: rgba(0, 0, 0, 0.32);
-    --cp-stat-border: rgba(234, 195, 51, 0.18);
-    --cp-chip-border: rgba(234, 195, 51, 0.5);
-    --cp-chip-bg: rgba(234, 195, 51, 0.08);
-    --cp-desc-bg: rgba(0, 0, 0, 0.28);
-    --cp-cta-hover: rgba(234, 195, 51, 0.16);
-    --cp-foot-bg: rgba(150, 7, 17, 0.1);
-    --cp-light-bg-a: rgba(150, 7, 17, 0.08);
-    --cp-light-bg-b: rgba(234, 195, 51, 0.14);
-    --cp-light-stat-bg: rgba(255, 255, 255, 0.55);
-    --cp-light-text: #2a1a08;
-    --cp-light-leader: #7a5a0a;
-    --cp-light-foot-bg: rgba(150, 7, 17, 0.06);
-    --cp-light-stat-border: rgba(150, 7, 17, 0.3);
-    --cp-light-chip-bg: rgba(234, 195, 51, 0.28);
-    --cp-light-card-shadow: rgba(0, 0, 0, 0.12);
-    --cp-light-crest-shadow: rgba(0, 0, 0, 0.25);
+    /* Theme-aware tokens — Starlight 토큰 자동 전환 */
+    --cp-text: var(--sl-color-text);
+    --cp-text-accent: var(--sl-color-text-accent);
+    --cp-text-muted: var(--sl-color-gray-3);
+    --cp-stat-bg: var(--sl-color-bg-nav);
+    --cp-border: var(--sl-color-gray-5);
+    --cp-card-shadow: color-mix(in srgb, var(--sl-color-black) 25%, transparent);
+
+    /* Brand 고정 — 다이아블로 핏줄 강조색 (테마 무관) */
+    --cp-blood: var(--d4-blood-bright);
+    --cp-blood-deep: var(--d4-blood);
     --cp-on-blood: var(--d4-on-blood);
-    --cp-card-shadow: rgba(0, 0, 0, 0.25);
-    --cp-crest-shadow: rgba(0, 0, 0, 0.6);
+
+    /* 배경 그라데이션 — d4-blood + sl-color-bg 합성 (테마 자동 추종) */
+    --cp-bg-stop-a: color-mix(in srgb, var(--d4-blood) 18%, transparent);
+    --cp-bg-stop-b: color-mix(in srgb, var(--sl-color-bg) 70%, transparent);
 
     margin: 1.25rem 0 1.5rem;
     padding: 1.25rem;
     background: linear-gradient(135deg, var(--cp-bg-stop-a), var(--cp-bg-stop-b));
-    border: 1px solid var(--cp-card-border);
+    border: 1px solid var(--cp-border);
     border-left: 4px solid var(--cp-blood);
     border-radius: 10px;
     box-shadow: 0 6px 18px var(--cp-card-shadow);
+    color: var(--cp-text);
   }
 
   .clan-profile-main {
@@ -146,14 +135,14 @@ const youtubeUrl = youtubeHandle
     display: flex;
     align-items: center;
     gap: 0.85rem;
-    border-bottom: 1px solid var(--cp-card-border);
+    border-bottom: 1px solid var(--cp-border);
     padding-bottom: 0.7rem;
   }
   .clan-profile-crest {
     font-size: 2.4rem;
     line-height: 1;
     flex: 0 0 auto;
-    filter: drop-shadow(0 2px 6px var(--cp-crest-shadow));
+    filter: drop-shadow(0 2px 6px var(--cp-card-shadow));
   }
   .clan-profile-titlebox {
     display: flex;
@@ -164,28 +153,28 @@ const youtubeUrl = youtubeHandle
   }
   .clan-profile-tag {
     font-size: 0.92rem;
-    color: var(--cp-bone);
+    color: var(--cp-text-muted);
     letter-spacing: 0.02em;
   }
   .clan-profile-name {
     margin: 0;
     font-size: 1.7rem;
     line-height: 1.15;
-    color: var(--cp-accent);
+    color: var(--cp-text-accent);
     border-bottom: none;
     padding-bottom: 0;
   }
   .clan-profile-sub {
     margin: 0.25rem 0 0;
     font-size: 0.9rem;
-    color: var(--cp-bone);
+    color: var(--cp-text);
     display: flex;
     flex-wrap: wrap;
     gap: 0.35rem 0.55rem;
     align-items: baseline;
   }
   .clan-profile-sub .clan-profile-sep { opacity: 0.5; }
-  .clan-profile-sub strong { color: var(--cp-accent); }
+  .clan-profile-sub strong { color: var(--cp-text-accent); }
 
   .clan-profile-stats {
     display: grid;
@@ -197,33 +186,31 @@ const youtubeUrl = youtubeHandle
   }
   .clan-profile-stat {
     background: var(--cp-stat-bg);
-    border: 1px solid var(--cp-stat-border);
+    border: 1px solid var(--cp-border);
     border-radius: 6px;
     padding: 0.55rem 0.7rem;
   }
   .clan-profile-stat-label {
     font-size: 0.78rem;
-    color: var(--cp-bone);
-    opacity: 0.85;
+    color: var(--cp-text-muted);
     margin-bottom: 0.2rem;
   }
   .clan-profile-stat-value {
     font-size: 1rem;
-    color: var(--cp-accent);
+    color: var(--cp-text-accent);
     font-weight: 600;
     font-variant-numeric: tabular-nums;
   }
 
   .clan-profile-desc {
-    background: var(--cp-desc-bg);
-    border: 1px solid var(--cp-stat-border);
+    background: var(--cp-stat-bg);
+    border: 1px solid var(--cp-border);
     border-radius: 6px;
     padding: 0.65rem 0.85rem;
   }
   .clan-profile-desc-label {
     font-size: 0.8rem;
-    color: var(--cp-bone);
-    opacity: 0.85;
+    color: var(--cp-text-muted);
     margin-bottom: 0.35rem;
     letter-spacing: 0.04em;
   }
@@ -231,11 +218,11 @@ const youtubeUrl = youtubeHandle
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--cp-bone);
+    color: var(--cp-text);
   }
   .clan-profile-desc code {
-    background: var(--cp-chip-bg);
-    color: var(--cp-accent);
+    background: color-mix(in srgb, var(--cp-text-accent) 12%, transparent);
+    color: var(--cp-text-accent);
     padding: 0.05rem 0.4rem;
     border-radius: 3px;
     font-size: 0.85em;
@@ -248,8 +235,7 @@ const youtubeUrl = youtubeHandle
   }
   .clan-profile-meta-label {
     font-size: 0.8rem;
-    color: var(--cp-bone);
-    opacity: 0.85;
+    color: var(--cp-text-muted);
     letter-spacing: 0.04em;
   }
   .clan-profile-tags {
@@ -261,9 +247,9 @@ const youtubeUrl = youtubeHandle
     display: inline-block;
     padding: 0.18rem 0.65rem;
     font-size: 0.82rem;
-    color: var(--cp-accent);
-    background: var(--cp-chip-bg);
-    border: 1px solid var(--cp-chip-border);
+    color: var(--cp-text-accent);
+    background: color-mix(in srgb, var(--cp-text-accent) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--cp-text-accent) 50%, transparent);
     border-radius: 4px;
     letter-spacing: 0.02em;
   }
@@ -278,8 +264,8 @@ const youtubeUrl = youtubeHandle
     align-items: center;
     gap: 0.35rem;
     padding: 0.5rem 0.95rem;
-    border: 1px solid var(--cp-accent);
-    color: var(--cp-accent);
+    border: 1px solid var(--cp-text-accent);
+    color: var(--cp-text-accent);
     background: transparent;
     border-radius: 6px;
     text-decoration: none;
@@ -288,74 +274,30 @@ const youtubeUrl = youtubeHandle
     transition: background 0.15s ease, transform 0.15s ease;
   }
   .clan-profile-btn:hover {
-    background: var(--cp-cta-hover);
+    background: color-mix(in srgb, var(--cp-text-accent) 16%, transparent);
     transform: translateY(-1px);
     text-decoration: none;
   }
   .clan-profile-btn.primary {
     background: var(--cp-blood);
     border-color: var(--cp-blood);
-    color: var(--cp-bone);
+    color: var(--cp-on-blood);
   }
   .clan-profile-btn.primary:hover {
     background: var(--cp-blood-deep);
-    color: var(--cp-bone);
+    color: var(--cp-on-blood);
   }
   .clan-profile-btn strong { color: inherit; }
 
   .clan-profile-foot {
     margin: 0;
     padding: 0.65rem 0.85rem;
-    background: var(--cp-foot-bg);
+    background: color-mix(in srgb, var(--cp-blood) 10%, transparent);
     border-left: 3px solid var(--cp-blood);
     border-radius: 0 6px 6px 0;
     font-size: 0.86rem;
     line-height: 1.65;
-    color: var(--cp-bone);
+    color: var(--cp-text);
   }
-  .clan-profile-foot strong { color: var(--cp-accent); }
-
-  [data-theme='light'] .clan-profile {
-    --cp-bg-stop-a: var(--cp-light-bg-a);
-    --cp-bg-stop-b: var(--cp-light-bg-b);
-    --cp-stat-bg: var(--cp-light-stat-bg);
-    --cp-stat-border: var(--cp-light-stat-border);
-    --cp-desc-bg: var(--cp-light-stat-bg);
-    --cp-foot-bg: var(--cp-light-foot-bg);
-    --cp-bone: var(--cp-light-text);
-    --cp-accent: var(--cp-light-leader);
-    --cp-accent-dim: var(--cp-light-leader);
-    --cp-chip-bg: var(--cp-light-chip-bg);
-    --cp-chip-border: var(--cp-light-leader);
-    --cp-card-shadow: var(--cp-light-card-shadow);
-    --cp-crest-shadow: var(--cp-light-crest-shadow);
-    color: var(--cp-light-text);
-  }
-  [data-theme='light'] .clan-profile-tag,
-  [data-theme='light'] .clan-profile-sub,
-  [data-theme='light'] .clan-profile-stat-label,
-  [data-theme='light'] .clan-profile-meta-label,
-  [data-theme='light'] .clan-profile-desc-label,
-  [data-theme='light'] .clan-profile-desc p,
-  [data-theme='light'] .clan-profile-foot {
-    color: var(--cp-light-text);
-    opacity: 1;
-  }
-  [data-theme='light'] .clan-profile-name,
-  [data-theme='light'] .clan-profile-sub strong,
-  [data-theme='light'] .clan-profile-stat-value,
-  [data-theme='light'] .clan-profile-chip,
-  [data-theme='light'] .clan-profile-btn,
-  [data-theme='light'] .clan-profile-foot strong,
-  [data-theme='light'] .clan-profile-desc code {
-    color: var(--cp-light-leader);
-  }
-  [data-theme='light'] .clan-profile-btn {
-    border-color: var(--cp-light-leader);
-  }
-  [data-theme='light'] .clan-profile-btn.primary {
-    color: var(--cp-on-blood);
-    border-color: var(--cp-blood);
-    background: var(--cp-blood);
-  }
+  .clan-profile-foot strong { color: var(--cp-text-accent); }
 </style>
