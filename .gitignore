@@ -28,6 +28,9 @@ giscus-rendered.png
 # Playwright/dev screenshots
 transfig-*.png
 
+# Claude/AI 작업 산출물 (스크린샷, 임시 스크립트, 분석 결과 등)
+_work/
+
 # Claude Code internal lock files
 .claude/
 
