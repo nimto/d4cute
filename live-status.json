@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-24T00:03:54.854Z",
+  "generatedAt": "2026-05-24T01:17:04.402Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "12시간 전",
+      "publishedTimeText": "2일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/tI5Hir3_2Jo/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=tI5Hir3_2Jo"
     }
   },
   "latest": {
-    "videoId": "tI5Hir3_2Jo",
-    "title": "디아블로4 시즌13 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 구독은 복이 와요. 길드자리 9자리남음 선조 플리커플레이중.",
-    "publishedAt": "2026-05-23T16:00:30+00:00",
+    "videoId": "-VHrPRLK-j0",
+    "title": "전쟁계획에 보라색 계획이 떳는데 ...",
+    "publishedAt": "2026-05-24T01:15:26+00:00",
     "detail": {
-      "videoId": "tI5Hir3_2Jo",
+      "videoId": "-VHrPRLK-j0",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "12시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/tI5Hir3_2Jo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=tI5Hir3_2Jo"
+      "publishedTimeText": "2일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/-VHrPRLK-j0/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=-VHrPRLK-j0"
     }
   },
   "error": null
