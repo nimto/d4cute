@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-25T02:26:56.955Z",
+  "generatedAt": "2026-05-25T03:49:31.064Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -14,11 +14,11 @@
   },
   "live": null,
   "latest": {
-    "videoId": "yrazD90XkH0",
-    "title": "디아블로4 시즌13 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 구독은 복이 와요. 길드자리 7자리남음 선조 플리커플레이중.",
-    "publishedAt": "2026-05-24T18:18:20+00:00",
+    "videoId": "UN5jyCBag9M",
+    "title": "군세에 떨어진 선조 반지 아이템",
+    "publishedAt": "2026-05-25T02:58:12+00:00",
     "detail": {
-      "videoId": "yrazD90XkH0",
+      "videoId": "UN5jyCBag9M",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "4일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/yrazD90XkH0/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=yrazD90XkH0"
+      "publishedTimeText": "23시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/UN5jyCBag9M/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=UN5jyCBag9M"
     }
   },
   "error": null
