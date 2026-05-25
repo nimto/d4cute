@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-25T03:49:31.064Z",
+  "generatedAt": "2026-05-25T05:23:06.265Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "UN5jyCBag9M",
-    "title": "군세에 떨어진 선조 반지 아이템",
-    "publishedAt": "2026-05-25T02:58:12+00:00",
+  "live": {
+    "videoId": "_H6ukIl8Kx0",
+    "title": "",
     "detail": {
-      "videoId": "UN5jyCBag9M",
+      "videoId": "_H6ukIl8Kx0",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,10 +30,11 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "23시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/UN5jyCBag9M/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=UN5jyCBag9M"
+      "publishedTimeText": "3주 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/_H6ukIl8Kx0/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=_H6ukIl8Kx0"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
