@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-25T22:06:50.501Z",
+  "generatedAt": "2026-05-25T22:34:10.602Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -14,11 +14,11 @@
   },
   "live": null,
   "latest": {
-    "videoId": "_H6ukIl8Kx0",
-    "title": "디아블로4 시즌13 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 구독은 복이 와요. 길드자리 7자리남음 선조 플리커플레이중.",
-    "publishedAt": "2026-05-25T13:58:55+00:00",
+    "videoId": "xsDxz73eu8A",
+    "title": "추방목걸이 뽑는방법",
+    "publishedAt": "2026-05-25T22:28:14+00:00",
     "detail": {
-      "videoId": "_H6ukIl8Kx0",
+      "videoId": "xsDxz73eu8A",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "16시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/_H6ukIl8Kx0/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=_H6ukIl8Kx0"
+      "publishedTimeText": "14시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/xsDxz73eu8A/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=xsDxz73eu8A"
     }
   },
   "error": null
