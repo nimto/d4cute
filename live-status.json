@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-27T21:21:51.334Z",
+  "generatedAt": "2026-05-27T22:06:27.502Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "2qVIw5CYIOM",
-    "title": "디아블로4 시즌13 소통은 기본 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 구독은 복이 와요. 선조 플리커플레이중.",
-    "publishedAt": "2026-05-27T13:47:54+00:00",
+  "live": {
+    "videoId": "zWetR0KR9v4",
+    "title": "",
     "detail": {
-      "videoId": "2qVIw5CYIOM",
+      "videoId": "zWetR0KR9v4",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +30,33 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "7일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/2qVIw5CYIOM/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=2qVIw5CYIOM"
+      "publishedTimeText": "스트리밍 시간: 8시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/zWetR0KR9v4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=zWetR0KR9v4"
+    }
+  },
+  "latest": {
+    "videoId": "zWetR0KR9v4",
+    "title": "디아블로4 시즌13 소통은 기본 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 구독은 복이 와요. 선조 플리커플레이중.",
+    "publishedAt": "2026-05-27T22:00:23+00:00",
+    "detail": {
+      "videoId": "zWetR0KR9v4",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 120명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "스트리밍 시간: 8시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/zWetR0KR9v4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=zWetR0KR9v4"
     }
   },
   "error": null
