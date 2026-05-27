@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-27T13:30:34.693Z",
+  "generatedAt": "2026-05-27T14:40:12.126Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,33 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "2qVIw5CYIOM",
-    "title": "",
-    "detail": {
-      "videoId": "2qVIw5CYIOM",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 120명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "1시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/2qVIw5CYIOM/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=2qVIw5CYIOM"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "2qVIw5CYIOM",
     "title": "디아블로4 시즌13 소통은 기본 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 구독은 복이 와요. 선조 플리커플레이중.",
-    "publishedAt": "2026-05-27T10:55:55+00:00",
+    "publishedAt": "2026-05-27T13:47:54+00:00",
     "detail": {
       "videoId": "2qVIw5CYIOM",
       "title": null,
@@ -54,7 +32,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1시간 전",
+      "publishedTimeText": "3시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/2qVIw5CYIOM/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=2qVIw5CYIOM"
     }
