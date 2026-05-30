@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-30T10:27:40.536Z",
+  "generatedAt": "2026-05-30T11:02:26.556Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,10 +30,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1시간 전",
+      "publishedTimeText": "12시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/Q0gZYtZ3aYo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=Q0gZYtZ3aYo",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=Q0gZYtZ3aYo"
+      "watchUrl": "https://www.youtube.com/watch?v=Q0gZYtZ3aYo"
     }
   },
   "latest": {
@@ -42,7 +41,22 @@
     "publishedAt": "2026-05-30T02:18:35+00:00",
     "detail": {
       "videoId": "63pZASPYQOo",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=63pZASPYQOo"
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 134명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "2시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/63pZASPYQOo/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=63pZASPYQOo"
     }
   },
   "error": null
