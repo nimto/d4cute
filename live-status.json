@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-30T02:08:01.974Z",
+  "generatedAt": "2026-05-30T03:21:24.449Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
+      "publishedTimeText": "20시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/Q0gZYtZ3aYo/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=Q0gZYtZ3aYo"
     }
   },
   "latest": {
-    "videoId": "Q0gZYtZ3aYo",
-    "title": "디아블로4 시즌13 소통은 기본 음악과 함께!! 무엇이든 물어보세요. 모르는거빼고 다알려드려요. 구독은 복이 와요. 선조 플리커플레이중. https://d4cute.com/ 공략",
-    "publishedAt": "2026-05-29T23:59:47+00:00",
+    "videoId": "63pZASPYQOo",
+    "title": "디아블로~ 변성재료 '일촉즉발' 을 빨리 얻기 위한 '지역(위상) 변경'  으로 쿨타임 없애고 허버빨리 심어버리기~! (삼촌의 다섯번째 Shorts)",
+    "publishedAt": "2026-05-30T02:18:35+00:00",
     "detail": {
-      "videoId": "Q0gZYtZ3aYo",
+      "videoId": "63pZASPYQOo",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/Q0gZYtZ3aYo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=Q0gZYtZ3aYo"
+      "publishedTimeText": "19시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/63pZASPYQOo/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=63pZASPYQOo"
     }
   },
   "error": null
