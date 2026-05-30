@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-30T15:36:18.436Z",
+  "generatedAt": "2026-05-30T16:03:56.152Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,7 +30,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "3개월 전",
+      "publishedTimeText": "1년 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/Q0gZYtZ3aYo/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=Q0gZYtZ3aYo"
     }
@@ -54,7 +54,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "2일 전",
+      "publishedTimeText": "3개월 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/63pZASPYQOo/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=63pZASPYQOo"
     }
