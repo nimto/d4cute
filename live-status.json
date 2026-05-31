@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-05-31T15:36:22.885Z",
+  "generatedAt": "2026-05-31T16:04:16.100Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -14,11 +14,11 @@
   },
   "live": null,
   "latest": {
-    "videoId": "Q0gZYtZ3aYo",
-    "title": "디아블로4 시즌13 소통은 기본 음악과 함께!! 부케 키우실분은 말씀하세요. 단 3명이 모이면 출발합니다. 선조 플리커플레이중. https://d4cute.com/ 공략",
-    "publishedAt": "2026-05-30T18:28:49+00:00",
+    "videoId": "uSteDeuVNqA",
+    "title": "상황을 보아하니 12초 정도 남기고 클리어?",
+    "publishedAt": "2026-05-31T15:42:35+00:00",
     "detail": {
-      "videoId": "Q0gZYtZ3aYo",
+      "videoId": "uSteDeuVNqA",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "11일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/Q0gZYtZ3aYo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=Q0gZYtZ3aYo"
+      "publishedTimeText": "5일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/uSteDeuVNqA/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=uSteDeuVNqA"
     }
   },
   "error": null
