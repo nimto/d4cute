@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-01T03:51:51.149Z",
+  "generatedAt": "2026-06-01T05:31:36.683Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 141명",
+    "subscriberLabel": "구독자 140명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,22 +25,22 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 141명",
+      "subscriberLabel": "구독자 140명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "4주 전",
+      "publishedTimeText": "7시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/tctxWyZHprc/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=tctxWyZHprc"
     }
   },
   "latest": {
-    "videoId": "tctxWyZHprc",
-    "title": "디아블로4 시즌13 소통은 기본 음악과 함께!! 부케 키우실분은 말씀하세요. 단 3명이 모이면 출발합니다. 선조 플리커플레이중. https://d4cute.com/ 공략",
-    "publishedAt": "2026-06-01T00:30:41+00:00",
+    "videoId": "O8OjtscIo1k",
+    "title": "선조야만. 150단 입장부터 보스킬까지. 그리고 장비~",
+    "publishedAt": "2026-06-01T04:50:47+00:00",
     "detail": {
-      "videoId": "tctxWyZHprc",
+      "videoId": "O8OjtscIo1k",
       "title": null,
       "author": null,
       "channelId": null,
@@ -49,14 +49,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 141명",
+      "subscriberLabel": "구독자 140명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
       "publishedTimeText": "4주 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/tctxWyZHprc/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=tctxWyZHprc"
+      "thumbnailUrl": "https://i.ytimg.com/vi/O8OjtscIo1k/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=O8OjtscIo1k"
     }
   },
   "error": null
