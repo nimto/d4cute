@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-07T12:14:49.361Z",
+  "generatedAt": "2026-06-07T12:51:40.637Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,15 +30,14 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 10일 전",
+      "publishedTimeText": "1시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/WAnIP8iJuwo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=WAnIP8iJuwo",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=WAnIP8iJuwo"
+      "watchUrl": "https://www.youtube.com/watch?v=WAnIP8iJuwo"
     }
   },
   "latest": {
     "videoId": "WAnIP8iJuwo",
-    "title": "디아블로4 시즌13 하루종일 들어도 좋은 음악! 과 함께 아직도 끝나지 않은 파밍? / 14시즌(D-24) 시즌 공략집 = https://d4cute.com/",
+    "title": "디아블로4 가 조금은 지루해져서. 외도하는중 DEAD SPACE 공포게임",
     "publishedAt": "2026-06-07T09:39:23+00:00",
     "detail": {
       "videoId": "WAnIP8iJuwo",
@@ -55,10 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 10일 전",
+      "publishedTimeText": "1시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/WAnIP8iJuwo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=WAnIP8iJuwo",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=WAnIP8iJuwo"
+      "watchUrl": "https://www.youtube.com/watch?v=WAnIP8iJuwo"
     }
   },
   "error": null
