@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-07T13:27:36.390Z",
+  "generatedAt": "2026-06-07T14:16:40.760Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,33 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "WAnIP8iJuwo",
-    "title": "",
-    "detail": {
-      "videoId": "WAnIP8iJuwo",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 146명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "15시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/WAnIP8iJuwo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=WAnIP8iJuwo"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "WAnIP8iJuwo",
     "title": "디아블로4 가 조금은 지루해져서. 외도하는중 DEAD SPACE 공포게임",
-    "publishedAt": "2026-06-07T09:39:23+00:00",
+    "publishedAt": "2026-06-07T14:03:15+00:00",
     "detail": {
       "videoId": "WAnIP8iJuwo",
       "title": null,
@@ -54,7 +32,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "15시간 전",
+      "publishedTimeText": "3시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/WAnIP8iJuwo/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=WAnIP8iJuwo"
     }
