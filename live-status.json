@@ -1,14 +1,12 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-14T17:49:23.562Z",
+  "generatedAt": "2026-06-14T18:20:15.545Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
-    "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 146명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -19,22 +17,7 @@
     "publishedAt": "2026-06-08T05:09:26+00:00",
     "detail": {
       "videoId": "YbC6Z23Z5Qs",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 146명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "2개월 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/YbC6Z23Z5Qs/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=YbC6Z23Z5Qs"
+      "error": "HTTP 429 https://www.youtube.com/watch?v=YbC6Z23Z5Qs"
     }
   },
   "error": null
