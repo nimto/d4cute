@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-16T18:52:40.577Z",
+  "generatedAt": "2026-06-16T20:00:57.182Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -32,7 +32,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "7일 전",
+      "publishedTimeText": "스트리밍 시간: 1일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/UkqBlSP4lT8/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=UkqBlSP4lT8"
     }
