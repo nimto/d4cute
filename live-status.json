@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-18T03:49:32.043Z",
+  "generatedAt": "2026-06-18T05:25:52.694Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,9 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
+  "live": null,
+  "latest": {
     "videoId": "eIvXjmHNijs",
-    "title": "",
+    "title": "디아블로4 시즌14전 데바데 Dead by Dayligh를 해볼까 합니다. /시즌13 공략집 = https://d4cute.com/",
+    "publishedAt": "2026-06-18T01:22:06+00:00",
     "detail": {
       "videoId": "eIvXjmHNijs",
       "title": null,
@@ -30,11 +32,10 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
+      "publishedTimeText": "18시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/eIvXjmHNijs/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=eIvXjmHNijs"
     }
   },
-  "latest": null,
-  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
+  "error": null
 }
