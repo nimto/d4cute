@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-22T13:29:54.718Z",
+  "generatedAt": "2026-06-22T15:24:01.584Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "DvvIFrtcqfo",
-    "title": "디아블로4 시즌14전, 히오스 또는 데바데 Dead by Dayligh를 해볼까 합니다. /시즌13 공략집 = https://d4cute.com/",
-    "publishedAt": "2026-06-22T07:29:39+00:00",
+  "live": {
+    "videoId": "vprh-1Iuvz4",
+    "title": "",
     "detail": {
-      "videoId": "DvvIFrtcqfo",
+      "videoId": "vprh-1Iuvz4",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +30,33 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 1일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/DvvIFrtcqfo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=DvvIFrtcqfo"
+      "publishedTimeText": "4시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/vprh-1Iuvz4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=vprh-1Iuvz4"
+    }
+  },
+  "latest": {
+    "videoId": "vprh-1Iuvz4",
+    "title": "디아블로4 시즌14전, 히오스 또는 데바데 Dead by Dayligh를 해볼까 합니다. /시즌13 공략집 = https://d4cute.com/",
+    "publishedAt": "2026-06-22T13:36:49+00:00",
+    "detail": {
+      "videoId": "vprh-1Iuvz4",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 150명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "4시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/vprh-1Iuvz4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=vprh-1Iuvz4"
     }
   },
   "error": null
