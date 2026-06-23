@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-23T00:05:15.239Z",
+  "generatedAt": "2026-06-23T01:13:05.517Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "vprh-1Iuvz4",
-    "title": "디아블로4 시즌14전, 히오스 또는 데바데 Dead by Dayligh를 해볼까 합니다. /시즌13 공략집 = https://d4cute.com/",
-    "publishedAt": "2026-06-22T16:52:48+00:00",
+  "live": {
+    "videoId": "FQ-_UyZVfK4",
+    "title": "",
     "detail": {
-      "videoId": "vprh-1Iuvz4",
+      "videoId": "FQ-_UyZVfK4",
       "title": null,
       "author": null,
       "channelId": null,
@@ -33,8 +31,32 @@
       "endTimestamp": null,
       "publishDate": null,
       "publishedTimeText": "7개월 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/vprh-1Iuvz4/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=vprh-1Iuvz4"
+      "thumbnailUrl": "https://i.ytimg.com/vi/FQ-_UyZVfK4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=FQ-_UyZVfK4"
+    }
+  },
+  "latest": {
+    "videoId": "FQ-_UyZVfK4",
+    "title": "디아블로4 시즌14전, 히오스 또는 데바데 Dead by Dayligh를 해볼까 합니다. /시즌13 공략집 = https://d4cute.com/",
+    "publishedAt": "2026-06-23T00:27:59+00:00",
+    "detail": {
+      "videoId": "FQ-_UyZVfK4",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 150명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "7개월 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/FQ-_UyZVfK4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=FQ-_UyZVfK4"
     }
   },
   "error": null
