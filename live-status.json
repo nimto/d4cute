@@ -1,16 +1,41 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-24T06:15:21.492Z",
+  "generatedAt": "2026-06-24T07:33:14.433Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
+    "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+    "subscriberLabel": "구독자 151명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": null,
-  "latest": null,
-  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
+  "latest": {
+    "videoId": "cGuX6kkDjyw",
+    "title": "데바데 시참 환영~ 디아블로4 시즌14전, 히오스 또는 데바데 Dead by Dayligh 하는중  /시즌13 공략집 = https://d4cute.com/",
+    "publishedAt": "2026-06-24T04:42:52+00:00",
+    "detail": {
+      "videoId": "cGuX6kkDjyw",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 151명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "7개월 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/cGuX6kkDjyw/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=cGuX6kkDjyw"
+    }
+  },
+  "error": null
 }
