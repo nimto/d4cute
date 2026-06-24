@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-24T01:57:31.483Z",
+  "generatedAt": "2026-06-24T03:19:49.400Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "FQ-_UyZVfK4",
-    "title": "데바데 시참 환영~ 디아블로4 시즌14전, 히오스 또는 데바데 Dead by Dayligh 하는중  /시즌13 공략집 = https://d4cute.com/",
-    "publishedAt": "2026-06-23T15:18:52+00:00",
+  "live": {
+    "videoId": "cGuX6kkDjyw",
+    "title": "",
     "detail": {
-      "videoId": "FQ-_UyZVfK4",
+      "videoId": "cGuX6kkDjyw",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,10 +30,11 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "3주 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/FQ-_UyZVfK4/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=FQ-_UyZVfK4"
+      "publishedTimeText": "3일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/cGuX6kkDjyw/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=cGuX6kkDjyw"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
