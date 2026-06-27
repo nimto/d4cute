@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-27T02:03:11.206Z",
+  "generatedAt": "2026-06-27T03:19:56.392Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,35 +12,13 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "hTiwbRJW14Y",
-    "title": "",
-    "detail": {
-      "videoId": "hTiwbRJW14Y",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 152명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "17시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/hTiwbRJW14Y/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=hTiwbRJW14Y"
-    }
-  },
+  "live": null,
   "latest": {
-    "videoId": "hTiwbRJW14Y",
+    "videoId": "sFUZ9uPqlCM",
     "title": "데바데 시참 환영~ 디아블로4 시즌14전, 히오스 또는 데바데 Dead by Dayligh 하는중  /시즌13 공략집 = https://d4cute.com/",
-    "publishedAt": "2026-06-27T01:49:16+00:00",
+    "publishedAt": "2026-06-26T16:44:19+00:00",
     "detail": {
-      "videoId": "hTiwbRJW14Y",
+      "videoId": "sFUZ9uPqlCM",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "17시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/hTiwbRJW14Y/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=hTiwbRJW14Y"
+      "publishedTimeText": "13시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/sFUZ9uPqlCM/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=sFUZ9uPqlCM"
     }
   },
   "error": null
