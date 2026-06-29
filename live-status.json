@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-29T05:05:25.448Z",
+  "generatedAt": "2026-06-29T06:46:58.066Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,34 +30,12 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "11시간 전",
+      "publishedTimeText": "스트리밍 시간: 11일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/is6yH8A_u_c/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=is6yH8A_u_c"
+      "watchUrl": "https://www.youtube.com/watch?v=is6yH8A_u_c",
+      "error": "HTTP 429 https://www.youtube.com/watch?v=is6yH8A_u_c"
     }
   },
-  "latest": {
-    "videoId": "is6yH8A_u_c",
-    "title": "디아블로4 시즌14전, 히오스 또는 데바데 Dead by Dayligh 하는중  /시즌13 공략집 = https://d4cute.com/",
-    "publishedAt": "2026-06-29T00:36:16+00:00",
-    "detail": {
-      "videoId": "is6yH8A_u_c",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 149명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "11시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/is6yH8A_u_c/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=is6yH8A_u_c"
-    }
-  },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
