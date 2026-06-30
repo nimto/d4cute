@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-30T12:12:59.310Z",
+  "generatedAt": "2026-06-30T13:00:32.571Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "o8lnZS3afV8",
-    "title": "디아블로4 시즌14전 14시간전~! 기다리며 데바데 Dead by Dayligh 하는중  /시즌13 공략집 = https://d4cute.com/",
-    "publishedAt": "2026-06-30T07:22:49+00:00",
+  "live": {
+    "videoId": "M1utj8vc0Po",
+    "title": "",
     "detail": {
-      "videoId": "o8lnZS3afV8",
+      "videoId": "M1utj8vc0Po",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +30,33 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 7일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/o8lnZS3afV8/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=o8lnZS3afV8"
+      "publishedTimeText": "1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/M1utj8vc0Po/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=M1utj8vc0Po"
+    }
+  },
+  "latest": {
+    "videoId": "M1utj8vc0Po",
+    "title": "디아블로4 시즌14시작  5시간전  데바데 Dead by Dayligh 하며 기다리기  /시즌13 공략집 = https://d4cute.com/",
+    "publishedAt": "2026-06-30T12:32:29+00:00",
+    "detail": {
+      "videoId": "M1utj8vc0Po",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 150명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/M1utj8vc0Po/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=M1utj8vc0Po"
     }
   },
   "error": null
