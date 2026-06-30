@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-06-30T22:08:37.003Z",
+  "generatedAt": "2026-06-30T22:42:15.479Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
+      "publishedTimeText": "12시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/M1utj8vc0Po/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=M1utj8vc0Po"
     }
   },
   "latest": {
-    "videoId": "M1utj8vc0Po",
-    "title": "디아블로4 시즌14~!  1일차 스타트!  음악과 함께~  디아블로4 공략집 = https://d4cute.com/",
-    "publishedAt": "2026-06-30T12:32:29+00:00",
+    "videoId": "o8lnZS3afV8",
+    "title": "디아블로4 시즌14전 14시간전~! 기다리며 데바데 Dead by Dayligh 하는중  /시즌13 공략집 = https://d4cute.com/",
+    "publishedAt": "2026-06-30T22:28:24+00:00",
     "detail": {
-      "videoId": "M1utj8vc0Po",
+      "videoId": "o8lnZS3afV8",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/M1utj8vc0Po/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=M1utj8vc0Po"
+      "publishedTimeText": "스트리밍 시간: 8일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/o8lnZS3afV8/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=o8lnZS3afV8"
     }
   },
   "error": null
