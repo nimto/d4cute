@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-03T20:45:35.195Z",
+  "generatedAt": "2026-07-03T21:47:37.650Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,33 +30,19 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 3일 전",
+      "publishedTimeText": "1일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/6RczBeYrDLQ/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=6RczBeYrDLQ"
+      "watchUrl": "https://www.youtube.com/watch?v=6RczBeYrDLQ",
+      "error": "HTTP 429 https://www.youtube.com/watch?v=6RczBeYrDLQ"
     }
   },
   "latest": {
-    "videoId": "zNz5LAIipto",
-    "title": "#shorts 디아블로4 14시즌 메피스토~ 여전히 좋은게 안나오네잉~",
-    "publishedAt": "2026-07-03T20:11:16+00:00",
+    "videoId": "0c3FmRdSKp4",
+    "title": "디아블로4 시즌14 3일차  릴리트 4인팟 1인 플리커 선조야만  말뚝딜 #shorts",
+    "publishedAt": "2026-07-03T20:50:03+00:00",
     "detail": {
-      "videoId": "zNz5LAIipto",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 180명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "1일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/zNz5LAIipto/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=zNz5LAIipto"
+      "videoId": "0c3FmRdSKp4",
+      "error": "HTTP 429 https://www.youtube.com/watch?v=0c3FmRdSKp4"
     }
   },
   "error": null
