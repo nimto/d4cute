@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-03T15:22:06.734Z",
+  "generatedAt": "2026-07-03T16:50:13.115Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 166명",
+    "subscriberLabel": "구독자 172명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,22 +25,22 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 166명",
+      "subscriberLabel": "구독자 172명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
+      "publishedTimeText": "4시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/6RczBeYrDLQ/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=6RczBeYrDLQ"
     }
   },
   "latest": {
-    "videoId": "FDYWd5qOluU",
-    "title": "디아블로4 시즌14 3일차~ 선조야만or조폭야만or소환야만 시작. 소통과 음악방송!. 길드가입 받습니다.   플리커~",
-    "publishedAt": "2026-07-03T10:16:37+00:00",
+    "videoId": "qfwpN1tccGQ",
+    "title": "디아블로4 시즌14 플리커야만 / 소환야만 / 조폭야만 3일차 나락 100단! 맨마지막을 참고하세요잉~",
+    "publishedAt": "2026-07-03T15:29:10+00:00",
     "detail": {
-      "videoId": "FDYWd5qOluU",
+      "videoId": "qfwpN1tccGQ",
       "title": null,
       "author": null,
       "channelId": null,
@@ -49,14 +49,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 166명",
+      "subscriberLabel": "구독자 172명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "5시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/FDYWd5qOluU/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=FDYWd5qOluU"
+      "publishedTimeText": "1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/qfwpN1tccGQ/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=qfwpN1tccGQ"
     }
   },
   "error": null
