@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-04T22:40:00.078Z",
+  "generatedAt": "2026-07-04T23:42:59.681Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 196명",
+    "subscriberLabel": "구독자 197명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,22 +25,22 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 196명",
+      "subscriberLabel": "구독자 197명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "2일 전",
+      "publishedTimeText": "38분 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/2Jbo-oNul70/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=2Jbo-oNul70"
     }
   },
   "latest": {
-    "videoId": "gvDLlWVYb6o",
-    "title": "디아블로4 시즌14 매피10단 버스를 해봤습니다. 다들 자신감을 가지세요.",
-    "publishedAt": "2026-07-04T16:20:32+00:00",
+    "videoId": "EyFr349OZyc",
+    "title": "디아블로4 시즌14 4일차. 선조야만 신화고유 파밍 브이로그! 상자깡 골드 수급부터 얼음 속의 야수 컷까지!",
+    "publishedAt": "2026-07-04T22:47:21+00:00",
     "detail": {
-      "videoId": "gvDLlWVYb6o",
+      "videoId": "EyFr349OZyc",
       "title": null,
       "author": null,
       "channelId": null,
@@ -49,14 +49,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 196명",
+      "subscriberLabel": "구독자 197명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
       "publishedTimeText": "4일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/gvDLlWVYb6o/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=gvDLlWVYb6o"
+      "thumbnailUrl": "https://i.ytimg.com/vi/EyFr349OZyc/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=EyFr349OZyc"
     }
   },
   "error": null
