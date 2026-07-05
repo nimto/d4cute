@@ -1,20 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-04T23:42:59.681Z",
+  "generatedAt": "2026-07-05T01:25:21.967Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 197명",
+    "subscriberLabel": "구독자 198명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
+  "live": null,
+  "latest": {
     "videoId": "2Jbo-oNul70",
-    "title": "",
+    "title": "디아블로4 시즌14 4일차~ 선조야만or조폭야만or소환야만 시작. 소통과 음악방송!. 길드가입 받습니다.   플리커~",
+    "publishedAt": "2026-07-05T00:18:39+00:00",
     "detail": {
       "videoId": "2Jbo-oNul70",
       "title": null,
@@ -25,38 +27,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 197명",
+      "subscriberLabel": "구독자 198명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "38분 전",
+      "publishedTimeText": "2주 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/2Jbo-oNul70/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=2Jbo-oNul70"
-    }
-  },
-  "latest": {
-    "videoId": "EyFr349OZyc",
-    "title": "디아블로4 시즌14 4일차. 선조야만 신화고유 파밍 브이로그! 상자깡 골드 수급부터 얼음 속의 야수 컷까지!",
-    "publishedAt": "2026-07-04T22:47:21+00:00",
-    "detail": {
-      "videoId": "EyFr349OZyc",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 197명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "4일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/EyFr349OZyc/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=EyFr349OZyc"
     }
   },
   "error": null
