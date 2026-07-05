@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-05T14:03:15.590Z",
+  "generatedAt": "2026-07-05T15:22:54.199Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "5일 전",
+      "publishedTimeText": "5시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/BL8Pl45M0qQ/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=BL8Pl45M0qQ"
     }
   },
   "latest": {
-    "videoId": "BL8Pl45M0qQ",
-    "title": "디아블로4 시즌14 5일차~ 선조야만or조폭야만or소환야만 시작. 소통과 음악방송!. 길드가입 받습니다.   플리커~",
-    "publishedAt": "2026-07-04T23:52:32+00:00",
+    "videoId": "_eqvzt0qAx8",
+    "title": "디아블로4 시즌14 플리커 빌드.  26년 7월 5일자",
+    "publishedAt": "2026-07-05T14:51:14+00:00",
     "detail": {
-      "videoId": "BL8Pl45M0qQ",
+      "videoId": "_eqvzt0qAx8",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "5일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/BL8Pl45M0qQ/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=BL8Pl45M0qQ"
+      "publishedTimeText": "15시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/_eqvzt0qAx8/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=_eqvzt0qAx8"
     }
   },
   "error": null
