@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-06T18:32:08.253Z",
+  "generatedAt": "2026-07-06T20:29:50.842Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,29 +12,7 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "fu0-2ioUEdg",
-    "title": "",
-    "detail": {
-      "videoId": "fu0-2ioUEdg",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 216명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "5시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/fu0-2ioUEdg/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=fu0-2ioUEdg"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "B1rP9MBbWu4",
     "title": "디아블로4 시즌14 야만용사 무기기예 빠르게 올리는 방법. 일단 따라하세요.  동영상 8회",
@@ -54,7 +32,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
+      "publishedTimeText": "11개월 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/B1rP9MBbWu4/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=B1rP9MBbWu4"
     }
