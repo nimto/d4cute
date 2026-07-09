@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-09T18:26:43.698Z",
+  "generatedAt": "2026-07-09T20:19:44.517Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -13,10 +13,10 @@
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": {
-    "videoId": "nW-G7jJ4ZVI",
+    "videoId": "Zsj9qTnM39Y",
     "title": "",
     "detail": {
-      "videoId": "nW-G7jJ4ZVI",
+      "videoId": "Zsj9qTnM39Y",
       "title": null,
       "author": null,
       "channelId": null,
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "2일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/nW-G7jJ4ZVI/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=nW-G7jJ4ZVI"
+      "publishedTimeText": "스트리밍 시간: 2시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Zsj9qTnM39Y/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=Zsj9qTnM39Y"
     }
   },
   "latest": {
-    "videoId": "nW-G7jJ4ZVI",
+    "videoId": "Zsj9qTnM39Y",
     "title": "디아블로4 시즌14 9일차~ 플리커선조야만or조폭야만or소환야만 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-09T00:47:53+00:00",
+    "publishedAt": "2026-07-09T18:47:57+00:00",
     "detail": {
-      "videoId": "nW-G7jJ4ZVI",
+      "videoId": "Zsj9qTnM39Y",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "2일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/nW-G7jJ4ZVI/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=nW-G7jJ4ZVI"
+      "publishedTimeText": "스트리밍 시간: 2시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Zsj9qTnM39Y/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=Zsj9qTnM39Y"
     }
   },
   "error": null
