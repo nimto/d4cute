@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-10T00:14:33.060Z",
+  "generatedAt": "2026-07-10T04:17:33.018Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "Zsj9qTnM39Y",
-    "title": "디아블로4 시즌14 9일차~ 플리커선조야만or조폭야만or소환야만 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-09T21:42:18+00:00",
+  "live": {
+    "videoId": "icxEIz6ORqs",
+    "title": "",
     "detail": {
-      "videoId": "Zsj9qTnM39Y",
+      "videoId": "icxEIz6ORqs",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,10 +30,11 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 5시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/Zsj9qTnM39Y/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=Zsj9qTnM39Y"
+      "publishedTimeText": "6일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/icxEIz6ORqs/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=icxEIz6ORqs"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
