@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-11T12:00:00.643Z",
+  "generatedAt": "2026-07-11T13:45:07.819Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "19시간 전",
+      "publishedTimeText": "13시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/0Ff0xgsUrE4/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=0Ff0xgsUrE4"
     }
   },
   "latest": {
-    "videoId": "0Ff0xgsUrE4",
-    "title": "디아블로4 시즌14 11일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-11T09:02:11+00:00",
+    "videoId": "ykTZdYJIm04",
+    "title": "디아블로4 시즌14~ 앞으로도 쭉 가능할수도 있는~  부캐로 꿀 빠는 지옥물결, 소굴 열쇠 수급!  변성 잉걸불 / 200% 활용법!",
+    "publishedAt": "2026-07-11T13:18:04+00:00",
     "detail": {
-      "videoId": "0Ff0xgsUrE4",
+      "videoId": "ykTZdYJIm04",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "19시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/0Ff0xgsUrE4/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=0Ff0xgsUrE4"
+      "publishedTimeText": "스트리밍 시간: 1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/ykTZdYJIm04/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=ykTZdYJIm04"
     }
   },
   "error": null
