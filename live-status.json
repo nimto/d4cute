@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-11T19:44:38.001Z",
+  "generatedAt": "2026-07-11T20:30:57.253Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "11시간 전",
+      "publishedTimeText": "10시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/0Ff0xgsUrE4/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=0Ff0xgsUrE4"
     }
   },
   "latest": {
-    "videoId": "ykTZdYJIm04",
-    "title": "디아블로4 시즌14~ 앞으로도 쭉 가능할수도 있는~  부캐로 꿀 빠는 지옥물결, 소굴 열쇠 수급!  변성 잉걸불 / 200% 활용법!",
-    "publishedAt": "2026-07-11T13:18:04+00:00",
+    "videoId": "--J4SjRKpbc",
+    "title": "디아블로4 시즌14 레벨업! 경험치! 경험치 얻는곳! 유익한 팁! 빠른레벨업 가이드입니다.",
+    "publishedAt": "2026-07-11T20:20:12+00:00",
     "detail": {
-      "videoId": "ykTZdYJIm04",
+      "videoId": "--J4SjRKpbc",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "11개월 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/ykTZdYJIm04/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=ykTZdYJIm04"
+      "publishedTimeText": "스트리밍 시간: 1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/--J4SjRKpbc/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=--J4SjRKpbc"
     }
   },
   "error": null
