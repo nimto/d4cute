@@ -1,20 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-11T22:22:14.470Z",
+  "generatedAt": "2026-07-11T23:14:22.276Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 237명",
+    "subscriberLabel": "구독자 238명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
+  "live": null,
+  "latest": {
     "videoId": "0Ff0xgsUrE4",
-    "title": "",
+    "title": "디아블로4 시즌14 11일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
+    "publishedAt": "2026-07-11T09:02:11+00:00",
     "detail": {
       "videoId": "0Ff0xgsUrE4",
       "title": null,
@@ -25,24 +27,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 237명",
+      "subscriberLabel": "구독자 238명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "19시간 전",
+      "publishedTimeText": "22시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/0Ff0xgsUrE4/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=0Ff0xgsUrE4",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=0Ff0xgsUrE4"
-    }
-  },
-  "latest": {
-    "videoId": "--J4SjRKpbc",
-    "title": "디아블로4 시즌14 레벨업! 경험치! 경험치 얻는곳! 유익한 팁! 빠른레벨업 가이드입니다.",
-    "publishedAt": "2026-07-11T20:20:12+00:00",
-    "detail": {
-      "videoId": "--J4SjRKpbc",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=--J4SjRKpbc"
+      "watchUrl": "https://www.youtube.com/watch?v=0Ff0xgsUrE4"
     }
   },
   "error": null
