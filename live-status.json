@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-13T03:55:51.099Z",
+  "generatedAt": "2026-07-13T06:51:47.130Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,34 +30,11 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 2년 전",
+      "publishedTimeText": "56분 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/5O2Z_0WU9Oc/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=5O2Z_0WU9Oc"
     }
   },
-  "latest": {
-    "videoId": "5O2Z_0WU9Oc",
-    "title": "디아블로4 시즌14 13일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-13T01:38:24+00:00",
-    "detail": {
-      "videoId": "5O2Z_0WU9Oc",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 239명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 2년 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/5O2Z_0WU9Oc/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=5O2Z_0WU9Oc"
-    }
-  },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
