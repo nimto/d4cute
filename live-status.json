@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-14T18:36:08.624Z",
+  "generatedAt": "2026-07-14T19:53:51.648Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "7시간 전",
+      "publishedTimeText": "12시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/tZkN4qqsjrg/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=tZkN4qqsjrg"
     }
   },
   "latest": {
-    "videoId": "tZkN4qqsjrg",
-    "title": "디아블로4 시즌14 14일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-14T02:31:53+00:00",
+    "videoId": "QizNdONJtS4",
+    "title": "디아블로4 시즌14 업데이트 3.1.1.패치 그리고 소굴 열쇠, 소굴 우두머리 열쇠 무한 파밍 꿀팁! 열쇠 파밍! 재료 파밍! 소굴 열쇠! 소굴 우두머리 열쇠!",
+    "publishedAt": "2026-07-14T19:00:29+00:00",
     "detail": {
-      "videoId": "tZkN4qqsjrg",
+      "videoId": "QizNdONJtS4",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "7시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/tZkN4qqsjrg/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=tZkN4qqsjrg"
+      "publishedTimeText": "7일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/QizNdONJtS4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=QizNdONJtS4"
     }
   },
   "error": null
