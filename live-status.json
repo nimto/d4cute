@@ -1,24 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-15T00:56:10.706Z",
+  "generatedAt": "2026-07-15T03:57:25.119Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 248명",
+    "subscriberLabel": "구독자 249명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "tZkN4qqsjrg",
-    "title": "디아블로4 시즌14 14일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-14T20:53:49+00:00",
+  "live": {
+    "videoId": "qFFcXSJsQio",
+    "title": "",
     "detail": {
-      "videoId": "tZkN4qqsjrg",
+      "videoId": "qFFcXSJsQio",
       "title": null,
       "author": null,
       "channelId": null,
@@ -27,15 +25,16 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 248명",
+      "subscriberLabel": "구독자 249명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "34분 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/tZkN4qqsjrg/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=tZkN4qqsjrg"
+      "publishedTimeText": "4시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/qFFcXSJsQio/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=qFFcXSJsQio"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
