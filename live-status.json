@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-15T22:37:00.497Z",
+  "generatedAt": "2026-07-15T23:38:18.226Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "qFFcXSJsQio",
-    "title": "디아블로4 시즌14 15일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-15T14:28:23+00:00",
+  "live": {
+    "videoId": "uLRCgyLm0q8",
+    "title": "",
     "detail": {
-      "videoId": "qFFcXSJsQio",
+      "videoId": "uLRCgyLm0q8",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +30,33 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "10시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/qFFcXSJsQio/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=qFFcXSJsQio"
+      "publishedTimeText": "1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/uLRCgyLm0q8/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=uLRCgyLm0q8"
+    }
+  },
+  "latest": {
+    "videoId": "uLRCgyLm0q8",
+    "title": "디아블로4 시즌14 15일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
+    "publishedAt": "2026-07-15T22:41:35+00:00",
+    "detail": {
+      "videoId": "uLRCgyLm0q8",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 255명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/uLRCgyLm0q8/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=uLRCgyLm0q8"
     }
   },
   "error": null
