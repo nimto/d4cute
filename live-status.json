@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-16T08:59:33.068Z",
+  "generatedAt": "2026-07-16T11:06:05.829Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 258명",
+    "subscriberLabel": "구독자 259명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,14 +25,15 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 258명",
+      "subscriberLabel": "구독자 259명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "8시간 전",
+      "publishedTimeText": "1시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/uLRCgyLm0q8/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=uLRCgyLm0q8"
+      "watchUrl": "https://www.youtube.com/watch?v=uLRCgyLm0q8",
+      "error": "HTTP 429 https://www.youtube.com/watch?v=uLRCgyLm0q8"
     }
   },
   "latest": {
@@ -49,14 +50,15 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 258명",
+      "subscriberLabel": "구독자 259명",
       "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "8시간 전",
+      "publishedTimeText": "1시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/uLRCgyLm0q8/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=uLRCgyLm0q8"
+      "watchUrl": "https://www.youtube.com/watch?v=uLRCgyLm0q8",
+      "error": "HTTP 429 https://www.youtube.com/watch?v=uLRCgyLm0q8"
     }
   },
   "error": null
