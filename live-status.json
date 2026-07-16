@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-16T19:47:23.167Z",
+  "generatedAt": "2026-07-16T20:37:05.835Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,36 +12,13 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "uLRCgyLm0q8",
-    "title": "",
-    "detail": {
-      "videoId": "uLRCgyLm0q8",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 263명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "19시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/uLRCgyLm0q8/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=uLRCgyLm0q8",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=uLRCgyLm0q8"
-    }
-  },
+  "live": null,
   "latest": {
-    "videoId": "uLRCgyLm0q8",
-    "title": "디아블로4 시즌14 16일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-15T22:41:35+00:00",
+    "videoId": "qFFcXSJsQio",
+    "title": "디아블로4 시즌14 15일차~  드루이드 칼날발톱 시작. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
+    "publishedAt": "2026-07-15T14:28:23+00:00",
     "detail": {
-      "videoId": "uLRCgyLm0q8",
+      "videoId": "qFFcXSJsQio",
       "title": null,
       "author": null,
       "channelId": null,
@@ -55,10 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "19시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/uLRCgyLm0q8/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=uLRCgyLm0q8",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=uLRCgyLm0q8"
+      "publishedTimeText": "스트리밍 시간: 4시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/qFFcXSJsQio/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=qFFcXSJsQio"
     }
   },
   "error": null
