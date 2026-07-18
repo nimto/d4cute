@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-18T07:19:04.608Z",
+  "generatedAt": "2026-07-18T09:03:18.450Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -13,10 +13,10 @@
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": {
-    "videoId": "ZIXASodN-4o",
+    "videoId": "X5lgyIgb-lc",
     "title": "",
     "detail": {
-      "videoId": "ZIXASodN-4o",
+      "videoId": "X5lgyIgb-lc",
       "title": null,
       "author": null,
       "channelId": null,
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "7시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/ZIXASodN-4o/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=ZIXASodN-4o"
+      "publishedTimeText": "9시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/X5lgyIgb-lc/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=X5lgyIgb-lc"
     }
   },
   "latest": {
-    "videoId": "ZIXASodN-4o",
+    "videoId": "X5lgyIgb-lc",
     "title": "디아블로4 시즌14 18일차~  드루이드 렙업 그리고 파밍. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-17T23:38:18+00:00",
+    "publishedAt": "2026-07-18T07:47:24+00:00",
     "detail": {
-      "videoId": "ZIXASodN-4o",
+      "videoId": "X5lgyIgb-lc",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "7시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/ZIXASodN-4o/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=ZIXASodN-4o"
+      "publishedTimeText": "9시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/X5lgyIgb-lc/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=X5lgyIgb-lc"
     }
   },
   "error": null
