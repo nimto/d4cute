@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-18T11:32:37.484Z",
+  "generatedAt": "2026-07-18T12:31:32.653Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,9 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
+  "live": null,
+  "latest": {
     "videoId": "X5lgyIgb-lc",
-    "title": "",
+    "title": "디아블로4 시즌14 18일차~  드루이드 렙업 그리고 파밍. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
+    "publishedAt": "2026-07-18T07:47:24+00:00",
     "detail": {
       "videoId": "X5lgyIgb-lc",
       "title": null,
@@ -30,33 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "6시간 전",
+      "publishedTimeText": "2주 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/X5lgyIgb-lc/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=X5lgyIgb-lc"
-    }
-  },
-  "latest": {
-    "videoId": "ZIXASodN-4o",
-    "title": "디아블로4 시즌14 18일차~  드루이드 렙업 그리고 파밍. 소통과 음악방송!. 길드가입 받습니다. 플리커~  증오의군주 공략 = https://d4cute.com/",
-    "publishedAt": "2026-07-18T07:50:13+00:00",
-    "detail": {
-      "videoId": "ZIXASodN-4o",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 270명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "3시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/ZIXASodN-4o/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=ZIXASodN-4o"
     }
   },
   "error": null
