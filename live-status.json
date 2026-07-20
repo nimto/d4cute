@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-20T16:14:12.245Z",
+  "generatedAt": "2026-07-20T18:21:29.673Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,9 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
+  "live": null,
+  "latest": {
     "videoId": "hERQWk2tLFc",
-    "title": "",
+    "title": "디아블로4 시즌14 20일차~  여유로운 파밍~ 레벨업~ 소통과 음악방송!. 길드가입 받습니다. 방송 하단 '더보기' 란에 유익한 정보~",
+    "publishedAt": "2026-07-20T01:10:47+00:00",
     "detail": {
       "videoId": "hERQWk2tLFc",
       "title": null,
@@ -30,33 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
+      "publishedTimeText": "2일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/hERQWk2tLFc/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=hERQWk2tLFc"
-    }
-  },
-  "latest": {
-    "videoId": "GEReKW_T7WU",
-    "title": "재미 삼아 해보는 나무뿌리 상자 경험치 테스트! 마지막 두번째! 골드만 있으면 다 사고싶은 '타락한 뿌리' 거의 안준다고 보면 됩니다. 지옥물결을 추천합니다. ^^",
-    "publishedAt": "2026-07-20T15:05:25+00:00",
-    "detail": {
-      "videoId": "GEReKW_T7WU",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 282명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "1시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/GEReKW_T7WU/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=GEReKW_T7WU"
     }
   },
   "error": null
