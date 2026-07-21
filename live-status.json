@@ -1,13 +1,13 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-21T16:09:48.074Z",
+  "generatedAt": "2026-07-21T17:43:40.097Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
-    "avatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+    "avatarUrl": "https://yt3.ggpht.com/2-SnLnQFZQl8vfDJpjXXECh8f2Cum_ZkXPkBqYOmGr6uyV01YbsxDgm5pzsR2MY0t69R0V6kW6Y=s88-c-k-c0x00ffffff-no-rj",
     "subscriberLabel": "구독자 283명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
@@ -26,14 +26,13 @@
       "isLive": false,
       "shortDescription": null,
       "subscriberLabel": "구독자 283명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "channelAvatarUrl": "https://yt3.ggpht.com/2-SnLnQFZQl8vfDJpjXXECh8f2Cum_ZkXPkBqYOmGr6uyV01YbsxDgm5pzsR2MY0t69R0V6kW6Y=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "5시간 전",
+      "publishedTimeText": "6시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/h9rX2e2oGtk/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=h9rX2e2oGtk",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=h9rX2e2oGtk"
+      "watchUrl": "https://www.youtube.com/watch?v=h9rX2e2oGtk"
     }
   },
   "latest": {
@@ -42,7 +41,22 @@
     "publishedAt": "2026-07-21T12:23:56+00:00",
     "detail": {
       "videoId": "rxK9nYj8bJQ",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=rxK9nYj8bJQ"
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 283명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/ytc/AIdro_lnq4YqOFONxQ_-imCwkrxY-BMH9-YJ1bjDp3feW8NqgB0=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/rxK9nYj8bJQ/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=rxK9nYj8bJQ"
     }
   },
   "error": null
