@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-22T13:03:29.561Z",
+  "generatedAt": "2026-07-22T15:10:46.074Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 284명",
+    "subscriberLabel": "구독자 286명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,15 +25,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 284명",
+      "subscriberLabel": "구독자 286명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1시간 전",
+      "publishedTimeText": "2시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/CZG5DkANrk4/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=CZG5DkANrk4",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=CZG5DkANrk4"
+      "watchUrl": "https://www.youtube.com/watch?v=CZG5DkANrk4"
     }
   },
   "latest": {
@@ -50,15 +49,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 284명",
+      "subscriberLabel": "구독자 286명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1시간 전",
+      "publishedTimeText": "2시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/CZG5DkANrk4/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=CZG5DkANrk4",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=CZG5DkANrk4"
+      "watchUrl": "https://www.youtube.com/watch?v=CZG5DkANrk4"
     }
   },
   "error": null
