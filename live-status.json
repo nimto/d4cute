@@ -1,24 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-23T01:11:53.978Z",
+  "generatedAt": "2026-07-23T04:34:25.243Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 286명",
+    "subscriberLabel": "구독자 287명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "CZG5DkANrk4",
-    "title": "디아블로4 시즌14 22일차~  300만렙후 여유로운 파밍~  소통과 음악방송!. 길드가입 받습니다. 방송 하단 '더보기' 란에 유익한 정보~",
-    "publishedAt": "2026-07-22T18:10:00+00:00",
+  "live": {
+    "videoId": "RBiNRCSkCeA",
+    "title": "",
     "detail": {
-      "videoId": "CZG5DkANrk4",
+      "videoId": "RBiNRCSkCeA",
       "title": null,
       "author": null,
       "channelId": null,
@@ -27,15 +25,16 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 286명",
+      "subscriberLabel": "구독자 287명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "15시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/CZG5DkANrk4/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=CZG5DkANrk4"
+      "publishedTimeText": "스트리밍 시간: 10일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/RBiNRCSkCeA/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=RBiNRCSkCeA"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
