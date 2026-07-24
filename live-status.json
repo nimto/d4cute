@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-24T01:05:29.457Z",
+  "generatedAt": "2026-07-24T04:27:04.756Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "Kf7vFVulalA",
-    "title": "디아블로4 시즌14 오픈N일차 오늘도 자유롭고여유롭게 소통방송! 길드가입환영! 칼발&amp;대격변 드루이드 플레이중~ 템 &amp; 재료파밍까지!  방송 하단 '더보기' 란에 유익한 정보~",
-    "publishedAt": "2026-07-23T23:44:10+00:00",
+  "live": {
+    "videoId": "pIDc6hUFVCI",
+    "title": "",
     "detail": {
-      "videoId": "Kf7vFVulalA",
+      "videoId": "pIDc6hUFVCI",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,10 +30,11 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "22시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/Kf7vFVulalA/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=Kf7vFVulalA"
+      "publishedTimeText": "1일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/pIDc6hUFVCI/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=pIDc6hUFVCI"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
