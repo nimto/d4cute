@@ -1,24 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-29T01:01:20.668Z",
+  "generatedAt": "2026-07-29T04:20:54.239Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 314명",
+    "subscriberLabel": "구독자 315명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "8deGNd-1yvY",
-    "title": "디아블로4 시즌14 오픈 28/90일차 오늘도 자유롭고여유롭게 소통방송! 제가만든 '전리품 필터'를 응용해 자신만의 필터로 만들어보세요~! 방송 하단 '더보기' 란에 '전리품필터'",
-    "publishedAt": "2026-07-28T17:50:29+00:00",
+  "live": {
+    "videoId": "K3LGfxy6Q6I",
+    "title": "",
     "detail": {
-      "videoId": "8deGNd-1yvY",
+      "videoId": "K3LGfxy6Q6I",
       "title": null,
       "author": null,
       "channelId": null,
@@ -27,15 +25,16 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 314명",
+      "subscriberLabel": "구독자 315명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "2개월 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/8deGNd-1yvY/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=8deGNd-1yvY"
+      "publishedTimeText": "49분 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/K3LGfxy6Q6I/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=K3LGfxy6Q6I"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
