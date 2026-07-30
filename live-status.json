@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-30T06:41:29.669Z",
+  "generatedAt": "2026-07-30T09:18:10.173Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 319명",
+    "subscriberLabel": "구독자 318명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,16 +25,39 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 319명",
+      "subscriberLabel": "구독자 318명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "3일 전",
+      "publishedTimeText": "스트리밍 시간: 3일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/2C9uyhBqDOA/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=2C9uyhBqDOA"
     }
   },
-  "latest": null,
-  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
+  "latest": {
+    "videoId": "2C9uyhBqDOA",
+    "title": "디아블로4 시즌14 30/90 일차~  묻고 답하고 소통하고 파밍하고 엉덩이 갈아넣고~ 여유롭게 즐기기  '더보기'란에 도움되는 정보가 있어요잉~ 칼발드루 플레이중",
+    "publishedAt": "2026-07-30T01:38:11+00:00",
+    "detail": {
+      "videoId": "2C9uyhBqDOA",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 318명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "스트리밍 시간: 3일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/2C9uyhBqDOA/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=2C9uyhBqDOA"
+    }
+  },
+  "error": null
 }
