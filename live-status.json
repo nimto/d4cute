@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-30T00:59:25.584Z",
+  "generatedAt": "2026-07-30T04:11:55.558Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "oIcdJFb7bt8",
-    "title": "디아블로4 시즌14 30/90 일차~  묻고 답하고 소통하고 파밍하고 엉덩이 갈아넣고~ 여유롭게 즐기기  '더보기'란에 도움되는 정보가 있어요잉~ 칼발드루 플레이중",
-    "publishedAt": "2026-07-29T21:33:14+00:00",
+  "live": {
+    "videoId": "2C9uyhBqDOA",
+    "title": "",
     "detail": {
-      "videoId": "oIcdJFb7bt8",
+      "videoId": "2C9uyhBqDOA",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,10 +30,11 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 5일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/oIcdJFb7bt8/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=oIcdJFb7bt8"
+      "publishedTimeText": "4시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/2C9uyhBqDOA/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=2C9uyhBqDOA"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
