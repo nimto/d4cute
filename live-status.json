@@ -1,24 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-07-31T09:31:16.619Z",
+  "generatedAt": "2026-07-31T11:39:19.831Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 318명",
+    "subscriberLabel": "구독자 319명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "5fOuGJfo5oc",
-    "title": "디아블로4 시즌14 31/90 일차~  묻고 답하고 소통하고 파밍하고 엉덩이 갈아넣고~ 여유롭게 즐기기  '더보기'란에 도움되는 정보가 있어요잉~",
-    "publishedAt": "2026-07-31T05:46:08+00:00",
+  "live": {
+    "videoId": "nMonI194dZs",
+    "title": "",
     "detail": {
-      "videoId": "5fOuGJfo5oc",
+      "videoId": "nMonI194dZs",
       "title": null,
       "author": null,
       "channelId": null,
@@ -27,14 +25,38 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 318명",
+      "subscriberLabel": "구독자 319명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 5일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/5fOuGJfo5oc/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=5fOuGJfo5oc"
+      "publishedTimeText": "스트리밍 시간: 4일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/nMonI194dZs/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=nMonI194dZs"
+    }
+  },
+  "latest": {
+    "videoId": "nMonI194dZs",
+    "title": "디아블로4 시즌14 31/90 일차~  묻고 답하고 소통하고 파밍하고 엉덩이 갈아넣고~ 여유롭게 즐기기  '더보기'란에 도움되는 정보가 있어요잉~",
+    "publishedAt": "2026-07-31T09:49:01+00:00",
+    "detail": {
+      "videoId": "nMonI194dZs",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 319명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "스트리밍 시간: 4일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/nMonI194dZs/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=nMonI194dZs"
     }
   },
   "error": null
