@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-01T10:51:46.698Z",
+  "generatedAt": "2026-08-01T11:53:08.168Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 321명",
+    "subscriberLabel": "구독자 322명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,22 +25,22 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 321명",
+      "subscriberLabel": "구독자 322명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 6일 전",
+      "publishedTimeText": "스트리밍 시간: 5일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/0wCP0vL57_g/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=0wCP0vL57_g"
     }
   },
   "latest": {
-    "videoId": "0wCP0vL57_g",
-    "title": "디아블로4 시즌14 31/90 일차~ 묻고 답하고 소통하고 엉덩이 갈아넣고~ 여유롭게 즐기기  '더보기'란에 도움되는 정보가 있어요잉~ 소돌/돌진 플레이중~ 템 &amp; 재료파밍까지!",
-    "publishedAt": "2026-08-01T05:07:46+00:00",
+    "videoId": "Gf4SFz8U9SY",
+    "title": "[디아4] 시즌14 전리품 필터 기초부터 응용까지! 야만 기준이지만 타 직업도 100% 가능! 아직도 템 일일이 보시나요? 디아블로4 시즌14 전리품 필터 설정법 (타직업 가능)",
+    "publishedAt": "2026-08-01T09:27:00+00:00",
     "detail": {
-      "videoId": "0wCP0vL57_g",
+      "videoId": "Gf4SFz8U9SY",
       "title": null,
       "author": null,
       "channelId": null,
@@ -49,14 +49,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 321명",
+      "subscriberLabel": "구독자 322명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 6일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/0wCP0vL57_g/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=0wCP0vL57_g"
+      "publishedTimeText": "2개월 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Gf4SFz8U9SY/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=Gf4SFz8U9SY"
     }
   },
   "error": null
