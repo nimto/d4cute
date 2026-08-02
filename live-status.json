@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-02T22:42:53.856Z",
+  "generatedAt": "2026-08-02T23:42:57.325Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,35 +12,13 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "2NMMpMHoWbo",
-    "title": "",
-    "detail": {
-      "videoId": "2NMMpMHoWbo",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 328명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "1일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/2NMMpMHoWbo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=2NMMpMHoWbo"
-    }
-  },
+  "live": null,
   "latest": {
-    "videoId": "2NMMpMHoWbo",
+    "videoId": "5fxktncLZb0",
     "title": "디아블로4 시즌14 34/77 일차~ 여유롭게 즐기기  음악방송 소통방송",
-    "publishedAt": "2026-08-02T20:18:29+00:00",
+    "publishedAt": "2026-08-02T23:25:59+00:00",
     "detail": {
-      "videoId": "2NMMpMHoWbo",
+      "videoId": "5fxktncLZb0",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "1일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/2NMMpMHoWbo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=2NMMpMHoWbo"
+      "publishedTimeText": "3일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/5fxktncLZb0/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=5fxktncLZb0"
     }
   },
   "error": null
