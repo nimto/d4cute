@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-06T11:52:40.891Z",
+  "generatedAt": "2026-08-06T13:40:22.121Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -36,11 +36,11 @@
     }
   },
   "latest": {
-    "videoId": "WWSnWVSt-2w",
-    "title": "디아블로4 시즌14 37/77 일차~ 여유롭게 즐기기  음악방송 소통방송",
-    "publishedAt": "2026-08-05T09:25:35+00:00",
+    "videoId": "eyvlSdt9tXk",
+    "title": "디아블로4 테스트섭(PTR) 처음이면 필수 시청! 본섭 설정 그대로 가져오는 방법 &amp; 초반 증강효과 꿀팁 절대로 주의할점! 등 총정리 (설정파일 pc방 유져 메일저장 필수)",
+    "publishedAt": "2026-08-06T12:44:09+00:00",
     "detail": {
-      "videoId": "WWSnWVSt-2w",
+      "videoId": "eyvlSdt9tXk",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "2시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/WWSnWVSt-2w/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=WWSnWVSt-2w"
+      "publishedTimeText": "2일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/eyvlSdt9tXk/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=eyvlSdt9tXk"
     }
   },
   "error": null
