@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-07T19:12:22.569Z",
+  "generatedAt": "2026-08-07T19:59:28.446Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,33 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "ZZUNTJnHL3g",
-    "title": "",
-    "detail": {
-      "videoId": "ZZUNTJnHL3g",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 335명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 3일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/ZZUNTJnHL3g/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=ZZUNTJnHL3g"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "ZZUNTJnHL3g",
     "title": "디아블로4 시즌14 38/77 일차~ 여유롭게 즐기기  음악방송 소통방송",
-    "publishedAt": "2026-08-07T08:21:12+00:00",
+    "publishedAt": "2026-08-07T19:49:04+00:00",
     "detail": {
       "videoId": "ZZUNTJnHL3g",
       "title": null,
@@ -54,7 +32,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 3일 전",
+      "publishedTimeText": "13시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/ZZUNTJnHL3g/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=ZZUNTJnHL3g"
     }
