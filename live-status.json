@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-08T18:15:06.902Z",
+  "generatedAt": "2026-08-08T19:01:35.091Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,34 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "PC1HidhDKNE",
-    "title": "",
-    "detail": {
-      "videoId": "PC1HidhDKNE",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 338명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 2일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/PC1HidhDKNE/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=PC1HidhDKNE",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=PC1HidhDKNE"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "PC1HidhDKNE",
     "title": "디아블로4 시즌14 39/77 일차~ 여유롭게 즐기기  음악방송 소통방송",
-    "publishedAt": "2026-08-08T03:03:36+00:00",
+    "publishedAt": "2026-08-08T18:58:30+00:00",
     "detail": {
       "videoId": "PC1HidhDKNE",
       "title": null,
@@ -55,10 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 2일 전",
+      "publishedTimeText": "2주 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/PC1HidhDKNE/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=PC1HidhDKNE",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=PC1HidhDKNE"
+      "watchUrl": "https://www.youtube.com/watch?v=PC1HidhDKNE"
     }
   },
   "error": null
