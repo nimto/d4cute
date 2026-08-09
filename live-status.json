@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-09T19:07:29.931Z",
+  "generatedAt": "2026-08-09T19:45:35.469Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -16,7 +16,7 @@
   "latest": {
     "videoId": "0JO9kQxGVNM",
     "title": "디아블로4 시즌14 40/77 일차~ 여유롭게 즐기기  음악방송 소통방송",
-    "publishedAt": "2026-08-09T05:16:37+00:00",
+    "publishedAt": "2026-08-09T19:19:07+00:00",
     "detail": {
       "videoId": "0JO9kQxGVNM",
       "title": null,
@@ -32,7 +32,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "9일 전",
+      "publishedTimeText": "스트리밍 시간: 9일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/0JO9kQxGVNM/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=0JO9kQxGVNM"
     }
