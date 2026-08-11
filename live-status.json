@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-11T00:36:19.792Z",
+  "generatedAt": "2026-08-11T02:48:48.550Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "ZHZ1oN223hY",
-    "title": "디아블로4 시즌14 41/77 일차~ 여유롭게 즐기기  음악방송 소통방송",
-    "publishedAt": "2026-08-10T08:39:29+00:00",
+  "live": {
+    "videoId": "rYVJX7MbpMw",
+    "title": "",
     "detail": {
-      "videoId": "ZHZ1oN223hY",
+      "videoId": "rYVJX7MbpMw",
       "title": null,
       "author": null,
       "channelId": null,
@@ -33,9 +31,10 @@
       "endTimestamp": null,
       "publishDate": null,
       "publishedTimeText": "스트리밍 시간: 18시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/ZHZ1oN223hY/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=ZHZ1oN223hY"
+      "thumbnailUrl": "https://i.ytimg.com/vi/rYVJX7MbpMw/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=rYVJX7MbpMw"
     }
   },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
