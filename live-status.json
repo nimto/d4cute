@@ -1,24 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-13T10:04:32.106Z",
+  "generatedAt": "2026-08-13T11:08:18.526Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 343명",
+    "subscriberLabel": "구독자 344명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "RtqXqFQ0U0Y",
-    "title": "디아블로4 시즌14 43/77일차  8월 11일~ 여유롭게 즐기기  음악방송 소통방송",
-    "publishedAt": "2026-08-12T18:14:14+00:00",
+  "live": {
+    "videoId": "j_zWwXoPlFg",
+    "title": "",
     "detail": {
-      "videoId": "RtqXqFQ0U0Y",
+      "videoId": "j_zWwXoPlFg",
       "title": null,
       "author": null,
       "channelId": null,
@@ -27,14 +25,38 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 343명",
+      "subscriberLabel": "구독자 344명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "52분 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/RtqXqFQ0U0Y/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=RtqXqFQ0U0Y"
+      "publishedTimeText": "1시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/j_zWwXoPlFg/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=j_zWwXoPlFg"
+    }
+  },
+  "latest": {
+    "videoId": "j_zWwXoPlFg",
+    "title": "디아블로4 시즌14 44/77일차  8월 11일~ 여유롭게 즐기기  음악방송 소통방송",
+    "publishedAt": "2026-08-13T10:14:17+00:00",
+    "detail": {
+      "videoId": "j_zWwXoPlFg",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 344명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "1시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/j_zWwXoPlFg/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=j_zWwXoPlFg"
     }
   },
   "error": null
