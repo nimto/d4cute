@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-13T14:33:08.426Z",
+  "generatedAt": "2026-08-13T15:33:12.198Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -14,11 +14,11 @@
   },
   "live": null,
   "latest": {
-    "videoId": "j_zWwXoPlFg",
-    "title": "디아블로4 시즌14 44/77일차  8월 11일~ 여유롭게 즐기기  음악방송 소통방송",
-    "publishedAt": "2026-08-13T10:14:17+00:00",
+    "videoId": "ag9XFaOwdFg",
+    "title": "디아4 시즌14, 시즌이 끝나가도 달린다. 라말라니드의 역작, 변성시도  해피엔딩일까? 제 영상을 보시고 즐기시고 힘내시고 달리세요!",
+    "publishedAt": "2026-08-13T15:00:11+00:00",
     "detail": {
-      "videoId": "j_zWwXoPlFg",
+      "videoId": "ag9XFaOwdFg",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 10시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/j_zWwXoPlFg/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=j_zWwXoPlFg"
+      "publishedTimeText": "2일 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/ag9XFaOwdFg/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=ag9XFaOwdFg"
     }
   },
   "error": null
