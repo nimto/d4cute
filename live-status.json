@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-15T03:25:34.959Z",
+  "generatedAt": "2026-08-15T04:03:05.174Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -30,34 +30,11 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "4시간 전",
+      "publishedTimeText": "7개월 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/rqUtANer6jQ/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=rqUtANer6jQ"
     }
   },
-  "latest": {
-    "videoId": "rqUtANer6jQ",
-    "title": "디아블로4 궁금증 같이해결해요. 소통방송 음악방송 길드가입 환영",
-    "publishedAt": "2026-08-14T19:05:02+00:00",
-    "detail": {
-      "videoId": "rqUtANer6jQ",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 348명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "4시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/rqUtANer6jQ/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=rqUtANer6jQ"
-    }
-  },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
