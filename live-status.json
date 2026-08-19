@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-19T15:18:10.368Z",
+  "generatedAt": "2026-08-19T15:50:17.543Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -15,7 +15,7 @@
   "live": null,
   "latest": {
     "videoId": "uXK8_hqTVv8",
-    "title": "디아블로4 궁금증 같이해결해요. 소통방송 음악방송 길드가입 환영 370818",
+    "title": "디아블로4 궁금증 같이해결해요. 소통방송 음악방송 길드가입 환영 370819-2",
     "publishedAt": "2026-08-19T10:45:37+00:00",
     "detail": {
       "videoId": "uXK8_hqTVv8",
@@ -32,7 +32,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 6일 전",
+      "publishedTimeText": "스트리밍 시간: 10일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/uXK8_hqTVv8/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=uXK8_hqTVv8"
     }
