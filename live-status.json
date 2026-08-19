@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-19T01:23:37.867Z",
+  "generatedAt": "2026-08-19T02:35:58.183Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -11,14 +11,6 @@
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": null,
-  "latest": {
-    "videoId": "irD6zkRxpXE",
-    "title": "디아블로4 궁금증 같이해결해요. 소통방송 음악방송 길드가입 환영 370818",
-    "publishedAt": "2026-08-18T21:13:31+00:00",
-    "detail": {
-      "videoId": "irD6zkRxpXE",
-      "error": "HTTP 429 https://www.youtube.com/watch?v=irD6zkRxpXE"
-    }
-  },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
