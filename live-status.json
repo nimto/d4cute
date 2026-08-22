@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T03:50:43.100Z",
+  "generatedAt": "2026-08-22T04:18:21.797Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -12,5 +12,5 @@
   },
   "live": null,
   "latest": null,
-  "error": "HTTP 500 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
