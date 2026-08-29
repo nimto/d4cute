@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-29T17:49:52.495Z",
+  "generatedAt": "2026-08-29T20:00:57.330Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,29 +12,7 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "_-hExml_83s",
-    "title": "",
-    "detail": {
-      "videoId": "_-hExml_83s",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 365명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "9시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/_-hExml_83s/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=_-hExml_83s"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "_-hExml_83s",
     "title": "디아블로4 시즌15를 기다리며 데바데를 즐겨봅니다.  소통방송  길드가입 환영 0829-1",
@@ -54,7 +32,7 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "9시간 전",
+      "publishedTimeText": "2일 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/_-hExml_83s/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=_-hExml_83s"
     }
