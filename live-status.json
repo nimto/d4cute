@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-29T09:11:08.839Z",
+  "generatedAt": "2026-08-29T14:28:33.002Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "offline",
+  "state": "live",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,13 +12,11 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": null,
-  "latest": {
-    "videoId": "6zGnleK6FX8",
-    "title": "디아블로4 시즌15를 기다리며 데바데를 즐겨봅니다.  소통방송  길드가입 환영 0829-1",
-    "publishedAt": "2026-08-29T09:03:30+00:00",
+  "live": {
+    "videoId": "_-hExml_83s",
+    "title": "",
     "detail": {
-      "videoId": "6zGnleK6FX8",
+      "videoId": "_-hExml_83s",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +30,33 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 13시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/6zGnleK6FX8/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=6zGnleK6FX8"
+      "publishedTimeText": "3주 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/_-hExml_83s/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=_-hExml_83s"
+    }
+  },
+  "latest": {
+    "videoId": "_-hExml_83s",
+    "title": "디아블로4 시즌15를 기다리며 데바데를 즐겨봅니다.  소통방송  길드가입 환영 0829-1",
+    "publishedAt": "2026-08-29T11:12:22+00:00",
+    "detail": {
+      "videoId": "_-hExml_83s",
+      "title": null,
+      "author": null,
+      "channelId": null,
+      "viewCount": null,
+      "likeCount": null,
+      "lengthSeconds": null,
+      "isLive": false,
+      "shortDescription": null,
+      "subscriberLabel": "구독자 364명",
+      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
+      "startTimestamp": null,
+      "endTimestamp": null,
+      "publishDate": null,
+      "publishedTimeText": "3주 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/_-hExml_83s/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=_-hExml_83s"
     }
   },
   "error": null
