@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-30T21:29:37.041Z",
+  "generatedAt": "2026-08-30T23:46:01.225Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "unknown",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -37,5 +37,5 @@
       "watchUrl": "https://www.youtube.com/watch?v=J1LC7ZfOGVg"
     }
   },
-  "error": "fetch failed"
+  "error": null
 }
