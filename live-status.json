@@ -1,9 +1,9 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-06T09:42:11.320Z",
+  "generatedAt": "2026-09-06T13:09:47.031Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
@@ -12,29 +12,7 @@
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "6JSWBzu1IqA",
-    "title": "",
-    "detail": {
-      "videoId": "6JSWBzu1IqA",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 361명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "3주 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/6JSWBzu1IqA/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=6JSWBzu1IqA"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "6JSWBzu1IqA",
     "title": "디아블로4 시즌15를 기다리며 데바데를 즐겨봅니다.  소통방송   0906-1",
