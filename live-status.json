@@ -1,44 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-08T13:30:47.102Z",
+  "generatedAt": "2026-09-08T17:24:20.127Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 363명",
+    "subscriberLabel": "구독자 362명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "Fr-r2WaHYsY",
-    "title": "",
-    "detail": {
-      "videoId": "Fr-r2WaHYsY",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 363명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "3일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/Fr-r2WaHYsY/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=Fr-r2WaHYsY"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "Fr-r2WaHYsY",
     "title": "디아블로4 시즌15를 기다리며 데바데를 즐겨봅니다.  소통방송   0908-1",
-    "publishedAt": "2026-09-08T11:18:26+00:00",
+    "publishedAt": "2026-09-08T14:12:49+00:00",
     "detail": {
       "videoId": "Fr-r2WaHYsY",
       "title": null,
@@ -49,12 +27,12 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 363명",
+      "subscriberLabel": "구독자 362명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "3일 전",
+      "publishedTimeText": "5시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/Fr-r2WaHYsY/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=Fr-r2WaHYsY"
     }
