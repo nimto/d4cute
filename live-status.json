@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-10T09:31:37.035Z",
+  "generatedAt": "2026-09-10T13:45:47.385Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -14,11 +14,11 @@
   },
   "live": null,
   "latest": {
-    "videoId": "K_fw4D8snfg",
-    "title": "디아블로4 시즌15를 기다리며 데바데를 즐겨봅니다.  소통방송   0909-2",
-    "publishedAt": "2026-09-09T20:54:47+00:00",
+    "videoId": "gP5nvXf5oX8",
+    "title": "디아블로4 시즌15를 기다리며 데바데를 즐겨봅니다.  소통방송   0910-1",
+    "publishedAt": "2026-09-10T12:57:28+00:00",
     "detail": {
-      "videoId": "K_fw4D8snfg",
+      "videoId": "gP5nvXf5oX8",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 1일 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/K_fw4D8snfg/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=K_fw4D8snfg"
+      "publishedTimeText": "스트리밍 시간: 4주 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/gP5nvXf5oX8/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=gP5nvXf5oX8"
     }
   },
   "error": null
