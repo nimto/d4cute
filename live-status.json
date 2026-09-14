@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-14T13:54:02.701Z",
+  "generatedAt": "2026-09-14T18:58:23.846Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -8,17 +8,17 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 361명",
+    "subscriberLabel": "구독자 362명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": null,
   "latest": {
-    "videoId": "IYCCfgz8-3Y",
-    "title": "디아블로4 시즌15 악마술사 레벨업 가이드｜1렙부터 70+ 스킬·장비·정복자까지 시즌15 악마술사,#디아블로4  #악마술사 #악마술사 스타트 #악마술사 스타트 빌드",
-    "publishedAt": "2026-09-14T05:31:30+00:00",
+    "videoId": "vXzWv0Wm_N4",
+    "title": "디아블로4 시즌15 도적 스타터｜칼날의 춤 레벨링 공략 #디아블로4 #시즌15 #도적",
+    "publishedAt": "2026-09-14T14:20:01+00:00",
     "detail": {
-      "videoId": "IYCCfgz8-3Y",
+      "videoId": "vXzWv0Wm_N4",
       "title": null,
       "author": null,
       "channelId": null,
@@ -27,14 +27,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 361명",
+      "subscriberLabel": "구독자 362명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 9시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/IYCCfgz8-3Y/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=IYCCfgz8-3Y"
+      "publishedTimeText": "11시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/vXzWv0Wm_N4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=vXzWv0Wm_N4"
     }
   },
   "error": null
