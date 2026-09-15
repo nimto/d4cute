@@ -1,44 +1,22 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-15T18:55:32.375Z",
+  "generatedAt": "2026-09-15T21:54:34.880Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 371명",
+    "subscriberLabel": "구독자 372명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "NPayPdD_MTk",
-    "title": "",
-    "detail": {
-      "videoId": "NPayPdD_MTk",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 371명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 1개월 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/NPayPdD_MTk/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=NPayPdD_MTk"
-    }
-  },
+  "live": null,
   "latest": {
     "videoId": "NPayPdD_MTk",
     "title": "디아블로4 시즌15 만렙까지 잠안잠. 스타트 악마술사 비명괘도(타오르는 비명)",
-    "publishedAt": "2026-09-15T14:34:39+00:00",
+    "publishedAt": "2026-09-15T19:17:34+00:00",
     "detail": {
       "videoId": "NPayPdD_MTk",
       "title": null,
@@ -49,12 +27,12 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 371명",
+      "subscriberLabel": "구독자 372명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "스트리밍 시간: 1개월 전",
+      "publishedTimeText": "10시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/NPayPdD_MTk/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=NPayPdD_MTk"
     }
