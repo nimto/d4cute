@@ -1,41 +1,16 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-18T00:37:07.949Z",
+  "generatedAt": "2026-09-18T05:10:24.245Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
-    "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 437명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": null,
-  "latest": {
-    "videoId": "XBsrXEczRG8",
-    "title": "디아블로4 시즌15 🔴빠른 렙업을 위한 제작진이 숨겨둔(?) 미친 효율의 경험치 우물 최적화 활용법 '가능한 한' 꼭 드세요. 많이 응원해주세요.  #diablo4 #디아블로4",
-    "publishedAt": "2026-09-17T07:18:17+00:00",
-    "detail": {
-      "videoId": "XBsrXEczRG8",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 437명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "5시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/XBsrXEczRG8/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=XBsrXEczRG8"
-    }
-  },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
