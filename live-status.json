@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-20T00:25:44.483Z",
+  "generatedAt": "2026-09-20T05:11:25.336Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,15 +8,15 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 978명",
+    "subscriberLabel": "구독자 1.09천명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": {
-    "videoId": "LKq9uIknH5c",
+    "videoId": "f_X9E5L7xyQ",
     "title": "",
     "detail": {
-      "videoId": "LKq9uIknH5c",
+      "videoId": "f_X9E5L7xyQ",
       "title": null,
       "author": null,
       "channelId": null,
@@ -25,39 +25,16 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 978명",
+      "subscriberLabel": "구독자 1.09천명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "36분 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/LKq9uIknH5c/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=LKq9uIknH5c"
+      "publishedTimeText": "5시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/f_X9E5L7xyQ/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=f_X9E5L7xyQ"
     }
   },
-  "latest": {
-    "videoId": "LKq9uIknH5c",
-    "title": "디아블로4 시즌15 휏불런방 나눔중입니다.  더보기  참고하세요. 그리고.~  잊지마시고  구독과 좋아요 꼭 좀 부탁드립니다.",
-    "publishedAt": "2026-09-18T21:44:14+00:00",
-    "detail": {
-      "videoId": "LKq9uIknH5c",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 978명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "36분 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/LKq9uIknH5c/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=LKq9uIknH5c"
-    }
-  },
-  "error": null
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
