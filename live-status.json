@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-22T15:38:47.191Z",
+  "generatedAt": "2026-09-22T19:09:39.859Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,15 +8,15 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 1.5천명",
+    "subscriberLabel": "구독자 1.51천명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": {
-    "videoId": "2lnpSsgJ5zE",
+    "videoId": "HmmwduAcuXg",
     "title": "",
     "detail": {
-      "videoId": "2lnpSsgJ5zE",
+      "videoId": "HmmwduAcuXg",
       "title": null,
       "author": null,
       "channelId": null,
@@ -25,22 +25,22 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 1.5천명",
+      "subscriberLabel": "구독자 1.51천명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "2시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/2lnpSsgJ5zE/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=2lnpSsgJ5zE"
+      "publishedTimeText": "10시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/HmmwduAcuXg/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=HmmwduAcuXg"
     }
   },
   "latest": {
-    "videoId": "2lnpSsgJ5zE",
+    "videoId": "HmmwduAcuXg",
     "title": "디아블로4 시즌15 더보기란에 사기급 렙업장소 쇼츠 링크해두었습니다. 스타트 악마술사 비명괘도(타오르는 비명)  그외 스타트 레벨링 가이드 3종도 더보기에 #시즌15",
-    "publishedAt": "2026-09-21T08:57:14+00:00",
+    "publishedAt": "2026-09-22T16:20:01+00:00",
     "detail": {
-      "videoId": "2lnpSsgJ5zE",
+      "videoId": "HmmwduAcuXg",
       "title": null,
       "author": null,
       "channelId": null,
@@ -49,14 +49,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 1.5천명",
+      "subscriberLabel": "구독자 1.51천명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "2시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/2lnpSsgJ5zE/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=2lnpSsgJ5zE"
+      "publishedTimeText": "10시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/HmmwduAcuXg/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=HmmwduAcuXg"
     }
   },
   "error": null
