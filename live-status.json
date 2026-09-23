@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-23T09:52:03.612Z",
+  "generatedAt": "2026-09-23T14:29:44.557Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -13,10 +13,10 @@
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
   "live": {
-    "videoId": "HmmwduAcuXg",
+    "videoId": "3Kf2ZXcIl_c",
     "title": "",
     "detail": {
-      "videoId": "HmmwduAcuXg",
+      "videoId": "3Kf2ZXcIl_c",
       "title": null,
       "author": null,
       "channelId": null,
@@ -30,17 +30,17 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "3시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/HmmwduAcuXg/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=HmmwduAcuXg"
+      "publishedTimeText": "1시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/3Kf2ZXcIl_c/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=3Kf2ZXcIl_c"
     }
   },
   "latest": {
-    "videoId": "CToFPHb7w5I",
-    "title": "내 방송",
-    "publishedAt": "2026-09-22T16:27:31+00:00",
+    "videoId": "3Kf2ZXcIl_c",
+    "title": "디아블로4 시즌15 더보기란에 사기급 렙업장소 쇼츠 링크해두었습니다. 스타트 악마술사 비명괘도(타오르는 비명)  그외 스타트 레벨링 가이드 3종도 더보기에 #시즌15",
+    "publishedAt": "2026-09-22T16:15:16+00:00",
     "detail": {
-      "videoId": "CToFPHb7w5I",
+      "videoId": "3Kf2ZXcIl_c",
       "title": null,
       "author": null,
       "channelId": null,
@@ -54,9 +54,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "17시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/CToFPHb7w5I/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=CToFPHb7w5I"
+      "publishedTimeText": "1시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/3Kf2ZXcIl_c/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=3Kf2ZXcIl_c"
     }
   },
   "error": null
