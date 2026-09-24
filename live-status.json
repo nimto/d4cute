@@ -1,63 +1,16 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-23T23:59:32.096Z",
+  "generatedAt": "2026-09-24T04:31:47.284Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
-  "state": "live",
+  "state": "offline",
   "channel": {
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
-    "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 1.56천명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
-  "live": {
-    "videoId": "3Kf2ZXcIl_c",
-    "title": "",
-    "detail": {
-      "videoId": "3Kf2ZXcIl_c",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 1.56천명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "4년 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/3Kf2ZXcIl_c/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=3Kf2ZXcIl_c"
-    }
-  },
-  "latest": {
-    "videoId": "3Kf2ZXcIl_c",
-    "title": "디아블로4 시즌15 더보기란에 사기급 렙업장소 쇼츠 링크해두었습니다. 스타트 악마술사 비명괘도(타오르는 비명)  그외 스타트 레벨링 가이드 3종도 더보기에 #시즌15",
-    "publishedAt": "2026-09-22T16:15:16+00:00",
-    "detail": {
-      "videoId": "3Kf2ZXcIl_c",
-      "title": null,
-      "author": null,
-      "channelId": null,
-      "viewCount": null,
-      "likeCount": null,
-      "lengthSeconds": null,
-      "isLive": false,
-      "shortDescription": null,
-      "subscriberLabel": "구독자 1.56천명",
-      "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-      "startTimestamp": null,
-      "endTimestamp": null,
-      "publishDate": null,
-      "publishedTimeText": "4년 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/3Kf2ZXcIl_c/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=3Kf2ZXcIl_c"
-    }
-  },
-  "error": null
+  "live": null,
+  "latest": null,
+  "error": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCSPPr4E6P1iGa25VDMJkFpQ"
 }
