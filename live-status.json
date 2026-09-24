@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-24T18:27:57.420Z",
+  "generatedAt": "2026-09-24T21:42:25.114Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "offline",
@@ -14,11 +14,11 @@
   },
   "live": null,
   "latest": {
-    "videoId": "xfRbVn4Fuco",
+    "videoId": "U8HJoqESTB4",
     "title": "디아블로4 시즌15 고정댓글 꼬옥 확인 더보기란 확인!  악마술사 플레이중  그외 스타트 레벨링 가이드 3종도 더보기에 #시즌15",
-    "publishedAt": "2026-09-24T18:26:19+00:00",
+    "publishedAt": "2026-09-24T20:10:46+00:00",
     "detail": {
-      "videoId": "xfRbVn4Fuco",
+      "videoId": "U8HJoqESTB4",
       "title": null,
       "author": null,
       "channelId": null,
@@ -32,9 +32,9 @@
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "7시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/xfRbVn4Fuco/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=xfRbVn4Fuco"
+      "publishedTimeText": "8시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/U8HJoqESTB4/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=U8HJoqESTB4"
     }
   },
   "error": null
