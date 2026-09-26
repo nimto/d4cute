@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-26T09:58:36.331Z",
+  "generatedAt": "2026-09-26T14:17:15.726Z",
   "channelId": "UCSPPr4E6P1iGa25VDMJkFpQ",
   "handle": "삼촌안잔다잉",
   "state": "live",
@@ -8,7 +8,7 @@
     "id": "UCSPPr4E6P1iGa25VDMJkFpQ",
     "title": "삼촌안잔다잉",
     "avatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberLabel": "구독자 1.79천명",
+    "subscriberLabel": "구독자 1.8천명",
     "handle": "삼촌안잔다잉",
     "url": "https://www.youtube.com/@삼촌안잔다잉"
   },
@@ -25,22 +25,22 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 1.79천명",
+      "subscriberLabel": "구독자 1.8천명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "6시간 전",
+      "publishedTimeText": "1시간 전",
       "thumbnailUrl": "https://i.ytimg.com/vi/PQwJDuUWBCo/hqdefault.jpg",
       "watchUrl": "https://www.youtube.com/watch?v=PQwJDuUWBCo"
     }
   },
   "latest": {
-    "videoId": "PQwJDuUWBCo",
+    "videoId": "tQZr8W7NJQA",
     "title": "디아블로4 시즌15 &quot;고정댓글 !!꼬옥!! 확인 더보기란 확인!&quot;  악마술사 플레이중  그외 스타트 레벨링 가이드 3종도 더보기에 #시즌15",
-    "publishedAt": "2026-09-26T08:24:45+00:00",
+    "publishedAt": "2026-09-26T08:50:09+00:00",
     "detail": {
-      "videoId": "PQwJDuUWBCo",
+      "videoId": "tQZr8W7NJQA",
       "title": null,
       "author": null,
       "channelId": null,
@@ -49,14 +49,14 @@
       "lengthSeconds": null,
       "isLive": false,
       "shortDescription": null,
-      "subscriberLabel": "구독자 1.79천명",
+      "subscriberLabel": "구독자 1.8천명",
       "channelAvatarUrl": "https://yt3.ggpht.com/Qp-kUKJkVAM4Uf0k-TqKjMuJTkuFkAd6O03217ByPh0t6qhKPVtwNRlioTUVk35AobKEGyhvDA=s88-c-k-c0x00ffffff-no-rj",
       "startTimestamp": null,
       "endTimestamp": null,
       "publishDate": null,
-      "publishedTimeText": "6시간 전",
-      "thumbnailUrl": "https://i.ytimg.com/vi/PQwJDuUWBCo/hqdefault.jpg",
-      "watchUrl": "https://www.youtube.com/watch?v=PQwJDuUWBCo"
+      "publishedTimeText": "5시간 전",
+      "thumbnailUrl": "https://i.ytimg.com/vi/tQZr8W7NJQA/hqdefault.jpg",
+      "watchUrl": "https://www.youtube.com/watch?v=tQZr8W7NJQA"
     }
   },
   "error": null
